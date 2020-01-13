@@ -1,0 +1,41 @@
+language: node_js
+
+sudo: false
+
+node_js:
+  - 12
+
+env:
+  global:
+    - ENV_BUCKET_NAME=wdraktuell-bot-tg-env
+    - AWS_REGION=eu-central-1
+
+cache: yarn
+
+after_success:
+  - npm install -g codecov
+  - codecov
+
+before_script:
+  - ./config/prepare-ci.js
+
+deploy:
+  - provider: script
+    skip_cleanup: true
+    script: export SLS_STAGE=staging && yarn serverless create_domain && yarn serverless deploy
+    on:
+      branch: master
+  - provider: script
+    skip_cleanup: true
+    script: export SLS_STAGE=prod && yarn serverless create_domain && yarn serverless deploy
+    on:
+      branch: production
+
+notifications:
+  slack:
+    rooms:
+      - secure: ZW1/8pBAK0hryjkgbfCp0Wal4Wmhv4U4kGZBVS6yLX46LZjBDEbaVYN9lmnFGz1R4OJ8tBMEWucqtLCrvA87ZdAaQTH+cPC1MH2OWy0FoOtS6aeucEGVq0G6zqscAtr5cdUuhVuPN7Ff5dML35VedlPQ1O7vj/jLgR+iAaMRMRBHSwY0BmtvGrB6SpSGR7js1a9+tk3XXwWMMhFdi8AFBkE1lrCM3M0sPX4qnid5Q790Qhkwg6oVJQ2VmI0ad+nT6W+eZMGD4DySqUrzaAAK7WWL03ZT6YDVsMLGQRplM8+GVcDbQsGCQl1o3lWdgcfgn2gVWGjMiHIW4LR34ZWAqzIm1LgjsdYttGtPq/IzIv8xkZocS4X7VivJD7qneAnlo7XHBHNCePnsyrWNSc8mGg8VUuTNOijvwTs/mRmY1xruEh/7C7E3UP43laBRR3XZjqOjXyUcTrLIThxnlUIUULv7pKfKCwElt2PXQ7F7ohn5XR0vtMOj7lbyxvEaF/s7bqQ+4atAb15nY70VBlIrfs6irM1MQ04wZuwdOPC736WocGQnHR6Gs0otAshkJ5iVupt/SdqHcNOWx5tiqqxLl7/WyZBjvzjfSPrrctcfasdIR6QemPtFMschDduPIvc40S7A6Gg24bJXTDm/zzbCnKma6/I0bxfHHxQfAXGSIvY=
+    on_pull_requests: false
+    template:
+      - "Deployment %{result}:"
+      - "<%{compare_url}|%{repository_slug}:%{branch}#%{commit}> by %{author}"

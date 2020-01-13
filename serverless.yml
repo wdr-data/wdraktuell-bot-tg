@@ -1,0 +1,69 @@
+service: wdraktuell-bot-tg
+
+provider:
+  name: aws
+  region: ${file(config.yml):region}
+  runtime: nodejs12.x
+  stage: ${file(config/env.js):stage}
+  environment: ${file(config/env.js):env}
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - dynamodb:Query
+        - dynamodb:Scan
+        - dynamodb:GetItem
+        - dynamodb:PutItem
+        - dynamodb:UpdateItem
+        - dynamodb:DeleteItem
+      Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:service}-${self:provider.stage}-*"
+    - Effect: Allow
+      Action:
+        - cloudwatch:PutMetricData
+      Resource: "*"
+    - Effect: Allow
+      Action:
+        - states:StartExecution
+      Resource: "*"
+
+functions:
+  tgUpdate:
+    handler: entrypoint/tg.update
+    timeout: 15
+    events:
+      - http:
+          path: tg # TODO: Prevent spoofing
+          method: post
+
+custom:
+  customDomain:
+    domainName: "${self:provider.stage}.${file(config.yml):domain_base}"
+    basePath: ""
+    stage: ${self:provider.stage}
+    createRoute53Record: true
+    enabled: ${file(config/env.js):enableDomain}
+  scripts:
+    hooks:
+      "package:initialize": npm run lint
+  webpack:
+    includeModules:
+      forceInclude:
+        - source-map-support
+      forceExclude:
+        - aws-sdk
+    packagerOptions:
+      scripts:
+        - npm rebuild grpc --target_arch=x64 --target_platform=linux --target_libc=glibc
+  sentry:
+    dsn: ${file(config/env.js):env.SENTRY_DSN}
+
+plugins:
+  - serverless-offline
+  - serverless-domain-manager
+  - serverless-plugin-scripts
+  - serverless-pseudo-parameters
+  - serverless-step-functions
+  - serverless-webpack
+  - serverless-sentry
+
+resources:
+  Resources: ${file(config/env.js):resources}
