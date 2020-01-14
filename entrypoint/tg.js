@@ -3,8 +3,9 @@ import Telegraf from 'telegraf';
 import RavenLambdaWrapper from 'serverless-sentry-lib';
 
 import { CustomContext } from '../lib/customContext';
-import handleText from '../handlers/text';
 import { getAttachmentId } from '../lib/attachments';
+import handleText from '../handlers/text';
+import handleStart from '../handlers/onboarding';
 
 const checkForToken = (event) => event.pathParameters.token === process.env.TG_TOKEN;
 
@@ -29,7 +30,7 @@ export const update = async (event, context, callback) => {
 
         console.log(JSON.stringify(payload, null, 2));
 
-        bot.start((ctx) => ctx.reply('Hallo'));
+        bot.start(handleStart);
 
         bot.hears(() => true, handleText);
 
