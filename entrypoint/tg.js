@@ -1,8 +1,18 @@
 import Raven from 'raven';
 import Telegraf from 'telegraf';
 
-// wraps the function handler with extensive error handling
+const checkForToken = (event) => event.pathParameters.token === process.env.TG_TOKEN;
+
 export const update = async (event, context, callback) => {
+    if (!checkForToken(event)) {
+        callback(null, {
+            statusCode: 403,
+            body: '',
+        });
+        Raven.captureMessage('illegal token');
+        return;
+    }
+
     const telegraf = new Telegraf(process.env.TG_TOKEN);
     try {
         const payload = JSON.parse(event.body);

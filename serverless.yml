@@ -31,7 +31,7 @@ functions:
     timeout: 15
     events:
       - http:
-          path: tg # TODO: Prevent spoofing
+          path: tg/{token}
           method: post
 
 custom:
