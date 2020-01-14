@@ -9,11 +9,7 @@ module.exports = {
     target: 'node',
     // Generate sourcemaps for proper error messages
     devtool: 'source-map',
-    externals: [
-        'memcpy',
-        'dialogflow',
-        'aws-sdk',
-    ],
+    externals: [ 'memcpy', 'dialogflow', 'aws-sdk' ],
     performance: {
         hints: 'error',
         maxEntrypointSize: 50000000,
@@ -21,7 +17,13 @@ module.exports = {
     },
     // Run babel on all .js files and skip those in node_modules
     module: {
-        rules: [ { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' } ],
+        rules: [
+            { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' },
+            {
+                test: /\.mjs$/,
+                type: 'javascript/auto',
+            },
+        ],
     },
     plugins: [
         new webpack.BannerPlugin({
