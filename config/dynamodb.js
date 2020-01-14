@@ -1,6 +1,41 @@
 const { loadConfig } = require('./util');
 
 const tableProps = {
+    'users': {
+        AttributeDefinitions: [
+            {
+                AttributeName: 'tgid',
+                AttributeType: 'N',
+            },
+            {
+                AttributeName: 'uuid',
+                AttributeType: 'S',
+            },
+        ],
+        KeySchema: [
+            {
+                AttributeName: 'tgid',
+                KeyType: 'HASH',
+            },
+
+        ],
+        GlobalSecondaryIndexes: [
+            {
+                IndexName: 'uuid_to_tgid',
+                KeySchema: [
+                    {
+                        AttributeName: 'uuid',
+                        KeyType: 'HASH',
+                    },
+                ],
+                Projection: { ProjectionType: 'ALL' },
+                ProvisionedThroughput: {
+                    ReadCapacityUnits: 2,
+                    WriteCapacityUnits: 1,
+                },
+            },
+        ],
+    },
     'attachments': {
         AttributeDefinitions: [
             {
@@ -18,13 +53,13 @@ const tableProps = {
     'subscriptions': {
         AttributeDefinitions: [
             {
-                AttributeName: 'psid',
-                AttributeType: 'S',
+                AttributeName: 'tgid',
+                AttributeType: 'N',
             },
         ],
         KeySchema: [
             {
-                AttributeName: 'psid',
+                AttributeName: 'tgid',
                 KeyType: 'HASH',
             },
         ],
@@ -78,13 +113,13 @@ const tableProps = {
     'tracking': {
         AttributeDefinitions: [
             {
-                AttributeName: 'psid',
-                AttributeType: 'S',
+                AttributeName: 'tgid',
+                AttributeType: 'N',
             },
         ],
         KeySchema: [
             {
-                AttributeName: 'psid',
+                AttributeName: 'tgid',
                 KeyType: 'HASH',
             },
         ],

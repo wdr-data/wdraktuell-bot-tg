@@ -1,6 +1,9 @@
 import Raven from 'raven';
 import Telegraf from 'telegraf';
 
+import CustomContext from '../lib/customContext';
+import { handleText } from '../handlers/text';
+
 const checkForToken = (event) => event.pathParameters.token === process.env.TG_TOKEN;
 
 export const update = async (event, context, callback) => {
@@ -13,7 +16,7 @@ export const update = async (event, context, callback) => {
         return;
     }
 
-    const telegraf = new Telegraf(process.env.TG_TOKEN);
+    const bot = new Telegraf(process.env.TG_TOKEN, { contextType: CustomContext });
     try {
         const payload = JSON.parse(event.body);
 
@@ -24,15 +27,17 @@ export const update = async (event, context, callback) => {
 
         console.log(JSON.stringify(payload, null, 2));
 
-        telegraf.start((ctx) => ctx.reply('Hallo'));
+        bot.start((ctx) => ctx.reply('Hallo'));
 
-        telegraf.catch((err, ctx) => {
+        bot.hears(() => true, handleText);
+
+        bot.catch((err, ctx) => {
             console.error('ERROR:', err);
             Raven.captureException(err);
             return ctx.reply('Da ist was schief gelaufen.');
         });
 
-        await telegraf.handleUpdate(payload);
+        await bot.handleUpdate(payload);
     } catch (error) {
         console.error('ERROR:', error);
         Raven.captureException(error);
