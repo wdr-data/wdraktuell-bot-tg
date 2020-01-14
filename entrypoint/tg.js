@@ -1,7 +1,7 @@
 import Raven from 'raven';
 import Telegraf from 'telegraf';
 
-import CustomContext from '../lib/customContext';
+import { CustomContext } from '../lib/customContext';
 import { handleText } from '../handlers/text';
 
 const checkForToken = (event) => event.pathParameters.token === process.env.TG_TOKEN;
