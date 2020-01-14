@@ -20,7 +20,7 @@ script: echo "No tests yet :/"
 deploy:
   - provider: script
     skip_cleanup: true
-    script: export SLS_STAGE=staging && yarn serverless create_domain && yarn serverless deploy
+    script: export SLS_STAGE=staging && yarn serverless create_domain && yarn serverless deploy && ./setWebhook.sh
     on:
       branch: master
   - provider: script
