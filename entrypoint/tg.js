@@ -1,8 +1,10 @@
 import Raven from 'raven';
 import Telegraf from 'telegraf';
+import RavenLambdaWrapper from 'serverless-sentry-lib';
 
 import { CustomContext } from '../lib/customContext';
-import { handleText } from '../handlers/text';
+import handleText from '../handlers/text';
+import { getAttachmentId } from '../lib/attachments';
 
 const checkForToken = (event) => event.pathParameters.token === process.env.TG_TOKEN;
 
@@ -43,3 +45,14 @@ export const update = async (event, context, callback) => {
         Raven.captureException(error);
     }
 };
+
+export const attachment = RavenLambdaWrapper.handler(Raven, async (event) => {
+    const payload = JSON.parse(event.body);
+    const url = payload.url;
+
+    const id = await getAttachmentId(url);
+    return {
+        statusCode: 200,
+        body: JSON.stringify({ success: true, message: id }),
+    };
+});

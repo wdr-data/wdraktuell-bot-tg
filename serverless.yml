@@ -33,6 +33,13 @@ functions:
       - http:
           path: tg/{token}
           method: post
+  tgAttachment:
+    handler: entrypoint/tg.attachment
+    timeout: 30
+    events:
+      - http:
+          path: attachment
+          method: post
 
 custom:
   customDomain:
