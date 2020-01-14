@@ -7,7 +7,7 @@ export const handleText = async (ctx) => {
         credentials: require('../.df_id.json') || {},
         /* eslint-enable */
     });
-    const sessionPath = sessionClient.sessionPath(process.env.DF_PROJECTID, ctx.uuid());
+    const sessionPath = sessionClient.sessionPath(process.env.DF_PROJECTID, await ctx.uuid());
 
     const request = {
         session: sessionPath,
