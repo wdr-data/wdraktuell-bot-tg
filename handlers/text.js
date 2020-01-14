@@ -1,6 +1,6 @@
 import dialogflow from 'dialogflow';
 
-export const handleText = async (ctx) => {
+const handleText = async (ctx) => {
     const text = ctx.message.text;
     const sessionClient = new dialogflow.SessionsClient({
         /* eslint-disable */
