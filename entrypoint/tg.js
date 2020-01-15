@@ -5,7 +5,11 @@ import RavenLambdaWrapper from 'serverless-sentry-lib';
 import { CustomContext } from '../lib/customContext';
 import { getAttachmentId } from '../lib/attachments';
 import handleText from '../handlers/text';
-import { actionDataMiddleware, settingsMiddleware } from '../lib/middlewares';
+import {
+    actionDataMiddleware,
+    settingsMiddleware,
+    analyticsMiddleware,
+} from '../lib/middlewares';
 import {
     handleStart,
     handleOnboardingAnalytics,
@@ -37,6 +41,7 @@ export const update = async (event, context, callback) => {
 
         bot.use(settingsMiddleware);
         bot.use(actionDataMiddleware);
+        bot.use(analyticsMiddleware);
 
         bot.start(handleStart);
         bot.action('onboarding_analytics', handleOnboardingAnalytics);
