@@ -124,6 +124,24 @@ const tableProps = {
             },
         ],
     },
+    'actionData': {
+        AttributeDefinitions: [
+            {
+                AttributeName: 'uuid',
+                AttributeType: 'S',
+            },
+        ],
+        KeySchema: [
+            {
+                AttributeName: 'uuid',
+                KeyType: 'HASH',
+            },
+        ],
+        TimeToLiveSpecification: {
+            AttributeName: 'ttl',
+            Enabled: 'TRUE',
+        },
+    },
 };
 
 const tableNames = (stage) => {
