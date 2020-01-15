@@ -14,18 +14,24 @@ const start = async (ctx) => {
 
     const analytics = await getFaq(`onboarding_analytics`);
     const extra = Markup.inlineKeyboard([
-        Markup.callbackButton(
-            'Ja, ist ok',
-            actionData('onboarding_analytics', { choice: 'accept' })
-        ),
-        Markup.callbackButton(
-            'Nein, für mich nicht',
-            actionData('onboarding_analytics', { choice: 'decline' })
-        ),
-        Markup.callbackButton(
-            'Datenschutz',
-            actionData('onboarding_analytics', { choice: 'policy' })
-        ),
+        [
+            Markup.callbackButton(
+                'Ja, ist ok',
+                actionData('onboarding_analytics', { choice: 'accept' })
+            ),
+        ],
+        [
+            Markup.callbackButton(
+                'Nein, für mich nicht',
+                actionData('onboarding_analytics', { choice: 'decline' })
+            ),
+        ],
+        [
+            Markup.callbackButton(
+                'Datenschutz',
+                actionData('onboarding_analytics', { choice: 'policy' })
+            ),
+        ],
     ]).extra();
     await ctx.replyFullNewsBase(analytics, extra);
 };
