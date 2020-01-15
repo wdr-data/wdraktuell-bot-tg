@@ -5,9 +5,12 @@ import RavenLambdaWrapper from 'serverless-sentry-lib';
 import { CustomContext } from '../lib/customContext';
 import { getAttachmentId } from '../lib/attachments';
 import handleText from '../handlers/text';
-import handleStart from '../handlers/onboarding';
 import { actionDataMiddleware, settingsMiddleware } from '../lib/middlewares';
-
+import {
+    handleStart,
+    handleOnboardingAnalytics,
+    handleOnboardingAnalyticsMore,
+} from '../handlers/onboarding';
 
 const checkForToken = (event) => event.pathParameters.token === process.env.TG_TOKEN;
 
@@ -36,6 +39,8 @@ export const update = async (event, context, callback) => {
         bot.use(actionDataMiddleware);
 
         bot.start(handleStart);
+        bot.action('onboarding_analytics', handleOnboardingAnalytics);
+        bot.action('onboarding_analytics_more', handleOnboardingAnalyticsMore);
 
         bot.hears(() => true, handleText);
 
