@@ -9,6 +9,7 @@ import {
     actionDataMiddleware,
     settingsMiddleware,
     analyticsMiddleware,
+    testMiddleware,
 } from '../lib/middlewares';
 import {
     handleStart,
@@ -42,6 +43,7 @@ export const update = async (event, context, callback) => {
         bot.use(settingsMiddleware);
         bot.use(actionDataMiddleware);
         bot.use(analyticsMiddleware);
+        bot.use(testMiddleware);
 
         bot.start(handleStart);
         bot.action('onboarding_analytics', handleOnboardingAnalytics);
