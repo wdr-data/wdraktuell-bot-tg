@@ -55,11 +55,11 @@ export const handleOnboardingAnalytics = async (ctx) => {
 
     switch (choice) {
     case 'accept':
-        await tracking.update(ctx.from.id, { enabled: true });
+        await tracking.update(ctx.from.id, 'enabled', true);
         await ctx.replyFullNewsBase(await getFaq('onboarding_analytics_accepted'));
         break;
     case 'decline':
-        await tracking.update(ctx.from.id, { enabled: false });
+        await tracking.update(ctx.from.id, 'enabled', false);
         await ctx.replyFullNewsBase(await getFaq('onboarding_analytics_declined'));
         break;
     case 'policy': {
