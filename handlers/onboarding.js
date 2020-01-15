@@ -12,7 +12,7 @@ const start = async (ctx) => {
     const greeting = await getFaq(`greeting_${faqPostfix}`);
     await ctx.replyFullNewsBase(greeting);
 
-    const analytics = await getFaq(`oboarding_analytics`);
+    const analytics = await getFaq(`onboarding_analytics`);
     const extra = Markup.inlineKeyboard([
         Markup.callbackButton(
             'Ja, ist ok',
