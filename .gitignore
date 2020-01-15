@@ -121,3 +121,5 @@ coverage
 # Logs
 yarn-error.log
 
+# vscode workspace settings
+.vscode
