@@ -1,13 +1,33 @@
+import Markup from 'telegraf/markup';
+
 import getFaq from '../lib/faq';
+import actionData from '../lib/actionData';
 
 const start = async (ctx) => {
     let faqPostfix = 'default';
-    const referral = ctx.message.text.split(' ').slice(-1)[0];
+    const referral = ctx.startPayload;
     if ([ 'transition' ].includes(referral)) {
         faqPostfix = referral;
     }
-    const faq = await getFaq(`greeting_${faqPostfix}`);
-    return ctx.replyFullNewsBase(faq);
+    const greeting = await getFaq(`greeting_${faqPostfix}`);
+    await ctx.replyFullNewsBase(greeting);
+
+    const analytics = await getFaq(`oboarding_analytics`);
+    const extra = Markup.inlineKeyboard([
+        Markup.callbackButton(
+            'Ja, ist ok',
+            actionData('onboarding_analytics', { choice: 'accept' })
+        ),
+        Markup.callbackButton(
+            'Nein, für mich nicht',
+            actionData('onboarding_analytics', { choice: 'decline' })
+        ),
+        Markup.callbackButton(
+            'Datenschutz',
+            actionData('onboarding_analytics', { choice: 'policy' })
+        ),
+    ]).extra();
+    await ctx.replyFullNewsBase(analytics, extra);
 };
 
 export default start;
