@@ -39,14 +39,13 @@ const handleText = async (ctx) => {
             }
             return handler.actions[result.action](chat, result.parameters['fields']);
         }
-        if (chat.trackingEnabled) {
-            await chat.track.event(
-                'chat',
-                'dialogflow',
-                result.intent.displayName
-            ).send();
-        }
         */
+
+        await ctx.track(
+            'chat',
+            'dialogflow',
+            result.intent.displayName
+        );
         return ctx.reply(result.fulfillmentText);
     }
 
