@@ -6,6 +6,8 @@ import { CustomContext } from '../lib/customContext';
 import { getAttachmentId } from '../lib/attachments';
 import handleText from '../handlers/text';
 import handleStart from '../handlers/onboarding';
+import { actionDataMiddleware, settingsMiddleware } from '../lib/middlewares';
+
 
 const checkForToken = (event) => event.pathParameters.token === process.env.TG_TOKEN;
 
@@ -29,6 +31,9 @@ export const update = async (event, context, callback) => {
         });
 
         console.log(JSON.stringify(payload, null, 2));
+
+        bot.use(settingsMiddleware);
+        bot.use(actionDataMiddleware);
 
         bot.start(handleStart);
 
