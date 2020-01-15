@@ -17,19 +17,19 @@ const start = async (ctx) => {
         [
             Markup.callbackButton(
                 'Ja, ist ok',
-                actionData('onboarding_analytics', { choice: 'accept' })
+                actionData('onboarding_analytics', { choice: 'accept', referral })
             ),
         ],
         [
             Markup.callbackButton(
                 'Nein, für mich nicht',
-                actionData('onboarding_analytics', { choice: 'decline' })
+                actionData('onboarding_analytics', { choice: 'decline', referral })
             ),
         ],
         [
             Markup.callbackButton(
                 'Datenschutz',
-                actionData('onboarding_analytics', { choice: 'policy' })
+                actionData('onboarding_analytics', { choice: 'policy', referral })
             ),
         ],
     ]).extra();
