@@ -161,7 +161,7 @@ export const handleOnboardingPushBreaking = async (ctx) => {
     const {
         choice,
     } = ctx.data;
-    const subscription = new DynamoDbCrud(process.env.DYNAMODB_SUBSCRIPTION, 'tgid');
-    await subscription.update(ctx.from.id, 'breaking', choice);
+    const subscriptions = new DynamoDbCrud(process.env.DYNAMODB_SUBSCRIPTIONS, 'tgid');
+    await subscriptions.update(ctx.from.id, 'breaking', choice);
     await ctx.replyFullNewsBase(await getFaq('onboarding_final'));
 };
