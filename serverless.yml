@@ -41,6 +41,93 @@ functions:
           path: attachment
           method: post
 
+  pushFetch:
+    handler: entrypoint/push.fetch
+    timeout: 30
+  pushSend:
+    handler: entrypoint/push.send
+    timeout: 30
+  pushFinish:
+    handler: entrypoint/push.finish
+    timeout: 30
+  pushProxy:
+    handler: entrypoint/push.proxy
+    timeout: 30
+    environment:
+      statemachine_arn: "arn:aws:states:#{AWS::Region}:#{AWS::AccountId}:stateMachine:${self:service}-${self:provider.stage}-push"
+    events:
+      - http:
+          path: push
+          method: post
+      - http:
+          path: breaking
+          method: post
+      - schedule:
+          name: ${self:service}-${self:provider.stage}-push_m
+          rate: cron(30 6 ? * MON-FRI *) # UTC+1 (No DST)
+          enabled: true
+          input:
+            timing: morning
+      - schedule:
+          name: ${self:service}-${self:provider.stage}-push_m_dst
+          rate: cron(30 5 ? * MON-FRI *) # UTC+2 (DST)
+          enabled: true
+          input:
+            timing: morning
+      - schedule:
+          name: ${self:service}-${self:provider.stage}-push_m_w
+          rate: cron(0 8 ? * * *) # UTC+1 (No DST)
+          enabled: true
+          input:
+            timing: morning
+      - schedule:
+          name: ${self:service}-${self:provider.stage}-push_m_w_dst
+          rate: cron(0 7 ? * * *) # UTC+2 (DST)
+          enabled: true
+          input:
+            timing: morning
+      - schedule:
+          name: ${self:service}-${self:provider.stage}-push_e
+          rate: cron(30 17 * * ? *) # UTC+1 (No DST)
+          enabled: true
+          input:
+            timing: evening
+      - schedule:
+          name: ${self:service}-${self:provider.stage}-push_e_dst
+          rate: cron(30 16 * * ? *) # UTC+2 (DST)
+          enabled: true
+          input:
+            timing: evening
+
+stepFunctions:
+  stateMachines:
+    push:
+      name: ${self:service}-${self:provider.stage}-push
+      definition:
+        StartAt: fetching
+        States:
+          fetching:
+            Type: Task
+            Resource: "arn:aws:lambda:#{AWS::Region}:#{AWS::AccountId}:function:${self:service}-${self:provider.stage}-pushFetch"
+            Next: loop
+          loop:
+            Type: Choice
+            Choices:
+              - Variable: "$.state"
+                StringEquals: "nextChunk"
+                Next: sending
+              - Variable: "$.state"
+                StringEquals: "finished"
+                Next: finished
+          sending:
+            Type: Task
+            Resource: "arn:aws:lambda:#{AWS::Region}:#{AWS::AccountId}:function:${self:service}-${self:provider.stage}-pushSend"
+            Next: loop
+          finished:
+            Type: Task
+            Resource: "arn:aws:lambda:#{AWS::Region}:#{AWS::AccountId}:function:${self:service}-${self:provider.stage}-pushFinish"
+            End: true
+
 custom:
   customDomain:
     domainName: "${self:provider.stage}.${file(config.yml):domain_base}"
