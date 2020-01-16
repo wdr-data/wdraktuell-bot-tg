@@ -15,6 +15,8 @@ import {
     handleStart,
     handleOnboardingAnalytics,
     handleOnboardingAnalyticsMore,
+    handleOnboardingPushWhen,
+    handleOnboardingPushBreaking,
 } from '../handlers/onboarding';
 
 const checkForToken = (event) => event.pathParameters.token === process.env.TG_TOKEN;
@@ -48,6 +50,8 @@ export const update = async (event, context, callback) => {
         bot.start(handleStart);
         bot.action('onboarding_analytics', handleOnboardingAnalytics);
         bot.action('onboarding_analytics_more', handleOnboardingAnalyticsMore);
+        bot.action('onboarding_push_when', handleOnboardingPushWhen);
+        bot.action('onboarding_push_breaking', handleOnboardingPushBreaking);
 
         bot.hears(() => true, handleText);
 

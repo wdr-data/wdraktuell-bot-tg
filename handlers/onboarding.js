@@ -1,4 +1,5 @@
 import Markup from 'telegraf/markup';
+import ua from 'universal-analytics';
 
 import getFaq from '../lib/faq';
 import actionData from '../lib/actionData';
@@ -8,11 +9,22 @@ const analyticsButtons = (variant, referral) => {
     const buttons = [
         Markup.callbackButton(
             'Ja, ist ok',
-            actionData('onboarding_analytics', { choice: 'accept', referral })
+            actionData('onboarding_analytics', {
+                choice: 'accept',
+                referral,
+                tracking: {
+                    category: 'onboarding',
+                    event: 'analytics',
+                    label: 'accept',
+                },
+            })
         ),
         Markup.callbackButton(
             'Nein, für mich nicht',
-            actionData('onboarding_analytics', { choice: 'decline', referral })
+            actionData('onboarding_analytics', {
+                choice: 'decline',
+                referral,
+            })
         ),
     ];
 
@@ -20,14 +32,19 @@ const analyticsButtons = (variant, referral) => {
         buttons.push(
             Markup.callbackButton(
                 'Datenschutz',
-                actionData('onboarding_analytics', { choice: 'policy', referral })
+                actionData('onboarding_analytics', {
+                    choice: 'policy',
+                    referral,
+                })
             )
         );
     } else if (variant === 'more') {
         buttons.push(
             Markup.callbackButton(
                 'Alles lesen',
-                actionData('onboarding_analytics_more', { referral })
+                actionData('onboarding_analytics_more', {
+                    referral,
+                })
             )
         );
     }
@@ -51,16 +68,47 @@ export const handleStart = async (ctx) => {
 
 export const handleOnboardingAnalytics = async (ctx) => {
     const tracking = new DynamoDbCrud(process.env.DYNAMODB_TRACKING, 'tgid');
-    const { choice, referral } = ctx.data;
+    const {
+        choice,
+        referral,
+    } = ctx.data;
+
+    const buttons = [
+        Markup.callbackButton(
+            'Morgens & Abends',
+            actionData('onboarding_push_when', {
+                choice: 'both',
+            })
+        ),
+        Markup.callbackButton(
+            'Morgens',
+            actionData('onboarding_push_when', {
+                choice: 'morning',
+            })
+        ),
+        Markup.callbackButton(
+            'Abends',
+            actionData('onboarding_push_when', {
+                choice: 'evening',
+            })
+        ),
+    ];
+    const extra = Markup.inlineKeyboard(buttons.map((button) => [ button ])).extra();
 
     switch (choice) {
     case 'accept':
+        await ua(
+            process.env.UA_TRACKING_ID,
+            ctx.uuid,
+        ).event('onboarding', 'referral', referral).send();
         await tracking.update(ctx.from.id, 'enabled', true);
         await ctx.replyFullNewsBase(await getFaq('onboarding_analytics_accepted'));
+        await ctx.replyFullNewsBase(await getFaq('onboarding_when'), extra);
         break;
     case 'decline':
         await tracking.update(ctx.from.id, 'enabled', false);
         await ctx.replyFullNewsBase(await getFaq('onboarding_analytics_declined'));
+        await ctx.replyFullNewsBase(await getFaq('onboarding_when'), extra);
         break;
     case 'policy': {
         const extra = Markup.inlineKeyboard(analyticsButtons('more', referral)).extra();
@@ -71,7 +119,32 @@ export const handleOnboardingAnalytics = async (ctx) => {
 };
 
 export const handleOnboardingAnalyticsMore = async (ctx) => {
-    const { referral } = ctx.data;
+    const {
+        referral,
+    } = ctx.data;
     const extra = Markup.inlineKeyboard(analyticsButtons(null, referral)).extra();
     await ctx.replyFullNewsBase(await getFaq('analytics_datapolicy_full'), extra);
+};
+
+export const handleOnboardingPushWhen = async (ctx) => {
+    const buttons = [
+        Markup.callbackButton(
+            'Ja, gerne',
+            actionData('onboarding_push_breaking', {
+                choice: 'yes',
+            })
+        ),
+        Markup.callbackButton(
+            'Nein, danke',
+            actionData('onboarding_push_breaking', {
+                choice: 'no',
+            })
+        ),
+    ];
+    const extra = Markup.inlineKeyboard(buttons.map((button) => [ button ])).extra();
+    await ctx.replyFullNewsBase(await getFaq('onboarding_breaking'), extra);
+};
+
+export const handleOnboardingPushBreaking = async (ctx) => {
+    await ctx.replyFullNewsBase(await getFaq('onboarding_final'));
 };
