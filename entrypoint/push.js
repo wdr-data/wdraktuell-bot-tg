@@ -97,16 +97,13 @@ export const fetch = RavenLambdaWrapper.handler(Raven, async (event) => {
 });
 
 const handlePushFailed = async (error) => {
+    Raven.captureException(error);
     console.error(error);
 
-    if (error.error.code === 'ETIMEDOUT') {
+    if (error.code === 'ETIMEDOUT') {
         console.error('Request timed out!');
-        Raven.captureException(error);
-        return;
-    } else if (error.statusCode !== 400) {
+    } else if (error.code !== 400) {
         console.error('Not a bad request!');
-        Raven.captureException(error);
-        return;
     }
 };
 
@@ -175,7 +172,7 @@ export const send = RavenLambdaWrapper.handler(Raven, async (event) => {
                         });
                     }
                 } catch (err) {
-                    handlePushFailed(err);
+                    return handlePushFailed(err);
                 }
             }));
         } else if (event.type === 'push') {
@@ -198,7 +195,7 @@ export const send = RavenLambdaWrapper.handler(Raven, async (event) => {
                         reply_markup: buttons.length ? Markup.inlineKeyboard(buttons) : undefined,
                     });
                 } catch (err) {
-                    handlePushFailed(err);
+                    return handlePushFailed(err);
                 }
             }));
         }
