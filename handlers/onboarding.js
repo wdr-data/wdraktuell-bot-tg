@@ -120,6 +120,8 @@ export const handleOnboardingAnalytics = async (ctx) => {
         break;
     }
     }
+
+    return ctx.editMessageReplyMarkup();
 };
 
 export const handleOnboardingAnalyticsMore = async (ctx) => {
@@ -128,6 +130,8 @@ export const handleOnboardingAnalyticsMore = async (ctx) => {
     } = ctx.data;
     const extra = Markup.inlineKeyboard(analyticsButtons(null, referral)).extra();
     await ctx.replyFullNewsBase(await getFaq('analytics_datapolicy_full'), extra);
+
+    return ctx.editMessageReplyMarkup();
 };
 
 export const handleOnboardingPushWhen = async (ctx) => {
@@ -159,6 +163,8 @@ export const handleOnboardingPushWhen = async (ctx) => {
     ];
     const extra = Markup.inlineKeyboard(buttons.map((button) => [ button ])).extra();
     await ctx.replyFullNewsBase(await getFaq('onboarding_breaking'), extra);
+
+    return ctx.editMessageReplyMarkup();
 };
 
 export const handleOnboardingPushBreaking = async (ctx) => {
@@ -169,4 +175,6 @@ export const handleOnboardingPushBreaking = async (ctx) => {
     await subscriptions.update(ctx.from.id, 'breaking', choice);
     await ctx.replyFullNewsBase(await getFaq(`onboarding_breaking_${choice ? 'yes' : 'no'}`));
     await ctx.replyFullNewsBase(await getFaq('onboarding_final'));
+
+    return ctx.editMessageReplyMarkup();
 };
