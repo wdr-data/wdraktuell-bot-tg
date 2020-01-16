@@ -100,7 +100,11 @@ export const handleOnboardingAnalytics = async (ctx) => {
         ua(
             process.env.UA_TRACKING_ID,
             ctx.uuid,
-        ).event('onboarding', 'referral', referral).send();
+        ).event(
+            'onboarding', 'referral', referral
+        ).event(
+            'onboarding', 'analytics', 'accepted'
+        ).send();
         await tracking.update(ctx.from.id, 'enabled', true);
         await ctx.replyFullNewsBase(await getFaq('onboarding_analytics_accepted'));
         await ctx.replyFullNewsBase(await getFaq('onboarding_when'), extra);
