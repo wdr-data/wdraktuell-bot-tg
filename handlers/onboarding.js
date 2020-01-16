@@ -127,17 +127,29 @@ export const handleOnboardingAnalyticsMore = async (ctx) => {
 };
 
 export const handleOnboardingPushWhen = async (ctx) => {
+    const {
+        choice,
+    } = ctx.data;
+
+    const subscription = new DynamoDbCrud(process.env.DYNAMODB_SUBSCRIPTION, 'tgid');
+    if ([ 'morning', 'both' ].includes(choice)) {
+        await subscription.update(ctx.from.id, 'morning', true);
+    }
+    if ([ 'evening', 'both' ].includes(choice)) {
+        await subscription.update(ctx.from.id, 'evening', true);
+    }
+
     const buttons = [
         Markup.callbackButton(
             'Ja, gerne',
             actionData('onboarding_push_breaking', {
-                choice: 'yes',
+                choice: true,
             })
         ),
         Markup.callbackButton(
             'Nein, danke',
             actionData('onboarding_push_breaking', {
-                choice: 'no',
+                choice: false,
             })
         ),
     ];
@@ -146,5 +158,10 @@ export const handleOnboardingPushWhen = async (ctx) => {
 };
 
 export const handleOnboardingPushBreaking = async (ctx) => {
+    const {
+        choice,
+    } = ctx.data;
+    const subscription = new DynamoDbCrud(process.env.DYNAMODB_SUBSCRIPTION, 'tgid');
+    await subscription.update(ctx.from.id, 'breaking', choice);
     await ctx.replyFullNewsBase(await getFaq('onboarding_final'));
 };
