@@ -131,12 +131,12 @@ export const handleOnboardingPushWhen = async (ctx) => {
         choice,
     } = ctx.data;
 
-    const subscription = new DynamoDbCrud(process.env.DYNAMODB_SUBSCRIPTION, 'tgid');
+    const subscriptions = new DynamoDbCrud(process.env.DYNAMODB_SUBSCRIPTIONS, 'tgid');
     if ([ 'morning', 'both' ].includes(choice)) {
-        await subscription.update(ctx.from.id, 'morning', true);
+        await subscriptions.update(ctx.from.id, 'morning', true);
     }
     if ([ 'evening', 'both' ].includes(choice)) {
-        await subscription.update(ctx.from.id, 'evening', true);
+        await subscriptions.update(ctx.from.id, 'evening', true);
     }
 
     const buttons = [
