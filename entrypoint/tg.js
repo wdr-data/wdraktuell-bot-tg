@@ -19,7 +19,8 @@ import {
     handleOnboardingPushBreaking,
 } from '../handlers/onboarding';
 
-const checkForToken = (event) => event.pathParameters.token === process.env.TG_TOKEN;
+const checkForToken = (event) => decodeURIComponent(
+    event.pathParameters.token) === process.env.TG_TOKEN;
 
 export const update = async (event, context, callback) => {
     if (!checkForToken(event)) {

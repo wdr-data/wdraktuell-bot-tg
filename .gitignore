@@ -123,3 +123,6 @@ yarn-error.log
 
 # vscode workspace settings
 .vscode
+
+# local webhook
+myWebhook.sh

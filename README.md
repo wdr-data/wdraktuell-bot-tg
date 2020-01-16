@@ -1,7 +1,7 @@
 # wdraktuell-bot-tg
 Telegram bot for WDR aktuell
 
-- 
+-
 - Create a bot via botfather
 - Use API token
 
@@ -9,7 +9,7 @@ Telegram bot for WDR aktuell
 ## Impressum / Team 🕵️
 
 - Redaktion: 1LIVE Infos, Jessica Häusler, Susanne Schwarzbach
-- Grafik: 
+- Grafik:
 - Umsetzung: Patricia Ennenbach, Jannes Höke, Christian Jörres
 
 [**Impressum**](https://www1.wdr.de/radio/1live/einslive-impressum-100.html)
@@ -29,9 +29,9 @@ git clone https://github.com/wdr-data/informant-bot.git
 git clone https://github.com/wdr-data/informant-cms.git
 ```
 
-Use `clone with ssh`-URL. 
+Use `clone with ssh`-URL.
 To `push` to repository, make sure you associate your ssh-key with you github account: https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/
-In case you need to create an 
+In case you need to create an
 `ssh-key`: https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/
 
 
@@ -39,7 +39,7 @@ In case you need to create an
 
 ### Local development
 
-You need to create a file called `.env.yml` in the root folder of the informant-bot directory. 
+You need to create a file called `.env.yml` in the root folder of the informant-bot directory.
 We will show you how to fill in the variables later in this text.
 
 ```yml
@@ -66,30 +66,30 @@ Go to your local repository and run:
 yarn  OR  yarn install
 ```
 
-To start with local development: 
+To start with local development:
 ```
 yarn sls deploy
 ```
 If you do this for the first time, you will get a lot of errors. Don't worry, we will fix them step by step by adding the necessary variables to the .env.yml file.
 
-`SENTRY_DSN` 
-Sentry is a helpful tool to ducument errors. You'll need to signup for a free account and get a link as a token: 
-https://sentry.io/welcome/ 
+`SENTRY_DSN`
+Sentry is a helpful tool to ducument errors. You'll need to signup for a free account and get a link as a token:
+https://sentry.io/welcome/
 
-`.df_id.json` 
-Dialogflow is a google tool to manage conversations with your bot. 
-You'll have to go to [dialogflow.com](https://dialogflow.com/) and sign in with your google account. 
+`.df_id.json`
+Dialogflow is a google tool to manage conversations with your bot.
+You'll have to go to [dialogflow.com](https://dialogflow.com/) and sign in with your google account.
 You'll need to set up a new dialogflow agent for your project.
 You'll also need to create a project on google-cloud-platform and set up a service account and create a key for your project.
 
-To do this follow the link in the Dialogflow-Agent-Settings to `Google-Cloud` 
---> IAM & admin 
---> Service accounts 
---> actions 
---> create a key 
+To do this follow the link in the Dialogflow-Agent-Settings to `Google-Cloud`
+--> IAM & admin
+--> Service accounts
+--> actions
+--> create a key
 --> safe `json`. Call the file `.df_id.json` and save it at same place as `.env.yml`
 
-`DF_PROJECTID`  
+`DF_PROJECTID`
 --> Dialogflow-Agent-Settings -> GoogleProjectID
 
 `AWS_Credentials`
@@ -98,8 +98,8 @@ For easy handling of AWS account use `aws-cli`: https://github.com/aws/aws-cli
 
 Then do:
 ```aws configure```
-AWS Access Key ID [None]: 
-AWS Secret Access Key [None]: 
+AWS Access Key ID [None]:
+AWS Secret Access Key [None]:
 Default region name [None]:
 Default output format [None]:
 
@@ -107,23 +107,41 @@ Default output format [None]:
 - Create a Page in Facebook.
 - Create an `Messenger-App` in Facebook-Developer and generate a `key` for you Page
 
-`CMS_API_TOKEN` 
-You will need a cms to handle your news content. Set it up as described in ```informant-cms```, then login as admin, generate a token. 
+`CMS_API_TOKEN`
+You will need a cms to handle your news content. Set it up as described in ```informant-cms```, then login as admin, generate a token.
 
 `CMS_API_URL`
 In `informant-cms` you create an api for your content, provide the url:
-CMS_BASE_URL/api/v1 
+CMS_BASE_URL/api/v1
 
-`INFO_AUDIO_URL` 
+`INFO_AUDIO_URL`
 As a feature we provide audio news from a podcast feed.
 --> https://www1.wdr.de/mediathek/audio/1live/infos/infos-1-100.podcast
 
-If your `yarn sls deploy` runs successfully: 
+If your `yarn sls deploy` runs successfully:
 - you will receive endpoints in your consle, grab the first one - ending with fb
-- go to your app on developers.facebook.com and setup a webhook, using the endpoint and the `FB_VERIFYTOKEN` you set up earlier in your `.env.yml`.   
-- in developers.facebook.com go to 'messenger' and select a page to subscribe your webhook to the page events 
+- go to your app on developers.facebook.com and setup a webhook, using the endpoint and the `FB_VERIFYTOKEN` you set up earlier in your `.env.yml`.
+- in developers.facebook.com go to 'messenger' and select a page to subscribe your webhook to the page events
 
 Now you can start chatting with your bot and develop new features.
+
+## Local development
+
+Once you deployed your bot, you can use serverless offline for local testing.
+
+Install [ngrok](https://ngrok.com/) and in external terminal window do:
+
+```
+ngrok http 3000
+```
+
+Open a terminal in your project directory and run:
+
+```
+yarn sls offline
+```
+
+Hint: Set webhook to ngrok-url.
 
 
 ## Datenschutz
