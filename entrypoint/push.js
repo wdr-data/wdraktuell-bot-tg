@@ -144,7 +144,7 @@ export const send = RavenLambdaWrapper.handler(Raven, async (event) => {
                 payload.link = report.link;
             }
 
-            const unsubscribeNote = 'Um Eilmeldungen abzubestellen, schreib Stop.';
+            const unsubscribeNote = 'Um Eilmeldungen abzubestellen, schreibe "Stop".';
             let messageText;
             if (report.type === 'breaking') {
                 messageText = `🚨 ${report.text}\n\n${unsubscribeNote}`;
@@ -169,35 +169,39 @@ export const send = RavenLambdaWrapper.handler(Raven, async (event) => {
                             reply_markup: keyboard,
                         });
                     } else {
-                        // eslint-disable-next-line camelcase
-                        await bot.sendMessage(user.tgid, messageText, { reply_markup: keyboard });
+                        await bot.sendMessage(user.tgid, messageText, {
+                            // eslint-disable-next-line camelcase
+                            reply_markup: keyboard,
+                        });
                     }
                 } catch (err) {
                     handlePushFailed(err);
                 }
             }));
-        } /* else if (event.type === 'push') {
-            const {
-                intro,
-                buttons,
-                quickReplies
-            } = assemblePush(event.data, event.preview);
-            await Promise.all(users.map((user) => {
-                const chat = new Chat({
-                    sender: {
-                        id: user.psid
-                    }
-                });
-                return chat.sendButtons(
-                    intro,
-                    buttons,
-                    quickReplies, {
-                        timeout: 20000,
-                        messagingType: 'NON_PROMOTIONAL_SUBSCRIPTION'
-                    }
-                ).catch((err) => handlePushFailed(chat, err));
+        } else if (event.type === 'push') {
+            const push = event.data;
+            const bot = new Telegram(process.env.TG_TOKEN);
+
+            const headlines = push.reports.map((report) => report.headline).join(' • ');
+            const texts = push.reports.map((report) => `➡️ ${report.text}`).join('\n\n');
+            const messageText =
+                `${headlines}\n\n${push.intro}\n\n${texts}\n\n${push.outro}\nwdraktuell.de`;
+
+            const buttons = push.reports.filter(
+                (report) => report.link).map(
+                (report) => [ Markup.urlButton(`🌍 ${report.short_headline}`, report.link) ]);
+
+            await Promise.all(users.map(async (user) => {
+                try {
+                    await bot.sendMessage(user.tgid, messageText, {
+                        // eslint-disable-next-line camelcase
+                        reply_markup: buttons.length ? Markup.inlineKeyboard(buttons) : undefined,
+                    });
+                } catch (err) {
+                    handlePushFailed(err);
+                }
             }));
-        } */
+        }
         console.log(`${event.type} sent to ${users.length} users`);
 
         // LastEvaluatedKey is empty, scan is finished
@@ -224,7 +228,7 @@ export const send = RavenLambdaWrapper.handler(Raven, async (event) => {
     }
 });
 
-export function getUsers(timing, start = null, limit = 50) {
+export function getUsers(timing, start = null, limit = 24) {
     const params = {
         Limit: limit,
         TableName: process.env.DYNAMODB_SUBSCRIPTIONS,
