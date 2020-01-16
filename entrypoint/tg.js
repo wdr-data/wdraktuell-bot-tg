@@ -56,6 +56,7 @@ export const update = async (event, context, callback) => {
         bot.action('onboarding_push_breaking', handleOnboardingPushBreaking);
 
         bot.hears(/stop|abmelden/i, handleSubscriptions);
+        bot.command('settings', handleSubscriptions);
         bot.action('manage_subscriptions', handleSubscriptions);
 
         bot.hears(() => true, handleText);
