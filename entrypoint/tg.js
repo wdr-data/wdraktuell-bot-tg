@@ -18,6 +18,7 @@ import {
     handleOnboardingPushWhen,
     handleOnboardingPushBreaking,
 } from '../handlers/onboarding';
+import { handleSubscriptions } from '../handlers/subscriptions';
 
 const checkForToken = (event) => decodeURIComponent(
     event.pathParameters.token) === process.env.TG_TOKEN;
@@ -53,6 +54,9 @@ export const update = async (event, context, callback) => {
         bot.action('onboarding_analytics_more', handleOnboardingAnalyticsMore);
         bot.action('onboarding_push_when', handleOnboardingPushWhen);
         bot.action('onboarding_push_breaking', handleOnboardingPushBreaking);
+
+        bot.hears(/stop|abmelden/i, handleSubscriptions);
+        bot.action('manage_subscriptions', handleSubscriptions);
 
         bot.hears(() => true, handleText);
 
