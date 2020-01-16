@@ -155,7 +155,7 @@ export const send = RavenLambdaWrapper.handler(Raven, async (event) => {
             let keyboard;
 
             if (report.link) {
-                keyboard = Markup.inlineKeyboard([ [ Markup.urlButton('🌍 Mehr') ] ]);
+                keyboard = Markup.inlineKeyboard([ [ Markup.urlButton('🌍 Mehr', report.link) ] ]);
             }
 
             const attachmentId = await getAttachmentId(report.media);
