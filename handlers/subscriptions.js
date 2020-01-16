@@ -29,21 +29,23 @@ export const handleSubscriptions = async (ctx) => {
             }
         }
         await ctx.answerCbQuery(
-            `${subscriptionMap[ctx.data.subscription]} ${ctx.data.enable ? 'an': 'ab'}gemeldet.`
+            `${ctx.data.enable ? '✅': '❌'} ` +
+            `${subscriptionMap[ctx.data.subscription]} ` +
+            `${ctx.data.enable ? 'an': 'ab'}gemeldet.`
         );
     }
 
     const buttons = [
         [
             Markup.callbackButton(
-                `${ctx.subscriptions.morning ? '❌ ' : '☑️ '} Morgens`,
+                `${ctx.subscriptions.morning ? '✅' : '❌'} Morgens`,
                 actionData('manage_subscriptions', {
                     subscription: 'morning',
                     enable: !ctx.subscriptions.morning,
                 })
             ),
             Markup.callbackButton(
-                `${ctx.subscriptions.evening ? '❌ ' : '☑️ '} Abends`,
+                `${ctx.subscriptions.evening ? '✅' : '❌'} Abends`,
                 actionData('manage_subscriptions', {
                     subscription: 'evening',
                     enable: !ctx.subscriptions.evening,
@@ -52,14 +54,14 @@ export const handleSubscriptions = async (ctx) => {
         ],
         [
             Markup.callbackButton(
-                `${ctx.subscriptions.breaking ? '❌ ' : '☑️ '} Eilmeldungen`,
+                `${ctx.subscriptions.breaking ? '✅' : '❌'} Eilmeldungen`,
                 actionData('manage_subscriptions', {
                     subscription: 'breaking',
                     enable: !ctx.subscriptions.breaking,
                 })
             ),
             Markup.callbackButton(
-                `${ctx.trackingEnabled ? '❌ ' : '☑️ '} Analytics`,
+                `${ctx.trackingEnabled ? '✅' : '❌'} Analytics`,
                 actionData('manage_subscriptions', {
                     subscription: 'analytics',
                     enable: !ctx.trackingEnabled,
@@ -71,6 +73,11 @@ export const handleSubscriptions = async (ctx) => {
     if (ctx.callbackQuery) {
         await ctx.editMessageReplyMarkup(markup);
     } else {
-        await ctx.reply('❌ zum Abmelden\n☑️ zum Anmelden', markup.extra());
+        await ctx.reply(
+            'Tippe auf die Buttons, um deine Einstellungen zu ändern.\n' +
+            '✅ = An\n' +
+            '❌ = Aus',
+            markup.extra()
+        );
     }
 };
