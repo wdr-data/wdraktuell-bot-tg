@@ -54,7 +54,7 @@ const analyticsButtons = (variant, referral) => {
 
 export const handleStart = async (ctx) => {
     let faqPostfix = 'default';
-    const referral = ctx.startPayload;
+    const referral = ctx.startPayload || undefined;
     if ([ 'transition' ].includes(referral)) {
         faqPostfix = referral;
     }
