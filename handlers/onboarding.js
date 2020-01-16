@@ -97,7 +97,7 @@ export const handleOnboardingAnalytics = async (ctx) => {
 
     switch (choice) {
     case 'accept':
-        await ua(
+        ua(
             process.env.UA_TRACKING_ID,
             ctx.uuid,
         ).event('onboarding', 'referral', referral).send();

@@ -41,7 +41,7 @@ const handleText = async (ctx) => {
         }
         */
 
-        await ctx.track(
+        ctx.track(
             'chat',
             'dialogflow',
             result.intent.displayName
