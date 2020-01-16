@@ -96,7 +96,7 @@ export const fetch = RavenLambdaWrapper.handler(Raven, async (event) => {
     }
 });
 
-const handlePushFailed = async (chat, error) => {
+const handlePushFailed = async (error) => {
     console.error(error);
 
     if (error.error.code === 'ETIMEDOUT') {
@@ -144,8 +144,7 @@ export const send = RavenLambdaWrapper.handler(Raven, async (event) => {
                 payload.link = report.link;
             }
 
-            const unsubscribeNote = 'Um Eilmeldungen abzubestellen, ' +
-                'schreib Stop.';
+            const unsubscribeNote = 'Um Eilmeldungen abzubestellen, schreib Stop.';
             let messageText;
             if (report.type === 'breaking') {
                 messageText = `🚨 ${report.text}\n\n${unsubscribeNote}`;
@@ -159,10 +158,12 @@ export const send = RavenLambdaWrapper.handler(Raven, async (event) => {
                 keyboard = Markup.inlineKeyboard([ [ Markup.urlButton('🌍 Mehr') ] ]);
             }
 
+            const attachmentId = await getAttachmentId(report.media);
+
             await Promise.all(users.map(async (user) => {
                 try {
                     if (report.media) {
-                        await bot.sendPhoto(user.tgid, getAttachmentId(report.media), {
+                        await bot.sendPhoto(user.tgid, attachmentId, {
                             caption: messageText,
                             // eslint-disable-next-line camelcase
                             reply_markup: keyboard,
