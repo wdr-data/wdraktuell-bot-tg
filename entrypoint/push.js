@@ -128,18 +128,6 @@ export const send = RavenLambdaWrapper.handler(Raven, async (event) => {
 
         if (event.type === 'report') {
             const report = event.data;
-            const payload = {
-                action: 'report_start',
-                report: report.id,
-                type: 'report',
-                category: `push-breaking-${report.pub_date}`,
-                event: `report-${report.headline}`,
-                label: 'intro',
-            };
-
-            if (report.link) {
-                payload.link = report.link;
-            }
 
             const unsubscribeNote = 'Um Eilmeldungen abzubestellen, schreibe "Stop".';
             let messageText;
