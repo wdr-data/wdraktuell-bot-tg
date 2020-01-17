@@ -53,12 +53,15 @@ const analyticsButtons = (variant, referral) => {
 };
 
 export const handleStart = async (ctx) => {
-    let faqPostfix = 'default';
     const referral = ctx.startPayload || undefined;
-    if ([ 'transition' ].includes(referral)) {
-        faqPostfix = referral;
+    let greeting;
+    if (referral) {
+        greeting = await getFaq(`greeting_${referral}`);
     }
-    const greeting = await getFaq(`greeting_${faqPostfix}`);
+    if (!greeting) {
+        greeting = await getFaq(`greeting_default`);
+    }
+
     await ctx.replyFullNewsBase(greeting);
 
     const analytics = await getFaq(`onboarding_analytics`);
