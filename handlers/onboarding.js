@@ -77,7 +77,7 @@ export const handleOnboardingAnalytics = async (ctx) => {
         Markup.callbackButton(
             'Morgens & Abends',
             actionData('onboarding_push_when', {
-                choice: 'both',
+                choice: 'morning_evening',
             })
         ),
         Markup.callbackButton(
@@ -140,10 +140,10 @@ export const handleOnboardingPushWhen = async (ctx) => {
     } = ctx.data;
 
     const subscriptions = new DynamoDbCrud(process.env.DYNAMODB_SUBSCRIPTIONS, 'tgid');
-    if ([ 'morning', 'both' ].includes(choice)) {
+    if ([ 'morning', 'morning_evening' ].includes(choice)) {
         await subscriptions.update(ctx.from.id, 'morning', true);
     }
-    if ([ 'evening', 'both' ].includes(choice)) {
+    if ([ 'evening', 'morning_evening' ].includes(choice)) {
         await subscriptions.update(ctx.from.id, 'evening', true);
     }
 
@@ -162,6 +162,7 @@ export const handleOnboardingPushWhen = async (ctx) => {
         ),
     ];
     const extra = Markup.inlineKeyboard(buttons.map((button) => [ button ])).extra();
+    await ctx.replyFullNewsBase(await getFaq(`onboarding_${choice}`));
     await ctx.replyFullNewsBase(await getFaq('onboarding_breaking'), extra);
 
     return ctx.editMessageReplyMarkup();
