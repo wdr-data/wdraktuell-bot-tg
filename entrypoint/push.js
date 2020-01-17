@@ -11,6 +11,7 @@ import getTiming from '../lib/timing';
 import urls from '../lib/urls';
 import {
     getLatestPush,
+    assemblePush,
 } from '../lib/pushData';
 import ddb from '../lib/dynamodb';
 import {
@@ -177,15 +178,7 @@ export const send = RavenLambdaWrapper.handler(Raven, async (event) => {
         } else if (event.type === 'push') {
             const push = event.data;
             const bot = new Telegram(process.env.TG_TOKEN);
-
-            const headlines = push.reports.map((report) => report.headline).join(' • ');
-            const texts = push.reports.map((report) => `➡️ ${report.text}`).join('\n\n');
-            const messageText =
-                `${headlines}\n\n${push.intro}\n\n${texts}\n\n${push.outro}\nwdraktuell.de`;
-
-            const buttons = push.reports.filter(
-                (report) => report.link).map(
-                (report) => [ Markup.urlButton(`🌍 ${report.short_headline}`, report.link) ]);
+            const { messageText, buttons } = assemblePush(push);
 
             await Promise.all(users.map(async (user) => {
                 try {
