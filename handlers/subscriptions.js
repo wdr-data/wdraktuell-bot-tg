@@ -39,14 +39,14 @@ export const handleSubscriptions = async (ctx) => {
         [
             Markup.callbackButton(
                 `${ctx.subscriptions.morning ? '✅' : '❌'} Morgens`,
-                actionData('manage_subscriptions', {
+                actionData('subscriptions', {
                     subscription: 'morning',
                     enable: !ctx.subscriptions.morning,
                 })
             ),
             Markup.callbackButton(
                 `${ctx.subscriptions.evening ? '✅' : '❌'} Abends`,
-                actionData('manage_subscriptions', {
+                actionData('subscriptions', {
                     subscription: 'evening',
                     enable: !ctx.subscriptions.evening,
                 })
@@ -55,14 +55,14 @@ export const handleSubscriptions = async (ctx) => {
         [
             Markup.callbackButton(
                 `${ctx.subscriptions.breaking ? '✅' : '❌'} Eilmeldungen`,
-                actionData('manage_subscriptions', {
+                actionData('subscriptions', {
                     subscription: 'breaking',
                     enable: !ctx.subscriptions.breaking,
                 })
             ),
             Markup.callbackButton(
                 `${ctx.trackingEnabled ? '✅' : '❌'} Analytics`,
-                actionData('manage_subscriptions', {
+                actionData('subscriptions', {
                     subscription: 'analytics',
                     enable: !ctx.trackingEnabled,
                 })

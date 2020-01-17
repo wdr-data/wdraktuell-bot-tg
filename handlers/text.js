@@ -1,5 +1,7 @@
 import dialogflow from 'dialogflow';
 
+import { actions } from './index.js';
+
 const handleText = async (ctx) => {
     const text = ctx.message.text;
     const sessionClient = new dialogflow.SessionsClient({
@@ -28,24 +30,18 @@ const handleText = async (ctx) => {
         console.log(`  Intent: ${result.intent.displayName}`);
         console.log(`  Parameters: ${JSON.stringify(result.parameters)}`);
         console.log(`  Action: ${result.action}`);
-        /*
-        if (result.action in handler.actions) {
-            if (chat.trackingEnabled) {
-                await chat.track.event(
-                    'chat',
-                    'dialogflow',
-                    result.intent.displayName
-                ).send();
-            }
-            return handler.actions[result.action](chat, result.parameters['fields']);
-        }
-        */
 
         ctx.track(
             'chat',
             'dialogflow',
             result.intent.displayName
         );
+
+        if (result.action in actions) {
+            ctx.dialogflowParams = result.parameters.fields;
+            return actions[result.action](ctx);
+        }
+
         return ctx.reply(result.fulfillmentText);
     }
 
