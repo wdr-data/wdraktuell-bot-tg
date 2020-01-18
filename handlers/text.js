@@ -31,17 +31,21 @@ const handleText = async (ctx) => {
         console.log(`  Parameters: ${JSON.stringify(result.parameters)}`);
         console.log(`  Action: ${result.action}`);
 
+        if (result.action in actions) {
+            ctx.dialogflowParams = result.parameters.fields;
+            ctx.track(
+                'chat',
+                'action',
+                result.action
+            );
+            return actions[result.action](ctx);
+        }
+
         ctx.track(
             'chat',
             'dialogflow',
             result.intent.displayName
         );
-
-        if (result.action in actions) {
-            ctx.dialogflowParams = result.parameters.fields;
-            return actions[result.action](ctx);
-        }
-
         return ctx.reply(result.fulfillmentText);
     }
 
