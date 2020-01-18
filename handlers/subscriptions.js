@@ -34,7 +34,7 @@ export const handleSubscriptions = async (ctx) => {
                 ua(
                     process.env.UA_TRACKING_ID,
                     ctx.uuid,
-                ).event('handleSubscription', 'analytics', ctx.data.enable).send();
+                ).event('subscriptions', 'analytics', 'enabled').send();
             }
         }
         await ctx.answerCbQuery(
@@ -51,6 +51,11 @@ export const handleSubscriptions = async (ctx) => {
                 actionData('subscriptions', {
                     subscription: 'morning',
                     enable: !ctx.subscriptions.morning,
+                    tracking: {
+                        category: 'subscriptions',
+                        action: 'morning',
+                        label: `${ctx.subscriptions.morning ? 'unsubscribed' : 'subscribed'}`,
+                    },
                 })
             ),
             Markup.callbackButton(
@@ -58,6 +63,11 @@ export const handleSubscriptions = async (ctx) => {
                 actionData('subscriptions', {
                     subscription: 'evening',
                     enable: !ctx.subscriptions.evening,
+                    tracking: {
+                        category: 'subscriptions',
+                        action: 'evening',
+                        label: `${ctx.subscriptions.evening ? 'unsubscribed' : 'subscribed'}`,
+                    },
                 })
             ),
         ],
@@ -67,6 +77,11 @@ export const handleSubscriptions = async (ctx) => {
                 actionData('subscriptions', {
                     subscription: 'breaking',
                     enable: !ctx.subscriptions.breaking,
+                    tracking: {
+                        category: 'subscriptions',
+                        action: 'breaking',
+                        label: `${ctx.subscriptions.breaking ? 'unsubscribed' : 'subscribed'}`,
+                    },
                 })
             ),
             Markup.callbackButton(
@@ -74,6 +89,11 @@ export const handleSubscriptions = async (ctx) => {
                 actionData('subscriptions', {
                     subscription: 'analytics',
                     enable: !ctx.trackingEnabled,
+                    tracking: {
+                        category: 'subscriptions',
+                        action: 'analytics',
+                        label: `${ctx.trackingEnabled ? 'disabled' : 'enabled'}`,
+                    },
                 })
             ),
         ],
