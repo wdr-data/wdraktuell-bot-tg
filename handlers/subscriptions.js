@@ -11,6 +11,15 @@ const subscriptionMap = {
     'analytics': 'Analytics',
 };
 
+export const handleSubscriptionsCommand = async (ctx) => {
+    ctx.track(
+        'command',
+        'action',
+        'subscriptions'
+    );
+    await handleSubscriptions(ctx);
+};
+
 export const handleSubscriptions = async (ctx) => {
     if (ctx.callbackQuery) {
         if ([ 'morning', 'evening', 'breaking' ].includes(ctx.data.subscription)) {
