@@ -43,13 +43,13 @@ functions:
 
   pushFetch:
     handler: entrypoint/push.fetch
-    timeout: 30
+    timeout: 300
   pushSend:
     handler: entrypoint/push.send
-    timeout: 30
+    timeout: 300
   pushFinish:
     handler: entrypoint/push.finish
-    timeout: 30
+    timeout: 300
   pushProxy:
     handler: entrypoint/push.proxy
     timeout: 30
