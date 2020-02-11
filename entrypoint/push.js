@@ -166,13 +166,13 @@ export const send = RavenLambdaWrapper.handler(Raven, async (event) => {
         } else if (event.type === 'push') {
             const push = event.data;
             const bot = new Telegram(process.env.TG_TOKEN);
-            const { messageText, buttons } = assemblePush(push);
+            const { messageText } = assemblePush(push);
 
             await Promise.all(users.map(async (user) => {
                 try {
                     await bot.sendMessage(user.tgid, messageText, {
-                        // eslint-disable-next-line camelcase
-                        reply_markup: buttons.length ? Markup.inlineKeyboard(buttons) : undefined,
+                        'parse_mode': 'HTML',
+                        'disable_web_page_preview': true,
                     });
                 } catch (err) {
                     return handlePushFailed(err);
