@@ -12,6 +12,7 @@ import urls from '../lib/urls';
 import {
     getLatestPush,
     assemblePush,
+    markSending,
 } from '../lib/pushData';
 import ddb from '../lib/dynamodb';
 import {
@@ -49,6 +50,7 @@ export const fetch = RavenLambdaWrapper.handler(Raven, async (event) => {
             };
             const report = await request(params);
             console.log('Starting to send report with id:', report.id);
+            await markSending(report.id, 'report');
             return {
                 state: 'nextChunk',
                 timing: 'breaking',
@@ -80,10 +82,11 @@ export const fetch = RavenLambdaWrapper.handler(Raven, async (event) => {
                 };
             }
             push = await getLatestPush(timing, {
-                delivered: 0,
+                'delivered_tg': 'not_sent',
             });
         }
         console.log('Starting to send push with id:', push.id);
+        await markSending(push.id, 'push');
         return {
             state: 'nextChunk',
             timing,
