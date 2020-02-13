@@ -19,6 +19,8 @@ import ddb from '../lib/dynamodb';
 import {
     getAttachmentId,
 } from '../lib/attachments';
+import { trackLink } from '../lib/util';
+
 
 export const proxy = RavenLambdaWrapper.handler(Raven, async (event) => {
     const params = {
@@ -144,7 +146,13 @@ export const send = RavenLambdaWrapper.handler(Raven, async (event) => {
             let keyboard;
 
             if (report.link) {
-                keyboard = Markup.inlineKeyboard([ [ Markup.urlButton('🌍 Mehr', report.link) ] ]);
+                keyboard = Markup.inlineKeyboard([
+                    [
+                        Markup.urlButton(`🔗️ ${
+                            report.short_headline
+                        }`, trackLink(report)),
+                    ],
+                ]);
             }
 
             await Promise.all(users.map(async (user) => {
