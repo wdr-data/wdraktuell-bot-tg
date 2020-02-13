@@ -9,7 +9,7 @@ export default async (ctx) => {
         json: true,
         qs: {
             limit: 1,
-            delivered: true,
+            'delivered_tg': 'sent',
         },
     });
 
