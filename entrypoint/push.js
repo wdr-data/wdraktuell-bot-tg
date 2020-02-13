@@ -147,11 +147,10 @@ export const send = RavenLambdaWrapper.handler(Raven, async (event) => {
                 keyboard = Markup.inlineKeyboard([ [ Markup.urlButton('🌍 Mehr', report.link) ] ]);
             }
 
-            const attachmentId = await getAttachmentId(report.media);
-
             await Promise.all(users.map(async (user) => {
                 try {
                     if (report.media) {
+                        const attachmentId = await getAttachmentId(report.media);
                         await bot.sendPhoto(user.tgid, attachmentId, {
                             caption: messageText,
                             // eslint-disable-next-line camelcase
