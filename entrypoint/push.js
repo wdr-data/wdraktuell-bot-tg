@@ -13,6 +13,7 @@ import {
     getLatestPush,
     assemblePush,
     markSending,
+    markSent,
 } from '../lib/pushData';
 import ddb from '../lib/dynamodb';
 import {
@@ -246,11 +247,7 @@ export const finish = RavenLambdaWrapper.handler(Raven, function(event, context,
         return callback(null, {});
     }
 
-    /*
     markSent(event.id, event.type)
         .then(() => callback(null, {}))
         .catch((err) => callback(err, {}));
-    */
-
-    callback(null, {});
 });
