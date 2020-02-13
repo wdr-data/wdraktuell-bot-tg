@@ -8,7 +8,8 @@ export const handleContact = async (ctx) => {
     const buttons = [
         Markup.callbackButton(
             'Anregungen zum Inhalt',
-            actionData('contact_comment', {
+            actionData('faq', {
+                faq: 'contact_comment',
                 tracking: {
                     category: 'payload',
                     event: 'contact',
@@ -18,7 +19,8 @@ export const handleContact = async (ctx) => {
         ),
         Markup.callbackButton(
             'Ein Thema vorschlagen',
-            actionData('contact_topic_suggestion', {
+            actionData('faq', {
+                faq: 'contact_topic_suggestion',
                 tracking: {
                     category: 'payload',
                     event: 'contact',
@@ -28,7 +30,8 @@ export const handleContact = async (ctx) => {
         ),
         Markup.callbackButton(
             'Einfach mal Danke sagen!',
-            actionData('contact_say_thank_you', {
+            actionData('faq', {
+                faq: 'contact_say_thank_you',
                 tracking: {
                     category: 'payload',
                     event: 'contact',
@@ -40,19 +43,4 @@ export const handleContact = async (ctx) => {
 
     const extra = Markup.inlineKeyboard(buttons.map((button) => [ button ])).extra();
     await ctx.replyFullNewsBase(contact, extra);
-};
-
-export const handleContactComment = async (ctx) => {
-    const handleContactComment = await getFaq(`contact_comment`);
-    await ctx.replyFullNewsBase(handleContactComment);
-};
-
-export const handleContactTopicSuggestion = async (ctx) => {
-    const contactTopicSuggestion = await getFaq(`contact_topic_suggestion`);
-    await ctx.replyFullNewsBase(contactTopicSuggestion);
-};
-
-export const handleContactThankYou = async (ctx) => {
-    const handleContactThankYou = await getFaq(`contact_say_thank_you`);
-    await ctx.replyFullNewsBase(handleContactThankYou);
 };
