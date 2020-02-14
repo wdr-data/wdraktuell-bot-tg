@@ -100,6 +100,7 @@ export const handleOnboardingAnalytics = async (ctx) => {
 
     switch (choice) {
     case 'accept':
+        /*
         ua(
             process.env.UA_TRACKING_ID,
             ctx.uuid,
@@ -108,6 +109,7 @@ export const handleOnboardingAnalytics = async (ctx) => {
         ).event(
             'onboarding', 'analytics', 'accepted'
         ).send();
+        */
         await tracking.update(ctx.from.id, 'enabled', true);
         await ctx.replyFullNewsBase(await getFaq('onboarding_analytics_accepted'));
         await ctx.replyFullNewsBase(await getFaq('onboarding_when'), extra);
