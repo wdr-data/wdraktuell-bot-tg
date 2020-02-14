@@ -1,5 +1,4 @@
 import Markup from 'telegraf/markup';
-import ua from 'universal-analytics';
 
 import actionData from '../lib/actionData';
 import DynamoDbCrud from '../lib/dynamodbCrud';

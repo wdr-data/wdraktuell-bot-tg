@@ -1,5 +1,4 @@
 import Markup from 'telegraf/markup';
-import ua from 'universal-analytics';
 
 import getFaq from '../lib/faq';
 import actionData from '../lib/actionData';
