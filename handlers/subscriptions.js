@@ -21,12 +21,14 @@ export const handleSubscriptions = async (ctx) => {
             const tracking = new DynamoDbCrud(process.env.DYNAMODB_TRACKING, 'tgid');
             await tracking.update(ctx.from.id, 'enabled', ctx.data.enable);
             ctx.trackingEnabled = ctx.data.enable;
+            /*
             if (ctx.trackingEnabled) {
                 ua(
                     process.env.UA_TRACKING_ID,
                     ctx.uuid,
                 ).event('handleSubscription', 'analytics', ctx.data.enable).send();
             }
+            */
         }
         await ctx.answerCbQuery(
             `${ctx.data.enable ? '✅': '❌'} ` +
