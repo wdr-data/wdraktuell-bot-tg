@@ -19,6 +19,8 @@ import ddb from '../lib/dynamodb';
 import {
     getAttachmentId,
 } from '../lib/attachments';
+import { trackLink } from '../lib/util';
+
 
 export const proxy = RavenLambdaWrapper.handler(Raven, async (event) => {
     const params = {
@@ -136,15 +138,21 @@ export const send = RavenLambdaWrapper.handler(Raven, async (event) => {
             const unsubscribeNote = 'Um Eilmeldungen abzubestellen, schreibe "Stop".';
             let messageText;
             if (report.type === 'breaking') {
-                messageText = `🚨 ${report.text}\n\n${unsubscribeNote}`;
+                messageText = `🚨 ${report.summary}\n\n${unsubscribeNote}`;
             } else {
-                messageText = report.text;
+                messageText = report.summary;
             }
 
             let keyboard;
 
             if (report.link) {
-                keyboard = Markup.inlineKeyboard([ [ Markup.urlButton('🌍 Mehr', report.link) ] ]);
+                keyboard = Markup.inlineKeyboard([
+                    [
+                        Markup.urlButton(`🔗️ ${
+                            report.short_headline
+                        }`, trackLink(report)),
+                    ],
+                ]);
             }
 
             await Promise.all(users.map(async (user) => {
