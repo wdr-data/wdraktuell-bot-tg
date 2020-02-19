@@ -7,8 +7,7 @@ const handleText = async (ctx) => {
     const text = ctx.message.text;
 
     if ( text.length > 70 ) {
-        await handleContact(ctx);
-        return;
+        return handleContact(ctx);
     }
 
     const sessionClient = new dialogflow.SessionsClient({
