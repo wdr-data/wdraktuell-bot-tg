@@ -35,11 +35,12 @@ functions:
           method: post
   tgAttachment:
     handler: entrypoint/tg.attachment
-    timeout: 30
+    timeout: 300
     events:
       - http:
           path: attachment
           method: post
+          async: true
 
   pushFetch:
     handler: entrypoint/push.fetch
