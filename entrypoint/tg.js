@@ -78,6 +78,7 @@ export const update = async (event, context, callback) => {
 };
 
 export const attachment = RavenLambdaWrapper.handler(Raven, async (event) => {
+    console.log(JSON.stringify(event, null, 2));
     const payload = JSON.parse(event.body);
     const url = payload.url;
 
