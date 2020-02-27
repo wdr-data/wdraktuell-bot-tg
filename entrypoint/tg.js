@@ -18,7 +18,7 @@ import {
     handleOnboardingPushWhen,
     handleOnboardingPushBreaking,
 } from '../handlers/onboarding';
-import { handleSubscriptions } from '../handlers/subscriptions';
+import { handleSubscriptionsCommand } from '../handlers/subscriptions';
 import { actions } from '../handlers';
 
 const checkForToken = (event) => decodeURIComponent(
@@ -56,7 +56,7 @@ export const update = async (event, context, callback) => {
         bot.action('onboarding_push_when', handleOnboardingPushWhen);
         bot.action('onboarding_push_breaking', handleOnboardingPushBreaking);
 
-        bot.command('einstellungen', handleSubscriptions);
+        bot.command('einstellungen', handleSubscriptionsCommand);
 
         for (const [ action, handler ] of Object.entries(actions)) {
             bot.action(action, handler);
