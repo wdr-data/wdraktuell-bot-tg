@@ -1,9 +1,15 @@
 import dialogflow from 'dialogflow';
 
 import { actions } from './index.js';
+import { handleContact } from './contact.js';
 
 const handleText = async (ctx) => {
     const text = ctx.message.text;
+
+    if ( text.length > 70 ) {
+        return handleContact(ctx);
+    }
+
     const sessionClient = new dialogflow.SessionsClient({
         /* eslint-disable */
         credentials: require('../.df_id.json') || {},
