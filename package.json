@@ -46,7 +46,6 @@
     "serverless-sentry-lib": "^1.0.0",
     "source-map-support": "^0.5.4",
     "telegraf": "^3.35.0",
-    "universal-analytics": "^0.4.20",
     "uuid": "^3.3.3"
   },
   "engines": {

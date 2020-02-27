@@ -2,6 +2,7 @@ import Markup from 'telegraf/markup';
 
 import actionData from '../lib/actionData';
 import DynamoDbCrud from '../lib/dynamodbCrud';
+import Webtrekk from '../lib/webtrekk';
 
 const subscriptionMap = {
     'morning': 'Morgens',
@@ -29,14 +30,11 @@ export const handleSubscriptions = async (ctx) => {
             const tracking = new DynamoDbCrud(process.env.DYNAMODB_TRACKING, 'tgid');
             await tracking.update(ctx.from.id, 'enabled', ctx.data.enable);
             ctx.trackingEnabled = ctx.data.enable;
-            /*
             if (ctx.trackingEnabled) {
-                ua(
-                    process.env.UA_TRACKING_ID,
+                new Webtrekk(
                     ctx.uuid,
-                ).event('subscriptions', 'analytics', 'enabled').send();
+                ).track('subscriptions', 'analytics', 'enabled');
             }
-            */
         }
         await ctx.answerCbQuery(
             `${ctx.data.enable ? '✅': '❌'} ` +

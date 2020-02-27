@@ -3,6 +3,7 @@ import Markup from 'telegraf/markup';
 import getFaq from '../lib/faq';
 import actionData from '../lib/actionData';
 import DynamoDbCrud from '../lib/dynamodbCrud';
+import Webtrekk from '../lib/webtrekk';
 
 const analyticsButtons = (variant, referral) => {
     const buttons = [
@@ -92,18 +93,13 @@ export const handleOnboardingAnalytics = async (ctx) => {
     ];
     const extra = Markup.inlineKeyboard(buttons.map((button) => [ button ])).extra();
 
+    let webtrekk;
+
     switch (choice) {
     case 'accept':
-        /*
-        ua(
-            process.env.UA_TRACKING_ID,
-            ctx.uuid,
-        ).event(
-            'onboarding', 'referral', referral
-        ).event(
-            'onboarding', 'analytics', 'accepted'
-        ).send();
-        */
+        webtrekk = new Webtrekk(ctx.uuid);
+        webtrekk.track('onboarding', 'referral', referral);
+        webtrekk.track('onboarding', 'analytics', 'accepted');
         await tracking.update(ctx.from.id, 'enabled', true);
         await ctx.replyFullNewsBase(await getFaq('onboarding_analytics_accepted'));
         await ctx.replyFullNewsBase(await getFaq('onboarding_when'), extra);
