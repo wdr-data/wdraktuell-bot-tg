@@ -157,8 +157,8 @@ export const send = RavenLambdaWrapper.handler(Raven, async (event) => {
 
             await Promise.all(users.map(async (user) => {
                 try {
-                    if (report.media) {
-                        const attachmentId = await getAttachmentId(report.media);
+                    if (report.attachment) {
+                        const attachmentId = await getAttachmentId(report.attachment.processed);
                         await bot.sendPhoto(user.tgid, attachmentId, {
                             caption: messageText,
                             // eslint-disable-next-line camelcase
