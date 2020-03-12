@@ -67,7 +67,8 @@ export const update = async (event, context, callback) => {
         bot.catch((err, ctx) => {
             console.error('ERROR:', err);
             Raven.captureException(err);
-            return ctx.reply('Da ist was schief gelaufen.');
+            return ctx.reply('🐞 Da ist was schief gelaufen. ' +
+                'Die Crew ist bereits im Maschinenraum und sucht nach dem Bug!');
         });
 
         await bot.handleUpdate(payload);
