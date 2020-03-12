@@ -132,7 +132,7 @@ const handlePushFailed = async (error) => {
     }
 };
 
-const getMethodForUrl = async (bot, url) => {
+const getMethodForUrl = (bot, url) => {
     const type = guessAttachmentType(url);
     const sendMapping = {
         image: bot.sendPhoto.bind(bot),
