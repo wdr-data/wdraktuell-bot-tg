@@ -52,6 +52,7 @@
     "node": ">=12"
   },
   "scripts": {
+    "env": "ENV_BUCKET_NAME=wdraktuell-bot-tg-env AWS_REGION=eu-central-1 s3-env-config",
     "deploy": "yarn && sls deploy",
     "lint": "eslint .",
     "fix": "yarn lint --fix",
