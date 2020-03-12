@@ -39,19 +39,19 @@ const handleText = async (ctx) => {
 
         if (result.action in actions) {
             ctx.dialogflowParams = result.parameters.fields;
-            ctx.track(
-                'chat',
-                'action',
-                result.action
-            );
+            ctx.track({
+                category: 'Unterhaltung',
+                event: 'Dialogflow',
+                label: result.intent.displayName,
+            });
             return actions[result.action](ctx);
         }
 
-        ctx.track(
-            'chat',
-            'dialogflow',
-            result.intent.displayName
-        );
+        ctx.track({
+            category: 'Unterhaltung',
+            event: 'Dialogflow',
+            label: result.intent.displayName,
+        });
         return ctx.reply(result.fulfillmentText);
     }
 
