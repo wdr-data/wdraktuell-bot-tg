@@ -6,6 +6,19 @@ import { handleContact } from './contact.js';
 const handleText = async (ctx) => {
     const text = ctx.message.text;
 
+    switch (text) {
+    case '#ich':
+        return ctx.reply(
+            `Deine Telegram-ID ist \`${ctx.from.id}\``,
+            { 'parse_mode': 'MarkdownV2' }
+        );
+    case '#uuid':
+        return ctx.reply(
+            `Deine UUID ist \`${ctx.uuid}\``,
+            { 'parse_mode': 'MarkdownV2' }
+        );
+    }
+
     if ( text.length > 70 ) {
         return handleContact(ctx);
     }
