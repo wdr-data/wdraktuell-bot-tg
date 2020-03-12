@@ -20,6 +20,7 @@ import {
     getAttachmentId,
 } from '../lib/attachments';
 import { trackLink } from '../lib/util';
+import { guessAttachmentType } from './attachments';
 
 
 export const proxy = RavenLambdaWrapper.handler(Raven, async (event) => {
@@ -131,6 +132,17 @@ const handlePushFailed = async (error) => {
     }
 };
 
+const getMethodForUrl = async (bot, url) => {
+    const type = guessAttachmentType(url);
+    const sendMapping = {
+        image: bot.sendPhoto.bind(bot),
+        document: bot.sendDocument.bind(bot),
+        audio: bot.sendAudio.bind(bot),
+        video: bot.sendVideo.bind(bot),
+    };
+    return sendMapping[type];
+};
+
 export const send = RavenLambdaWrapper.handler(Raven, async (event) => {
     console.log(`attempting to push chunk for ${event.type}`, event.data.id);
 
@@ -182,16 +194,16 @@ export const send = RavenLambdaWrapper.handler(Raven, async (event) => {
             await Promise.all(users.map(async (user) => {
                 try {
                     if (report.attachment) {
-                        const attachmentId = await getAttachmentId(report.attachment.processed);
-                        await bot.sendPhoto(user.tgid, attachmentId, {
+                        const url = report.attachment.processed;
+                        const attachmentId = await getAttachmentId(url);
+                        const sendAttachment = getMethodForUrl(url, bot);
+                        await sendAttachment(user.tgid, attachmentId, {
                             caption: messageText,
-                            // eslint-disable-next-line camelcase
-                            reply_markup: keyboard,
+                            'reply_markup': keyboard,
                         });
                     } else {
                         await bot.sendMessage(user.tgid, messageText, {
-                            // eslint-disable-next-line camelcase
-                            reply_markup: keyboard,
+                            'reply_markup': keyboard,
                         });
                     }
                 } catch (err) {
