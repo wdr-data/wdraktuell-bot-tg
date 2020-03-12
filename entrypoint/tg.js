@@ -19,7 +19,7 @@ import {
 } from '../handlers/onboarding';
 import { handleSubscriptionsCommand } from '../handlers/subscriptions';
 import { actions } from '../handlers';
-import handleDataPolicy from './handlers/dataPolicy';
+import handleDataPolicy from '../handlers/dataPolicy';
 
 const checkForToken = (event) => decodeURIComponent(
     event.pathParameters.token) === process.env.TG_TOKEN;
