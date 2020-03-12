@@ -20,7 +20,7 @@ import {
     getAttachmentId,
 } from '../lib/attachments';
 import { trackLink } from '../lib/util';
-import { guessAttachmentType } from './attachments';
+import { guessAttachmentType } from '../lib/attachments';
 
 
 export const proxy = RavenLambdaWrapper.handler(Raven, async (event) => {
