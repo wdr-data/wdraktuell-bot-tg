@@ -33,15 +33,6 @@ const analyticsButtons = (variant, referral) => {
                 })
             )
         );
-    } else if (variant === 'more') {
-        buttons.push(
-            Markup.callbackButton(
-                'Alles lesen',
-                actionData('onboarding_analytics_more', {
-                    referral,
-                })
-            )
-        );
     }
 
     return buttons.map((button) => [ button ]);
@@ -110,21 +101,11 @@ export const handleOnboardingAnalytics = async (ctx) => {
         await ctx.replyFullNewsBase(await getFaq('onboarding_when'), extra);
         break;
     case 'policy': {
-        const extra = Markup.inlineKeyboard(analyticsButtons('more', referral)).extra();
-        await ctx.replyFullNewsBase(await getFaq('onboarding_analytics_policy'), extra);
+        const extra = Markup.inlineKeyboard(analyticsButtons(null, referral)).extra();
+        await ctx.replyFullNewsBase(await getFaq('analytics_datapolicy_full'), extra);
         break;
     }
     }
-
-    return ctx.editMessageReplyMarkup();
-};
-
-export const handleOnboardingAnalyticsMore = async (ctx) => {
-    const {
-        referral,
-    } = ctx.data;
-    const extra = Markup.inlineKeyboard(analyticsButtons(null, referral)).extra();
-    await ctx.replyFullNewsBase(await getFaq('analytics_datapolicy_full'), extra);
 
     return ctx.editMessageReplyMarkup();
 };
