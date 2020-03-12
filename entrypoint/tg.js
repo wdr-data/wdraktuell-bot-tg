@@ -19,6 +19,7 @@ import {
 } from '../handlers/onboarding';
 import { handleSubscriptionsCommand } from '../handlers/subscriptions';
 import { actions } from '../handlers';
+import handleDataPolicy from './dataPolicy';
 
 const checkForToken = (event) => decodeURIComponent(
     event.pathParameters.token) === process.env.TG_TOKEN;
@@ -55,6 +56,7 @@ export const update = async (event, context, callback) => {
         bot.action('onboarding_push_breaking', handleOnboardingPushBreaking);
 
         bot.command('einstellungen', handleSubscriptionsCommand);
+        bot.command('datenschutz', handleDataPolicy);
 
         for (const [ action, handler ] of Object.entries(actions)) {
             bot.action(action, handler);
