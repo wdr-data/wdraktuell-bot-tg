@@ -56,7 +56,7 @@ export const update = async (event, context, callback) => {
         bot.action('onboarding_push_breaking', handleOnboardingPushBreaking);
 
         bot.command('einstellungen', handleSubscriptionsCommand);
-        bot.command('datenschutz', handleDataPolicy);
+        bot.command('datenschutz_tracking', handleDataPolicy);
 
         for (const [ action, handler ] of Object.entries(actions)) {
             bot.action(action, handler);
