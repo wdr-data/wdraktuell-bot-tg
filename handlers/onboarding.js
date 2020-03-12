@@ -102,7 +102,7 @@ export const handleOnboardingAnalytics = async (ctx) => {
         break;
     case 'policy': {
         const extra = Markup.inlineKeyboard(analyticsButtons(null, referral)).extra();
-        await ctx.replyFullNewsBase(await getFaq('analytics_datapolicy_full'), extra);
+        await ctx.replyFullNewsBase(await getFaq('datenschutz_tracking'), extra);
         break;
     }
     }
