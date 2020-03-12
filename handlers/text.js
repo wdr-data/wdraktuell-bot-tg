@@ -9,13 +9,13 @@ const handleText = async (ctx) => {
     switch (text) {
     case '#ich':
         return ctx.reply(
-            `Deine Telegram-ID ist \`${ctx.from.id}\``,
-            { 'parse_mode': 'MarkdownV2' }
+            `Deine Telegram-ID ist <code>${ctx.from.id}</code>`,
+            { 'parse_mode': 'HTML' }
         );
     case '#uuid':
         return ctx.reply(
-            `Deine UUID ist \`${ctx.uuid}\``,
-            { 'parse_mode': 'MarkdownV2' }
+            `Deine UUID ist <code>${ctx.uuid}</code>`,
+            { 'parse_mode': 'HTML' }
         );
     }
 
