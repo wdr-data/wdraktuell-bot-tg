@@ -14,12 +14,12 @@ import {
 import {
     handleStart,
     handleOnboardingAnalytics,
-    handleOnboardingAnalyticsMore,
     handleOnboardingPushWhen,
     handleOnboardingPushBreaking,
 } from '../handlers/onboarding';
 import { handleSubscriptionsCommand } from '../handlers/subscriptions';
 import { actions } from '../handlers';
+import handleDataPolicy from '../handlers/dataPolicy';
 
 const checkForToken = (event) => decodeURIComponent(
     event.pathParameters.token) === process.env.TG_TOKEN;
@@ -52,11 +52,11 @@ export const update = async (event, context, callback) => {
 
         bot.start(handleStart);
         bot.action('onboarding_analytics', handleOnboardingAnalytics);
-        bot.action('onboarding_analytics_more', handleOnboardingAnalyticsMore);
         bot.action('onboarding_push_when', handleOnboardingPushWhen);
         bot.action('onboarding_push_breaking', handleOnboardingPushBreaking);
 
         bot.command('einstellungen', handleSubscriptionsCommand);
+        bot.command('datenschutz', handleDataPolicy);
 
         for (const [ action, handler ] of Object.entries(actions)) {
             bot.action(action, handler);
@@ -67,7 +67,8 @@ export const update = async (event, context, callback) => {
         bot.catch((err, ctx) => {
             console.error('ERROR:', err);
             Raven.captureException(err);
-            return ctx.reply('Da ist was schief gelaufen.');
+            return ctx.reply('🐞 Da ist was schief gelaufen. ' +
+                'Die Crew ist bereits im Maschinenraum und sucht nach dem Bug!');
         });
 
         await bot.handleUpdate(payload);
