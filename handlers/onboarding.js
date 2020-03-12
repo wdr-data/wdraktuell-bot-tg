@@ -3,6 +3,7 @@ import Markup from 'telegraf/markup';
 import getFaq from '../lib/faq';
 import actionData from '../lib/actionData';
 import DynamoDbCrud from '../lib/dynamodbCrud';
+import Webtrekk from '../lib/webtrekk';
 
 const analyticsButtons = (variant, referral) => {
     const buttons = [
@@ -11,11 +12,6 @@ const analyticsButtons = (variant, referral) => {
             actionData('onboarding_analytics', {
                 choice: 'accept',
                 referral,
-                tracking: {
-                    category: 'onboarding',
-                    event: 'analytics',
-                    label: 'accept',
-                },
             })
         ),
         Markup.callbackButton(
@@ -97,18 +93,13 @@ export const handleOnboardingAnalytics = async (ctx) => {
     ];
     const extra = Markup.inlineKeyboard(buttons.map((button) => [ button ])).extra();
 
+    let webtrekk;
+
     switch (choice) {
     case 'accept':
-        /*
-        ua(
-            process.env.UA_TRACKING_ID,
-            ctx.uuid,
-        ).event(
-            'onboarding', 'referral', referral
-        ).event(
-            'onboarding', 'analytics', 'accepted'
-        ).send();
-        */
+        webtrekk = new Webtrekk(ctx.uuid);
+        webtrekk.track('onboarding', 'referral', referral);
+        webtrekk.track('onboarding', 'analytics', 'accepted');
         await tracking.update(ctx.from.id, 'enabled', true);
         await ctx.replyFullNewsBase(await getFaq('onboarding_analytics_accepted'));
         await ctx.replyFullNewsBase(await getFaq('onboarding_when'), extra);
@@ -146,9 +137,11 @@ export const handleOnboardingPushWhen = async (ctx) => {
     const subscriptions = new DynamoDbCrud(process.env.DYNAMODB_SUBSCRIPTIONS, 'tgid');
     if ([ 'morning', 'morning_evening' ].includes(choice)) {
         await subscriptions.update(ctx.from.id, 'morning', true);
+        ctx.track('onboarding', 'morning', 'subscribed');
     }
     if ([ 'evening', 'morning_evening' ].includes(choice)) {
         await subscriptions.update(ctx.from.id, 'evening', true);
+        ctx.track('onboarding', 'evening', 'subscribed');
     }
 
     const buttons = [
@@ -156,12 +149,22 @@ export const handleOnboardingPushWhen = async (ctx) => {
             'Ja, gerne',
             actionData('onboarding_push_breaking', {
                 choice: true,
+                tracking: {
+                    category: 'onboarding',
+                    action: 'breaking',
+                    label: 'subscribed',
+                },
             })
         ),
         Markup.callbackButton(
             'Nein, danke',
             actionData('onboarding_push_breaking', {
                 choice: false,
+                tracking: {
+                    category: 'onboarding',
+                    action: 'breaking',
+                    label: 'declined',
+                },
             })
         ),
     ];

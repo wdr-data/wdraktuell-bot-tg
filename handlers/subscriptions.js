@@ -2,12 +2,22 @@ import Markup from 'telegraf/markup';
 
 import actionData from '../lib/actionData';
 import DynamoDbCrud from '../lib/dynamodbCrud';
+import Webtrekk from '../lib/webtrekk';
 
 const subscriptionMap = {
     'morning': 'Morgens',
     'evening': 'Abends',
     'breaking': 'Eilmeldungen',
     'analytics': 'Analytics',
+};
+
+export const handleSubscriptionsCommand = async (ctx) => {
+    ctx.track(
+        'command',
+        'action',
+        'subscriptions'
+    );
+    await handleSubscriptions(ctx);
 };
 
 export const handleSubscriptions = async (ctx) => {
@@ -20,14 +30,11 @@ export const handleSubscriptions = async (ctx) => {
             const tracking = new DynamoDbCrud(process.env.DYNAMODB_TRACKING, 'tgid');
             await tracking.update(ctx.from.id, 'enabled', ctx.data.enable);
             ctx.trackingEnabled = ctx.data.enable;
-            /*
             if (ctx.trackingEnabled) {
-                ua(
-                    process.env.UA_TRACKING_ID,
+                new Webtrekk(
                     ctx.uuid,
-                ).event('handleSubscription', 'analytics', ctx.data.enable).send();
+                ).track('subscriptions', 'analytics', 'enabled');
             }
-            */
         }
         await ctx.answerCbQuery(
             `${ctx.data.enable ? '✅': '❌'} ` +
@@ -43,6 +50,11 @@ export const handleSubscriptions = async (ctx) => {
                 actionData('subscriptions', {
                     subscription: 'morning',
                     enable: !ctx.subscriptions.morning,
+                    tracking: {
+                        category: 'subscriptions',
+                        action: 'morning',
+                        label: `${ctx.subscriptions.morning ? 'unsubscribed' : 'subscribed'}`,
+                    },
                 })
             ),
             Markup.callbackButton(
@@ -50,6 +62,11 @@ export const handleSubscriptions = async (ctx) => {
                 actionData('subscriptions', {
                     subscription: 'evening',
                     enable: !ctx.subscriptions.evening,
+                    tracking: {
+                        category: 'subscriptions',
+                        action: 'evening',
+                        label: `${ctx.subscriptions.evening ? 'unsubscribed' : 'subscribed'}`,
+                    },
                 })
             ),
         ],
@@ -59,6 +76,11 @@ export const handleSubscriptions = async (ctx) => {
                 actionData('subscriptions', {
                     subscription: 'breaking',
                     enable: !ctx.subscriptions.breaking,
+                    tracking: {
+                        category: 'subscriptions',
+                        action: 'breaking',
+                        label: `${ctx.subscriptions.breaking ? 'unsubscribed' : 'subscribed'}`,
+                    },
                 })
             ),
             Markup.callbackButton(
@@ -66,6 +88,11 @@ export const handleSubscriptions = async (ctx) => {
                 actionData('subscriptions', {
                     subscription: 'analytics',
                     enable: !ctx.trackingEnabled,
+                    tracking: {
+                        category: 'subscriptions',
+                        action: 'analytics',
+                        label: `${ctx.trackingEnabled ? 'disabled' : 'enabled'}`,
+                    },
                 })
             ),
         ],

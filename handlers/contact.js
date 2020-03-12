@@ -12,7 +12,7 @@ export const handleContact = async (ctx) => {
                 faq: 'contact_comment',
                 tracking: {
                     category: 'payload',
-                    event: 'contact',
+                    action: 'contact',
                     label: 'user_leaves_commentary',
                 },
             })
@@ -23,7 +23,7 @@ export const handleContact = async (ctx) => {
                 faq: 'contact_topic_suggestion',
                 tracking: {
                     category: 'payload',
-                    event: 'contact',
+                    action: 'contact',
                     label: 'user_gives_topic_suggestion',
                 },
             })
@@ -34,7 +34,7 @@ export const handleContact = async (ctx) => {
                 faq: 'contact_say_thank_you',
                 tracking: {
                     category: 'payload',
-                    event: 'contact',
+                    action: 'contact',
                     label: 'user_says_thank_you',
                 },
             })
