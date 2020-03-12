@@ -196,7 +196,7 @@ export const send = RavenLambdaWrapper.handler(Raven, async (event) => {
                     if (report.attachment) {
                         const url = report.attachment.processed;
                         const attachmentId = await getAttachmentId(url);
-                        const sendAttachment = getMethodForUrl(url, bot);
+                        const sendAttachment = getMethodForUrl(bot, url);
                         await sendAttachment(user.tgid, attachmentId, {
                             caption: messageText,
                             'reply_markup': keyboard,
