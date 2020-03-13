@@ -21,6 +21,7 @@ import {
 } from '../lib/attachments';
 import { trackLink } from '../lib/util';
 import { guessAttachmentType } from '../lib/attachments';
+import Webtrekk from '../lib/webtrekk';
 
 
 export const proxy = RavenLambdaWrapper.handler(Raven, async (event) => {
@@ -114,6 +115,7 @@ export const fetch = RavenLambdaWrapper.handler(Raven, async (event) => {
             type: 'push',
             data: push,
             preview: event.preview,
+            recipients: 0,
         };
     } catch (error) {
         console.log('Sending push failed: ', JSON.stringify(error, null, 2));
@@ -163,6 +165,9 @@ export const send = RavenLambdaWrapper.handler(Raven, async (event) => {
                 id: event.data.id,
                 type: event.type,
                 preview: event.preview,
+                timing: event.timing,
+                data: event.data,
+                recipients: event.recipients,
             };
         }
 
@@ -192,6 +197,7 @@ export const send = RavenLambdaWrapper.handler(Raven, async (event) => {
             }
 
             await Promise.all(users.map(async (user) => {
+                event.recipients++;
                 try {
                     if (report.attachment) {
                         const url = report.attachment.processed;
@@ -216,6 +222,7 @@ export const send = RavenLambdaWrapper.handler(Raven, async (event) => {
             const { messageText } = assemblePush(push);
 
             await Promise.all(users.map(async (user) => {
+                event.recipients++;
                 try {
                     await bot.sendMessage(user.tgid, messageText, {
                         'parse_mode': 'HTML',
@@ -235,6 +242,9 @@ export const send = RavenLambdaWrapper.handler(Raven, async (event) => {
                 id: event.data.id,
                 type: event.type,
                 preview: event.preview,
+                timing: event.timing,
+                data: event.data,
+                recipients: event.recipients,
             };
         }
 
@@ -245,6 +255,7 @@ export const send = RavenLambdaWrapper.handler(Raven, async (event) => {
             data: event.data,
             start: last,
             preview: event.preview,
+            recipients: event.recipients,
         };
     } catch (err) {
         console.error('Sending failed:', err);
@@ -289,6 +300,26 @@ export const finish = RavenLambdaWrapper.handler(Raven, function(event, context,
     if (!event.id) {
         return callback(null, {});
     }
+
+    const webtrekk = new Webtrekk(12345);
+    let trackCategory = 'Preview';
+    switch (event.timing) {
+    case 'morning':
+        trackCategory = 'Morgen-Push';
+        break;
+    case 'evening':
+        trackCategory = 'Abend-Push';
+        break;
+    case 'breaking':
+        trackCategory = 'Breaking-Push';
+    }
+    webtrekk.track({
+        category: trackCategory,
+        event: 'Zugestellt',
+        label: event.data.headline,
+        publicationDate: event.data.pub_date || event.data.published_date,
+        recipients: event.recipients,
+    });
 
     markSent(event.id, event.type)
         .then(() => callback(null, {}))
