@@ -118,11 +118,23 @@ export const handleOnboardingPushWhen = async (ctx) => {
     const subscriptions = new DynamoDbCrud(process.env.DYNAMODB_SUBSCRIPTIONS, 'tgid');
     if ([ 'morning', 'morning_evening' ].includes(choice)) {
         await subscriptions.update(ctx.from.id, 'morning', true);
-        ctx.track('onboarding', 'morning', 'subscribed');
+        ctx.track({
+            category: 'Onboarding',
+            event: 'Einstellungen',
+            label: 'Morgen-Push',
+            subType: 'Anmelden',
+            actionSwitch: 'on',
+        });
     }
     if ([ 'evening', 'morning_evening' ].includes(choice)) {
         await subscriptions.update(ctx.from.id, 'evening', true);
-        ctx.track('onboarding', 'evening', 'subscribed');
+        ctx.track({
+            category: 'Onboarding',
+            event: 'Einstellungen',
+            label: 'Abend-Push',
+            subType: 'Anmelden',
+            actionSwitch: 'on',
+        });
     }
 
     const buttons = [
@@ -130,10 +142,12 @@ export const handleOnboardingPushWhen = async (ctx) => {
             'Ja, gerne',
             actionData('onboarding_push_breaking', {
                 choice: true,
-                tracking: {
-                    category: 'onboarding',
-                    action: 'breaking',
-                    label: 'subscribed',
+                track: {
+                    category: 'Onboarding',
+                    event: 'Einstellungen',
+                    label: 'Eilmeldungen',
+                    subType: 'Anmelden',
+                    actionSwitch: 'on',
                 },
             })
         ),
@@ -141,10 +155,12 @@ export const handleOnboardingPushWhen = async (ctx) => {
             'Nein, danke',
             actionData('onboarding_push_breaking', {
                 choice: false,
-                tracking: {
-                    category: 'onboarding',
-                    action: 'breaking',
-                    label: 'declined',
+                track: {
+                    category: 'Onboarding',
+                    event: 'Einstellungen',
+                    label: 'Eilmeldungen',
+                    subType: 'Abmelden',
+                    actionSwitch: 'off',
                 },
             })
         ),

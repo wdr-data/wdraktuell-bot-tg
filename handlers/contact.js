@@ -10,10 +10,10 @@ export const handleContact = async (ctx) => {
             'Anregungen zum Inhalt',
             actionData('faq', {
                 faq: 'contact_comment',
-                tracking: {
-                    category: 'payload',
-                    action: 'contact',
-                    label: 'user_leaves_commentary',
+                track: {
+                    category: 'Menüpunkt',
+                    event: 'Feebdack-Menü',
+                    label: 'Kontakt aufnehmen',
                 },
             })
         ),
@@ -21,10 +21,10 @@ export const handleContact = async (ctx) => {
             'Ein Thema vorschlagen',
             actionData('faq', {
                 faq: 'contact_topic_suggestion',
-                tracking: {
-                    category: 'payload',
-                    action: 'contact',
-                    label: 'user_gives_topic_suggestion',
+                track: {
+                    category: 'Menüpunkt',
+                    event: 'Feedback-Menü',
+                    label: 'Thema vorschlagen',
                 },
             })
         ),
@@ -32,10 +32,10 @@ export const handleContact = async (ctx) => {
             'Einfach mal Danke sagen!',
             actionData('faq', {
                 faq: 'contact_say_thank_you',
-                tracking: {
-                    category: 'payload',
-                    action: 'contact',
-                    label: 'user_says_thank_you',
+                track: {
+                    category: 'Menüpunkt',
+                    event: 'Feedback-Menü',
+                    label: 'Danke sagen',
                 },
             })
         ),

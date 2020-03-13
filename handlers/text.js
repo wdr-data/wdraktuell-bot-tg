@@ -50,21 +50,39 @@ const handleText = async (ctx) => {
         console.log(`  Parameters: ${JSON.stringify(result.parameters)}`);
         console.log(`  Action: ${result.action}`);
 
+        if (result.parameters.fields.tags && result.parameters.fields.tags.stringValue) {
+            await ctx.track({
+                category: 'Unterhaltung',
+                event: 'Dialogflow',
+                label: 'Themen-Suche',
+                subType: 'Tag',
+                tags: result.parameters.fields.tags.stringValue,
+            });
+        }
+        if (result.parameters.fields.genres && result.parameters.fields.genres.stringValue) {
+            await ctx.track({
+                category: 'Unterhaltung',
+                event: 'Dialogflow',
+                label: 'Themen-Suche',
+                subType: 'Genre',
+                tags: result.parameters.fields.genres.stringValue,
+            });
+        }
         if (result.action in actions) {
             ctx.dialogflowParams = result.parameters.fields;
-            ctx.track(
-                'chat',
-                'action',
-                result.action
-            );
+            ctx.track({
+                category: 'Unterhaltung',
+                event: 'Dialogflow',
+                label: result.intent.displayName,
+            });
             return actions[result.action](ctx);
         }
 
-        ctx.track(
-            'chat',
-            'dialogflow',
-            result.intent.displayName
-        );
+        ctx.track({
+            category: 'Unterhaltung',
+            event: 'Dialogflow',
+            label: result.intent.displayName,
+        });
         return ctx.reply(result.fulfillmentText);
     }
 
