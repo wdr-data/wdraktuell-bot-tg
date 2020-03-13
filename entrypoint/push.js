@@ -22,6 +22,7 @@ import {
 import { trackLink } from '../lib/util';
 import { guessAttachmentType } from '../lib/attachments';
 import Webtrekk from '../lib/webtrekk';
+import DynamoDbCrud from '../lib/dynamodbCrud';
 
 
 export const proxy = RavenLambdaWrapper.handler(Raven, async (event) => {
@@ -69,6 +70,7 @@ export const fetch = RavenLambdaWrapper.handler(Raven, async (event) => {
                 data: report,
                 preview: event.preview,
                 recipients: 0,
+                blocked: 0,
             };
         } catch (error) {
             console.log('Sending report failed: ', JSON.stringify(error, null, 2));
@@ -117,6 +119,7 @@ export const fetch = RavenLambdaWrapper.handler(Raven, async (event) => {
             data: push,
             preview: event.preview,
             recipients: 0,
+            blocked: 0,
         };
     } catch (error) {
         console.log('Sending push failed: ', JSON.stringify(error, null, 2));
@@ -124,15 +127,27 @@ export const fetch = RavenLambdaWrapper.handler(Raven, async (event) => {
     }
 });
 
-const handlePushFailed = async (error) => {
+const reasons = {
+    UNKNOWN: 'unknown',
+    TIMED_OUT: 'timed out',
+    BLOCKED: 'blocked',
+};
+
+const handlePushFailed = async (error, tgid) => {
     Raven.captureException(error);
     console.error(error);
 
     if (error.code === 'ETIMEDOUT') {
         console.error('Request timed out!');
-    } else if (error.code !== 400) {
-        console.error('Not a bad request!');
+        return reasons.TIMED_OUT;
+    } else if (
+        error.code === 403 && error.description === 'Forbidden: bot was blocked by the user'
+    ) {
+        const subscriptions = new DynamoDbCrud(process.env.DYNAMODB_SUBSCRIPTIONS, 'tgid');
+        await subscriptions.remove(tgid);
+        return reasons.BLOCKED;
     }
+    return reasons.UNKNOWN;
 };
 
 const getMethodForUrl = (bot, url) => {
@@ -169,6 +184,7 @@ export const send = RavenLambdaWrapper.handler(Raven, async (event) => {
                 timing: event.timing,
                 data: event.data,
                 recipients: event.recipients,
+                blocked: event.blocked,
             };
         }
 
@@ -198,7 +214,6 @@ export const send = RavenLambdaWrapper.handler(Raven, async (event) => {
             }
 
             await Promise.all(users.map(async (user) => {
-                event.recipients++;
                 try {
                     if (report.attachment) {
                         const url = report.attachment.processed;
@@ -213,8 +228,12 @@ export const send = RavenLambdaWrapper.handler(Raven, async (event) => {
                             'reply_markup': keyboard,
                         });
                     }
+                    event.recipients++;
                 } catch (err) {
-                    return handlePushFailed(err);
+                    const reason = await handlePushFailed(err, user.tgid);
+                    if (reason === reasons.BLOCKED) {
+                        event.blocked++;
+                    }
                 }
             }));
         } else if (event.type === 'push') {
@@ -223,14 +242,17 @@ export const send = RavenLambdaWrapper.handler(Raven, async (event) => {
             const { messageText } = assemblePush(push);
 
             await Promise.all(users.map(async (user) => {
-                event.recipients++;
                 try {
                     await bot.sendMessage(user.tgid, messageText, {
                         'parse_mode': 'HTML',
                         'disable_web_page_preview': true,
                     });
+                    event.recipients++;
                 } catch (err) {
-                    return handlePushFailed(err);
+                    const reason = await handlePushFailed(err, user.tgid);
+                    if (reason === reasons.BLOCKED) {
+                        event.blocked++;
+                    }
                 }
             }));
         }
@@ -246,6 +268,7 @@ export const send = RavenLambdaWrapper.handler(Raven, async (event) => {
                 timing: event.timing,
                 data: event.data,
                 recipients: event.recipients,
+                blocked: event.blocked,
             };
         }
 
@@ -257,6 +280,7 @@ export const send = RavenLambdaWrapper.handler(Raven, async (event) => {
             start: last,
             preview: event.preview,
             recipients: event.recipients,
+            blocked: event.blocked,
         };
     } catch (err) {
         console.error('Sending failed:', err);
@@ -320,6 +344,7 @@ export const finish = RavenLambdaWrapper.handler(Raven, function(event, context,
         label: event.data.headline,
         publicationDate: event.data.pub_date || event.data.published_date,
         recipients: event.recipients,
+        blocked: event.blocked,
     });
 
     markSent(event.id, event.type)
