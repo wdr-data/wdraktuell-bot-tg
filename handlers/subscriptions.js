@@ -74,8 +74,8 @@ export const handleSubscriptions = async (ctx) => {
                         category: 'Menüpunkt',
                         event: 'Einstellungen',
                         label: 'Abend-Push',
-                        subType: !ctx.subscription.evening ? 'Anmelden' : 'Abmelden',
-                        actionSwitch: !ctx.subscription.evening ? 'on' : 'off',
+                        subType: !ctx.subscriptions.evening ? 'Anmelden' : 'Abmelden',
+                        actionSwitch: !ctx.subscriptions.evening ? 'on' : 'off',
                     },
                 })
             ),
