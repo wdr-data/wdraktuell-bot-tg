@@ -22,6 +22,7 @@ import {
 import { trackLink } from '../lib/util';
 import { guessAttachmentType } from '../lib/attachments';
 import Webtrekk from '../lib/webtrekk';
+import DynamoDbCrud from '../lib/dynamodbCrud';
 
 
 export const proxy = RavenLambdaWrapper.handler(Raven, async (event) => {
@@ -124,7 +125,7 @@ export const fetch = RavenLambdaWrapper.handler(Raven, async (event) => {
     }
 });
 
-const handlePushFailed = async (error) => {
+const handlePushFailed = async (error, tgid) => {
     Raven.captureException(error);
     console.error(error);
 
@@ -132,6 +133,11 @@ const handlePushFailed = async (error) => {
         console.error('Request timed out!');
     } else if (error.code !== 400) {
         console.error('Not a bad request!');
+    } else if (
+        error.code === 403 && error.description === 'Forbidden: bot was blocked by the user'
+    ) {
+        const subscriptions = new DynamoDbCrud(process.env.DYNAMODB_SUBSCRIPTIONS, 'tgid');
+        return subscriptions.remove(tgid);
     }
 };
 
@@ -214,7 +220,7 @@ export const send = RavenLambdaWrapper.handler(Raven, async (event) => {
                         });
                     }
                 } catch (err) {
-                    return handlePushFailed(err);
+                    return handlePushFailed(err, user.tgid);
                 }
             }));
         } else if (event.type === 'push') {
@@ -230,7 +236,7 @@ export const send = RavenLambdaWrapper.handler(Raven, async (event) => {
                         'disable_web_page_preview': true,
                     });
                 } catch (err) {
-                    return handlePushFailed(err);
+                    return handlePushFailed(err, user.tgid);
                 }
             }));
         }
