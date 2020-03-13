@@ -50,6 +50,24 @@ const handleText = async (ctx) => {
         console.log(`  Parameters: ${JSON.stringify(result.parameters)}`);
         console.log(`  Action: ${result.action}`);
 
+        if (result.parameters.tags && result.parameters.tags.stringValue) {
+            await ctx.track({
+                category: 'Unterhaltung',
+                event: 'Dialogflow',
+                label: 'Themen-Suche',
+                subType: 'Tag',
+                tags: result.parameters.tags.stringValue,
+            });
+        }
+        if (result.parameters.genres && result.parameters.genres.stringValue) {
+            await ctx.track({
+                category: 'Unterhaltung',
+                event: 'Dialogflow',
+                label: 'Themen-Suche',
+                subType: 'Genre',
+                tags: result.parameters.genres.stringValue,
+            });
+        }
         if (result.action in actions) {
             ctx.dialogflowParams = result.parameters.fields;
             ctx.track({
