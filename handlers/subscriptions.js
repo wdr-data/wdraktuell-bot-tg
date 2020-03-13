@@ -12,11 +12,11 @@ const subscriptionMap = {
 };
 
 export const handleSubscriptionsCommand = async (ctx) => {
-    ctx.track(
-        'command',
-        'action',
-        'subscriptions'
-    );
+    ctx.track({
+        category: 'Menüpunkt',
+        event: 'Command-Menü',
+        label: 'action',
+    });
     await handleSubscriptions(ctx);
 };
 
@@ -33,7 +33,13 @@ export const handleSubscriptions = async (ctx) => {
             if (ctx.trackingEnabled) {
                 new Webtrekk(
                     ctx.uuid,
-                ).track('subscriptions', 'analytics', 'enabled');
+                ).track({
+                    category: 'Menüpunkt',
+                    event: 'Einstellungen',
+                    label: 'Tracking',
+                    subType: 'Aktiviert',
+                    actionSwitch: 'on',
+                });
             }
         }
         await ctx.answerCbQuery(
@@ -50,10 +56,12 @@ export const handleSubscriptions = async (ctx) => {
                 actionData('subscriptions', {
                     subscription: 'morning',
                     enable: !ctx.subscriptions.morning,
-                    tracking: {
-                        category: 'subscriptions',
-                        action: 'morning',
-                        label: `${ctx.subscriptions.morning ? 'unsubscribed' : 'subscribed'}`,
+                    track: {
+                        category: 'Menüpunkt',
+                        event: 'Einstellungen',
+                        label: 'Morgen-Push',
+                        subType: !ctx.subscriptions.morning ? 'Anmelden' : 'Abmelden',
+                        actionSwitch: !ctx.subscriptions.morning ? 'on' : 'off',
                     },
                 })
             ),
@@ -62,10 +70,12 @@ export const handleSubscriptions = async (ctx) => {
                 actionData('subscriptions', {
                     subscription: 'evening',
                     enable: !ctx.subscriptions.evening,
-                    tracking: {
-                        category: 'subscriptions',
-                        action: 'evening',
-                        label: `${ctx.subscriptions.evening ? 'unsubscribed' : 'subscribed'}`,
+                    track: {
+                        category: 'Menüpunkt',
+                        event: 'Einstellungen',
+                        label: 'Abend-Push',
+                        subType: !ctx.subscription.evening ? 'Anmelden' : 'Abmelden',
+                        actionSwitch: !ctx.subscription.evening ? 'on' : 'off',
                     },
                 })
             ),
@@ -76,10 +86,12 @@ export const handleSubscriptions = async (ctx) => {
                 actionData('subscriptions', {
                     subscription: 'breaking',
                     enable: !ctx.subscriptions.breaking,
-                    tracking: {
-                        category: 'subscriptions',
-                        action: 'breaking',
-                        label: `${ctx.subscriptions.breaking ? 'unsubscribed' : 'subscribed'}`,
+                    track: {
+                        category: 'Menüpunkt',
+                        event: 'Einstellungen',
+                        label: 'Eilmeldungen',
+                        subType: !ctx.subscriptions.breaking ? 'Anmelden' : 'Abmelden',
+                        actionSwitch: !ctx.subscriptions.breaking ? 'on' : 'off',
                     },
                 })
             ),
@@ -88,10 +100,12 @@ export const handleSubscriptions = async (ctx) => {
                 actionData('subscriptions', {
                     subscription: 'analytics',
                     enable: !ctx.trackingEnabled,
-                    tracking: {
-                        category: 'subscriptions',
-                        action: 'analytics',
-                        label: `${ctx.trackingEnabled ? 'disabled' : 'enabled'}`,
+                    track: {
+                        category: 'Menüpunkt',
+                        event: 'Einstellungen',
+                        label: 'Tracking',
+                        subType: !ctx.trackingEnabled ? 'Aktiviert' : 'Deaktiviert',
+                        actionSwitch: !ctx.trackingEnabled ? 'on' : 'off',
                     },
                 })
             ),
