@@ -42,7 +42,11 @@ export const handleStart = async (ctx) => {
     const referral = ctx.startPayload || undefined;
     let greeting;
     if (referral) {
-        greeting = await getFaq(`greeting_${referral}`);
+        try {
+            greeting = await getFaq(`greeting_${referral}`);
+        } catch (err) {
+            console.log(err);
+        }
     }
     if (!greeting) {
         greeting = await getFaq(`greeting_default`);
