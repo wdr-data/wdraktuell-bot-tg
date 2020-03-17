@@ -19,7 +19,7 @@ import ddb from '../lib/dynamodb';
 import {
     getAttachmentId,
 } from '../lib/attachments';
-import { trackLink } from '../lib/util';
+import { trackLink, regexSlug } from '../lib/util';
 import { guessAttachmentType } from '../lib/attachments';
 import Webtrekk from '../lib/webtrekk';
 import DynamoDbCrud from '../lib/dynamodbCrud';
@@ -208,7 +208,12 @@ export const send = RavenLambdaWrapper.handler(Raven, async (event) => {
                     [
                         Markup.urlButton(`🔗️ ${
                             report.short_headline
-                        }`, trackLink(report)),
+                        }`, trackLink(
+                            report.link, {
+                                campaignType: 'breaking_push',
+                                campaignName: regexSlug(report.headline),
+                                campaignId: report.id,
+                            })),
                     ],
                 ]);
             }
