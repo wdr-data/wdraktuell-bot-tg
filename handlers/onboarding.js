@@ -1,3 +1,4 @@
+import Raven from 'raven';
 import Markup from 'telegraf/markup';
 
 import getFaq from '../lib/faq';
@@ -46,6 +47,7 @@ export const handleStart = async (ctx) => {
             greeting = await getFaq(`greeting_${referral}`);
         } catch (err) {
             console.log(err);
+            Raven.captureException(err);
         }
     }
     if (!greeting) {
