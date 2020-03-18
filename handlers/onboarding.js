@@ -93,8 +93,18 @@ export const handleOnboardingAnalytics = async (ctx) => {
     switch (choice) {
     case 'accept':
         webtrekk = new Webtrekk(ctx.uuid);
-        webtrekk.track('onboarding', 'referral', referral);
-        webtrekk.track('onboarding', 'analytics', 'accepted');
+        webtrekk.track({
+            category: 'Onboarding',
+            event: 'Referral',
+            label: referral,
+        });
+        webtrekk.track({
+            category: 'Onboarding',
+            event: 'Einstellungen',
+            label: 'Tracking',
+            subType: 'Aktiviert',
+            actionSwitch: 'on',
+        });
         await tracking.update(ctx.from.id, 'enabled', true);
         await ctx.replyFullNewsBase(await getFaq('onboarding_analytics_accepted'));
         await ctx.replyFullNewsBase(await getFaq('onboarding_when'), extra);
