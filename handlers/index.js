@@ -5,6 +5,7 @@ import handleCurrentTime from './currentTime';
 import { handleContact } from './contact';
 import { handleFaq } from './faq';
 import handleDataPolicy from './dataPolicy';
+import { handleLocation } from './location';
 
 export const actions = {
     subscriptions: handleSubscriptions,
@@ -13,4 +14,5 @@ export const actions = {
     contact: handleContact,
     faq: handleFaq,
     faq_data_protection: handleDataPolicy,
+    location: handleLocation,
 };

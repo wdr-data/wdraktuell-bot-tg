@@ -70,6 +70,7 @@ const handleText = async (ctx) => {
         }
         if (result.action in actions) {
             ctx.dialogflowParams = result.parameters.fields;
+            ctx.dialogflowResponse = result.fulfillmentText;
             ctx.track({
                 category: 'Unterhaltung',
                 event: 'Dialogflow',
