@@ -75,6 +75,7 @@ const handleText = async (ctx) => {
                 category: 'Unterhaltung',
                 event: 'Dialogflow',
                 label: result.intent.displayName,
+                subType: result.action,
             });
             return actions[result.action](ctx);
         }
