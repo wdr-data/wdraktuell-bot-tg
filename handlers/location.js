@@ -1,4 +1,4 @@
-import { byCities, byStudios, byZipCode } from '../data/locationMappings';
+import { byCities, byStudios, byZipCodes } from '../data/locationMappings';
 
 export const handleLocation = async (ctx) => {
     const location = ctx.dialogflowParams.location.structValue.fields;
@@ -10,10 +10,10 @@ export const handleLocation = async (ctx) => {
     } else if (location['zip-code'].stringValue) {
         const queryZipCode = location['zip-code'].stringValue;
         console.log(`Detected zip-code: ${location['zip-code'].stringValue}`);
-        console.log(byZipCode);
-        console.log(byZipCode[queryZipCode]);
-        if (byZipCode[queryZipCode]) {
-            return handleCity(ctx, byZipCode[queryZipCode].city);
+        console.log(byZipCodes);
+        console.log(byZipCodes[queryZipCode]);
+        if (byZipCodes[queryZipCode]) {
+            return handleCity(ctx, byZipCodes[queryZipCode].city);
         }
     }
 
