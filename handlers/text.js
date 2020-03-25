@@ -69,7 +69,6 @@ const handleText = async (ctx) => {
             });
         }
         if (result.action in actions) {
-            ctx.dialogflowParams = result.parameters.fields;
             ctx.dialogflowResponse = result.fulfillmentText;
             ctx.track({
                 category: 'Unterhaltung',
@@ -77,7 +76,7 @@ const handleText = async (ctx) => {
                 label: result.intent.displayName,
                 subType: result.action,
             });
-            return actions[result.action](ctx);
+            return actions[result.action](ctx, result.parameters['fields']);
         }
 
         ctx.track({
