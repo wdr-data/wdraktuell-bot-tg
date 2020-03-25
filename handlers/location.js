@@ -18,9 +18,6 @@ export const handleLocation = async (ctx, dialogflowParams) => {
     if (byZipCodes[zipCode]) {
         city = byZipCodes[zipCode].city;
     }
-    if (byCities[city]) {
-        return handleCity(ctx, byCities[city]);
-    }
     if (city) {
         ctx.track({
             category: 'Unterhaltung',
@@ -28,6 +25,9 @@ export const handleLocation = async (ctx, dialogflowParams) => {
             label: 'Location-Feature',
             subType: city,
         });
+    }
+    if (byCities[city]) {
+        return handleCity(ctx, byCities[city]);
     }
     if (city || zipCode) {
         return ctx.reply(`${
