@@ -62,20 +62,24 @@ export const handleCity = async (ctx, cityFull) => {
     }</a>`;
 
     const messageText = `Hier die aktuellen Zahlen für ${
-        cityFull.city
-    }${
-        cityFull.keyCity.slice(-1) === '0' ? '' : ' im Landkreis ' + cityFull.district
-    }:\n${covidData.infected} positiv auf Covid19 getestete Menschen. Das sind ${
+        cityFull.keyCity.slice(-1) === '0' ? cityFull.city : 'den im Landkreis ' + cityFull.district
+    }:\n${covidData.infected} positiv auf das Coronavirus getestete Menschen. Das entspricht ${
         covidData.per100k
-    } Menschen pro 100.000 Einwohner.\n\nMit ${
+    } Menschen pro 100.000 Einwohner. An der Krankheit Covid-19 sind bisher ${
+        covidData.dead
+    } gestorben.\n\nMit ${
         covidData.max.per100k
     } wurde die meisten positiven Tests pro 100.000 Einwohner in ${
         covidData.max.district
-    } registriert.\nDie wenigsten positiven Tests in NRW wurden in ${
+    } (${
+        covidData.max.dead
+    } Tote) registriert.\nDie wenigsten positiven Tests in NRW wurden in ${
         covidData.min.district
     } mit ${
         covidData.min.per100k
-    } pro 100.000 Einwohner gezählt.\n\n(Stand: ${
+    } (${
+        covidData.min.dead
+    } Tote) pro 100.000 Einwohner gezählt.\n\n(Stand: ${
         covidData.publishedDate
     })\n\n`;
 
@@ -100,19 +104,22 @@ export const getCovid = async (district) => {
     const min = sorted[0];
     const max = sorted[sorted.length - 1];
     for (const row of covidData) {
-        if (row['Landkreis/Kreisfreie Stadt'] === district) {
+        if (row['Landkreis/ kreisfreie Stadt'] === district) {
             return {
-                infected: row['Bestätigte Fälle'],
+                infected: row['Infizierte'],
                 per100k: row['Infizierte pro 100.000 Einwohner'].split('.')[0],
+                dead: max['Tote'],
                 publishedDate: row['Stand'],
                 max: {
-                    district: max['Landkreis/Kreisfreie Stadt'],
-                    infected: max['Bestätigte Fälle'],
+                    district: max['Landkreis/ kreisfreie Stadt'],
+                    infected: max['Infizierte'],
+                    dead: max['Tote'],
                     per100k: max['Infizierte pro 100.000 Einwohner'].split('.')[0],
                 },
                 min: {
-                    district: min['Landkreis/Kreisfreie Stadt'],
-                    infected: min['Bestätigte Fälle'],
+                    district: min['Landkreis/ kreisfreie Stadt'],
+                    infected: min['Infizierte'],
+                    dead: min['Tote'],
                     per100k: min['Infizierte pro 100.000 Einwohner'].split('.')[0],
                 },
             };
