@@ -69,17 +69,17 @@ export const handleCity = async (ctx, cityFull) => {
         covidData.dead
     } gestorben.\n\nMit ${
         covidData.max.per100k
-    } wurde die meisten positiven Tests pro 100.000 Einwohner in ${
-        covidData.max.district
-    } (${
+    } wurde die meisten positiven Tests pro 100.000 Einwohner (${
         covidData.max.dead
-    } Tote) registriert.\nDie wenigsten positiven Tests in NRW wurden in ${
+    } Tote) in ${
+        covidData.max.district
+    } registriert.\nDie wenigsten positiven Tests in NRW wurden in ${
         covidData.min.district
     } mit ${
         covidData.min.per100k
-    } (${
+    } pro 100.000 Einwohner (${
         covidData.min.dead
-    } Tote) pro 100.000 Einwohner gezählt.\n\n(Stand: ${
+    } Tote) gezählt.\n\n(Stand: ${
         covidData.publishedDate
     })\n\n`;
 
