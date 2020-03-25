@@ -108,18 +108,18 @@ export const getCovid = async (district) => {
             return {
                 infected: row['Infizierte'],
                 per100k: row['Infizierte pro 100.000 Einwohner'].split('.')[0],
-                dead: max['Tote'],
+                dead: row['Tote'] || '0',
                 publishedDate: row['Stand'],
                 max: {
                     district: max['Landkreis/ kreisfreie Stadt'],
                     infected: max['Infizierte'],
-                    dead: max['Tote'],
+                    dead: max['Tote'] || '0',
                     per100k: max['Infizierte pro 100.000 Einwohner'].split('.')[0],
                 },
                 min: {
                     district: min['Landkreis/ kreisfreie Stadt'],
                     infected: min['Infizierte'],
-                    dead: min['Tote'],
+                    dead: min['Tote'] || '0',
                     per100k: min['Infizierte pro 100.000 Einwohner'].split('.')[0],
                 },
             };
