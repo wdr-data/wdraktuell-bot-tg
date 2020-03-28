@@ -8,33 +8,34 @@ import csvtojson from 'csvtojson';
 const uri = 'https://coronanrw-prod.s3.eu-central-1.amazonaws.com/corona_mags_nrw.csv';
 
 export const handleLocation = async (ctx) => {
-    const location = ctx.dialogflowParams.location.structValue.fields;
-    console.log(`Detected location: ${location}`);
-    let messageText = ctx.dialogflowResponse;
-    const zipCode = location['zip-code'].stringValue;
-    let city = location.city.stringValue;
-    console.log(`zipCode: ${zipCode}`);
-    console.log(`city: ${zipCode}`);
-    if (byZipCodes[zipCode]) {
-        city = byZipCodes[zipCode].city;
+    if (ctx.dialogflowParams.location.structValue.fields) {
+        const location = ctx.dialogflowParams.location.structValue.fields;
+        console.log(`Detected location: ${location}`);
+        const zipCode = location['zip-code'].stringValue;
+        let city = location.city.stringValue;
+        console.log(`zipCode: ${zipCode}`);
+        console.log(`city: ${zipCode}`);
+        if (byZipCodes[zipCode]) {
+            city = byZipCodes[zipCode].city;
+        }
+        if (city) {
+            ctx.track({
+                category: 'Unterhaltung',
+                event: 'Feature',
+                label: 'Location',
+                subType: byCities[city] ? `${city}-NRW` : city,
+            });
+        }
+        if (byCities[city]) {
+            return handleCity(ctx, byCities[city]);
+        }
+        if (city || zipCode) {
+            return ctx.reply(`${
+                zipCode ? `Die Postleitzahl ${zipCode}` : city
+            } liegt wohl nicht in NRW. Versuche es mit einer PLZ oder einem Ort aus NRW.`);
+        }
     }
-    if (city) {
-        ctx.track({
-            category: 'Unterhaltung',
-            event: 'Feature',
-            label: 'Location',
-            subType: byCities[city] ? `${city}-NRW` : city,
-        });
-    }
-    if (byCities[city]) {
-        return handleCity(ctx, byCities[city]);
-    }
-    if (city || zipCode) {
-        return ctx.reply(`${
-            zipCode ? `Die Postleitzahl ${zipCode}` : city
-        } liegt wohl nicht in NRW. Versuche es mit einer PLZ, einem Ort oder einer Stadt aus NRW.`);
-    }
-    return ctx.reply(messageText);
+    return ctx.reply(ctx.dialogflowResponse);
 };
 
 export const handleCity = async (ctx, cityFull) => {
