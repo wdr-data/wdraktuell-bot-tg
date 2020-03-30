@@ -8,7 +8,7 @@ import csvtojson from 'csvtojson';
 const uri = 'https://coronanrw-prod.s3.eu-central-1.amazonaws.com/corona_mags_nrw.csv';
 
 export const handleLocation = async (ctx) => {
-    if (!ctx.dialogflowParams.location) {
+    if (!ctx.dialogflowParams.location.structValue) {
         return ctx.reply(ctx.dialogflowResponse);
     }
     const location = ctx.dialogflowParams.location.structValue.fields;
