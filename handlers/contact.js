@@ -12,7 +12,7 @@ export const handleContact = async (ctx) => {
                 faq: 'contact_comment',
                 track: {
                     category: 'Menüpunkt',
-                    event: 'Feebdack-Menü',
+                    event: 'Feedback-Menü',
                     label: 'Kontakt aufnehmen',
                 },
             })

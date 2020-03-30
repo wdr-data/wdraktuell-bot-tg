@@ -5,12 +5,14 @@ import getFaq from '../lib/faq';
 import request from 'request-promise-native';
 import csvtojson from 'csvtojson';
 
-const uri = 'https://covid19nrw.netlify.com/.netlify/functions/get_nrw';
+const uri = 'https://coronanrw-prod.s3.eu-central-1.amazonaws.com/corona_mags_nrw.csv';
 
 export const handleLocation = async (ctx) => {
+    if (!ctx.dialogflowParams.location.structValue) {
+        return ctx.reply(ctx.dialogflowResponse);
+    }
     const location = ctx.dialogflowParams.location.structValue.fields;
     console.log(`Detected location: ${location}`);
-    let messageText = ctx.dialogflowResponse;
     const zipCode = location['zip-code'].stringValue;
     let city = location.city.stringValue;
     console.log(`zipCode: ${zipCode}`);
@@ -23,7 +25,7 @@ export const handleLocation = async (ctx) => {
             category: 'Unterhaltung',
             event: 'Feature',
             label: 'Location',
-            subType: byCities[city] ? `${city}-NRW` : city,
+            subType: byCities[city] ? city : `${city}-0`,
         });
     }
     if (byCities[city]) {
@@ -32,9 +34,9 @@ export const handleLocation = async (ctx) => {
     if (city || zipCode) {
         return ctx.reply(`${
             zipCode ? `Die Postleitzahl ${zipCode}` : city
-        } liegt wohl nicht in NRW. Versuche es mit einer PLZ, einem Ort oder einer Stadt aus NRW.`);
+        } liegt wohl nicht in NRW. Versuche es mit einer PLZ oder einem Ort aus NRW.`);
     }
-    return ctx.reply(messageText);
+    return ctx.reply(ctx.dialogflowResponse);
 };
 
 export const handleCity = async (ctx, cityFull) => {
@@ -103,7 +105,7 @@ export const getCovid = async (district) => {
     console.log(covidData);
 
     const sorted = covidData.sort(
-        (a, b) => a['Infizierte pro 100.000 Einwohner'] - b['Infizierte pro 100.000 Einwohner']
+        (a, b) => a['Infizierte pro 100.000'] - b['Infizierte pro 100.000']
     );
     const min = sorted[0];
     const max = sorted[sorted.length - 1];
@@ -111,20 +113,20 @@ export const getCovid = async (district) => {
         if (row['Landkreis/ kreisfreie Stadt'] === district) {
             return {
                 infected: row['Infizierte'],
-                per100k: row['Infizierte pro 100.000 Einwohner'].split('.')[0],
-                dead: row['Tote'] || '0',
+                per100k: row['Infizierte pro 100.000'].split('.')[0],
+                dead: row['Todesfälle'] || '0',
                 publishedDate: row['Stand'],
                 max: {
                     district: max['Landkreis/ kreisfreie Stadt'],
                     infected: max['Infizierte'],
-                    dead: max['Tote'] || '0',
-                    per100k: max['Infizierte pro 100.000 Einwohner'].split('.')[0],
+                    dead: max['Todesfälle'] || '0',
+                    per100k: max['Infizierte pro 100.000'].split('.')[0],
                 },
                 min: {
                     district: min['Landkreis/ kreisfreie Stadt'],
                     infected: min['Infizierte'],
-                    dead: min['Tote'] || '0',
-                    per100k: min['Infizierte pro 100.000 Einwohner'].split('.')[0],
+                    dead: min['Todesfälle'] || '0',
+                    per100k: min['Infizierte pro 100.000'].split('.')[0],
                 },
             };
         }
