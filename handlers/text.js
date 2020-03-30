@@ -20,6 +20,11 @@ const handleText = async (ctx) => {
     }
 
     if ( text.length > 70 ) {
+        ctx.track({
+            category: 'Unterhaltung',
+            event: 'Feedback-Menü',
+            label: '70 Zeichen',
+        });
         return handleContact(ctx);
     }
 
