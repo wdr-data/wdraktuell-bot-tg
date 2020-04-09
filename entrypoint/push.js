@@ -4,7 +4,6 @@ import RavenLambdaWrapper from 'serverless-sentry-lib';
 import * as aws from 'aws-sdk';
 import {
     Telegram,
-    Markup,
 } from 'telegraf';
 
 import getTiming from '../lib/timing';
@@ -19,8 +18,8 @@ import ddb from '../lib/dynamodb';
 import {
     getAttachmentId,
 } from '../lib/attachments';
-import { trackLink, regexSlug } from '../lib/util';
 import { guessAttachmentType } from '../lib/attachments';
+import { escapeHTML, trackLink, regexSlug } from '../lib/util';
 import Webtrekk from '../lib/webtrekk';
 import DynamoDbCrud from '../lib/dynamodbCrud';
 
@@ -193,29 +192,25 @@ export const send = RavenLambdaWrapper.handler(Raven, async (event) => {
         if (event.type === 'report') {
             const report = event.data;
 
+            let reportUrl = '';
+            if (report.link) {
+                reportUrl = trackLink( report.link, {
+                    campaignType: 'breaking_push',
+                    campaignName: regexSlug( report.headline ),
+                    campaignId: report.id,
+                });
+            }
+            const link = report.link ?
+                `\n🔗 <a href="${escapeHTML(reportUrl)}">${
+                    escapeHTML(report.short_headline)
+                }</a>` : ``;
+
             const unsubscribeNote = 'Um Eilmeldungen abzubestellen, schreibe "Stop".';
             let messageText;
             if (report.type === 'breaking') {
-                messageText = `🚨 ${report.summary}\n\n${unsubscribeNote}`;
+                messageText = `🚨 ${report.summary}${link}\n\n${unsubscribeNote}`;
             } else {
-                messageText = report.summary;
-            }
-
-            let keyboard;
-
-            if (report.link) {
-                keyboard = Markup.inlineKeyboard([
-                    [
-                        Markup.urlButton(`🔗️ ${
-                            report.short_headline
-                        }`, trackLink(
-                            report.link, {
-                                campaignType: 'breaking_push',
-                                campaignName: regexSlug(report.headline),
-                                campaignId: report.id,
-                            })),
-                    ],
-                ]);
+                messageText = `${report.summary}${link}`;
             }
 
             await Promise.all(users.map(async (user) => {
@@ -226,11 +221,13 @@ export const send = RavenLambdaWrapper.handler(Raven, async (event) => {
                         const sendAttachment = getMethodForUrl(bot, url);
                         await sendAttachment(user.tgid, attachmentId, {
                             caption: messageText,
-                            'reply_markup': keyboard,
+                            'parse_mode': 'HTML',
+                            'disable_web_page_preview': true,
                         });
                     } else {
                         await bot.sendMessage(user.tgid, messageText, {
-                            'reply_markup': keyboard,
+                            'parse_mode': 'HTML',
+                            'disable_web_page_preview': true,
                         });
                     }
                     event.recipients++;
