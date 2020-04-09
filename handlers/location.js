@@ -63,29 +63,34 @@ export const handleCity = async (ctx, cityFull) => {
         escapeHTML(`Aktuelle Zahlen zur Corona-Krise in NRW`)
     }</a>`;
 
-    const messageText = `Hier die aktuellen Zahlen für ${
+    const messageText = `Hier die aktuellen Corona-Fallzahlen für ${
         cityFull.keyCity.slice(-3) === '000' ? cityFull.city : 'den Landkreis ' + cityFull.district
-    }:\n${covidData.infected} positiv auf das Coronavirus getestete Menschen. Das entspricht ${
+    }:\n${
+        covidData.infected
+    } - Bestätigte Infektionen\n${
+        covidData.recovered
+    } - Genesene\n${
+        covidData.dead} - Todesfälle\n${
         covidData.per100k
-    } Menschen pro 100.000 Einwohner.  An der Krankheit Covid-19 sind ${
-        cityFull.keyCity.slice(-3) === '000' ?
-            `in ${cityFull.city}` : 'im Landkreis ' +
-            cityFull.district
-    } bisher ${
-        covidData.dead
-    } Menschen gestorben.\n\nMit ${
-        covidData.max.per100k
-    } wurden die meisten positiven Tests pro 100.000 Einwohner (${
-        covidData.max.dead
-    } Tote) in ${
+    } - Infektionen je 100.000 Einwohner\n\nDie meisten bestätigten Infizierten gibt es hier: ${
         covidData.max.district
-    } registriert.\nDie wenigsten positiven Tests wurden hier gezählt: ${
+    }\n${
+        covidData.max.infected
+    } - Bestätigte Infektionen\n${
+        covidData.max.recovered
+    } - Genesene\n${
+        covidData.max.dead} - Todesfälle\n${
+        covidData.max.per100k
+    } - Infektionen je 100.000 Einwohner\n\nDie wenigsten Infizierten gibt es hier: ${
         covidData.min.district
-    } mit ${
+    }\n${
+        covidData.min.infected
+    } - Bestätigte Infektionen\n${
+        covidData.min.recovered
+    } - Genesene\n${
+        covidData.min.dead} - Todesfälle\n${
         covidData.min.per100k
-    } Infizierten pro 100.000 Einwohner (${
-        covidData.min.dead
-    } Tote).\n\n(Stand: ${
+    } - Infektionen je 100.000 Einwohner\n\n(Quelle: MAGS NRW, Stand: ${
         covidData.publishedDate
     })\n\n`;
 
@@ -105,7 +110,7 @@ export const getCovid = async (district) => {
     console.log(covidData);
 
     const sorted = covidData.sort(
-        (a, b) => a['Infizierte pro 100.000'] - b['Infizierte pro 100.000']
+        (a, b) => a['Infizierte'] - b['Infizierte']
     );
     const min = sorted[0];
     const max = sorted[sorted.length - 1];
@@ -116,17 +121,20 @@ export const getCovid = async (district) => {
                 per100k: row['Infizierte pro 100.000'].split('.')[0],
                 dead: row['Todesfälle'] || '0',
                 publishedDate: row['Stand'],
+                recovered: row['Genesene*'],
                 max: {
                     district: max['Landkreis/ kreisfreie Stadt'],
                     infected: max['Infizierte'],
                     dead: max['Todesfälle'] || '0',
                     per100k: max['Infizierte pro 100.000'].split('.')[0],
+                    recovered: max['Genesene*'],
                 },
                 min: {
                     district: min['Landkreis/ kreisfreie Stadt'],
                     infected: min['Infizierte'],
                     dead: min['Todesfälle'] || '0',
                     per100k: min['Infizierte pro 100.000'].split('.')[0],
+                    recovered: min['Genesene*'],
                 },
             };
         }
