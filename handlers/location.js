@@ -5,7 +5,8 @@ import getFaq from '../lib/faq';
 import request from 'request-promise-native';
 import csvtojson from 'csvtojson';
 
-const uri = 'https://coronanrw-prod.s3.eu-central-1.amazonaws.com/corona_mags_nrw.csv';
+const uriCityMAGS = 'https://coronanrw-prod.s3.eu-central-1.amazonaws.com/corona_mags_nrw.csv';
+const uriNRWMAGS = 'https://coronanrw-staging.s3.eu-central-1.amazonaws.com/corona_mags_nrw_gesamt.csv';
 
 export const handleLocation = async (ctx) => {
     if (!ctx.dialogflowParams.location.structValue) {
@@ -42,7 +43,8 @@ export const handleLocation = async (ctx) => {
 export const handleCity = async (ctx, cityFull) => {
     const covidText = await getFaq(`locationcovidnrw`);
 
-    const covidData = await getCovid(cityFull.district);
+    const covidDataCity = await getCovidCityMAGS(cityFull.district);
+    const covidDataNRW = await getCovidNRWMAGS();
 
     const studioUrl = trackLink(byStudios[cityFull.studio].linkCorona, {
         campaignType: 'unterhaltung',
@@ -65,33 +67,24 @@ export const handleCity = async (ctx, cityFull) => {
 
     const messageText = `Hier die aktuellen Corona-Fallzahlen für ${
         cityFull.keyCity.slice(-3) === '000' ? cityFull.city : 'den Landkreis ' + cityFull.district
-    }:\n${
-        covidData.infected
-    } - Bestätigte Infektionen\n${
-        covidData.recovered
-    } - Genesene\n${
-        covidData.dead} - Todesfälle\n${
-        covidData.per100k
-    } - Infektionen je 100.000 Einwohner\n\nDie meisten bestätigten Infizierten gibt es hier: ${
-        covidData.max.district
-    }\n${
-        covidData.max.infected
-    } - Bestätigte Infektionen\n${
-        covidData.max.recovered
-    } - Genesene\n${
-        covidData.max.dead} - Todesfälle\n${
-        covidData.max.per100k
-    } - Infektionen je 100.000 Einwohner\n\nDie wenigsten Infizierten gibt es hier: ${
-        covidData.min.district
-    }\n${
-        covidData.min.infected
-    } - Bestätigte Infektionen\n${
-        covidData.min.recovered
-    } - Genesene\n${
-        covidData.min.dead} - Todesfälle\n${
-        covidData.min.per100k
-    } - Infektionen je 100.000 Einwohner\n\n(Quelle: MAGS NRW, Stand: ${
-        covidData.publishedDate
+    }:\n\tBestätigte Infektionen: ${
+        covidDataCity.infected
+    }\n\tGenesene: ${
+        covidDataCity.recovered
+    }\n\tTodesfälle: ${
+        covidDataCity.dead
+    }\n\tInfektionen je 100.000 Einwohner: ${
+        covidDataCity.per100k
+    }\n\nAktuelle Zahlen für NRW im Überblick:\n\tBestätigte Infektionen: ${
+        covidDataNRW.infected
+    }\n\tGenesene: ${
+        covidDataNRW.recovered
+    }\n\tTodesfälle: ${
+        covidDataNRW.dead
+    }\n\tInfektionen je 100.000 Einwohner: ${
+        covidDataNRW.per100k
+    }\n\n(Quelle: MAGS NRW, Stand: ${
+        covidDataCity.publishedDate
     })\n\n`;
 
     return ctx.reply(
@@ -103,11 +96,9 @@ export const handleCity = async (ctx, cityFull) => {
     );
 };
 
-export const getCovid = async (district) => {
-    const response = await request.get({ uri });
-    console.log(response);
+export const getCovidCityMAGS = async (district) => {
+    const response = await request.get({ uri: uriCityMAGS });
     const covidData = await csvtojson({ flatKeys: true }).fromString(response);
-    console.log(covidData);
 
     const sorted = covidData.sort(
         (a, b) => a['Infizierte'] - b['Infizierte']
@@ -140,4 +131,19 @@ export const getCovid = async (district) => {
         }
     }
     return;
+};
+
+export const getCovidNRWMAGS = async () => {
+    const response = await request.get({ uri: uriNRWMAGS });
+    console.log(response);
+    const covidData = await csvtojson({ flatKeys: true }).fromString(response);
+    console.log(covidData);
+    const total = covidData[0];
+    return {
+        infected: total['Infizierte'],
+        per100k: total['Infizierte pro 100.000'].split('.')[0],
+        dead: total['Todesfälle'] || '0',
+        publishedDate: total['Stand'],
+        recovered: total['Genesene*'],
+    };
 };
