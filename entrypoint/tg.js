@@ -10,6 +10,7 @@ import {
     settingsMiddleware,
     analyticsMiddleware,
     answerCallbackMiddleware,
+    removeKeyboardMiddleware,
 } from '../lib/middlewares';
 import {
     handleStart,
@@ -49,6 +50,7 @@ export const update = async (event, context, callback) => {
         bot.use(actionDataMiddleware);
         bot.use(analyticsMiddleware);
         bot.use(answerCallbackMiddleware);
+        bot.use(removeKeyboardMiddleware);
 
         bot.start(handleStart);
         bot.action('onboarding_analytics', handleOnboardingAnalytics);
