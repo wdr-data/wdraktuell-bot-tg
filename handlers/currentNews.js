@@ -15,9 +15,6 @@ export default async (ctx) => {
 
     const push = data.results[0];
 
-    const { messageText } = assemblePush(push);
-    await ctx.reply(messageText, {
-        'parse_mode': 'HTML',
-        'disable_web_page_preview': true,
-    });
+    const { messageText, extra } = assemblePush(push);
+    await ctx.reply(messageText, extra);
 };

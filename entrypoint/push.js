@@ -241,14 +241,11 @@ export const send = RavenLambdaWrapper.handler(Raven, async (event) => {
         } else if (event.type === 'push') {
             const push = event.data;
             const bot = new Telegram(process.env.TG_TOKEN);
-            const { messageText } = assemblePush(push);
+            const { messageText, extra } = assemblePush(push, event.preview);
 
             await Promise.all(users.map(async (user) => {
                 try {
-                    await bot.sendMessage(user.tgid, messageText, {
-                        'parse_mode': 'HTML',
-                        'disable_web_page_preview': true,
-                    });
+                    await bot.sendMessage(user.tgid, messageText, extra);
                     event.recipients++;
                 } catch (err) {
                     const reason = await handlePushFailed(err, user.tgid);
