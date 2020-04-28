@@ -1,7 +1,7 @@
 import request from 'request-promise-native';
 
 import urls from '../lib/urls';
-import { trackLink, regexSlug } from '../lib/util';
+import { trackLink, regexSlug, escapeHTML } from '../lib/util';
 import fragmentSender from '../lib/fragmentSender';
 
 export default async (ctx) => {
@@ -42,5 +42,8 @@ export default async (ctx) => {
         ctx.data.audio = report.audio;
     }
 
-    return fragmentSender(ctx, report.next_fragments, report);
+    const text = `<b>${escapeHTML(report.headline)}</b>\n${escapeHTML(report.text)}`;
+
+    return fragmentSender(
+        ctx, report.next_fragments, { ...report, text, extra: { 'parse_mode': 'HTML' } });
 };
