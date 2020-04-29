@@ -24,6 +24,7 @@ const handleText = async (ctx) => {
             category: 'Unterhaltung',
             event: 'Feedback-Menü',
             label: '70 Zeichen',
+            subtype: text.slice(0, 50),
         });
         return handleContact(ctx);
     }
@@ -87,6 +88,7 @@ const handleText = async (ctx) => {
             category: 'Unterhaltung',
             event: 'Dialogflow',
             label: result.intent.displayName,
+            subType: result.queryText.slice(0, 50),
         });
         return ctx.reply(result.fulfillmentText);
     }
