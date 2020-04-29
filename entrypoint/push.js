@@ -170,9 +170,11 @@ const makeFakeContext = (bot, user, event) => {
         audio: report.audio,
         preview: event.preview,
         track: {
-            category: `Breaking-Push`,
-            event: report.subtype ? `Meldung: ${report.subtype.title}` : 'Meldung',
-            label: report.headline,
+            category: `Breaking-Push-${report.id}`,
+            event: `Breaking Meldung:`,
+            label: report.subtype ?
+                `${report.subtype.title}: ${report.headline}` :
+                report.headline,
             subType: '1.Bubble',
             publicationDate: report.published_date,
         },
@@ -348,13 +350,13 @@ export const finish = RavenLambdaWrapper.handler(Raven, function(event, context,
     let trackCategory = 'Preview';
     switch (event.timing) {
     case 'morning':
-        trackCategory = 'Morgen-Push';
+        trackCategory = `Morgen-Push-${event.data.id}`;
         break;
     case 'evening':
-        trackCategory = 'Abend-Push';
+        trackCategory = `Abend-Push-${event.data.id}`;
         break;
     case 'breaking':
-        trackCategory = 'Breaking-Push';
+        trackCategory = `Breaking-Push-${event.data.id}`;
     }
     webtrekk.track({
         category: trackCategory,
