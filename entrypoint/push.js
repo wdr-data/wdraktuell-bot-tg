@@ -232,7 +232,7 @@ export const send = RavenLambdaWrapper.handler(Raven, async (event) => {
                 headline = `<b>${escapeHTML(report.headline)}</b>`;
             }
 
-            const messageText = `${headline}\n\n${report.summary}${unsubscribeNote}`;
+            const messageText = `${headline}\n\n${report.text}${unsubscribeNote}`;
 
             await Promise.all(users.map(async (user) => {
                 const ctx = makeFakeContext(bot, user, event);
