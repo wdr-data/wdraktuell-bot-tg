@@ -42,7 +42,18 @@ export default async (ctx) => {
         ctx.data.audio = report.audio;
     }
 
-    const text = `<b>${escapeHTML(report.headline)}</b>\n${escapeHTML(report.text)}`;
+    let text;
+    if (report.type === 'last') {
+        text = `<b>${
+            escapeHTML(report.subtype.emoji)
+        } ${
+            escapeHTML(report.subtype.title)
+        }: ${
+            escapeHTML(report.headline)
+        }</b> ${escapeHTML(report.text)}`;
+    } else {
+        text = `<b>${escapeHTML(report.headline)}</b> ${escapeHTML(report.text)}`;
+    }
 
     return fragmentSender(
         ctx, report.next_fragments, { ...report, text, extra: { 'parse_mode': 'HTML' } });
