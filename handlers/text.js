@@ -57,20 +57,18 @@ const handleText = async (ctx) => {
 
         if (result.parameters.fields.tags && result.parameters.fields.tags.stringValue) {
             await ctx.track({
-                category: 'Unterhaltung',
-                event: 'Dialogflow',
-                label: 'Themen-Suche',
-                subType: 'Tag',
-                tags: result.parameters.fields.tags.stringValue,
+                category: 'Feature',
+                event: 'Themen nach Tag/Genre',
+                label: 'Tag',
+                subType: result.parameters.fields.tags.stringValue,
             });
         }
         if (result.parameters.fields.genres && result.parameters.fields.genres.stringValue) {
             await ctx.track({
-                category: 'Unterhaltung',
-                event: 'Dialogflow',
-                label: 'Themen-Suche',
-                subType: 'Genre',
-                tags: result.parameters.fields.genres.stringValue,
+                category: 'Feature',
+                event: 'Themen nach Tag/Genre',
+                label: 'Genre',
+                subType: result.parameters.fields.genres.stringValue,
             });
         }
         if (result.action in actions) {
