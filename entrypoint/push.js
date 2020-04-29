@@ -15,13 +15,11 @@ import {
     markSent,
 } from '../lib/pushData';
 import ddb from '../lib/dynamodb';
-import {
-    getAttachmentId,
-} from '../lib/attachments';
-import { guessAttachmentType } from '../lib/attachments';
 import { escapeHTML, trackLink, regexSlug } from '../lib/util';
 import Webtrekk from '../lib/webtrekk';
 import DynamoDbCrud from '../lib/dynamodbCrud';
+import { CustomContext as Context } from '../lib/customContext';
+import fragmentSender from '../lib/fragmentSender';
 
 
 export const proxy = RavenLambdaWrapper.handler(Raven, async (event) => {
@@ -149,15 +147,47 @@ const handlePushFailed = async (error, tgid) => {
     return reasons.UNKNOWN;
 };
 
-const getMethodForUrl = (bot, url) => {
-    const type = guessAttachmentType(url);
-    const sendMapping = {
-        image: bot.sendPhoto.bind(bot),
-        document: bot.sendDocument.bind(bot),
-        audio: bot.sendAudio.bind(bot),
-        video: bot.sendVideo.bind(bot),
+const makeFakeContext = (bot, user, event) => {
+    const report = event.data;
+    const update = {
+        'update_id': 1,
+        message: {
+            from: {
+                id: user.tgid,
+            },
+            chat: {
+                id: user.tgid,
+                type: 'private',
+            },
+        },
     };
-    return sendMapping[type];
+    const ctx = new Context(update, bot, {});
+    ctx.data = {
+        timing: report.type,
+        report: report.id,
+        type: 'report',
+        quiz: report.is_quiz,
+        audio: report.audio,
+        preview: event.preview,
+        track: {
+            category: `Breaking-Push`,
+            event: report.subtype ? `Meldung: ${report.subtype.title}` : 'Meldung',
+            label: report.headline,
+            subType: '1.Bubble',
+            publicationDate: report.published_date,
+        },
+    };
+    if (report.link) {
+        let campaignType = 'breaking_push';
+        ctx.data.link = trackLink(
+            report.link, {
+                campaignType,
+                campaignName: regexSlug(report.headline),
+                campaignId: report.id,
+            }
+        );
+    }
+    return ctx;
 };
 
 export const send = RavenLambdaWrapper.handler(Raven, async (event) => {
@@ -192,44 +222,33 @@ export const send = RavenLambdaWrapper.handler(Raven, async (event) => {
         if (event.type === 'report') {
             const report = event.data;
 
-            let reportUrl = '';
-            if (report.link) {
-                reportUrl = trackLink( report.link, {
-                    campaignType: 'breaking_push',
-                    campaignName: regexSlug( report.headline ),
-                    campaignId: report.id,
-                });
-            }
-            const link = report.link ?
-                `\n🔗 <a href="${escapeHTML(reportUrl)}">${
-                    escapeHTML(report.short_headline)
-                }</a>` : ``;
+            let headline;
+            let unsubscribeNote = '';
 
-            const unsubscribeNote = 'Um Eilmeldungen abzubestellen, schreibe "Stop".';
-            let messageText;
             if (report.type === 'breaking') {
-                messageText = `🚨 ${report.summary}${link}\n\n${unsubscribeNote}`;
+                unsubscribeNote = '\n\nUm Eilmeldungen abzubestellen, schreibe "Stop".';
+                headline = `🚨 <b>${escapeHTML(report.headline)}</b>`;
             } else {
-                messageText = `${report.summary}${link}`;
+                headline = `<b>${escapeHTML(report.headline)}</b>`;
             }
+
+            const messageText = `${headline}\n\n${report.summary}${unsubscribeNote}`;
 
             await Promise.all(users.map(async (user) => {
+                const ctx = makeFakeContext(bot, user, event);
                 try {
-                    if (report.attachment) {
-                        const url = report.attachment.processed;
-                        const attachmentId = await getAttachmentId(url);
-                        const sendAttachment = getMethodForUrl(bot, url);
-                        await sendAttachment(user.tgid, attachmentId, {
-                            caption: messageText,
-                            'parse_mode': 'HTML',
-                            'disable_web_page_preview': true,
-                        });
-                    } else {
-                        await bot.sendMessage(user.tgid, messageText, {
-                            'parse_mode': 'HTML',
-                            'disable_web_page_preview': true,
-                        });
-                    }
+                    await fragmentSender(
+                        ctx,
+                        report.next_fragments,
+                        {
+                            ...report,
+                            text: messageText,
+                            extra: {
+                                'parse_mode': 'HTML',
+                                'disable_web_page_preview': true,
+                            },
+                        }
+                    );
                     event.recipients++;
                 } catch (err) {
                     const reason = await handlePushFailed(err, user.tgid);
