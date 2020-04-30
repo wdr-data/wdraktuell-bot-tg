@@ -24,7 +24,7 @@ const handleText = async (ctx) => {
             category: 'Unterhaltung',
             event: 'Feedback-Menü',
             label: '70 Zeichen',
-            subtype: text.slice(0, 50),
+            subType: text.slice(0, 50),
         });
         return handleContact(ctx);
     }
