@@ -24,6 +24,7 @@ const handleText = async (ctx) => {
             category: 'Unterhaltung',
             event: 'Feedback-Menü',
             label: '70 Zeichen',
+            subType: text.slice(0, 50),
         });
         return handleContact(ctx);
     }
@@ -57,20 +58,18 @@ const handleText = async (ctx) => {
 
         if (result.parameters.fields.tags && result.parameters.fields.tags.stringValue) {
             await ctx.track({
-                category: 'Unterhaltung',
-                event: 'Dialogflow',
-                label: 'Themen-Suche',
-                subType: 'Tag',
-                tags: result.parameters.fields.tags.stringValue,
+                category: 'Feature',
+                event: 'Themen nach Tag/Genre',
+                label: 'Tag',
+                subType: result.parameters.fields.tags.stringValue,
             });
         }
         if (result.parameters.fields.genres && result.parameters.fields.genres.stringValue) {
             await ctx.track({
-                category: 'Unterhaltung',
-                event: 'Dialogflow',
-                label: 'Themen-Suche',
-                subType: 'Genre',
-                tags: result.parameters.fields.genres.stringValue,
+                category: 'Feature',
+                event: 'Themen nach Tag/Genre',
+                label: 'Genre',
+                subType: result.parameters.fields.genres.stringValue,
             });
         }
         if (result.action in actions) {
@@ -89,6 +88,7 @@ const handleText = async (ctx) => {
             category: 'Unterhaltung',
             event: 'Dialogflow',
             label: result.intent.displayName,
+            subType: result.queryText.slice(0, 50),
         });
         return ctx.reply(result.fulfillmentText);
     }

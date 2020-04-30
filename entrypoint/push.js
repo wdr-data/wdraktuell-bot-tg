@@ -4,7 +4,6 @@ import RavenLambdaWrapper from 'serverless-sentry-lib';
 import * as aws from 'aws-sdk';
 import {
     Telegram,
-    Markup,
 } from 'telegraf';
 
 import getTiming from '../lib/timing';
@@ -16,13 +15,11 @@ import {
     markSent,
 } from '../lib/pushData';
 import ddb from '../lib/dynamodb';
-import {
-    getAttachmentId,
-} from '../lib/attachments';
-import { trackLink, regexSlug } from '../lib/util';
-import { guessAttachmentType } from '../lib/attachments';
+import { escapeHTML, trackLink, regexSlug } from '../lib/util';
 import Webtrekk from '../lib/webtrekk';
 import DynamoDbCrud from '../lib/dynamodbCrud';
+import { CustomContext as Context } from '../lib/customContext';
+import fragmentSender from '../lib/fragmentSender';
 
 
 export const proxy = RavenLambdaWrapper.handler(Raven, async (event) => {
@@ -150,15 +147,49 @@ const handlePushFailed = async (error, tgid) => {
     return reasons.UNKNOWN;
 };
 
-const getMethodForUrl = (bot, url) => {
-    const type = guessAttachmentType(url);
-    const sendMapping = {
-        image: bot.sendPhoto.bind(bot),
-        document: bot.sendDocument.bind(bot),
-        audio: bot.sendAudio.bind(bot),
-        video: bot.sendVideo.bind(bot),
+const makeFakeContext = (bot, user, event) => {
+    const report = event.data;
+    const update = {
+        'update_id': 1,
+        message: {
+            from: {
+                id: user.tgid,
+            },
+            chat: {
+                id: user.tgid,
+                type: 'private',
+            },
+        },
     };
-    return sendMapping[type];
+    const ctx = new Context(update, bot, {});
+    ctx.data = {
+        timing: report.type,
+        report: report.id,
+        type: 'report',
+        quiz: report.is_quiz,
+        audio: report.audio,
+        preview: event.preview,
+        track: {
+            category: `Breaking-Push-${report.id}`,
+            event: `Breaking Meldung`,
+            label: report.subtype ?
+                `${report.subtype.title}: ${report.headline}` :
+                report.headline,
+            subType: '1.Bubble',
+            publicationDate: report.published_date,
+        },
+    };
+    if (report.link) {
+        let campaignType = 'breaking_push';
+        ctx.data.link = trackLink(
+            report.link, {
+                campaignType,
+                campaignName: regexSlug(report.headline),
+                campaignId: report.id,
+            }
+        );
+    }
+    return ctx;
 };
 
 export const send = RavenLambdaWrapper.handler(Raven, async (event) => {
@@ -193,46 +224,33 @@ export const send = RavenLambdaWrapper.handler(Raven, async (event) => {
         if (event.type === 'report') {
             const report = event.data;
 
-            const unsubscribeNote = 'Um Eilmeldungen abzubestellen, schreibe "Stop".';
-            let messageText;
+            let headline;
+            let unsubscribeNote = '';
+
             if (report.type === 'breaking') {
-                messageText = `🚨 ${report.summary}\n\n${unsubscribeNote}`;
+                unsubscribeNote = '\n\nUm Eilmeldungen abzubestellen, schreibe "Stop".';
+                headline = `🚨 <b>${escapeHTML(report.headline)}</b>`;
             } else {
-                messageText = report.summary;
+                headline = `<b>${escapeHTML(report.headline)}</b>`;
             }
 
-            let keyboard;
-
-            if (report.link) {
-                keyboard = Markup.inlineKeyboard([
-                    [
-                        Markup.urlButton(`🔗️ ${
-                            report.short_headline
-                        }`, trackLink(
-                            report.link, {
-                                campaignType: 'breaking_push',
-                                campaignName: regexSlug(report.headline),
-                                campaignId: report.id,
-                            })),
-                    ],
-                ]);
-            }
+            const messageText = `${headline}\n\n${report.text}${unsubscribeNote}`;
 
             await Promise.all(users.map(async (user) => {
+                const ctx = makeFakeContext(bot, user, event);
                 try {
-                    if (report.attachment) {
-                        const url = report.attachment.processed;
-                        const attachmentId = await getAttachmentId(url);
-                        const sendAttachment = getMethodForUrl(bot, url);
-                        await sendAttachment(user.tgid, attachmentId, {
-                            caption: messageText,
-                            'reply_markup': keyboard,
-                        });
-                    } else {
-                        await bot.sendMessage(user.tgid, messageText, {
-                            'reply_markup': keyboard,
-                        });
-                    }
+                    await fragmentSender(
+                        ctx,
+                        report.next_fragments,
+                        {
+                            ...report,
+                            text: messageText,
+                            extra: {
+                                'parse_mode': 'HTML',
+                                'disable_web_page_preview': true,
+                            },
+                        }
+                    );
                     event.recipients++;
                 } catch (err) {
                     const reason = await handlePushFailed(err, user.tgid);
@@ -244,14 +262,11 @@ export const send = RavenLambdaWrapper.handler(Raven, async (event) => {
         } else if (event.type === 'push') {
             const push = event.data;
             const bot = new Telegram(process.env.TG_TOKEN);
-            const { messageText } = assemblePush(push);
+            const { messageText, extra } = assemblePush(push, event.preview);
 
             await Promise.all(users.map(async (user) => {
                 try {
-                    await bot.sendMessage(user.tgid, messageText, {
-                        'parse_mode': 'HTML',
-                        'disable_web_page_preview': true,
-                    });
+                    await bot.sendMessage(user.tgid, messageText, extra);
                     event.recipients++;
                 } catch (err) {
                     const reason = await handlePushFailed(err, user.tgid);
@@ -335,13 +350,13 @@ export const finish = RavenLambdaWrapper.handler(Raven, function(event, context,
     let trackCategory = 'Preview';
     switch (event.timing) {
     case 'morning':
-        trackCategory = 'Morgen-Push';
+        trackCategory = `Morgen-Push-${event.data.id}`;
         break;
     case 'evening':
-        trackCategory = 'Abend-Push';
+        trackCategory = `Abend-Push-${event.data.id}`;
         break;
     case 'breaking':
-        trackCategory = 'Breaking-Push';
+        trackCategory = `Breaking-Push-${event.data.id}`;
     }
     webtrekk.track({
         category: trackCategory,

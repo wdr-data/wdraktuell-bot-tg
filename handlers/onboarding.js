@@ -12,6 +12,7 @@ const analyticsButtons = (variant, referral) => {
             'Ja, ist ok',
             actionData('onboarding_analytics', {
                 choice: 'accept',
+                removeKeyboard: true,
                 referral,
             })
         ),
@@ -19,6 +20,7 @@ const analyticsButtons = (variant, referral) => {
             'Nein, für mich nicht',
             actionData('onboarding_analytics', {
                 choice: 'decline',
+                removeKeyboard: true,
                 referral,
             })
         ),
@@ -30,6 +32,7 @@ const analyticsButtons = (variant, referral) => {
                 'Datenschutz',
                 actionData('onboarding_analytics', {
                     choice: 'policy',
+                    removeKeyboard: true,
                     referral,
                 })
             )
@@ -73,18 +76,21 @@ export const handleOnboardingAnalytics = async (ctx) => {
             'Morgens & Abends',
             actionData('onboarding_push_when', {
                 choice: 'morning_evening',
+                removeKeyboard: true,
             })
         ),
         Markup.callbackButton(
             'Morgens',
             actionData('onboarding_push_when', {
                 choice: 'morning',
+                removeKeyboard: true,
             })
         ),
         Markup.callbackButton(
             'Abends',
             actionData('onboarding_push_when', {
                 choice: 'evening',
+                removeKeyboard: true,
             })
         ),
     ];
@@ -122,8 +128,6 @@ export const handleOnboardingAnalytics = async (ctx) => {
         break;
     }
     }
-
-    return ctx.editMessageReplyMarkup();
 };
 
 export const handleOnboardingPushWhen = async (ctx) => {
@@ -158,6 +162,7 @@ export const handleOnboardingPushWhen = async (ctx) => {
             'Ja, gerne',
             actionData('onboarding_push_breaking', {
                 choice: true,
+                removeKeyboard: true,
                 track: {
                     category: 'Onboarding',
                     event: 'Einstellungen',
@@ -171,6 +176,7 @@ export const handleOnboardingPushWhen = async (ctx) => {
             'Nein, danke',
             actionData('onboarding_push_breaking', {
                 choice: false,
+                removeKeyboard: true,
                 track: {
                     category: 'Onboarding',
                     event: 'Einstellungen',
@@ -184,8 +190,6 @@ export const handleOnboardingPushWhen = async (ctx) => {
     const extra = Markup.inlineKeyboard(buttons.map((button) => [ button ])).extra();
     await ctx.replyFullNewsBase(await getFaq(`onboarding_${choice}`));
     await ctx.replyFullNewsBase(await getFaq('onboarding_breaking'), extra);
-
-    return ctx.editMessageReplyMarkup();
 };
 
 export const handleOnboardingPushBreaking = async (ctx) => {
@@ -196,6 +200,4 @@ export const handleOnboardingPushBreaking = async (ctx) => {
     await subscriptions.update(ctx.from.id, 'breaking', choice);
     await ctx.replyFullNewsBase(await getFaq(`onboarding_breaking_${choice ? 'yes' : 'no'}`));
     await ctx.replyFullNewsBase(await getFaq('onboarding_final'));
-
-    return ctx.editMessageReplyMarkup();
 };

@@ -10,6 +10,8 @@ import {
     settingsMiddleware,
     analyticsMiddleware,
     answerCallbackMiddleware,
+    removeKeyboardMiddleware,
+    replyMiddleware,
 } from '../lib/middlewares';
 import {
     handleStart,
@@ -20,6 +22,11 @@ import {
 import { handleSubscriptionsCommand } from '../handlers/subscriptions';
 import { actions } from '../handlers';
 import handleDataPolicy from '../handlers/dataPolicy';
+import handleReport from '../handlers/report';
+import handleFragment from '../handlers/fragment';
+import handleReportAudio from '../handlers/reportAudio';
+import handleQuizResponse from '../handlers/quizResponse';
+import handlePushOutro from '../handlers/pushOutro';
 
 const checkForToken = (event) => decodeURIComponent(
     event.pathParameters.token) === process.env.TG_TOKEN;
@@ -49,11 +56,19 @@ export const update = async (event, context, callback) => {
         bot.use(actionDataMiddleware);
         bot.use(analyticsMiddleware);
         bot.use(answerCallbackMiddleware);
+        bot.use(removeKeyboardMiddleware);
+        bot.use(replyMiddleware);
 
         bot.start(handleStart);
         bot.action('onboarding_analytics', handleOnboardingAnalytics);
         bot.action('onboarding_push_when', handleOnboardingPushWhen);
         bot.action('onboarding_push_breaking', handleOnboardingPushBreaking);
+
+        bot.action('report', handleReport);
+        bot.action('fragment', handleFragment);
+        bot.action('report_audio', handleReportAudio);
+        bot.action('quiz_response', handleQuizResponse);
+        bot.action('push_outro', handlePushOutro);
 
         bot.command('einstellungen', handleSubscriptionsCommand);
         bot.command('datenschutz', handleDataPolicy);
