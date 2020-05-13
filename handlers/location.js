@@ -89,8 +89,8 @@ export const handleCity = async (ctx, cityFull) => {
         covidDataCity.recovered
     }\nTodesfälle: ${
         covidDataCity.dead
-    }\n\nSteigt die Zahl der Neuinfektionen in den vergangenen 7 Tagen pro 100.000 Einwohner über 50, dann muss die Stadt ${
-        cityFull.keyCity.slice(-3) === '000' ? cityFull.city : 'der Landkreis ' + cityFull.district
+    }\n\nSteigt die Zahl der Neuinfektionen in den vergangenen 7 Tagen pro 100.000 Einwohner über 50, dann muss ${
+        cityFull.keyCity.slice(-3) === '000' ? `die Stadt ${cityFull.city}` : 'der Landkreis ' + cityFull.district
     } Maßnahmen zur Eindämmung ergreifen.\n
 Aktuelle Zahlen für NRW im Überblick:\nGemeldete Infektionen in den vergangenen 7 Tagen pro 100.000 Einwohner: ${
         covidDataNRW.lastSevenDaysPer100k
@@ -105,6 +105,7 @@ Aktuelle Zahlen für NRW im Überblick:\nGemeldete Infektionen in den vergangene
     }\n\n(Quelle: MAGS NRW, Stand: ${
         covidDataCity.publishedDate
     })\n\n`;
+    /* eslint-enable */
 
     return ctx.reply(
         escapeHTML(messageText) + `${escapeHTML(covidText.text)}\n${ddjLink}\n${studioLink}`,
