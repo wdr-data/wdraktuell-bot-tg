@@ -15,9 +15,13 @@ export const handleLocation = async (ctx) => {
     const location = ctx.dialogflowParams.location.structValue.fields;
     console.log(`Detected location: ${location}`);
     const zipCode = location['zip-code'].stringValue;
+    const subadminArea = location['subadmin-area'].stringValue;
     let city = location.city.stringValue;
     console.log(`zipCode: ${zipCode}`);
     console.log(`city: ${zipCode}`);
+    if (subadminArea) {
+        city = subadminArea;
+    }
     if (byZipCodes[zipCode]) {
         city = byZipCodes[zipCode].city;
     }
@@ -89,9 +93,7 @@ export const handleCity = async (ctx, cityFull) => {
         covidDataCity.recovered
     }\nTodesfälle: ${
         covidDataCity.dead
-    }\n\nSteigt die Zahl der Neuinfektionen in den vergangenen 7 Tagen pro 100.000 Einwohner über 50, dann muss ${
-        cityFull.keyCity.slice(-3) === '000' ? `die Stadt ${cityFull.city}` : 'der Landkreis ' + cityFull.district
-    } Maßnahmen zur Eindämmung ergreifen.\n
+    }\n\nSteigt die Zahl der Neuinfektionen in den vergangenen 7 Tagen pro 100.000 Einwohner über 50, dann muss der Ort Maßnahmen zur Eindämmung ergreifen.\n
 Aktuelle Zahlen für NRW im Überblick:\nGemeldete Infektionen in den vergangenen 7 Tagen pro 100.000 Einwohner: ${
         covidDataNRW.lastSevenDaysPer100k
     }\nGemeldete Infektionen in den vergangenen 7 Tagen: ${
