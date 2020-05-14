@@ -17,8 +17,6 @@ export const handleLocation = async (ctx) => {
     const zipCode = location['zip-code'].stringValue;
     const subadminArea = location['subadmin-area'].stringValue;
     let city = location.city.stringValue;
-    console.log(`zipCode: ${zipCode}`);
-    console.log(`city: ${zipCode}`);
     if (subadminArea) {
         city = subadminArea;
     }
