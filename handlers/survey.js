@@ -31,8 +31,8 @@ export async function handleSurvey(ctx) {
     }
     const survey = surveyData[ctx.data.nextStep];
     let buttons = [];
-    survey.answers.map(
-        (answer) => buttons.push(
+    survey.answers.forEach(
+        (answer) => buttons.push([
             Markup.callbackButton(
                 answer,
                 actionData('survey', {
@@ -47,7 +47,7 @@ export async function handleSurvey(ctx) {
                     },
                 })
             ),
-        )
+        ]),
     );
     const markup = Markup.inlineKeyboard(buttons);
     return ctx.reply(
