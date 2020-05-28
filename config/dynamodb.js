@@ -142,6 +142,20 @@ const tableProps = {
             Enabled: 'TRUE',
         },
     },
+    'userStates': {
+        AttributeDefinitions: [
+            {
+                AttributeName: 'uuid',
+                AttributeType: 'S',
+            },
+        ],
+        KeySchema: [
+            {
+                AttributeName: 'uuid',
+                KeyType: 'HASH',
+            },
+        ],
+    },
 };
 
 const tableNames = (stage) => {
