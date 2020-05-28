@@ -13,8 +13,14 @@ const getNews = async (index, options={ tag: 'Coronavirus' }) => {
     });
     const headline = response.data[0].teaser.schlagzeile;
     const teaserText = response.data[0].teaser.teaserText.map((text) => `➡️ ${text}`).join('\n');
-    const imageUrl = Object.values(response.data[0].teaser.containsMedia)
-        .find((e) => e.index===1).url.replace('%%FORMAT%%', 'gseapremiumxl');
+    const mediaItems = Object.values(
+        response.data[0].teaser.containsMedia
+    ).sort(
+        (a, b) => a.index - b.index
+    );
+    const imageUrl = mediaItems.find(
+        (e) => e.mediaType === 'image'
+    ).url.replace('%%FORMAT%%', 'gseapremiumxl');
 
     const text = `<b>${escapeHTML(headline)}</b>\n\n${escapeHTML(teaserText)}`;
 
