@@ -22,8 +22,8 @@ const getNews = async (index, options={ tag: 'Coronavirus' }) => {
     const headline = response.data[0].teaser.schlagzeile;
     const teaserText = response.data[0].teaser.teaserText.map((text) => `➡️ ${text}`).join('\n');
     const lastUpdate = moment(
-        response.data[0].teaser.redaktionellerStand
-    ).tz('Europe/Berlin').format('HH:MM • DD.MM.');
+        response.data[0].teaser.redaktionellerStand * 1000
+    ).tz('Europe/Berlin').format('DD.MM.YY, HH:mm');
 
     // Find image url
     const mediaItems = Object.values(
