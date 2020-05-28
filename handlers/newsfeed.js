@@ -5,6 +5,14 @@ import urls from '../lib/urls';
 import actionData from '../lib/actionData';
 import { escapeHTML } from '../lib/util';
 
+const imageVariants = [
+    'ARDFotogalerie',
+    'gseapremiumxl',
+    'TeaserAufmacher',
+    'gseaclassicxl',
+    'TeaserNormal',
+];
+
 const getNews = async (index, options={ tag: 'Coronavirus' }) => {
     const { tag } = options;
     const response = await request({
@@ -13,14 +21,22 @@ const getNews = async (index, options={ tag: 'Coronavirus' }) => {
     });
     const headline = response.data[0].teaser.schlagzeile;
     const teaserText = response.data[0].teaser.teaserText.map((text) => `➡️ ${text}`).join('\n');
+
+    // Find image url
     const mediaItems = Object.values(
         response.data[0].teaser.containsMedia
     ).sort(
         (a, b) => a.index - b.index
     );
-    const imageUrl = mediaItems.find(
+    const imageUrlTemplate = mediaItems.find(
         (e) => e.mediaType === 'image'
-    ).url.replace('%%FORMAT%%', 'gseapremiumxl');
+    ).url;
+    const imageCandidates = imageVariants.map(
+        (variant) => imageUrlTemplate.replace('%%FORMAT%%', variant)
+    );
+
+    const statuses = await Promise.allSettled(imageCandidates.map((url) => request.head(url)));
+    const imageUrl = imageCandidates.find((candidate, i) => statuses[i].status === 'fulfilled');
 
     const text = `<b>${escapeHTML(headline)}</b>\n\n${escapeHTML(teaserText)}`;
 
