@@ -20,7 +20,7 @@ const getNews = async (index, options={ tag: 'Coronavirus' }) => {
         json: true,
     });
     const headline = response.data[0].teaser.schlagzeile;
-    const teaserText = response.data[0].teaser.teaserText.map((text) => `➡️ ${text}`).join('\n');
+    const teaserText = response.data[0].teaser.teaserText.map((text) => ` • ${text}`).join('\n');
     const lastUpdate = moment(
         response.data[0].teaser.redaktionellerStand * 1000
     ).tz('Europe/Berlin').format('DD.MM.YY, HH:mm');
