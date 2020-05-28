@@ -9,8 +9,6 @@ const imageVariants = [
     'ARDFotogalerie',
     'gseapremiumxl',
     'TeaserAufmacher',
-    'gseaclassicxl',
-    'TeaserNormal',
 ];
 
 const getNews = async (index, options={ tag: 'Coronavirus' }) => {
