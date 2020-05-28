@@ -3,6 +3,7 @@ import Markup from 'telegraf/markup';
 import actionData from '../lib/actionData';
 import DynamoDbCrud from '../lib/dynamodbCrud';
 import Webtrekk from '../lib/webtrekk';
+import { startSurvey } from './survey';
 
 const subscriptionMap = {
     'morning': 'Morgens',
@@ -14,8 +15,8 @@ const subscriptionMap = {
 export const handleSubscriptionsCommand = async (ctx) => {
     ctx.track({
         category: 'Menüpunkt',
-        event: 'Command-Menü',
-        label: 'action',
+        event: 'Einstellungen',
+        label: 'Command-Menü',
     });
     await handleSubscriptions(ctx);
 };
@@ -26,6 +27,9 @@ export const handleSubscriptions = async (ctx) => {
             const subscriptions = new DynamoDbCrud(process.env.DYNAMODB_SUBSCRIPTIONS, 'tgid');
             await subscriptions.update(ctx.from.id, ctx.data.subscription, ctx.data.enable);
             ctx.subscriptions[ctx.data.subscription] = ctx.data.enable;
+            if (!ctx.surveyMode && ctx.trackingEnabled && ctx.data.track.subType === 'Abmelden') {
+                await startSurvey(ctx);
+            }
         } else if ([ 'analytics' ].includes(ctx.data.subscription)) {
             const tracking = new DynamoDbCrud(process.env.DYNAMODB_TRACKING, 'tgid');
             await tracking.update(ctx.from.id, 'enabled', ctx.data.enable);
