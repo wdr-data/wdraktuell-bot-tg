@@ -6,6 +6,7 @@ import { handleContact } from './contact';
 import { handleFaq } from './faq';
 import handleDataPolicy from './dataPolicy';
 import { handleLocation } from './location';
+import { handleNewsfeedStart } from './newsfeed';
 
 export const actions = {
     subscriptions: handleSubscriptions,
@@ -15,4 +16,5 @@ export const actions = {
     faq: handleFaq,
     faq_data_protection: handleDataPolicy,
     location: handleLocation,
+    newsfeed_corona: handleNewsfeedStart,
 };
