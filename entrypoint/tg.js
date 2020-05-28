@@ -27,6 +27,7 @@ import handleFragment from '../handlers/fragment';
 import handleReportAudio from '../handlers/reportAudio';
 import handleQuizResponse from '../handlers/quizResponse';
 import handlePushOutro from '../handlers/pushOutro';
+import { handleSurvey } from '../handlers/survey';
 
 const checkForToken = (event) => decodeURIComponent(
     event.pathParameters.token) === process.env.TG_TOKEN;
@@ -69,6 +70,7 @@ export const update = async (event, context, callback) => {
         bot.action('report_audio', handleReportAudio);
         bot.action('quiz_response', handleQuizResponse);
         bot.action('push_outro', handlePushOutro);
+        bot.action('survey', handleSurvey);
 
         bot.command('einstellungen', handleSubscriptionsCommand);
         bot.command('datenschutz', handleDataPolicy);
