@@ -1,5 +1,7 @@
 import request from 'request-promise-native';
 import Markup from 'telegraf/markup';
+import moment from 'moment';
+import 'moment-timezone';
 
 import urls from '../lib/urls';
 import actionData from '../lib/actionData';
@@ -19,6 +21,9 @@ const getNews = async (index, options={ tag: 'Coronavirus' }) => {
     });
     const headline = response.data[0].teaser.schlagzeile;
     const teaserText = response.data[0].teaser.teaserText.map((text) => `➡️ ${text}`).join('\n');
+    const lastUpdate = moment(
+        response.data[0].teaser.redaktionellerStand
+    ).tz('Europe/Berlin').format('HH:MM • DD.MM.');
 
     // Find image url
     const mediaItems = Object.values(
@@ -36,7 +41,13 @@ const getNews = async (index, options={ tag: 'Coronavirus' }) => {
     const statuses = await Promise.allSettled(imageCandidates.map((url) => request.head(url)));
     const imageUrl = imageCandidates.find((candidate, i) => statuses[i].status === 'fulfilled');
 
-    const text = `<b>${escapeHTML(headline)}</b>\n\n${escapeHTML(teaserText)}`;
+    const text = `<b>${
+        escapeHTML(headline)
+    }</b>\n\n${
+        escapeHTML(teaserText)
+    }\n<i>${
+        lastUpdate
+    }</i>`;
 
     const linkButton = Markup.urlButton(`🔗 Lesen`, response.data[0].teaser.shareLink);
 
