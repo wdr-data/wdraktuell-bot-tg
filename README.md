@@ -135,14 +135,25 @@ Install [ngrok](https://ngrok.com/) and in external terminal window do:
 ngrok http 3000
 ```
 
-Open a terminal in your project directory and run:
+Set webhook to ngrok-url:
 
+Add file myWebhook.sh with this example content:
+```
+#!/bin/bash
+export TG_TOKEN="Add your TG_TOKEN"
+export NGROK_URL="https://123.ngrok.io"
+curl -X GET https://api.telegram.org/bot${TG_TOKEN}/setWebhook\?url\=${NGROK_URL}/tg/${TG_TOKEN}
+```
+
+Change NGROK_URL every time you want to use this and run myWebhook.sh:
+```
+./myWebhook.sh
+```
+
+Then open a terminal in your project directory and run:
 ```
 yarn sls offline
 ```
-
-Hint: Set webhook to ngrok-url.
-
 
 ## Datenschutz
 Es gelten die Facebook-Datenschutz-Regeln. Falls Nutzer sich für Push-Nachrichten anmelden, speichert der Bot eine PSID (page specific id). Diese ID identifiziert den User nur im Chat und hat sonst keine Bedeutung für Facebook.

@@ -25,9 +25,9 @@ export const handleLocation = async (ctx) => {
     }
     if (city) {
         ctx.track({
-            category: 'Unterhaltung',
-            event: 'Feature',
-            label: 'Location',
+            category: 'Feature',
+            event: 'Location',
+            label: zipCode ? 'Postleitzahl' : 'Ort',
             subType: byCities[city] ? city : `${city}-0`,
         });
     }
