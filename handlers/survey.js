@@ -38,7 +38,7 @@ export async function handleSurvey(ctx) {
                 actionData('survey', {
                     nextStep: ctx.data.nextStep + 1,
                     removeKeyboard: true,
-                    replyHTML: `<b>✅ ${answer}</b>`,
+                    replyHTML: `<b>➡️ ${answer}</b>`,
                     track: {
                         category: 'Umfrage',
                         event: 'Abmelden',
