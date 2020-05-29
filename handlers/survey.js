@@ -40,8 +40,8 @@ export async function handleSurvey(ctx) {
                     removeKeyboard: true,
                     replyHTML: `<b>➡️ ${answer}</b>`,
                     track: {
-                        category: 'Umfrage',
-                        event: 'Abmelden',
+                        category: 'Feature',
+                        event: 'Umfrage-Abmelden',
                         label: survey.question,
                         subType: answer,
                     },
