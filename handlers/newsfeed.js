@@ -5,7 +5,7 @@ import 'moment-timezone';
 
 import urls from '../lib/urls';
 import actionData from '../lib/actionData';
-import { escapeHTML } from '../lib/util';
+import { escapeHTML, trackLink } from '../lib/util';
 
 const imageVariants = [
     'ARDFotogalerie',
@@ -49,7 +49,14 @@ const getNews = async (index, options={ tag: 'Coronavirus' }) => {
         lastUpdate
     }</i>`;
 
-    const linkButton = Markup.urlButton(`🔗 Lesen`, response.data[0].teaser.shareLink);
+    // tracklink
+    const linkButton = Markup.urlButton(`🔗 Lesen`, trackLink(
+        response.data[0].teaser.shareLink, {
+            campaignType: 'newsfeed',
+            campaignName: 'coronavirus',
+            campaignId: 'bot',
+        })
+    );
 
     const navButtons = [];
 
@@ -60,6 +67,12 @@ const getNews = async (index, options={ tag: 'Coronavirus' }) => {
                 actionData('newsfeed', {
                     next: index - 1,
                     tag,
+                    track: {
+                        category: 'Feature',
+                        event: `Newsfeed`,
+                        label: 'Zurück',
+                        subType: index-1,
+                    },
                 })
             ),
         );
@@ -72,6 +85,12 @@ const getNews = async (index, options={ tag: 'Coronavirus' }) => {
                 actionData('newsfeed', {
                     next: index + 1,
                     tag,
+                    track: {
+                        category: 'Feature',
+                        event: `Newsfeed`,
+                        label: 'Vor',
+                        subType: index+1,
+                    },
                 })
             ));
     }
