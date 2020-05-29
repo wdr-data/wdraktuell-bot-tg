@@ -68,13 +68,14 @@ const getNews = async (index, options={ tag: 'Coronavirus' }) => {
     if (index < response.numFound) {
         navButtons.push(
             Markup.callbackButton(
-                '➡️',
+                index === 1 ? 'Nächster Beitrag ➡️' : '➡️',
                 actionData('newsfeed', {
                     next: index + 1,
                     tag,
                 })
             ));
     }
+
     const extra = Markup.inlineKeyboard([ [ linkButton ], navButtons ]).extra();
     extra.caption = text;
     extra['parse_mode'] = 'HTML';
