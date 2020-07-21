@@ -5,8 +5,8 @@ import getFaq from '../lib/faq';
 import request from 'request-promise-native';
 import csvtojson from 'csvtojson';
 
-const uriCityMAGS = 'https://coronanrw-prod.s3.eu-central-1.amazonaws.com/corona_mags_nrw.csv';
-const uriNRWMAGS = 'https://coronanrw-staging.s3.eu-central-1.amazonaws.com/corona_mags_nrw_gesamt.csv';
+const uriCityMAGS = 'https://coronanrw-prod.s3.eu-central-1.amazonaws.com/rki_ndr_districts_nrw.csv';
+const uriNRWMAGS = 'https://coronanrw-prod.s3.eu-central-1.amazonaws.com/rki_ndr_districts_nrw_gesamt.csv';
 
 export const handleLocation = async (ctx) => {
     if (!ctx.dialogflowParams.location.structValue) {
