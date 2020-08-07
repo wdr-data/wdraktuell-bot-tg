@@ -16,5 +16,6 @@ export const actions = {
     faq: handleFaq,
     faq_data_protection: handleDataPolicy,
     location: handleLocation,
+    location_corona: (ctx) => handleLocation(ctx, { type: 'corona' }),
     newsfeed_corona: handleNewsfeedStart,
 };
