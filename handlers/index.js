@@ -17,5 +17,6 @@ export const actions = {
     faq_data_protection: handleDataPolicy,
     location: handleLocation,
     location_corona: (ctx) => handleLocation(ctx, { type: 'corona' }),
+    location_schools: (ctx) => handleLocation(ctx, { type: 'schools' }),
     newsfeed_corona: handleNewsfeedStart,
 };

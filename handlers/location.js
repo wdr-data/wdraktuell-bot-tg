@@ -1,5 +1,6 @@
 import { byCities, byZipCodes } from '../data/locationMappings';
 import { handleCity as handleCityCorona } from './locationCorona';
+import { handleCity as handleCitySchools } from './locationSchools';
 
 
 export const handleLocation = async (ctx, options = {}) => {
@@ -48,6 +49,8 @@ export const handleLocation = async (ctx, options = {}) => {
     // Trigger specific location feature
     if (options.type === 'corona') {
         return handleCityCorona(ctx, location);
+    } else if (options.type === 'schools') {
+        return handleCitySchools(ctx, location);
     } else {
         return ctx.reply(ctx.dialogflowResponse);
     }
