@@ -10,7 +10,7 @@ with open(path_csv) as file_csv:
     reader_csv = csv.DictReader(file_csv)
     for row in reader_csv:
         ags = row["AGS"]
-        row["responded"] = row["Tablets je 100 Schüler"] != "keine Angabe"
+        row["responded"] = row["Bemerkungen"] != "keine Teilnahme an der Abfrage"
         data[ags] = row
 
 with open(path_json, "w", encoding="utf8") as file_json:
