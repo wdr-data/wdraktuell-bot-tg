@@ -1,6 +1,6 @@
 
 import schoolsByAGS from '../data/schools';
-import { escapeHTML, trackLink } from '../lib/util';
+import { escapeHTML } from '../lib/util';
 
 
 export const handleCity = async (ctx, city) => {
