@@ -2,7 +2,7 @@ import csv
 import json
 
 path_csv = "schools.csv"
-path_json = "schools.js"
+path_json = "../schools.js"
 
 data = {}
 
@@ -10,7 +10,10 @@ with open(path_csv) as file_csv:
     reader_csv = csv.DictReader(file_csv)
     for row in reader_csv:
         ags = row["AGS"]
-        row["responded"] = row["Bemerkungen"] != "keine Teilnahme an der Abfrage"
+        row["responded"] = row["Tablets je 100 Schüler"] not in [
+            "keine Angabe",
+            "keine Angaben",
+        ]
         data[ags] = row
 
 with open(path_json, "w", encoding="utf8") as file_json:

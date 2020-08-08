@@ -2758,7 +2758,7 @@ export default {
     "Mittelwert NRW Desktop": "10,4",
     "Mittelwert NRW Whiteboards": "1,2",
     "Bemerkungen": "",
-    "responded": true
+    "responded": false
   },
   "5754012": {
     "Ort": "Halle (Westf.)",
@@ -5265,7 +5265,7 @@ export default {
     "Mittelwert NRW Desktop": "10,4",
     "Mittelwert NRW Whiteboards": "1,2",
     "Bemerkungen": "",
-    "responded": true
+    "responded": false
   },
   "5566052": {
     "Ort": "Metelen",
@@ -5334,7 +5334,7 @@ export default {
     "Mittelwert NRW Desktop": "10,4",
     "Mittelwert NRW Whiteboards": "1,2",
     "Bemerkungen": "",
-    "responded": true
+    "responded": false
   },
   "5770024": {
     "Ort": "Minden",
@@ -5426,7 +5426,7 @@ export default {
     "Mittelwert NRW Desktop": "10,4",
     "Mittelwert NRW Whiteboards": "1,2",
     "Bemerkungen": "",
-    "responded": true
+    "responded": false
   },
   "5158026": {
     "Ort": "Monheim am Rhein",

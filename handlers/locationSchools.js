@@ -23,6 +23,8 @@ const extendSchoolData = function(schoolData) {
     return schoolData;
 };
 
+export const generateImageUrl = (ags) => `${process.env.MEDIA_BASE_URL}assets/schools/${ags}.png`;
+
 export const handleCity = async (ctx, city) => {
     const ags = city.keyCity;
     const schoolData = extendSchoolData(schoolsByAGS[ags]);
@@ -37,11 +39,7 @@ export const handleCity = async (ctx, city) => {
             locationName
         } liegen keine Daten vor. ${locationName} hat unsere Anfrage nicht beantwortet.`);
     }
-    /*
-    const text = Object.entries(schoolData).map(
-        ([ k, v ]) => `<b>${escapeHTML(k.toString())}:</b> ${escapeHTML(v.toString())}`
-    ).join('\n');
-    */
+
     const text = `An den Schulen in ${schoolData.Ort} teilen sich im Schnitt je 100 Schüler*innen`;
 
     let table = `${schoolData.Ort} hat zwar auf unsere Anfrage geantwortet, ` +
@@ -94,7 +92,7 @@ export const handleCity = async (ctx, city) => {
     }
 
     const finalText = `Für die Befragung haben wir alle 396 Kommunen in NRW anschrieben. ` +
-        `309 von Ihnen haben uns geantwortet.`;
+        `309 von ihnen haben uns geantwortet.`;
 
 
     const ddjUrl = trackLink(
@@ -103,13 +101,24 @@ export const handleCity = async (ctx, city) => {
             campaignName: `Zahlen Digitalisierung Schulen`,
             campaignId: 'spezial',
         });
-    const ddjLink = `\n🔗 <a href="${escapeHTML(ddjUrl)}">${
+    const ddjLink = `\n<a href="${escapeHTML(ddjUrl)}">🔗 ${
         escapeHTML(`Weitere Ergebnisse und interaktive Grafiken`)
     }</a>`;
 
-    ctx.reply(
-        `${text}\n\n${table}\n\n${middleText}${finalText}\n${ddjLink}`,
+    const caption = `${text}\n\n${table}\n\n${middleText}${finalText}\n${ddjLink}`;
+
+    /*
+    const caption = Object.entries(schoolData).map(
+        ([ k, v ]) => `<b>${escapeHTML(k.toString())}:</b> ${escapeHTML(v.toString())}`
+    ).join('\n');
+    */
+
+    const imageUrl = generateImageUrl(ags);
+
+    return ctx.replyWithAttachment(
+        imageUrl,
         {
+            caption,
             'parse_mode': 'HTML',
             'disable_web_page_preview': true,
         }
