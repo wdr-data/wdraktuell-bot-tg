@@ -8,8 +8,10 @@ path_school_data = "raw/schools.json"
 # Image dimensions
 WIDTH = 1350
 HEIGHT = 1350
+HEIGHT_NO_RESPONSE = 830
 PADDING = 40
 DIMENSIONS = (WIDTH, HEIGHT)
+DIMENSIONS_NO_RESPONSE = (WIDTH, HEIGHT_NO_RESPONSE)
 CONTENT_WIDTH = WIDTH - 2 * PADDING
 
 STAT_OFFSET_Y = 470
@@ -24,6 +26,7 @@ SIZE_SUBTITLE = 120
 SIZE_NUMBER = 150
 SIZE_DESCRIPTION = 50
 SIZE_CA = 50
+SIZE_SMILEY = 200
 
 
 # Load device data
@@ -61,6 +64,7 @@ font_subtitle = ImageFont.truetype(FONT_SLAB_BOLD, SIZE_SUBTITLE)
 font_number = ImageFont.truetype(FONT_SANS_BOLD, SIZE_NUMBER)
 font_description = ImageFont.truetype(FONT_SANS_MEDIUM, SIZE_DESCRIPTION)
 font_ca = ImageFont.truetype(FONT_SANS_MEDIUM, SIZE_CA)
+font_smiley = ImageFont.truetype(FONT_SANS_MEDIUM, SIZE_SMILEY)
 
 spacing_title = int(SIZE_TITLE / 5)
 
@@ -140,13 +144,20 @@ def draw_stat(
 for ags, item in data.items():
     name = item["name"]
 
-    if name == "NRW" or not item["responded"]:
+    if name == "NRW":
         print("Skipping", name)
         continue
     else:
         print("Processing", name)
 
-    img = layer_bg.copy()  # Image.new("RGBA", DIMENSIONS)
+    if not item["responded"]:
+        print("Making response image for", name)
+        img = layer_bg.copy().resize(
+            DIMENSIONS_NO_RESPONSE, box=(0, 0, *DIMENSIONS_NO_RESPONSE)
+        )
+    else:
+        img = layer_bg.copy()
+
     draw = ImageDraw.Draw(img)
     title = "WDR-Umfrage: Digitale Ausstattung\nder Schulen in NRW"
     subtitle = name
@@ -178,91 +189,105 @@ for ags, item in data.items():
 
     notice = None
 
-    icon_variant_tablet = "missing"
-    icon_variant_laptop = "missing"
-    icon_variant_fiber = "missing"
+    if item["responded"]:
+        icon_variant_tablet = "missing"
+        icon_variant_laptop = "missing"
+        icon_variant_fiber = "missing"
 
-    if item["answeredDevices"] and item["studentsPerLaptop"] is not None:
-        students_per_laptop = format_number(item["studentsPerLaptop"])
-        students_per_laptop_description = "Schüler teilen\nsich ein Laptop"
-        icon_variant_laptop = "normal"
-    elif item["answeredDevices"]:
-        students_per_laptop = "-"
-        students_per_laptop_description = "Keine Laptops\nvorhanden"
-    else:
-        students_per_laptop = "k.A.*"
-        students_per_laptop_description = "Schüler teilen\nsich ein Laptop"
-        notice = f"* Hierzu wurden keine Angaben gemacht"
-
-    if item["answeredDevices"] and item["studentsPerTablet"] is not None:
-        students_per_tablet = format_number(item["studentsPerTablet"])
-        students_per_tablet_description = "Schüler teilen\nsich ein Tablet"
-        icon_variant_tablet = "normal"
-    elif item["answeredDevices"]:
-        students_per_tablet = "-"
-        students_per_tablet_description = "Keine Tablets\nvorhanden"
-    else:
-        students_per_tablet = "k.A.*"
-        students_per_tablet_description = "Schüler teilen\nsich ein Tablet"
-        notice = f"* Hierzu wurden keine Angaben gemacht"
-
-    fiber_ca = False
-    if item["couldEvaluateFiber"]:
-        if item["numSchoolsTotal"] > 50:
-            fiber_ca = True
-            fiber_percentage = f"{format_number(item['numSchoolsFiberPercent'])}%"
-            fiber_percentage_description = (
-                "der Schulen haben\nGlasfaseranschluss/\nüber 100 MBit/s"
-            )
+        if item["answeredDevices"] and item["studentsPerLaptop"] is not None:
+            students_per_laptop = format_number(item["studentsPerLaptop"])
+            students_per_laptop_description = "Schüler teilen\nsich ein Laptop"
+            icon_variant_laptop = "normal"
+        elif item["answeredDevices"]:
+            students_per_laptop = "-"
+            students_per_laptop_description = "Keine Laptops\nvorhanden"
         else:
-            fiber_percentage = f"{format_number(item['numSchoolsFiber'])}/{format_number(item['numSchoolsTotal'])}"
-            fiber_percentage_description = (
-                "Schulen haben\nGlasfaseranschluss/\nüber 100 MBit/s"
+            students_per_laptop = "k.A.*"
+            students_per_laptop_description = "Schüler teilen\nsich ein Laptop"
+            notice = f"* Hierzu wurden keine Angaben gemacht"
+
+        if item["answeredDevices"] and item["studentsPerTablet"] is not None:
+            students_per_tablet = format_number(item["studentsPerTablet"])
+            students_per_tablet_description = "Schüler teilen\nsich ein Tablet"
+            icon_variant_tablet = "normal"
+        elif item["answeredDevices"]:
+            students_per_tablet = "-"
+            students_per_tablet_description = "Keine Tablets\nvorhanden"
+        else:
+            students_per_tablet = "k.A.*"
+            students_per_tablet_description = "Schüler teilen\nsich ein Tablet"
+            notice = f"* Hierzu wurden keine Angaben gemacht"
+
+        fiber_ca = False
+        if item["couldEvaluateFiber"]:
+            if item["numSchoolsTotal"] > 50:
+                fiber_ca = True
+                fiber_percentage = f"{format_number(item['numSchoolsFiberPercent'])}%"
+                fiber_percentage_description = (
+                    "der Schulen haben\nGlasfaseranschluss/\nüber 100 MBit/s"
+                )
+            else:
+                fiber_percentage = f"{format_number(item['numSchoolsFiber'])}/{format_number(item['numSchoolsTotal'])}"
+                fiber_percentage_description = (
+                    "Schulen haben\nGlasfaseranschluss/\nüber 100 MBit/s"
+                )
+            icon_variant_fiber = "normal"
+        elif item["answeredFiber"]:
+            fiber_percentage = "k.A.*"
+            fiber_percentage_description = "Schulen haben\nGlasfaseranschluss"
+            notice = f"* Die Angaben konnten nicht ausgewertet werden"
+        else:
+            fiber_percentage = "k.A.*"
+            fiber_percentage_description = "Schulen haben\nGlasfaseranschluss"
+            notice = f"* Hierzu wurden keine Angaben gemacht"
+
+        draw_stat(
+            img,
+            draw,
+            icon_laptop[icon_variant_laptop],
+            students_per_laptop,
+            students_per_laptop_description,
+            1,
+            ca=icon_variant_laptop == "normal",
+        )
+        draw_stat(
+            img,
+            draw,
+            icon_tablet[icon_variant_tablet],
+            students_per_tablet,
+            students_per_tablet_description,
+            2,
+            ca=icon_variant_tablet == "normal",
+        )
+        draw_stat(
+            img,
+            draw,
+            icon_fiber[icon_variant_fiber],
+            fiber_percentage,
+            fiber_percentage_description,
+            3,
+            ca=fiber_ca,
+        )
+
+        # Add notice
+        if notice:
+            size_notice = draw.textsize(notice, font=font_description)
+            position_notice = (
+                WIDTH - size_notice[0] - int(PADDING / 2),
+                HEIGHT - size_notice[1] - int(PADDING / 2),
             )
-        icon_variant_fiber = "normal"
-    elif item["answeredFiber"]:
-        fiber_percentage = "k.A.*"
-        fiber_percentage_description = "Schulen haben\nGlasfaseranschluss"
-        notice = f"* Die Angaben konnten nicht ausgewertet werden"
+            draw.text(
+                position_notice, notice, fill=COLOR_PRIMARY, font=font_description
+            )
+
     else:
-        fiber_percentage = "k.A.*"
-        fiber_percentage_description = "Schulen haben\nGlasfaseranschluss"
-        notice = f"* Hierzu wurden keine Angaben gemacht"
+        draw.text((520, 420), ":(", fill=COLOR_SECONDARY, font=font_smiley)
 
-    draw_stat(
-        img,
-        draw,
-        icon_laptop[icon_variant_laptop],
-        students_per_laptop,
-        students_per_laptop_description,
-        1,
-        ca=icon_variant_laptop == "normal",
-    )
-    draw_stat(
-        img,
-        draw,
-        icon_tablet[icon_variant_tablet],
-        students_per_tablet,
-        students_per_tablet_description,
-        2,
-        ca=icon_variant_tablet == "normal",
-    )
-    draw_stat(
-        img,
-        draw,
-        icon_fiber[icon_variant_fiber],
-        fiber_percentage,
-        fiber_percentage_description,
-        3,
-        ca=fiber_ca,
-    )
-
-    # Add notice
-    if notice:
+        notice = "Leider hat uns die Gemeinde keine Daten geliefert."
         size_notice = draw.textsize(notice, font=font_description)
         position_notice = (
-            WIDTH - size_notice[0] - int(PADDING / 2),
-            HEIGHT - size_notice[1] - int(PADDING / 2),
+            PADDING,
+            HEIGHT_NO_RESPONSE - size_notice[1] - PADDING,
         )
         draw.text(position_notice, notice, fill=COLOR_PRIMARY, font=font_description)
 
