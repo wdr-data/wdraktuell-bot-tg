@@ -283,7 +283,7 @@ for ags, item in data.items():
     else:
         draw.text((520, 420), ":(", fill=COLOR_SECONDARY, font=font_smiley)
 
-        notice = "Leider hat uns die Gemeinde keine Daten geliefert."
+        notice = "Leider hat uns die Kommune keine Daten geliefert."
         size_notice = draw.textsize(notice, font=font_description)
         position_notice = (
             PADDING,
