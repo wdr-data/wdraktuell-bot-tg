@@ -10,51 +10,96 @@ export const handleLocation = async (ctx) => {
 
 export const handleAGS = async (ctx, ags) => {
     const schoolData = schoolsByAGS[ags];
+    const schoolDataNRW = schoolsByAGS['nrw'];
     console.log(ags);
     console.log(schoolData);
 
-    if (!schoolData.responded) {
-        return ctx.reply(`Für ${
+    let intro = `${
+        schoolData.name
+    } hat als eine von 87 Kommunen nicht auf unsere IFG-Anfrage geantwortet.`;
+    let device = `Leider hat ${
+        schoolData.name
+    } keine Angaben zu digitalen Geräten an den Schulen gemacht.`;
+    let fiber = '';
+
+    if (schoolData.responded) {
+        intro = `In ${
             schoolData.name
-        } liegen keine Daten vor. ${schoolData.name} hat unsere Anfrage nicht beantwortet.`);
+        } gehen ${
+            schoolData.numStudentsTotal
+        } Schüler*innen auf ${
+            schoolData.numSchoolsTotal === 1 ?
+                `eine Schule` : `${schoolData.numSchoolsTotal} Schulen`
+        }.`;
+
+        const noDevice = [];
+        if (schoolData.answeredDevices) {
+            device = `An den Schulen teilen sich im Schnitt\n${
+                schoolData.studentsPerLaptop ? `${
+                    schoolData.studentsPerLaptop
+                } Schüler*innen einen Laptop,\n` : ''
+            }${
+                schoolData.studentsPerTablet? `${
+                    schoolData.studentsPerTablet
+                } Schüler*innen ein Tablet,\n` : ''
+            }${
+                schoolData.studentsPerDesktop ? `${
+                    schoolData.studentsPerDesktop
+                } Schüler*innen einen Desktoprechner,\n` : ''
+            }${
+                schoolData.studentsPerWhiteboard ? `${
+                    schoolData.studentsPerWhiteboard
+                } Schüler*innen ein Whiteboard.\n` : ''
+            }`;
+            for (const [ key, value ] of Object.entries({
+                'studentsPerLaptop': 'Laptops',
+                'studentsPerTablet': 'Tablets',
+                'studentsPerDesktop': 'Desktoprechner',
+                'studentsPerWhiteboard': 'Whiteboards',
+            })) {
+                if (!schoolData[key]) {
+                    noDevice.push(value);
+                }
+            }
+            if (noDevice) {
+                device += '\n' + noDevice.join(', ') + ' sind keine vorhanden.';
+            }
+        }
+        device += `\n\nIm Vergleich dazu teilen sich in ganz NRW im Schnitt\n${
+            schoolDataNRW.studentsPerLaptop
+        } Schüler*innen einen Laptop,\n${
+            schoolDataNRW.studentsPerTablet
+        } Schüler*innen ein Tablet,\n${
+            schoolDataNRW.studentsPerDesktop
+        } Schüler*innen einen Desktoprechner,\n${
+            schoolDataNRW.studentsPerWhiteboard
+        } Schüler*innen ein Whiteboard.\n`;
+
+        if ( schoolData.couldEvaluateFiber ) {
+            fiber = `${
+                schoolData.numSchoolsFiber
+            } / ${
+                schoolData.numSchoolsTotal
+            } Schulen haben einen Glasfaser Anschluss (> 100 MBit/s).`;
+        } else if (schoolData.answeredFiber) {
+            fiber = `Leider konnte die Antwort von ${schoolData.name} nicht ausgewertet werden.`;
+        }
     }
 
-    const text = `An den Schulen in ${schoolData.name} teilen sich im Schnitt je 100 Schüler*innen`;
-
-    let table = `${schoolData.name} hat zwar auf unsere Anfrage geantwortet, ` +
-            `konnte uns aber keine Angaben zu der Anzahl technischer Endgeräten in Schulen geben.`;
-    if (schoolData.answeredDevices) {
-        table = `Tablets: ${
-            schoolData.studentsPerTablet ?
-                schoolData.studentsPerTablet : 'Keine Tablets vorhanden'
-        }\nLaptops: ${
-            schoolData.studentsPerLaptop ?
-                schoolData.studentsPerLaptop : 'Keine Laptops vorhanden'
-        }\nDesktoprechner: ${
-            schoolData.studentsPerDesktop ?
-                schoolData.studentsPerDesktop : 'Keine Desktoprechner vorhanden'
-        }\nWhiteboards: ${
-            schoolData.studentsPerWhiteboard ?
-                schoolData.studentsPerWhiteboard : 'Keine Whiteboards vorhanden'
-        }\n`;
-    }
-
-
-    const finalText = `Für die Befragung haben wir alle 396 Kommunen in NRW anschrieben. ` +
-        `309 von ihnen haben uns geantwortet.`;
-
+    const outro = `Für die Daten hat das WDR Newsroom-Team ` +
+        `alle 396 Kommunen in NRW im Juli 2020 per IFG angefragt.`;
 
     const ddjUrl = trackLink(
-        'https://www1.wdr.de/nachrichten/themen/coronavirus/corona-daten-nrw-100.html', {
+        'https://www1.wdr.de/nachrichten/digitalisierung-schulen-umfrage-kommunen-100.html', {
             campaignType: 'unterhaltung',
             campaignName: `Zahlen Digitalisierung Schulen`,
-            campaignId: 'spezial',
+            campaignId: 'feature',
         });
     const ddjLink = `\n<a href="${escapeHTML(ddjUrl)}">🔗 ${
         escapeHTML(`Weitere Ergebnisse und interaktive Grafiken`)
     }</a>`;
 
-    const caption = `${text}\n\n${table}\n\n${finalText}\n${ddjLink}`;
+    const caption = `${intro}\n\n${device}\n${fiber}\n${outro}\n${ddjLink}`;
 
     /*
     const caption = Object.entries(schoolData).map(
