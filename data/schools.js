@@ -12,7 +12,14 @@ export default {
     "studentsPerDesktop": 7.0,
     "studentsPerLaptop": 90.9,
     "studentsPerWhitboard": 500.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 57,
+    "numSchoolsFiber": 18,
+    "numSchoolsBroadband": 39,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 31.6
   },
   "5554004": {
     "name": "Ahaus",
@@ -26,7 +33,14 @@ export default {
     "studentsPerDesktop": 5.3,
     "studentsPerLaptop": 21.3,
     "studentsPerWhitboard": 23.8,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 10,
+    "numSchoolsFiber": 10,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 100.0
   },
   "5570004": {
     "name": "Ahlen",
@@ -40,7 +54,14 @@ export default {
     "studentsPerDesktop": 10.2,
     "studentsPerLaptop": 25.6,
     "studentsPerWhitboard": 250.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 14,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 14,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5358004": {
     "name": "Aldenhoven",
@@ -54,7 +75,14 @@ export default {
     "studentsPerDesktop": 11.6,
     "studentsPerLaptop": 37.0,
     "studentsPerWhitboard": 142.9,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 2,
+    "numSchoolsFiber": 2,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 100.0
   },
   "5382004": {
     "name": "Alfter",
@@ -68,7 +96,14 @@ export default {
     "studentsPerDesktop": 8.2,
     "studentsPerLaptop": 45.5,
     "studentsPerWhitboard": 500.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 7,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 3,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5170004": {
     "name": "Alpen",
@@ -82,7 +117,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5334004": {
     "name": "Alsdorf",
@@ -96,7 +138,14 @@ export default {
     "studentsPerDesktop": 11.5,
     "studentsPerLaptop": 13.7,
     "studentsPerWhitboard": 1000.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 13,
+    "numSchoolsFiber": 4,
+    "numSchoolsBroadband": 9,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 30.8
   },
   "5962004": {
     "name": "Altena",
@@ -110,7 +159,14 @@ export default {
     "studentsPerDesktop": 9.9,
     "studentsPerLaptop": 16.4,
     "studentsPerWhitboard": 333.3,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 4,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5774004": {
     "name": "Altenbeken",
@@ -124,7 +180,14 @@ export default {
     "studentsPerDesktop": 5.5,
     "studentsPerLaptop": 41.7,
     "studentsPerWhitboard": 166.7,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 2,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 3,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5566004": {
     "name": "Altenberge",
@@ -138,7 +201,14 @@ export default {
     "studentsPerDesktop": 7.8,
     "studentsPerLaptop": 90.9,
     "studentsPerWhitboard": null,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 2,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 2,
+    "numSchoolsFiberPercent": 0.0
   },
   "5974004": {
     "name": "Anröchte",
@@ -152,7 +222,14 @@ export default {
     "studentsPerDesktop": 6.8,
     "studentsPerLaptop": 83.3,
     "studentsPerWhitboard": 125.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 2,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 425,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5958004": {
     "name": "Arnsberg",
@@ -166,7 +243,14 @@ export default {
     "studentsPerDesktop": 12.0,
     "studentsPerLaptop": 40.0,
     "studentsPerWhitboard": 45.5,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 23,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5558004": {
     "name": "Ascheberg",
@@ -180,7 +264,14 @@ export default {
     "studentsPerDesktop": 7.0,
     "studentsPerLaptop": 9.7,
     "studentsPerWhitboard": 200.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 3,
+    "numSchoolsFiber": 3,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 100.0
   },
   "5966004": {
     "name": "Attendorn",
@@ -194,7 +285,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5766004": {
     "name": "Augustdorf",
@@ -208,7 +306,14 @@ export default {
     "studentsPerDesktop": 45.5,
     "studentsPerLaptop": 28.6,
     "studentsPerWhitboard": 500.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 3,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 32,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5970004": {
     "name": "Bad Berleburg",
@@ -222,7 +327,14 @@ export default {
     "studentsPerDesktop": 10.1,
     "studentsPerLaptop": 18.5,
     "studentsPerWhitboard": 66.7,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 8,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 3,
+    "numSchoolsOther": 5,
+    "numSchoolsFiberPercent": 0.0
   },
   "5762004": {
     "name": "Bad Driburg",
@@ -236,7 +348,14 @@ export default {
     "studentsPerDesktop": 19.2,
     "studentsPerLaptop": 7.8,
     "studentsPerWhitboard": 33.3,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 3,
+    "numSchoolsFiber": 3,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 100.0
   },
   "5382008": {
     "name": "Bad Honnef",
@@ -250,7 +369,14 @@ export default {
     "studentsPerDesktop": 17.9,
     "studentsPerLaptop": 34.5,
     "studentsPerWhitboard": 41.7,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 5,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 5,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5970028": {
     "name": "Bad Laasphe",
@@ -264,7 +390,14 @@ export default {
     "studentsPerDesktop": 6.2,
     "studentsPerLaptop": 13.7,
     "studentsPerWhitboard": 200.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 5,
+    "numSchoolsFiber": 1,
+    "numSchoolsBroadband": 4,
+    "numSchoolsOther": 1,
+    "numSchoolsFiberPercent": 20.0
   },
   "5774008": {
     "name": "Bad Lippspringe",
@@ -278,7 +411,14 @@ export default {
     "studentsPerDesktop": 7.6,
     "studentsPerLaptop": 66.7,
     "studentsPerWhitboard": 23.3,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 3,
+    "numSchoolsFiber": 2,
+    "numSchoolsBroadband": 1,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 66.7
   },
   "5366004": {
     "name": "Bad Münstereifel",
@@ -292,7 +432,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5770004": {
     "name": "Bad Oeynhausen",
@@ -306,7 +453,14 @@ export default {
     "studentsPerDesktop": 8.1,
     "studentsPerLaptop": 13.3,
     "studentsPerWhitboard": 500.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 10,
+    "numSchoolsFiber": 3,
+    "numSchoolsBroadband": 7,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 30.0
   },
   "5766008": {
     "name": "Bad Salzuflen",
@@ -320,7 +474,14 @@ export default {
     "studentsPerDesktop": 8.7,
     "studentsPerLaptop": 29.4,
     "studentsPerWhitboard": 142.9,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 13,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 13,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5974008": {
     "name": "Bad Sassendorf",
@@ -334,7 +495,14 @@ export default {
     "studentsPerDesktop": 32.3,
     "studentsPerLaptop": 125.0,
     "studentsPerWhitboard": null,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 2,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5774040": {
     "name": "Bad Wünnenberg",
@@ -348,7 +516,14 @@ export default {
     "studentsPerDesktop": 5.4,
     "studentsPerLaptop": 33.3,
     "studentsPerWhitboard": 23.8,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 4,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 4,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5334008": {
     "name": "Baesweiler",
@@ -362,7 +537,14 @@ export default {
     "studentsPerDesktop": 11.5,
     "studentsPerLaptop": 100.0,
     "studentsPerWhitboard": 76.9,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 8,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 8,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5962008": {
     "name": "Balve",
@@ -376,7 +558,14 @@ export default {
     "studentsPerDesktop": 6.9,
     "studentsPerLaptop": 33.3,
     "studentsPerWhitboard": 37.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 5,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 5,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5766012": {
     "name": "Barntrup",
@@ -390,7 +579,14 @@ export default {
     "studentsPerDesktop": 7.5,
     "studentsPerLaptop": 20.4,
     "studentsPerWhitboard": 12.8,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 3,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 150,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5570008": {
     "name": "Beckum",
@@ -404,7 +600,14 @@ export default {
     "studentsPerDesktop": 25.6,
     "studentsPerLaptop": 27.0,
     "studentsPerWhitboard": 1000.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 10,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 1225,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5362004": {
     "name": "Bedburg",
@@ -418,7 +621,14 @@ export default {
     "studentsPerDesktop": 11.4,
     "studentsPerLaptop": 5.3,
     "studentsPerWhitboard": 32.3,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 7,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 7,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5154004": {
     "name": "Bedburg-Hau",
@@ -432,7 +642,14 @@ export default {
     "studentsPerDesktop": 5.2,
     "studentsPerLaptop": 34.5,
     "studentsPerWhitboard": 30.3,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 2,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 2,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5570012": {
     "name": "Beelen",
@@ -446,7 +663,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": 4.2,
     "studentsPerWhitboard": 16.7,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": 1,
+    "numSchoolsFiber": 200,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 100.0
   },
   "5362008": {
     "name": "Bergheim",
@@ -460,7 +684,14 @@ export default {
     "studentsPerDesktop": 9.3,
     "studentsPerLaptop": 32.3,
     "studentsPerWhitboard": null,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 15,
+    "numSchoolsFiber": 4,
+    "numSchoolsBroadband": 11,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 26.7
   },
   "5378004": {
     "name": "Bergisch Gladbach",
@@ -474,7 +705,14 @@ export default {
     "studentsPerDesktop": 9.4,
     "studentsPerLaptop": 25.6,
     "studentsPerWhitboard": 90.9,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 32,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 32,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5978004": {
     "name": "Bergkamen",
@@ -488,7 +726,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5374004": {
     "name": "Bergneustadt",
@@ -502,7 +747,14 @@ export default {
     "studentsPerDesktop": 5.4,
     "studentsPerLaptop": 7.8,
     "studentsPerWhitboard": 200.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 6,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 6,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5958008": {
     "name": "Bestwig",
@@ -516,7 +768,14 @@ export default {
     "studentsPerDesktop": 9.3,
     "studentsPerLaptop": 38.5,
     "studentsPerWhitboard": 23.8,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 4,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5762008": {
     "name": "Beverungen",
@@ -530,7 +789,14 @@ export default {
     "studentsPerDesktop": 13.9,
     "studentsPerLaptop": 21.3,
     "studentsPerWhitboard": 43.5,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 3,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 300,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5711000": {
     "name": "Bielefeld",
@@ -544,7 +810,14 @@ export default {
     "studentsPerDesktop": 7.9,
     "studentsPerLaptop": 71.4,
     "studentsPerWhitboard": 500.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 76,
+    "numSchoolsFiber": 23,
+    "numSchoolsBroadband": 53,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 30.3
   },
   "5558008": {
     "name": "Billerbeck",
@@ -558,7 +831,14 @@ export default {
     "studentsPerDesktop": 5.6,
     "studentsPerLaptop": 7.4,
     "studentsPerWhitboard": 333.3,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": 2,
+    "numSchoolsFiber": 4,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": null
   },
   "5366008": {
     "name": "Blankenheim",
@@ -572,7 +852,14 @@ export default {
     "studentsPerDesktop": 18.9,
     "studentsPerLaptop": 38.5,
     "studentsPerWhitboard": 200.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 2,
+    "numSchoolsFiber": 1,
+    "numSchoolsBroadband": 1,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 50.0
   },
   "5766016": {
     "name": "Blomberg",
@@ -586,7 +873,14 @@ export default {
     "studentsPerDesktop": 37.0,
     "studentsPerLaptop": 4.4,
     "studentsPerWhitboard": 52.6,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 6,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 6,
+    "numSchoolsFiberPercent": 0.0
   },
   "5554008": {
     "name": "Bocholt",
@@ -600,7 +894,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5911000": {
     "name": "Bochum",
@@ -614,7 +915,14 @@ export default {
     "studentsPerDesktop": 4.2,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": 58.8,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 73,
+    "numSchoolsFiber": 5,
+    "numSchoolsBroadband": 68,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 6.8
   },
   "5978008": {
     "name": "Bönen",
@@ -628,7 +936,14 @@ export default {
     "studentsPerDesktop": 12.7,
     "studentsPerLaptop": 34.5,
     "studentsPerWhitboard": 1000.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 5,
+    "numSchoolsFiber": 1,
+    "numSchoolsBroadband": 5,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 20.0
   },
   "5314000": {
     "name": "Bonn",
@@ -642,7 +957,14 @@ export default {
     "studentsPerDesktop": 19.6,
     "studentsPerLaptop": 142.9,
     "studentsPerWhitboard": 333.3,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 83,
+    "numSchoolsFiber": 27,
+    "numSchoolsBroadband": 56,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 32.5
   },
   "5774012": {
     "name": "Borchen",
@@ -656,7 +978,14 @@ export default {
     "studentsPerDesktop": 9.8,
     "studentsPerLaptop": 34.5,
     "studentsPerWhitboard": 111.1,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 4,
+    "numSchoolsFiber": 3,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 75.0
   },
   "5762012": {
     "name": "Borgentreich",
@@ -670,7 +999,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 1,
+    "numSchoolsFiber": 1,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 100.0
   },
   "5754004": {
     "name": "Borgholzhausen",
@@ -684,7 +1020,14 @@ export default {
     "studentsPerDesktop": 5.3,
     "studentsPerLaptop": 7.9,
     "studentsPerWhitboard": null,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 1,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 1,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5554012": {
     "name": "Borken",
@@ -698,7 +1041,14 @@ export default {
     "studentsPerDesktop": 7.7,
     "studentsPerLaptop": 62.5,
     "studentsPerWhitboard": 31.2,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 12,
+    "numSchoolsFiber": 12,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 100.0
   },
   "5382012": {
     "name": "Bornheim",
@@ -712,7 +1062,14 @@ export default {
     "studentsPerDesktop": 6.6,
     "studentsPerLaptop": 15.9,
     "studentsPerWhitboard": 1000.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 12,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 12,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5512000": {
     "name": "Bottrop",
@@ -726,7 +1083,14 @@ export default {
     "studentsPerDesktop": 8.2,
     "studentsPerLaptop": 55.6,
     "studentsPerWhitboard": 166.7,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": 31,
+    "numSchoolsFiber": 1000,
+    "numSchoolsBroadband": 1200,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": null
   },
   "5762016": {
     "name": "Brakel",
@@ -740,7 +1104,14 @@ export default {
     "studentsPerDesktop": 6.4,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": 19.2,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 3,
+    "numSchoolsFiber": 2,
+    "numSchoolsBroadband": 6,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 66.7
   },
   "5954004": {
     "name": "Breckerfeld",
@@ -754,7 +1125,14 @@ export default {
     "studentsPerDesktop": 12.3,
     "studentsPerLaptop": 76.9,
     "studentsPerWhitboard": null,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": 1,
+    "numSchoolsFiber": 100,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 100.0
   },
   "5958012": {
     "name": "Brilon",
@@ -768,7 +1146,14 @@ export default {
     "studentsPerDesktop": 12.7,
     "studentsPerLaptop": 7.7,
     "studentsPerWhitboard": 31.2,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": 5,
+    "numSchoolsFiber": 1200,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": null
   },
   "5166004": {
     "name": "Brüggen",
@@ -782,7 +1167,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5362012": {
     "name": "Brühl",
@@ -796,7 +1188,14 @@ export default {
     "studentsPerDesktop": 7.4,
     "studentsPerLaptop": 50.0,
     "studentsPerWhitboard": 111.1,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 12,
+    "numSchoolsFiber": 5,
+    "numSchoolsBroadband": 7,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 41.7
   },
   "5758004": {
     "name": "Bünde",
@@ -810,7 +1209,14 @@ export default {
     "studentsPerDesktop": 15.6,
     "studentsPerLaptop": 71.4,
     "studentsPerWhitboard": 166.7,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 14,
+    "numSchoolsFiber": 6,
+    "numSchoolsBroadband": 9,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 42.9
   },
   "5970008": {
     "name": "Burbach",
@@ -824,7 +1230,14 @@ export default {
     "studentsPerDesktop": 9.3,
     "studentsPerLaptop": 13.0,
     "studentsPerWhitboard": 25.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 3,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 125,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5774016": {
     "name": "Büren",
@@ -838,7 +1251,14 @@ export default {
     "studentsPerDesktop": 14.1,
     "studentsPerLaptop": 23.8,
     "studentsPerWhitboard": 14.1,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 7,
+    "numSchoolsFiber": 5,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 71.4
   },
   "5378008": {
     "name": "Burscheid",
@@ -852,7 +1272,14 @@ export default {
     "studentsPerDesktop": 8.6,
     "studentsPerLaptop": 34.5,
     "studentsPerWhitboard": 333.3,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 3,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 3,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5562004": {
     "name": "Castrop-Rauxel",
@@ -866,7 +1293,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5558012": {
     "name": "Coesfeld",
@@ -880,7 +1314,14 @@ export default {
     "studentsPerDesktop": 20.0,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": 111.1,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 11,
+    "numSchoolsFiber": 6,
+    "numSchoolsBroadband": 3,
+    "numSchoolsOther": 3,
+    "numSchoolsFiberPercent": 54.5
   },
   "5366012": {
     "name": "Dahlem",
@@ -894,7 +1335,14 @@ export default {
     "studentsPerDesktop": 17.9,
     "studentsPerLaptop": 19.6,
     "studentsPerWhitboard": 200.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 1,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 1,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5562008": {
     "name": "Datteln",
@@ -908,7 +1356,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5774020": {
     "name": "Delbrück",
@@ -922,7 +1377,14 @@ export default {
     "studentsPerDesktop": 142.9,
     "studentsPerLaptop": 52.6,
     "studentsPerWhitboard": 1000.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": 8,
+    "numSchoolsFiber": 600,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": null
   },
   "5766020": {
     "name": "Detmold",
@@ -936,7 +1398,14 @@ export default {
     "studentsPerDesktop": 5.9,
     "studentsPerLaptop": 26.3,
     "studentsPerWhitboard": 166.7,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 21,
+    "numSchoolsFiber": 19,
+    "numSchoolsBroadband": 2,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 90.5
   },
   "5170008": {
     "name": "Dinslaken",
@@ -950,7 +1419,14 @@ export default {
     "studentsPerDesktop": 9.3,
     "studentsPerLaptop": 66.7,
     "studentsPerWhitboard": 83.3,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 16,
+    "numSchoolsFiber": 16,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 100.0
   },
   "5766024": {
     "name": "Dörentrup",
@@ -964,7 +1440,14 @@ export default {
     "studentsPerDesktop": 3.9,
     "studentsPerLaptop": 58.8,
     "studentsPerWhitboard": 34.5,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 1,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 1,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5162004": {
     "name": "Dormagen",
@@ -978,7 +1461,14 @@ export default {
     "studentsPerDesktop": 18.2,
     "studentsPerLaptop": 111.1,
     "studentsPerWhitboard": 66.7,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 18,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 18,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5562012": {
     "name": "Dorsten",
@@ -992,7 +1482,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": 76.9,
     "studentsPerWhitboard": 100.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 19,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5913000": {
     "name": "Dortmund",
@@ -1006,7 +1503,14 @@ export default {
     "studentsPerDesktop": 7.7,
     "studentsPerLaptop": 34.5,
     "studentsPerWhitboard": 32.3,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 145,
+    "numSchoolsFiber": 51,
+    "numSchoolsBroadband": 94,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 35.2
   },
   "5570016": {
     "name": "Drensteinfurt",
@@ -1020,7 +1524,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5966008": {
     "name": "Drolshagen",
@@ -1034,7 +1545,14 @@ export default {
     "studentsPerDesktop": 13.0,
     "studentsPerLaptop": 100.0,
     "studentsPerWhitboard": 250.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": 2,
+    "numSchoolsFiber": 4,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": null
   },
   "5112000": {
     "name": "Duisburg",
@@ -1048,7 +1566,14 @@ export default {
     "studentsPerDesktop": 5.7,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 121,
+    "numSchoolsFiber": 1,
+    "numSchoolsBroadband": 120,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.8
   },
   "5558016": {
     "name": "Dülmen",
@@ -1062,7 +1587,14 @@ export default {
     "studentsPerDesktop": 7.7,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": 100.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 11,
+    "numSchoolsFiber": 11,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 100.0
   },
   "5358008": {
     "name": "Düren",
@@ -1076,7 +1608,14 @@ export default {
     "studentsPerDesktop": 10.5,
     "studentsPerLaptop": 250.0,
     "studentsPerWhitboard": 333.3,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 29,
+    "numSchoolsFiber": 2,
+    "numSchoolsBroadband": 27,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 6.9
   },
   "5111000": {
     "name": "Düsseldorf",
@@ -1090,7 +1629,14 @@ export default {
     "studentsPerDesktop": 21.7,
     "studentsPerLaptop": 58.8,
     "studentsPerWhitboard": 41.7,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 141,
+    "numSchoolsFiber": 93,
+    "numSchoolsBroadband": 48,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 66.0
   },
   "5382016": {
     "name": "Eitorf",
@@ -1104,7 +1650,14 @@ export default {
     "studentsPerDesktop": 4.9,
     "studentsPerLaptop": 8.6,
     "studentsPerWhitboard": 18.5,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 4,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 4,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5362016": {
     "name": "Elsdorf",
@@ -1118,7 +1671,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5154008": {
     "name": "Emmerich am Rhein",
@@ -1132,7 +1692,14 @@ export default {
     "studentsPerDesktop": 13.5,
     "studentsPerLaptop": 33.3,
     "studentsPerWhitboard": 27.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 8,
+    "numSchoolsFiber": 3,
+    "numSchoolsBroadband": 5,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 37.5
   },
   "5566008": {
     "name": "Emsdetten",
@@ -1146,7 +1713,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": 47.6,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 10,
+    "numSchoolsFiber": 10,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 100.0
   },
   "5374008": {
     "name": "Engelskirchen",
@@ -1160,7 +1734,14 @@ export default {
     "studentsPerDesktop": 9.3,
     "studentsPerLaptop": 23.8,
     "studentsPerWhitboard": 500.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 6,
+    "numSchoolsFiber": 4,
+    "numSchoolsBroadband": 2,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 66.7
   },
   "5758008": {
     "name": "Enger",
@@ -1174,7 +1755,14 @@ export default {
     "studentsPerDesktop": 16.9,
     "studentsPerLaptop": 31.2,
     "studentsPerWhitboard": 21.3,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 6,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 5,
+    "numSchoolsOther": 1,
+    "numSchoolsFiberPercent": 0.0
   },
   "5954008": {
     "name": "Ennepetal",
@@ -1188,7 +1776,14 @@ export default {
     "studentsPerDesktop": 4.5,
     "studentsPerLaptop": 10.9,
     "studentsPerWhitboard": 35.7,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 9,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 10,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5570020": {
     "name": "Ennigerloh",
@@ -1202,7 +1797,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5974012": {
     "name": "Ense",
@@ -1216,7 +1818,14 @@ export default {
     "studentsPerDesktop": 20.4,
     "studentsPerLaptop": 10.4,
     "studentsPerWhitboard": 200.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 4,
+    "numSchoolsFiber": 4,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 100.0
   },
   "5362020": {
     "name": "Erftstadt",
@@ -1230,7 +1839,14 @@ export default {
     "studentsPerDesktop": 27.8,
     "studentsPerLaptop": 50.0,
     "studentsPerWhitboard": 1000.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 12,
+    "numSchoolsFiber": 2,
+    "numSchoolsBroadband": 10,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 16.7
   },
   "5370004": {
     "name": "Erkelenz",
@@ -1244,7 +1860,14 @@ export default {
     "studentsPerDesktop": 7.6,
     "studentsPerLaptop": 19.6,
     "studentsPerWhitboard": 58.8,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 11,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 11,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5158004": {
     "name": "Erkrath",
@@ -1258,7 +1881,14 @@ export default {
     "studentsPerDesktop": 8.7,
     "studentsPerLaptop": 23.8,
     "studentsPerWhitboard": 66.7,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 12,
+    "numSchoolsFiber": 5,
+    "numSchoolsBroadband": 2,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 41.7
   },
   "5970012": {
     "name": "Erndtebrück",
@@ -1272,7 +1902,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5974016": {
     "name": "Erwitte",
@@ -1286,7 +1923,14 @@ export default {
     "studentsPerDesktop": 8.9,
     "studentsPerLaptop": 12.8,
     "studentsPerWhitboard": 166.7,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 6,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 4,
+    "numSchoolsOther": 1,
+    "numSchoolsFiberPercent": 0.0
   },
   "5334012": {
     "name": "Eschweiler",
@@ -1300,7 +1944,14 @@ export default {
     "studentsPerDesktop": 13.9,
     "studentsPerLaptop": 71.4,
     "studentsPerWhitboard": 200.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 15,
+    "numSchoolsFiber": 3,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 12,
+    "numSchoolsFiberPercent": 20.0
   },
   "5958016": {
     "name": "Eslohe (Sauerland)",
@@ -1314,7 +1965,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5770008": {
     "name": "Espelkamp",
@@ -1328,7 +1986,14 @@ export default {
     "studentsPerDesktop": 4.7,
     "studentsPerLaptop": 76.9,
     "studentsPerWhitboard": 200.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 3,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 3,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5113000": {
     "name": "Essen",
@@ -1342,7 +2007,14 @@ export default {
     "studentsPerDesktop": 21.7,
     "studentsPerLaptop": 52.6,
     "studentsPerWhitboard": 500.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 139,
+    "numSchoolsFiber": 128,
+    "numSchoolsBroadband": 10,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 92.1
   },
   "5366016": {
     "name": "Euskirchen",
@@ -1356,7 +2028,14 @@ export default {
     "studentsPerDesktop": 7.6,
     "studentsPerLaptop": 47.6,
     "studentsPerWhitboard": 32.3,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 14,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 11,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5570024": {
     "name": "Everswinkel",
@@ -1370,7 +2049,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5766028": {
     "name": "Extertal",
@@ -1384,7 +2070,14 @@ export default {
     "studentsPerDesktop": 6.6,
     "studentsPerLaptop": 83.3,
     "studentsPerWhitboard": 500.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 3,
+    "numSchoolsFiber": 1,
+    "numSchoolsBroadband": 2,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 33.3
   },
   "5966012": {
     "name": "Finnentrop",
@@ -1398,7 +2091,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5362024": {
     "name": "Frechen",
@@ -1412,7 +2112,14 @@ export default {
     "studentsPerDesktop": 7.2,
     "studentsPerLaptop": 41.7,
     "studentsPerWhitboard": 1000.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 10,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 10,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5970016": {
     "name": "Freudenberg",
@@ -1426,7 +2133,14 @@ export default {
     "studentsPerDesktop": 14.3,
     "studentsPerLaptop": 10.5,
     "studentsPerWhitboard": 166.7,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 6,
+    "numSchoolsFiber": 3,
+    "numSchoolsBroadband": 3,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 50.0
   },
   "5978012": {
     "name": "Fröndenberg/Ruhr",
@@ -1440,7 +2154,14 @@ export default {
     "studentsPerDesktop": 25.6,
     "studentsPerLaptop": 32.3,
     "studentsPerWhitboard": 41.7,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": 4,
+    "numSchoolsFiber": 1000,
+    "numSchoolsBroadband": 400,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": null
   },
   "5370008": {
     "name": "Gangelt",
@@ -1454,7 +2175,14 @@ export default {
     "studentsPerDesktop": 15.4,
     "studentsPerLaptop": 58.8,
     "studentsPerWhitboard": 14.9,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 3,
+    "numSchoolsFiber": 3,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 100.0
   },
   "5370012": {
     "name": "Geilenkirchen",
@@ -1468,7 +2196,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": 166.7,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 8,
+    "numSchoolsFiber": 7,
+    "numSchoolsBroadband": 1,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 87.5
   },
   "5154012": {
     "name": "Geldern",
@@ -1482,7 +2217,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5513000": {
     "name": "Gelsenkirchen",
@@ -1496,7 +2238,14 @@ export default {
     "studentsPerDesktop": 6.1,
     "studentsPerLaptop": 5.7,
     "studentsPerWhitboard": 18.5,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 69,
+    "numSchoolsFiber": 69,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 100.0
   },
   "5554016": {
     "name": "Gescher",
@@ -1510,7 +2259,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": 25.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 3,
+    "numSchoolsFiber": 3,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 100.0
   },
   "5974020": {
     "name": "Geseke",
@@ -1524,7 +2280,14 @@ export default {
     "studentsPerDesktop": 9.8,
     "studentsPerLaptop": 50.0,
     "studentsPerWhitboard": 333.3,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 6,
+    "numSchoolsFiber": 2,
+    "numSchoolsBroadband": 4,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 33.3
   },
   "5954012": {
     "name": "Gevelsberg",
@@ -1538,7 +2301,14 @@ export default {
     "studentsPerDesktop": 10.5,
     "studentsPerLaptop": 31.2,
     "studentsPerWhitboard": 111.1,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 13,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 13,
+    "numSchoolsFiberPercent": 0.0
   },
   "5562014": {
     "name": "Gladbeck",
@@ -1552,7 +2322,14 @@ export default {
     "studentsPerDesktop": 11.0,
     "studentsPerLaptop": 25.0,
     "studentsPerWhitboard": 200.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 17,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5154016": {
     "name": "Goch",
@@ -1566,7 +2343,14 @@ export default {
     "studentsPerDesktop": 7.2,
     "studentsPerLaptop": 24.4,
     "studentsPerWhitboard": 100.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 8,
+    "numSchoolsFiber": 4,
+    "numSchoolsBroadband": 4,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 50.0
   },
   "5166008": {
     "name": "Grefrath",
@@ -1580,7 +2364,14 @@ export default {
     "studentsPerDesktop": 37.0,
     "studentsPerLaptop": 58.8,
     "studentsPerWhitboard": 166.7,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 2,
+    "numSchoolsFiber": 2,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 100.0
   },
   "5566012": {
     "name": "Greven",
@@ -1594,7 +2385,14 @@ export default {
     "studentsPerDesktop": 15.6,
     "studentsPerLaptop": 15.9,
     "studentsPerWhitboard": 17.9,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 8,
+    "numSchoolsFiber": 8,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 100.0
   },
   "5162008": {
     "name": "Grevenbroich",
@@ -1608,7 +2406,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5554020": {
     "name": "Gronau (Westf.)",
@@ -1622,7 +2427,14 @@ export default {
     "studentsPerDesktop": 7.7,
     "studentsPerLaptop": 333.3,
     "studentsPerWhitboard": 34.5,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 13,
+    "numSchoolsFiber": 13,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 100.0
   },
   "5374012": {
     "name": "Gummersbach",
@@ -1636,7 +2448,14 @@ export default {
     "studentsPerDesktop": 5.8,
     "studentsPerLaptop": 9.4,
     "studentsPerWhitboard": 142.9,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 15,
+    "numSchoolsFiber": 1,
+    "numSchoolsBroadband": 14,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 6.7
   },
   "5754008": {
     "name": "Gütersloh",
@@ -1650,7 +2469,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5158008": {
     "name": "Haan",
@@ -1664,7 +2490,14 @@ export default {
     "studentsPerDesktop": 7.8,
     "studentsPerLaptop": 45.5,
     "studentsPerWhitboard": 17.9,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 9,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 9,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5914000": {
     "name": "Hagen",
@@ -1678,7 +2511,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 50,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 50,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5754012": {
     "name": "Halle (Westf.)",
@@ -1692,7 +2532,14 @@ export default {
     "studentsPerDesktop": 8.1,
     "studentsPerLaptop": 47.6,
     "studentsPerWhitboard": 21.7,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 5,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 5,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5958020": {
     "name": "Hallenberg",
@@ -1706,7 +2553,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": 8.0,
     "studentsPerWhitboard": 25.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 1,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 1,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5562016": {
     "name": "Haltern am See",
@@ -1720,7 +2574,14 @@ export default {
     "studentsPerDesktop": 11.6,
     "studentsPerLaptop": 16.9,
     "studentsPerWhitboard": 200.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 9,
+    "numSchoolsFiber": 9,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 100.0
   },
   "5962012": {
     "name": "Halver",
@@ -1734,7 +2595,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5915000": {
     "name": "Hamm",
@@ -1748,7 +2616,14 @@ export default {
     "studentsPerDesktop": 6.1,
     "studentsPerLaptop": 40.0,
     "studentsPerWhitboard": 1000.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 49,
+    "numSchoolsFiber": 45,
+    "numSchoolsBroadband": 4,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 91.8
   },
   "5170012": {
     "name": "Hamminkeln",
@@ -1762,7 +2637,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5754016": {
     "name": "Harsewinkel",
@@ -1776,7 +2658,14 @@ export default {
     "studentsPerDesktop": 8.3,
     "studentsPerLaptop": 20.4,
     "studentsPerWhitboard": 1000.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 7,
+    "numSchoolsFiber": 4,
+    "numSchoolsBroadband": 3,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 57.1
   },
   "5954016": {
     "name": "Hattingen",
@@ -1790,7 +2679,14 @@ export default {
     "studentsPerDesktop": 14.1,
     "studentsPerLaptop": 37.0,
     "studentsPerWhitboard": 166.7,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 13,
+    "numSchoolsFiber": 7,
+    "numSchoolsBroadband": 6,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 53.8
   },
   "5558020": {
     "name": "Havixbeck",
@@ -1804,7 +2700,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5554024": {
     "name": "Heek",
@@ -1818,7 +2721,14 @@ export default {
     "studentsPerDesktop": 7.3,
     "studentsPerLaptop": 62.5,
     "studentsPerWhitboard": 250.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 3,
+    "numSchoolsFiber": 3,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 100.0
   },
   "5554028": {
     "name": "Heiden",
@@ -1832,7 +2742,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5158012": {
     "name": "Heiligenhaus",
@@ -1846,7 +2763,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5358012": {
     "name": "Heimbach",
@@ -1860,7 +2784,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": 125.0,
     "studentsPerWhitboard": 13.2,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 1,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 1,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5370016": {
     "name": "Heinsberg",
@@ -1874,7 +2805,14 @@ export default {
     "studentsPerDesktop": 8.4,
     "studentsPerLaptop": 32.3,
     "studentsPerWhitboard": 21.3,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 10,
+    "numSchoolsFiber": 9,
+    "numSchoolsBroadband": 1,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 90.0
   },
   "5366020": {
     "name": "Hellenthal",
@@ -1888,7 +2826,14 @@ export default {
     "studentsPerDesktop": 20.0,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": 28.6,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": 2,
+    "numSchoolsFiber": 530,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": null
   },
   "5962016": {
     "name": "Hemer",
@@ -1902,7 +2847,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5382020": {
     "name": "Hennef (Sieg)",
@@ -1916,7 +2868,14 @@ export default {
     "studentsPerDesktop": 5.9,
     "studentsPerLaptop": 15.9,
     "studentsPerWhitboard": 17.5,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 11,
+    "numSchoolsFiber": 6,
+    "numSchoolsBroadband": 5,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 54.5
   },
   "5954020": {
     "name": "Herdecke",
@@ -1930,7 +2889,14 @@ export default {
     "studentsPerDesktop": 23.8,
     "studentsPerLaptop": 14.5,
     "studentsPerWhitboard": 28.6,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 6,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 6,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5758012": {
     "name": "Herford",
@@ -1944,7 +2910,14 @@ export default {
     "studentsPerDesktop": 7.5,
     "studentsPerLaptop": 58.8,
     "studentsPerWhitboard": 333.3,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 18,
+    "numSchoolsFiber": 18,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 100.0
   },
   "5916000": {
     "name": "Herne",
@@ -1958,7 +2931,14 @@ export default {
     "studentsPerDesktop": 12.2,
     "studentsPerLaptop": 166.7,
     "studentsPerWhitboard": 100.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 38,
+    "numSchoolsFiber": 8,
+    "numSchoolsBroadband": 13,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 21.1
   },
   "5962020": {
     "name": "Herscheid",
@@ -1972,7 +2952,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5562020": {
     "name": "Herten",
@@ -1986,7 +2973,14 @@ export default {
     "studentsPerDesktop": 12.0,
     "studentsPerLaptop": 30.3,
     "studentsPerWhitboard": 142.9,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 13,
+    "numSchoolsFiber": 5,
+    "numSchoolsBroadband": 5,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 38.5
   },
   "5754020": {
     "name": "Herzebrock-Clarholz",
@@ -2000,7 +2994,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5334016": {
     "name": "Herzogenrath",
@@ -2014,7 +3015,14 @@ export default {
     "studentsPerDesktop": 9.3,
     "studentsPerLaptop": 100.0,
     "studentsPerWhitboard": 62.5,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 13,
+    "numSchoolsFiber": 1,
+    "numSchoolsBroadband": 12,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 7.7
   },
   "5758016": {
     "name": "Hiddenhausen",
@@ -2028,7 +3036,14 @@ export default {
     "studentsPerDesktop": 11.4,
     "studentsPerLaptop": 22.2,
     "studentsPerWhitboard": 500.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 4,
+    "numSchoolsFiber": 2,
+    "numSchoolsBroadband": 2,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 50.0
   },
   "5970020": {
     "name": "Hilchenbach",
@@ -2042,7 +3057,14 @@ export default {
     "studentsPerDesktop": 15.9,
     "studentsPerLaptop": 21.3,
     "studentsPerWhitboard": 200.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 3,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 3,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5158016": {
     "name": "Hilden",
@@ -2056,7 +3078,14 @@ export default {
     "studentsPerDesktop": 9.0,
     "studentsPerLaptop": 15.9,
     "studentsPerWhitboard": 41.7,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 9,
+    "numSchoolsFiber": 4,
+    "numSchoolsBroadband": 5,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 44.4
   },
   "5770012": {
     "name": "Hille",
@@ -2070,7 +3099,14 @@ export default {
     "studentsPerDesktop": 43.5,
     "studentsPerLaptop": 19.6,
     "studentsPerWhitboard": 71.4,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 4,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 4,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5978016": {
     "name": "Holzwickede",
@@ -2084,7 +3120,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5566020": {
     "name": "Hopsten",
@@ -2098,7 +3141,14 @@ export default {
     "studentsPerDesktop": 7.5,
     "studentsPerLaptop": 83.3,
     "studentsPerWhitboard": 16.1,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 2,
+    "numSchoolsFiber": 2,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 100.0
   },
   "5766032": {
     "name": "Horn-Bad Meinberg",
@@ -2112,7 +3162,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5566016": {
     "name": "Hörstel",
@@ -2126,7 +3183,14 @@ export default {
     "studentsPerDesktop": 13.9,
     "studentsPerLaptop": 58.8,
     "studentsPerWhitboard": null,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 6,
+    "numSchoolsFiber": 6,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 100.0
   },
   "5566024": {
     "name": "Horstmar",
@@ -2140,7 +3204,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5774024": {
     "name": "Hövelhof",
@@ -2154,7 +3225,14 @@ export default {
     "studentsPerDesktop": 8.7,
     "studentsPerLaptop": 40.0,
     "studentsPerWhitboard": 90.9,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 5,
+    "numSchoolsFiber": 1,
+    "numSchoolsBroadband": 4,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 20.0
   },
   "5762020": {
     "name": "Höxter",
@@ -2168,7 +3246,14 @@ export default {
     "studentsPerDesktop": 15.6,
     "studentsPerLaptop": 10.8,
     "studentsPerWhitboard": 62.5,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 8,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 8,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5370020": {
     "name": "Hückelhoven",
@@ -2182,7 +3267,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5374016": {
     "name": "Hückeswagen",
@@ -2196,7 +3288,14 @@ export default {
     "studentsPerDesktop": 9.8,
     "studentsPerLaptop": 12.2,
     "studentsPerWhitboard": 100.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 5,
+    "numSchoolsFiber": 2,
+    "numSchoolsBroadband": 3,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 40.0
   },
   "5770016": {
     "name": "Hüllhorst",
@@ -2210,7 +3309,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5170016": {
     "name": "Hünxe",
@@ -2224,7 +3330,14 @@ export default {
     "studentsPerDesktop": 24.4,
     "studentsPerLaptop": 22.2,
     "studentsPerWhitboard": 32.3,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 4,
+    "numSchoolsFiber": 2,
+    "numSchoolsBroadband": 2,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 50.0
   },
   "5358016": {
     "name": "Hürtgenwald",
@@ -2238,7 +3351,14 @@ export default {
     "studentsPerDesktop": 17.2,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": 19.6,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 2,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 2,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5362028": {
     "name": "Hürth",
@@ -2252,7 +3372,14 @@ export default {
     "studentsPerDesktop": 6.6,
     "studentsPerLaptop": 20.8,
     "studentsPerWhitboard": 166.7,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 16,
+    "numSchoolsFiber": 1,
+    "numSchoolsBroadband": 15,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 6.2
   },
   "5566028": {
     "name": "Ibbenbüren",
@@ -2266,7 +3393,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5358020": {
     "name": "Inden",
@@ -2280,7 +3414,14 @@ export default {
     "studentsPerDesktop": 5.2,
     "studentsPerLaptop": 23.3,
     "studentsPerWhitboard": 111.1,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 2,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 2,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5962024": {
     "name": "Iserlohn",
@@ -2294,7 +3435,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 22,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5554032": {
     "name": "Isselburg",
@@ -2308,7 +3456,14 @@ export default {
     "studentsPerDesktop": 5.6,
     "studentsPerLaptop": 62.5,
     "studentsPerWhitboard": 250.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": 3,
+    "numSchoolsFiber": 300,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": null
   },
   "5154020": {
     "name": "Issum",
@@ -2322,7 +3477,14 @@ export default {
     "studentsPerDesktop": 20.0,
     "studentsPerLaptop": 12.5,
     "studentsPerWhitboard": 35.7,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 2,
+    "numSchoolsFiber": 2,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 100.0
   },
   "5162012": {
     "name": "Jüchen",
@@ -2336,7 +3498,14 @@ export default {
     "studentsPerDesktop": 16.1,
     "studentsPerLaptop": 142.9,
     "studentsPerWhitboard": null,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 5,
+    "numSchoolsFiber": 3,
+    "numSchoolsBroadband": 5,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 60.0
   },
   "5358024": {
     "name": "Jülich",
@@ -2350,7 +3519,14 @@ export default {
     "studentsPerDesktop": 5.6,
     "studentsPerLaptop": 62.5,
     "studentsPerWhitboard": 111.1,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 6,
+    "numSchoolsFiber": 6,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 100.0
   },
   "5162016": {
     "name": "Kaarst",
@@ -2364,7 +3540,14 @@ export default {
     "studentsPerDesktop": 11.2,
     "studentsPerLaptop": 37.0,
     "studentsPerWhitboard": 41.7,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 10,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 10,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5154024": {
     "name": "Kalkar",
@@ -2378,7 +3561,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5366024": {
     "name": "Kall",
@@ -2392,7 +3582,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5766036": {
     "name": "Kalletal",
@@ -2406,7 +3603,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5978020": {
     "name": "Kamen",
@@ -2420,7 +3624,14 @@ export default {
     "studentsPerDesktop": 10.4,
     "studentsPerLaptop": 7.6,
     "studentsPerWhitboard": 41.7,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 10,
+    "numSchoolsFiber": 10,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 100.0
   },
   "5170020": {
     "name": "Kamp-Lintfort",
@@ -2434,7 +3645,14 @@ export default {
     "studentsPerDesktop": 9.6,
     "studentsPerLaptop": 20.0,
     "studentsPerWhitboard": null,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 7,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 4,
+    "numSchoolsOther": 3,
+    "numSchoolsFiberPercent": 0.0
   },
   "5166012": {
     "name": "Kempen",
@@ -2448,7 +3666,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 8,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 8,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5154028": {
     "name": "Kerken",
@@ -2462,7 +3687,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5362032": {
     "name": "Kerpen",
@@ -2476,7 +3708,14 @@ export default {
     "studentsPerDesktop": 8.7,
     "studentsPerLaptop": 55.6,
     "studentsPerWhitboard": 333.3,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 17,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 17,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5154032": {
     "name": "Kevelaer",
@@ -2490,7 +3729,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5962028": {
     "name": "Kierspe",
@@ -2504,7 +3750,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 5,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 2,
+    "numSchoolsOther": 3,
+    "numSchoolsFiberPercent": 0.0
   },
   "5966016": {
     "name": "Kirchhundem",
@@ -2518,7 +3771,14 @@ export default {
     "studentsPerDesktop": 4.4,
     "studentsPerLaptop": 14.1,
     "studentsPerWhitboard": 50.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 4,
+    "numSchoolsFiber": 4,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 100.0
   },
   "5758020": {
     "name": "Kirchlengern",
@@ -2532,7 +3792,14 @@ export default {
     "studentsPerDesktop": 62.5,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": 58.8,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 2,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 3,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5154036": {
     "name": "Kleve",
@@ -2546,7 +3813,14 @@ export default {
     "studentsPerDesktop": 13.2,
     "studentsPerLaptop": 12.8,
     "studentsPerWhitboard": 15.4,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 12,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 12,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5315000": {
     "name": "Köln",
@@ -2560,7 +3834,14 @@ export default {
     "studentsPerDesktop": 5.4,
     "studentsPerLaptop": 200.0,
     "studentsPerWhitboard": 333.3,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 240,
+    "numSchoolsFiber": 6,
+    "numSchoolsBroadband": 232,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 2.5
   },
   "5382024": {
     "name": "Königswinter",
@@ -2574,7 +3855,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5162020": {
     "name": "Korschenbroich",
@@ -2588,7 +3876,14 @@ export default {
     "studentsPerDesktop": 5.8,
     "studentsPerLaptop": 76.9,
     "studentsPerWhitboard": 50.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 9,
+    "numSchoolsFiber": 9,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 100.0
   },
   "5154040": {
     "name": "Kranenburg",
@@ -2602,7 +3897,14 @@ export default {
     "studentsPerDesktop": 6.3,
     "studentsPerLaptop": 11.1,
     "studentsPerWhitboard": 200.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 2,
+    "numSchoolsFiber": 2,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 100.0
   },
   "5114000": {
     "name": "Krefeld",
@@ -2616,7 +3918,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5358028": {
     "name": "Kreuzau",
@@ -2630,7 +3939,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5970024": {
     "name": "Kreuztal",
@@ -2644,7 +3960,14 @@ export default {
     "studentsPerDesktop": 9.6,
     "studentsPerLaptop": 58.8,
     "studentsPerWhitboard": 250.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 11,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 11,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5378012": {
     "name": "Kürten",
@@ -2658,7 +3981,14 @@ export default {
     "studentsPerDesktop": 6.0,
     "studentsPerLaptop": 10.0,
     "studentsPerWhitboard": 250.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 5,
+    "numSchoolsFiber": 2,
+    "numSchoolsBroadband": 3,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 40.0
   },
   "5566032": {
     "name": "Ladbergen",
@@ -2672,7 +4002,14 @@ export default {
     "studentsPerDesktop": 9.2,
     "studentsPerLaptop": 45.5,
     "studentsPerWhitboard": 19.2,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": 1,
+    "numSchoolsFiber": 100,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 100.0
   },
   "5566036": {
     "name": "Laer",
@@ -2686,7 +4023,14 @@ export default {
     "studentsPerDesktop": 13.0,
     "studentsPerLaptop": 142.9,
     "studentsPerWhitboard": 21.3,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": 1,
+    "numSchoolsFiber": 200,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 100.0
   },
   "5766040": {
     "name": "Lage",
@@ -2700,7 +4044,14 @@ export default {
     "studentsPerDesktop": 6.7,
     "studentsPerLaptop": 10.9,
     "studentsPerWhitboard": 45.5,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 11,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 10,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5754024": {
     "name": "Langenberg",
@@ -2714,7 +4065,14 @@ export default {
     "studentsPerDesktop": 55.6,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 2,
+    "numSchoolsFiber": 2,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 100.0
   },
   "5158020": {
     "name": "Langenfeld (Rhld.)",
@@ -2728,7 +4086,14 @@ export default {
     "studentsPerDesktop": 9.2,
     "studentsPerLaptop": 11.5,
     "studentsPerWhitboard": 62.5,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 13,
+    "numSchoolsFiber": 13,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 100.0
   },
   "5358032": {
     "name": "Langerwehe",
@@ -2742,7 +4107,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5554036": {
     "name": "Legden",
@@ -2756,7 +4128,14 @@ export default {
     "studentsPerDesktop": 18.9,
     "studentsPerLaptop": 22.7,
     "studentsPerWhitboard": 76.9,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 2,
+    "numSchoolsFiber": 2,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 100.0
   },
   "5378016": {
     "name": "Leichlingen (Rhld.)",
@@ -2770,7 +4149,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5766044": {
     "name": "Lemgo",
@@ -2784,7 +4170,14 @@ export default {
     "studentsPerDesktop": 8.2,
     "studentsPerLaptop": 58.8,
     "studentsPerWhitboard": 90.9,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 9,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 3,
+    "numSchoolsOther": 6,
+    "numSchoolsFiberPercent": 0.0
   },
   "5566040": {
     "name": "Lengerich",
@@ -2798,7 +4191,14 @@ export default {
     "studentsPerDesktop": 10.4,
     "studentsPerLaptop": 71.4,
     "studentsPerWhitboard": null,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": 8,
+    "numSchoolsFiber": 2000,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": null
   },
   "5966020": {
     "name": "Lennestadt",
@@ -2812,7 +4212,14 @@ export default {
     "studentsPerDesktop": 13.0,
     "studentsPerLaptop": 8.1,
     "studentsPerWhitboard": 52.6,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 8,
+    "numSchoolsFiber": 2,
+    "numSchoolsBroadband": 6,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 25.0
   },
   "5766048": {
     "name": "Leopoldshöhe",
@@ -2826,7 +4233,14 @@ export default {
     "studentsPerDesktop": 24.4,
     "studentsPerLaptop": 111.1,
     "studentsPerWhitboard": 166.7,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 3,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 3,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5316000": {
     "name": "Leverkusen",
@@ -2840,7 +4254,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5774028": {
     "name": "Lichtenau",
@@ -2854,7 +4275,14 @@ export default {
     "studentsPerDesktop": 14.7,
     "studentsPerLaptop": 55.6,
     "studentsPerWhitboard": 333.3,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 3,
+    "numSchoolsFiber": 3,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 100.0
   },
   "5566044": {
     "name": "Lienen",
@@ -2868,7 +4296,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5374020": {
     "name": "Lindlar",
@@ -2882,7 +4317,14 @@ export default {
     "studentsPerDesktop": 7.8,
     "studentsPerLaptop": 8.5,
     "studentsPerWhitboard": 142.9,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 8,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 8,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5358036": {
     "name": "Linnich",
@@ -2896,7 +4338,14 @@ export default {
     "studentsPerDesktop": 10.2,
     "studentsPerLaptop": 200.0,
     "studentsPerWhitboard": 125.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 1,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 1,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5974024": {
     "name": "Lippetal",
@@ -2910,7 +4359,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5974028": {
     "name": "Lippstadt",
@@ -2924,7 +4380,14 @@ export default {
     "studentsPerDesktop": 12.3,
     "studentsPerLaptop": 25.6,
     "studentsPerWhitboard": null,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 18,
+    "numSchoolsFiber": 10,
+    "numSchoolsBroadband": 11,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 55.6
   },
   "5382028": {
     "name": "Lohmar",
@@ -2938,7 +4401,14 @@ export default {
     "studentsPerDesktop": 6.7,
     "studentsPerLaptop": 23.8,
     "studentsPerWhitboard": 40.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 6,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 6,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5758024": {
     "name": "Löhne",
@@ -2952,7 +4422,14 @@ export default {
     "studentsPerDesktop": 18.9,
     "studentsPerLaptop": 31.2,
     "studentsPerWhitboard": 100.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 11,
+    "numSchoolsFiber": 7,
+    "numSchoolsBroadband": 4,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 63.6
   },
   "5566048": {
     "name": "Lotte",
@@ -2966,7 +4443,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5770020": {
     "name": "Lübbecke",
@@ -2980,7 +4464,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": 23.8,
     "studentsPerWhitboard": 18.2,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 8,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 8,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5962032": {
     "name": "Lüdenscheid",
@@ -2994,7 +4485,14 @@ export default {
     "studentsPerDesktop": 19.6,
     "studentsPerLaptop": 66.7,
     "studentsPerWhitboard": 333.3,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 20,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 20,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5558024": {
     "name": "Lüdinghausen",
@@ -3008,7 +4506,14 @@ export default {
     "studentsPerDesktop": 4.6,
     "studentsPerLaptop": 26.3,
     "studentsPerWhitboard": 43.5,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 8,
+    "numSchoolsFiber": 5,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 62.5
   },
   "5766052": {
     "name": "Lügde",
@@ -3022,7 +4527,14 @@ export default {
     "studentsPerDesktop": 9.5,
     "studentsPerLaptop": 21.3,
     "studentsPerWhitboard": null,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 3,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 3,
+    "numSchoolsFiberPercent": 0.0
   },
   "5978024": {
     "name": "Lünen",
@@ -3036,7 +4548,14 @@ export default {
     "studentsPerDesktop": 5.5,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": 45.5,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 21,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 24,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5374024": {
     "name": "Marienheide",
@@ -3050,7 +4569,14 @@ export default {
     "studentsPerDesktop": 11.9,
     "studentsPerLaptop": 32.3,
     "studentsPerWhitboard": null,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 3,
+    "numSchoolsFiber": 1,
+    "numSchoolsBroadband": 2,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 33.3
   },
   "5762024": {
     "name": "Marienmünster",
@@ -3064,7 +4590,14 @@ export default {
     "studentsPerDesktop": 41.7,
     "studentsPerLaptop": 5.9,
     "studentsPerWhitboard": 11.8,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 1,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 100,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5562024": {
     "name": "Marl",
@@ -3078,7 +4611,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5958024": {
     "name": "Marsberg",
@@ -3092,7 +4632,14 @@ export default {
     "studentsPerDesktop": 7.1,
     "studentsPerLaptop": 62.5,
     "studentsPerWhitboard": 43.5,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 5,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 5,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5366028": {
     "name": "Mechernich",
@@ -3106,7 +4653,14 @@ export default {
     "studentsPerDesktop": 31.2,
     "studentsPerLaptop": 13.5,
     "studentsPerWhitboard": 38.5,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 6,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 6,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5382032": {
     "name": "Meckenheim",
@@ -3120,7 +4674,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5958028": {
     "name": "Medebach",
@@ -3134,7 +4695,14 @@ export default {
     "studentsPerDesktop": 43.5,
     "studentsPerLaptop": 18.9,
     "studentsPerWhitboard": 23.3,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 2,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 1,
+    "numSchoolsOther": 1,
+    "numSchoolsFiberPercent": 0.0
   },
   "5162022": {
     "name": "Meerbusch",
@@ -3148,7 +4716,14 @@ export default {
     "studentsPerDesktop": 13.7,
     "studentsPerLaptop": 33.3,
     "studentsPerWhitboard": 90.9,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 12,
+    "numSchoolsFiber": 4,
+    "numSchoolsBroadband": 8,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 33.3
   },
   "5962036": {
     "name": "Meinerzhagen",
@@ -3162,7 +4737,14 @@ export default {
     "studentsPerDesktop": 15.9,
     "studentsPerLaptop": 8.4,
     "studentsPerWhitboard": 34.5,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 4,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 4,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5962040": {
     "name": "Menden (Sauerland)",
@@ -3176,7 +4758,14 @@ export default {
     "studentsPerDesktop": 12.7,
     "studentsPerLaptop": 40.0,
     "studentsPerWhitboard": 166.7,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 9,
+    "numSchoolsFiber": 6,
+    "numSchoolsBroadband": 3,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 66.7
   },
   "5358040": {
     "name": "Merzenich",
@@ -3190,7 +4779,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5958032": {
     "name": "Meschede",
@@ -3204,7 +4800,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 9,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5566052": {
     "name": "Metelen",
@@ -3218,7 +4821,14 @@ export default {
     "studentsPerDesktop": 66.7,
     "studentsPerLaptop": 66.7,
     "studentsPerWhitboard": 20.4,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 1,
+    "numSchoolsFiber": 1,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 100.0
   },
   "5566056": {
     "name": "Mettingen",
@@ -3232,7 +4842,14 @@ export default {
     "studentsPerDesktop": 9.9,
     "studentsPerLaptop": 40.0,
     "studentsPerWhitboard": 1000.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": 3,
+    "numSchoolsFiber": 400,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": null
   },
   "5158024": {
     "name": "Mettmann",
@@ -3246,7 +4863,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 8,
+    "numSchoolsFiber": 3,
+    "numSchoolsBroadband": 5,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 37.5
   },
   "5770024": {
     "name": "Minden",
@@ -3260,7 +4884,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5170024": {
     "name": "Moers",
@@ -3274,7 +4905,14 @@ export default {
     "studentsPerDesktop": 10.8,
     "studentsPerLaptop": 76.9,
     "studentsPerWhitboard": 200.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 22,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 22,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5974032": {
     "name": "Möhnesee",
@@ -3288,7 +4926,14 @@ export default {
     "studentsPerDesktop": 7.4,
     "studentsPerLaptop": 22.2,
     "studentsPerWhitboard": 333.3,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 2,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 166000,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5116000": {
     "name": "Mönchengladbach",
@@ -3302,7 +4947,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 66,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5158026": {
     "name": "Monheim am Rhein",
@@ -3316,7 +4968,14 @@ export default {
     "studentsPerDesktop": 6.4,
     "studentsPerLaptop": 47.6,
     "studentsPerWhitboard": 23.8,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": 10,
+    "numSchoolsFiber": 1200,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": null
   },
   "5334020": {
     "name": "Monschau",
@@ -3330,7 +4989,14 @@ export default {
     "studentsPerDesktop": 13.3,
     "studentsPerLaptop": 23.3,
     "studentsPerWhitboard": 500.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 3,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 3,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5374028": {
     "name": "Morsbach",
@@ -3344,7 +5010,14 @@ export default {
     "studentsPerDesktop": 4.1,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": 27.8,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 2,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 2,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5382036": {
     "name": "Much",
@@ -3358,7 +5031,14 @@ export default {
     "studentsPerDesktop": 21.3,
     "studentsPerLaptop": 58.8,
     "studentsPerWhitboard": 47.6,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 3,
+    "numSchoolsFiber": 1,
+    "numSchoolsBroadband": 2,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 33.3
   },
   "5117000": {
     "name": "Mülheim an der Ruhr",
@@ -3372,7 +5052,14 @@ export default {
     "studentsPerDesktop": 13.5,
     "studentsPerLaptop": 50.0,
     "studentsPerWhitboard": 1000.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 36,
+    "numSchoolsFiber": 2,
+    "numSchoolsBroadband": 30,
+    "numSchoolsOther": 4,
+    "numSchoolsFiberPercent": 5.6
   },
   "5515000": {
     "name": "Münster",
@@ -3386,7 +5073,14 @@ export default {
     "studentsPerDesktop": 13.7,
     "studentsPerLaptop": 43.5,
     "studentsPerWhitboard": 1000.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 72,
+    "numSchoolsFiber": 38,
+    "numSchoolsBroadband": 34,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 52.8
   },
   "5962044": {
     "name": "Nachrodt-Wiblingwerde",
@@ -3400,7 +5094,14 @@ export default {
     "studentsPerDesktop": 3.3,
     "studentsPerLaptop": 83.3,
     "studentsPerWhitboard": null,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 2,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 800,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5970032": {
     "name": "Netphen",
@@ -3414,7 +5115,14 @@ export default {
     "studentsPerDesktop": 7.4,
     "studentsPerLaptop": 29.4,
     "studentsPerWhitboard": 166.7,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 8,
+    "numSchoolsFiber": 5,
+    "numSchoolsBroadband": 3,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 62.5
   },
   "5366032": {
     "name": "Nettersheim",
@@ -3428,7 +5136,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5166016": {
     "name": "Nettetal",
@@ -3442,7 +5157,14 @@ export default {
     "studentsPerDesktop": 18.5,
     "studentsPerLaptop": 13.5,
     "studentsPerWhitboard": 50.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 11,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 5,
+    "numSchoolsOther": 6,
+    "numSchoolsFiberPercent": 0.0
   },
   "5566060": {
     "name": "Neuenkirchen",
@@ -3456,7 +5178,14 @@ export default {
     "studentsPerDesktop": 5.8,
     "studentsPerLaptop": 25.0,
     "studentsPerWhitboard": 32.3,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 3,
+    "numSchoolsFiber": 3,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 100.0
   },
   "5962048": {
     "name": "Neuenrade",
@@ -3470,7 +5199,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5170028": {
     "name": "Neukirchen-Vluyn",
@@ -3484,7 +5220,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5970036": {
     "name": "Neunkirchen",
@@ -3498,7 +5241,14 @@ export default {
     "studentsPerDesktop": 17.9,
     "studentsPerLaptop": 16.7,
     "studentsPerWhitboard": 50.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 6,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 6,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5382040": {
     "name": "Neunkirchen-Seelscheid",
@@ -3512,7 +5262,14 @@ export default {
     "studentsPerDesktop": 18.9,
     "studentsPerLaptop": 47.6,
     "studentsPerWhitboard": 90.9,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 4,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 4,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5162024": {
     "name": "Neuss",
@@ -3526,7 +5283,14 @@ export default {
     "studentsPerDesktop": 20.0,
     "studentsPerLaptop": 31.2,
     "studentsPerWhitboard": 500.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 37,
+    "numSchoolsFiber": 10,
+    "numSchoolsBroadband": 27,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 27.0
   },
   "5358044": {
     "name": "Nideggen",
@@ -3540,7 +5304,14 @@ export default {
     "studentsPerDesktop": 7.9,
     "studentsPerLaptop": 111.1,
     "studentsPerWhitboard": 47.6,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 4,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 4,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5382044": {
     "name": "Niederkassel",
@@ -3554,7 +5325,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5166020": {
     "name": "Niederkrüchten",
@@ -3568,7 +5346,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5358048": {
     "name": "Niederzier",
@@ -3582,7 +5367,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5762028": {
     "name": "Nieheim",
@@ -3596,7 +5388,14 @@ export default {
     "studentsPerDesktop": 3.9,
     "studentsPerLaptop": 9.2,
     "studentsPerWhitboard": 41.7,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 2,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 2,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5558028": {
     "name": "Nordkirchen",
@@ -3610,7 +5409,14 @@ export default {
     "studentsPerDesktop": 19.6,
     "studentsPerLaptop": 25.6,
     "studentsPerWhitboard": 111.1,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 3,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5566064": {
     "name": "Nordwalde",
@@ -3624,7 +5430,14 @@ export default {
     "studentsPerDesktop": 27.0,
     "studentsPerLaptop": 15.4,
     "studentsPerWhitboard": 500.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": 3,
+    "numSchoolsFiber": 500,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": null
   },
   "5358052": {
     "name": "Nörvenich",
@@ -3638,7 +5451,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5558032": {
     "name": "Nottuln",
@@ -3652,7 +5472,14 @@ export default {
     "studentsPerDesktop": 6.5,
     "studentsPerLaptop": 34.5,
     "studentsPerWhitboard": 1000.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 6,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 5,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5374032": {
     "name": "Nümbrecht",
@@ -3666,7 +5493,14 @@ export default {
     "studentsPerDesktop": 38.5,
     "studentsPerLaptop": 8.1,
     "studentsPerWhitboard": 1000.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 6,
+    "numSchoolsFiber": 6,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 100.0
   },
   "5119000": {
     "name": "Oberhausen",
@@ -3680,7 +5514,14 @@ export default {
     "studentsPerDesktop": 15.2,
     "studentsPerLaptop": 55.6,
     "studentsPerWhitboard": 1000.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 44,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 44,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5566068": {
     "name": "Ochtrup",
@@ -3694,7 +5535,14 @@ export default {
     "studentsPerDesktop": 10.0,
     "studentsPerLaptop": 14.5,
     "studentsPerWhitboard": 66.7,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 6,
+    "numSchoolsFiber": 6,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 100.0
   },
   "5378020": {
     "name": "Odenthal",
@@ -3708,7 +5556,14 @@ export default {
     "studentsPerDesktop": 38.5,
     "studentsPerLaptop": 11.4,
     "studentsPerWhitboard": 30.3,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 7,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 7,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5570028": {
     "name": "Oelde",
@@ -3722,7 +5577,14 @@ export default {
     "studentsPerDesktop": 41.7,
     "studentsPerLaptop": 6.8,
     "studentsPerWhitboard": null,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 7,
+    "numSchoolsFiber": 7,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 100.0
   },
   "5562028": {
     "name": "Oer-Erkenschwick",
@@ -3736,7 +5598,14 @@ export default {
     "studentsPerDesktop": 18.5,
     "studentsPerLaptop": 15.2,
     "studentsPerWhitboard": 1000.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 7,
+    "numSchoolsFiber": 7,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 100.0
   },
   "5766056": {
     "name": "Oerlinghausen",
@@ -3750,7 +5619,14 @@ export default {
     "studentsPerDesktop": 8.0,
     "studentsPerLaptop": 100.0,
     "studentsPerWhitboard": 166.7,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": 5,
+    "numSchoolsFiber": 1200,
+    "numSchoolsBroadband": 100,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": null
   },
   "5558036": {
     "name": "Olfen",
@@ -3764,7 +5640,14 @@ export default {
     "studentsPerDesktop": 166.7,
     "studentsPerLaptop": 1.1,
     "studentsPerWhitboard": 18.2,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": 2,
+    "numSchoolsFiber": 80,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": null
   },
   "5966024": {
     "name": "Olpe",
@@ -3778,7 +5661,14 @@ export default {
     "studentsPerDesktop": 15.4,
     "studentsPerLaptop": 28.6,
     "studentsPerWhitboard": 66.7,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 6,
+    "numSchoolsFiber": 6,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 100.0
   },
   "5958036": {
     "name": "Olsberg",
@@ -3792,7 +5682,14 @@ export default {
     "studentsPerDesktop": 9.7,
     "studentsPerLaptop": 30.3,
     "studentsPerWhitboard": 18.9,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 5,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 5,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5570032": {
     "name": "Ostbevern",
@@ -3806,7 +5703,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5378024": {
     "name": "Overath",
@@ -3820,7 +5724,14 @@ export default {
     "studentsPerDesktop": 10.4,
     "studentsPerLaptop": 55.6,
     "studentsPerWhitboard": 250.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 8,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 8,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5774032": {
     "name": "Paderborn",
@@ -3834,7 +5745,14 @@ export default {
     "studentsPerDesktop": 41.7,
     "studentsPerLaptop": 66.7,
     "studentsPerWhitboard": 14.3,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 35,
+    "numSchoolsFiber": 6,
+    "numSchoolsBroadband": 29,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 17.1
   },
   "5770028": {
     "name": "Petershagen",
@@ -3848,7 +5766,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5962052": {
     "name": "Plettenberg",
@@ -3862,7 +5787,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5770032": {
     "name": "Porta Westfalica",
@@ -3876,7 +5808,14 @@ export default {
     "studentsPerDesktop": 12.0,
     "studentsPerLaptop": 17.9,
     "studentsPerWhitboard": null,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 8,
+    "numSchoolsFiber": 3,
+    "numSchoolsBroadband": 5,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 37.5
   },
   "5770036": {
     "name": "Preußisch Oldendorf",
@@ -3890,7 +5829,14 @@ export default {
     "studentsPerDesktop": 5.7,
     "studentsPerLaptop": 45.5,
     "studentsPerWhitboard": 32.3,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 3,
+    "numSchoolsFiber": 3,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 100.0
   },
   "5362036": {
     "name": "Pulheim",
@@ -3904,7 +5850,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5374036": {
     "name": "Radevormwald",
@@ -3918,7 +5871,14 @@ export default {
     "studentsPerDesktop": 4.5,
     "studentsPerLaptop": 16.7,
     "studentsPerWhitboard": 34.5,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 8,
+    "numSchoolsFiber": 1,
+    "numSchoolsBroadband": 7,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 12.5
   },
   "5554040": {
     "name": "Raesfeld",
@@ -3932,7 +5892,14 @@ export default {
     "studentsPerDesktop": 5.0,
     "studentsPerLaptop": 12.0,
     "studentsPerWhitboard": 45.5,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": 3,
+    "numSchoolsFiber": 400,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": null
   },
   "5770040": {
     "name": "Rahden",
@@ -3946,7 +5913,14 @@ export default {
     "studentsPerDesktop": 6.4,
     "studentsPerLaptop": 22.2,
     "studentsPerWhitboard": 76.9,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 6,
+    "numSchoolsFiber": 2,
+    "numSchoolsBroadband": 4,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 33.3
   },
   "5158028": {
     "name": "Ratingen",
@@ -3960,7 +5934,14 @@ export default {
     "studentsPerDesktop": 8.8,
     "studentsPerLaptop": 52.6,
     "studentsPerWhitboard": 500.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 21,
+    "numSchoolsFiber": 21,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 100.0
   },
   "5566072": {
     "name": "Recke",
@@ -3974,7 +5955,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5562032": {
     "name": "Recklinghausen",
@@ -3988,7 +5976,14 @@ export default {
     "studentsPerDesktop": 7.9,
     "studentsPerLaptop": 20.0,
     "studentsPerWhitboard": 125.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 29,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 29,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5154044": {
     "name": "Rees",
@@ -4002,7 +5997,14 @@ export default {
     "studentsPerDesktop": 11.0,
     "studentsPerLaptop": 50.0,
     "studentsPerWhitboard": 166.7,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 7,
+    "numSchoolsFiber": 7,
+    "numSchoolsBroadband": 7,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 100.0
   },
   "5374040": {
     "name": "Reichshof",
@@ -4016,7 +6018,14 @@ export default {
     "studentsPerDesktop": 8.1,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": 41.7,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 5,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 5,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5554044": {
     "name": "Reken",
@@ -4030,7 +6039,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5120000": {
     "name": "Remscheid",
@@ -4044,7 +6060,14 @@ export default {
     "studentsPerDesktop": 9.6,
     "studentsPerLaptop": 11.5,
     "studentsPerWhitboard": 37.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 29,
+    "numSchoolsFiber": 1,
+    "numSchoolsBroadband": 28,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 3.4
   },
   "5754028": {
     "name": "Rheda-Wiedenbrück",
@@ -4058,7 +6081,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5554048": {
     "name": "Rhede",
@@ -4072,7 +6102,14 @@ export default {
     "studentsPerDesktop": 16.1,
     "studentsPerLaptop": 9.4,
     "studentsPerWhitboard": 47.6,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 4,
+    "numSchoolsFiber": 2,
+    "numSchoolsBroadband": 2,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 50.0
   },
   "5382048": {
     "name": "Rheinbach",
@@ -4086,7 +6123,14 @@ export default {
     "studentsPerDesktop": 8.8,
     "studentsPerLaptop": 13.0,
     "studentsPerWhitboard": 125.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 7,
+    "numSchoolsFiber": 2,
+    "numSchoolsBroadband": 5,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 28.6
   },
   "5170032": {
     "name": "Rheinberg",
@@ -4100,7 +6144,14 @@ export default {
     "studentsPerDesktop": 21.3,
     "studentsPerLaptop": 7.1,
     "studentsPerWhitboard": 250.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 7,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 7,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5566076": {
     "name": "Rheine",
@@ -4114,7 +6165,14 @@ export default {
     "studentsPerDesktop": 10.9,
     "studentsPerLaptop": 62.5,
     "studentsPerWhitboard": 50.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 22,
+    "numSchoolsFiber": 1,
+    "numSchoolsBroadband": 22,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 4.5
   },
   "5154048": {
     "name": "Rheurdt",
@@ -4128,7 +6186,14 @@ export default {
     "studentsPerDesktop": 6.0,
     "studentsPerLaptop": 20.4,
     "studentsPerWhitboard": 40.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 1,
+    "numSchoolsFiber": 1,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 100.0
   },
   "5754032": {
     "name": "Rietberg",
@@ -4142,7 +6207,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5758028": {
     "name": "Rödinghausen",
@@ -4156,7 +6228,14 @@ export default {
     "studentsPerDesktop": 12.0,
     "studentsPerLaptop": 142.9,
     "studentsPerWhitboard": 58.8,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 3,
+    "numSchoolsFiber": 3,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 100.0
   },
   "5334024": {
     "name": "Roetgen",
@@ -4170,7 +6249,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5162028": {
     "name": "Rommerskirchen",
@@ -4184,7 +6270,14 @@ export default {
     "studentsPerDesktop": 4.7,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": 22.7,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 3,
+    "numSchoolsFiber": 2,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 66.7
   },
   "5558040": {
     "name": "Rosendahl",
@@ -4198,7 +6291,14 @@ export default {
     "studentsPerDesktop": 7.0,
     "studentsPerLaptop": 18.2,
     "studentsPerWhitboard": 40.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 4,
+    "numSchoolsFiber": 4,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 100.0
   },
   "5378028": {
     "name": "Rösrath",
@@ -4212,7 +6312,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5382052": {
     "name": "Ruppichteroth",
@@ -4226,7 +6333,14 @@ export default {
     "studentsPerDesktop": 18.9,
     "studentsPerLaptop": 9.3,
     "studentsPerWhitboard": 333.3,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 4,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 4,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5974036": {
     "name": "Rüthen",
@@ -4240,7 +6354,14 @@ export default {
     "studentsPerDesktop": 9.8,
     "studentsPerLaptop": 200.0,
     "studentsPerWhitboard": 1000.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 3,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 600,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5566080": {
     "name": "Saerbeck",
@@ -4254,7 +6375,14 @@ export default {
     "studentsPerDesktop": 15.4,
     "studentsPerLaptop": 333.3,
     "studentsPerWhitboard": 200.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": 2,
+    "numSchoolsFiber": 500,
+    "numSchoolsBroadband": 32,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": null
   },
   "5774036": {
     "name": "Salzkotten",
@@ -4268,7 +6396,14 @@ export default {
     "studentsPerDesktop": 8.5,
     "studentsPerLaptop": 66.7,
     "studentsPerWhitboard": 33.3,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 5,
+    "numSchoolsFiber": 5,
+    "numSchoolsBroadband": 4,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 100.0
   },
   "5382056": {
     "name": "Sankt Augustin",
@@ -4282,7 +6417,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": 200.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 14,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 14,
+    "numSchoolsFiberPercent": 0.0
   },
   "5570036": {
     "name": "Sassenberg",
@@ -4296,7 +6438,14 @@ export default {
     "studentsPerDesktop": 5.6,
     "studentsPerLaptop": 24.4,
     "studentsPerWhitboard": 1000.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 4,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 4,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5962056": {
     "name": "Schalksmühle",
@@ -4310,7 +6459,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5170036": {
     "name": "Schermbeck",
@@ -4324,7 +6480,14 @@ export default {
     "studentsPerDesktop": 10.9,
     "studentsPerLaptop": 200.0,
     "studentsPerWhitboard": 250.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": 2,
+    "numSchoolsFiber": 3,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": null
   },
   "5766060": {
     "name": "Schieder-Schwalenberg",
@@ -4338,7 +6501,14 @@ export default {
     "studentsPerDesktop": 9.4,
     "studentsPerLaptop": 142.9,
     "studentsPerWhitboard": 55.6,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 2,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 2,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5766064": {
     "name": "Schlangen",
@@ -4352,7 +6522,14 @@ export default {
     "studentsPerDesktop": 6.2,
     "studentsPerLaptop": 100.0,
     "studentsPerWhitboard": null,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 2,
+    "numSchoolsFiber": 2,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 100.0
   },
   "5366036": {
     "name": "Schleiden",
@@ -4366,7 +6543,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5754036": {
     "name": "Schloß Holte-Stukenbrock",
@@ -4380,7 +6564,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": 9.3,
     "studentsPerWhitboard": null,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 6,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 6,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5958040": {
     "name": "Schmallenberg",
@@ -4394,7 +6585,14 @@ export default {
     "studentsPerDesktop": 7.5,
     "studentsPerLaptop": 55.6,
     "studentsPerWhitboard": 142.9,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 9,
+    "numSchoolsFiber": 3,
+    "numSchoolsBroadband": 6,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 33.3
   },
   "5554052": {
     "name": "Schöppingen",
@@ -4408,7 +6606,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5166024": {
     "name": "Schwalmtal",
@@ -4422,7 +6627,14 @@ export default {
     "studentsPerDesktop": 12.7,
     "studentsPerLaptop": 83.3,
     "studentsPerWhitboard": 90.9,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 5,
+    "numSchoolsFiber": 5,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 100.0
   },
   "5954024": {
     "name": "Schwelm",
@@ -4436,7 +6648,14 @@ export default {
     "studentsPerDesktop": 8.6,
     "studentsPerLaptop": 166.7,
     "studentsPerWhitboard": 166.7,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 6,
+    "numSchoolsFiber": 1,
+    "numSchoolsBroadband": 5,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 16.7
   },
   "5978028": {
     "name": "Schwerte",
@@ -4450,7 +6669,14 @@ export default {
     "studentsPerDesktop": 7.6,
     "studentsPerLaptop": 29.4,
     "studentsPerWhitboard": 200.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 12,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 12,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5370024": {
     "name": "Selfkant",
@@ -4464,7 +6690,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5978032": {
     "name": "Selm",
@@ -4478,7 +6711,14 @@ export default {
     "studentsPerDesktop": 15.2,
     "studentsPerLaptop": 27.8,
     "studentsPerWhitboard": 333.3,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 5,
+    "numSchoolsFiber": 2,
+    "numSchoolsBroadband": 3,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 40.0
   },
   "5558044": {
     "name": "Senden",
@@ -4492,7 +6732,14 @@ export default {
     "studentsPerDesktop": 8.6,
     "studentsPerLaptop": 333.3,
     "studentsPerWhitboard": 71.4,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 7,
+    "numSchoolsFiber": 7,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 100.0
   },
   "5570040": {
     "name": "Sendenhorst",
@@ -4506,7 +6753,14 @@ export default {
     "studentsPerDesktop": 10.0,
     "studentsPerLaptop": 125.0,
     "studentsPerWhitboard": 111.1,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 3,
+    "numSchoolsFiber": 1,
+    "numSchoolsBroadband": 2,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 33.3
   },
   "5382060": {
     "name": "Siegburg",
@@ -4520,7 +6774,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5970040": {
     "name": "Siegen",
@@ -4534,7 +6795,14 @@ export default {
     "studentsPerDesktop": 15.6,
     "studentsPerLaptop": 41.7,
     "studentsPerWhitboard": 1000.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 30,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 30,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5334028": {
     "name": "Simmerath",
@@ -4548,7 +6816,14 @@ export default {
     "studentsPerDesktop": 10.0,
     "studentsPerLaptop": 12.8,
     "studentsPerWhitboard": null,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 5,
+    "numSchoolsFiber": 2,
+    "numSchoolsBroadband": 3,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 40.0
   },
   "5974040": {
     "name": "Soest",
@@ -4562,7 +6837,14 @@ export default {
     "studentsPerDesktop": 10.1,
     "studentsPerLaptop": 47.6,
     "studentsPerWhitboard": 166.7,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 16,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 14,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5122000": {
     "name": "Solingen",
@@ -4576,7 +6858,14 @@ export default {
     "studentsPerDesktop": 7.5,
     "studentsPerLaptop": 17.5,
     "studentsPerWhitboard": 125.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 37,
+    "numSchoolsFiber": 1,
+    "numSchoolsBroadband": 36,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 2.7
   },
   "5170040": {
     "name": "Sonsbeck",
@@ -4590,7 +6879,14 @@ export default {
     "studentsPerDesktop": 10.1,
     "studentsPerLaptop": 23.3,
     "studentsPerWhitboard": null,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 1,
+    "numSchoolsFiber": 1,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 100.0
   },
   "5758032": {
     "name": "Spenge",
@@ -4604,7 +6900,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5954028": {
     "name": "Sprockhövel",
@@ -4618,7 +6921,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5554056": {
     "name": "Stadtlohn",
@@ -4632,7 +6942,14 @@ export default {
     "studentsPerDesktop": 7.9,
     "studentsPerLaptop": 16.9,
     "studentsPerWhitboard": 166.7,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 7,
+    "numSchoolsFiber": 3,
+    "numSchoolsBroadband": 4,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 42.9
   },
   "5566084": {
     "name": "Steinfurt",
@@ -4646,7 +6963,14 @@ export default {
     "studentsPerDesktop": 20.4,
     "studentsPerLaptop": 25.0,
     "studentsPerWhitboard": 111.1,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": 11,
+    "numSchoolsFiber": 4000,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": null
   },
   "5754040": {
     "name": "Steinhagen",
@@ -4660,7 +6984,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5762032": {
     "name": "Steinheim",
@@ -4674,7 +7005,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5770044": {
     "name": "Stemwede",
@@ -4688,7 +7026,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": 18.5,
     "studentsPerWhitboard": null,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 4,
+    "numSchoolsFiber": 1,
+    "numSchoolsBroadband": 3,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 25.0
   },
   "5334032": {
     "name": "Stolberg (Rhld.)",
@@ -4702,7 +7047,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5154052": {
     "name": "Straelen",
@@ -4716,7 +7068,14 @@ export default {
     "studentsPerDesktop": 12.3,
     "studentsPerLaptop": 83.3,
     "studentsPerWhitboard": 43.5,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 3,
+    "numSchoolsFiber": 2,
+    "numSchoolsBroadband": 7,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 66.7
   },
   "5554060": {
     "name": "Südlohn",
@@ -4730,7 +7089,14 @@ export default {
     "studentsPerDesktop": 14.9,
     "studentsPerLaptop": 17.9,
     "studentsPerWhitboard": 166.7,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 2,
+    "numSchoolsFiber": 2,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 100.0
   },
   "5958044": {
     "name": "Sundern (Sauerland)",
@@ -4744,7 +7110,14 @@ export default {
     "studentsPerDesktop": 6.1,
     "studentsPerLaptop": 29.4,
     "studentsPerWhitboard": 38.5,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 8,
+    "numSchoolsFiber": 6,
+    "numSchoolsBroadband": 3,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 75.0
   },
   "5382064": {
     "name": "Swisttal",
@@ -4758,7 +7131,14 @@ export default {
     "studentsPerDesktop": 5.5,
     "studentsPerLaptop": 23.3,
     "studentsPerWhitboard": 34.5,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 4,
+    "numSchoolsFiber": 1,
+    "numSchoolsBroadband": 3,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 25.0
   },
   "5566088": {
     "name": "Tecklenburg",
@@ -4772,7 +7152,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 7,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 7,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5570044": {
     "name": "Telgte",
@@ -4786,7 +7173,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5358056": {
     "name": "Titz",
@@ -4800,7 +7194,14 @@ export default {
     "studentsPerDesktop": 9.4,
     "studentsPerLaptop": 76.9,
     "studentsPerWhitboard": 200.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 0,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": NaN
   },
   "5166028": {
     "name": "Tönisvorst",
@@ -4814,7 +7215,14 @@ export default {
     "studentsPerDesktop": 19.6,
     "studentsPerLaptop": 20.8,
     "studentsPerWhitboard": 76.9,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 6,
+    "numSchoolsFiber": 3,
+    "numSchoolsBroadband": 3,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 50.0
   },
   "5382068": {
     "name": "Troisdorf",
@@ -4828,7 +7236,14 @@ export default {
     "studentsPerDesktop": 7.5,
     "studentsPerLaptop": 11.2,
     "studentsPerWhitboard": 111.1,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 19,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 19,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5370028": {
     "name": "Übach-Palenberg",
@@ -4842,7 +7257,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5154056": {
     "name": "Uedem",
@@ -4856,7 +7278,14 @@ export default {
     "studentsPerDesktop": 52.6,
     "studentsPerLaptop": 27.0,
     "studentsPerWhitboard": 17.9,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 1,
+    "numSchoolsFiber": 1,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 100.0
   },
   "5978036": {
     "name": "Unna",
@@ -4870,7 +7299,14 @@ export default {
     "studentsPerDesktop": 41.7,
     "studentsPerLaptop": 7.8,
     "studentsPerWhitboard": 66.7,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 17,
+    "numSchoolsFiber": 17,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 100.0
   },
   "5158032": {
     "name": "Velbert",
@@ -4884,7 +7320,14 @@ export default {
     "studentsPerDesktop": 10.0,
     "studentsPerLaptop": 66.7,
     "studentsPerWhitboard": null,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 21,
+    "numSchoolsFiber": 17,
+    "numSchoolsBroadband": 4,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 81.0
   },
   "5554064": {
     "name": "Velen",
@@ -4898,7 +7341,14 @@ export default {
     "studentsPerDesktop": 6.2,
     "studentsPerLaptop": 58.8,
     "studentsPerWhitboard": 13.9,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 3,
+    "numSchoolsFiber": 3,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 100.0
   },
   "5754044": {
     "name": "Verl",
@@ -4912,7 +7362,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5754048": {
     "name": "Versmold",
@@ -4926,7 +7383,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5358060": {
     "name": "Vettweiß",
@@ -4940,7 +7404,14 @@ export default {
     "studentsPerDesktop": 55.6,
     "studentsPerLaptop": 9.2,
     "studentsPerWhitboard": 43.5,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 1,
+    "numSchoolsFiber": 1,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 100.0
   },
   "5166032": {
     "name": "Viersen",
@@ -4954,7 +7425,14 @@ export default {
     "studentsPerDesktop": 8.5,
     "studentsPerLaptop": 22.2,
     "studentsPerWhitboard": 500.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 16,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 13,
+    "numSchoolsOther": 3,
+    "numSchoolsFiberPercent": 0.0
   },
   "5758036": {
     "name": "Vlotho",
@@ -4968,7 +7446,14 @@ export default {
     "studentsPerDesktop": 10.1,
     "studentsPerLaptop": 13.0,
     "studentsPerWhitboard": 166.7,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 5,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 2,
+    "numSchoolsOther": 3,
+    "numSchoolsFiberPercent": 0.0
   },
   "5170044": {
     "name": "Voerde (Niederrhein)",
@@ -4982,7 +7467,14 @@ export default {
     "studentsPerDesktop": 12.2,
     "studentsPerLaptop": 22.2,
     "studentsPerWhitboard": 38.5,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 7,
+    "numSchoolsFiber": 2,
+    "numSchoolsBroadband": 5,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 28.6
   },
   "5554068": {
     "name": "Vreden",
@@ -4996,7 +7488,14 @@ export default {
     "studentsPerDesktop": 8.1,
     "studentsPerLaptop": 30.3,
     "studentsPerWhitboard": 166.7,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 6,
+    "numSchoolsFiber": 6,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 100.0
   },
   "5382072": {
     "name": "Wachtberg",
@@ -5010,7 +7509,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 6,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 6,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5154060": {
     "name": "Wachtendonk",
@@ -5024,7 +7530,14 @@ export default {
     "studentsPerDesktop": 17.5,
     "studentsPerLaptop": 6.7,
     "studentsPerWhitboard": 25.6,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 2,
+    "numSchoolsFiber": 2,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 100.0
   },
   "5570048": {
     "name": "Wadersloh",
@@ -5038,7 +7551,14 @@ export default {
     "studentsPerDesktop": 5.4,
     "studentsPerLaptop": 34.5,
     "studentsPerWhitboard": 25.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": 2,
+    "numSchoolsFiber": 450,
+    "numSchoolsBroadband": 100,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": null
   },
   "5374044": {
     "name": "Waldbröl",
@@ -5052,7 +7572,14 @@ export default {
     "studentsPerDesktop": 6.2,
     "studentsPerLaptop": 21.3,
     "studentsPerWhitboard": null,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 6,
+    "numSchoolsFiber": 1,
+    "numSchoolsBroadband": 5,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 16.7
   },
   "5370032": {
     "name": "Waldfeucht",
@@ -5066,7 +7593,14 @@ export default {
     "studentsPerDesktop": 7.5,
     "studentsPerLaptop": 8.1,
     "studentsPerWhitboard": 25.6,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 3,
+    "numSchoolsFiber": 3,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 100.0
   },
   "5562036": {
     "name": "Waltrop",
@@ -5080,7 +7614,14 @@ export default {
     "studentsPerDesktop": 7.3,
     "studentsPerLaptop": 50.0,
     "studentsPerWhitboard": 166.7,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": 7,
+    "numSchoolsFiber": 400,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": null
   },
   "5762036": {
     "name": "Warburg",
@@ -5094,7 +7635,14 @@ export default {
     "studentsPerDesktop": 9.9,
     "studentsPerLaptop": 20.4,
     "studentsPerWhitboard": 47.6,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 6,
+    "numSchoolsFiber": 1,
+    "numSchoolsBroadband": 5,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 16.7
   },
   "5570052": {
     "name": "Warendorf",
@@ -5108,7 +7656,14 @@ export default {
     "studentsPerDesktop": 9.9,
     "studentsPerLaptop": 18.5,
     "studentsPerWhitboard": 200.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 10,
+    "numSchoolsFiber": 4,
+    "numSchoolsBroadband": 6,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 40.0
   },
   "5974044": {
     "name": "Warstein",
@@ -5122,7 +7677,14 @@ export default {
     "studentsPerDesktop": 12.8,
     "studentsPerLaptop": 32.3,
     "studentsPerWhitboard": 83.3,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 7,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 7,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5370036": {
     "name": "Wassenberg",
@@ -5136,7 +7698,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5154064": {
     "name": "Weeze",
@@ -5150,7 +7719,14 @@ export default {
     "studentsPerDesktop": 8.9,
     "studentsPerLaptop": 21.3,
     "studentsPerWhitboard": 22.2,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 2,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 2,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5370040": {
     "name": "Wegberg",
@@ -5164,7 +7740,14 @@ export default {
     "studentsPerDesktop": 11.6,
     "studentsPerLaptop": 27.0,
     "studentsPerWhitboard": 250.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 7,
+    "numSchoolsFiber": 3,
+    "numSchoolsBroadband": 4,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 42.9
   },
   "5366040": {
     "name": "Weilerswist",
@@ -5178,7 +7761,14 @@ export default {
     "studentsPerDesktop": 125.0,
     "studentsPerLaptop": 8.2,
     "studentsPerWhitboard": 50.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 4,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 1,
+    "numSchoolsOther": 3,
+    "numSchoolsFiberPercent": 0.0
   },
   "5974048": {
     "name": "Welver",
@@ -5192,7 +7782,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5966028": {
     "name": "Wenden",
@@ -5206,7 +7803,14 @@ export default {
     "studentsPerDesktop": 11.4,
     "studentsPerLaptop": 24.4,
     "studentsPerWhitboard": 200.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 4,
+    "numSchoolsFiber": 3,
+    "numSchoolsBroadband": 1,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 75.0
   },
   "5962060": {
     "name": "Werdohl",
@@ -5220,7 +7824,14 @@ export default {
     "studentsPerDesktop": 12.5,
     "studentsPerLaptop": 16.7,
     "studentsPerWhitboard": 1000.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 5,
+    "numSchoolsFiber": 2,
+    "numSchoolsBroadband": 3,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 40.0
   },
   "5974052": {
     "name": "Werl",
@@ -5234,7 +7845,14 @@ export default {
     "studentsPerDesktop": 6.5,
     "studentsPerLaptop": 37.0,
     "studentsPerWhitboard": 45.5,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 7,
+    "numSchoolsFiber": 2,
+    "numSchoolsBroadband": 3,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 28.6
   },
   "5378032": {
     "name": "Wermelskirchen",
@@ -5248,7 +7866,14 @@ export default {
     "studentsPerDesktop": 5.6,
     "studentsPerLaptop": 15.6,
     "studentsPerWhitboard": 27.8,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 9,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 460,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5978040": {
     "name": "Werne",
@@ -5262,7 +7887,14 @@ export default {
     "studentsPerDesktop": 8.5,
     "studentsPerLaptop": 90.9,
     "studentsPerWhitboard": 34.5,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 5,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 2,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5754052": {
     "name": "Werther (Westf.)",
@@ -5276,7 +7908,14 @@ export default {
     "studentsPerDesktop": 12.2,
     "studentsPerLaptop": 200.0,
     "studentsPerWhitboard": 45.5,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 2,
+    "numSchoolsFiber": 1,
+    "numSchoolsBroadband": 1,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 50.0
   },
   "5170048": {
     "name": "Wesel",
@@ -5290,7 +7929,14 @@ export default {
     "studentsPerDesktop": 19.6,
     "studentsPerLaptop": 35.7,
     "studentsPerWhitboard": 71.4,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 17,
+    "numSchoolsFiber": 16,
+    "numSchoolsBroadband": 1,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 94.1
   },
   "5362040": {
     "name": "Wesseling",
@@ -5304,7 +7950,14 @@ export default {
     "studentsPerDesktop": 7.1,
     "studentsPerLaptop": 30.3,
     "studentsPerWhitboard": 45.5,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 9,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 9,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5566092": {
     "name": "Westerkappeln",
@@ -5318,7 +7971,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5954032": {
     "name": "Wetter (Ruhr)",
@@ -5332,7 +7992,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5566096": {
     "name": "Wettringen",
@@ -5346,7 +8013,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "5974056": {
     "name": "Wickede (Ruhr)",
@@ -5360,7 +8034,14 @@ export default {
     "studentsPerDesktop": 7.8,
     "studentsPerLaptop": 16.1,
     "studentsPerWhitboard": 333.3,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 3,
+    "numSchoolsFiber": 3,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 100.0
   },
   "5374048": {
     "name": "Wiehl",
@@ -5374,7 +8055,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": 41.7,
     "studentsPerWhitboard": 66.7,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 6,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 6,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5762040": {
     "name": "Willebadessen",
@@ -5388,7 +8076,14 @@ export default {
     "studentsPerDesktop": 14.9,
     "studentsPerLaptop": 3.6,
     "studentsPerWhitboard": 12.5,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": 3,
+    "numSchoolsFiber": 200,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": null
   },
   "5166036": {
     "name": "Willich",
@@ -5402,7 +8097,14 @@ export default {
     "studentsPerDesktop": 14.9,
     "studentsPerLaptop": 20.4,
     "studentsPerWhitboard": 200.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 12,
+    "numSchoolsFiber": 12,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 100.0
   },
   "5970044": {
     "name": "Wilnsdorf",
@@ -5416,7 +8118,14 @@ export default {
     "studentsPerDesktop": 10.2,
     "studentsPerLaptop": 32.3,
     "studentsPerWhitboard": 16.4,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 10,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5382076": {
     "name": "Windeck",
@@ -5430,7 +8139,14 @@ export default {
     "studentsPerDesktop": 9.3,
     "studentsPerLaptop": 90.9,
     "studentsPerWhitboard": 66.7,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 5,
+    "numSchoolsFiber": 5,
+    "numSchoolsBroadband": 5,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 100.0
   },
   "5958048": {
     "name": "Winterberg",
@@ -5444,7 +8160,14 @@ export default {
     "studentsPerDesktop": 14.5,
     "studentsPerLaptop": 18.2,
     "studentsPerWhitboard": 32.3,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 5,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 5,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5374052": {
     "name": "Wipperfürth",
@@ -5458,7 +8181,14 @@ export default {
     "studentsPerDesktop": 5.2,
     "studentsPerLaptop": 27.0,
     "studentsPerWhitboard": 20.4,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 9,
+    "numSchoolsFiber": 6,
+    "numSchoolsBroadband": 3,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 66.7
   },
   "5954036": {
     "name": "Witten",
@@ -5472,7 +8202,14 @@ export default {
     "studentsPerDesktop": 6.2,
     "studentsPerLaptop": 142.9,
     "studentsPerWhitboard": 250.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 27,
+    "numSchoolsFiber": 0,
+    "numSchoolsBroadband": 27,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5158036": {
     "name": "Wülfrath",
@@ -5486,7 +8223,14 @@ export default {
     "studentsPerDesktop": 13.5,
     "studentsPerLaptop": 25.6,
     "studentsPerWhitboard": 250.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 5,
+    "numSchoolsFiber": 2,
+    "numSchoolsBroadband": 2,
+    "numSchoolsOther": 1,
+    "numSchoolsFiberPercent": 40.0
   },
   "5124000": {
     "name": "Wuppertal",
@@ -5500,7 +8244,14 @@ export default {
     "studentsPerDesktop": 8.5,
     "studentsPerLaptop": 16.7,
     "studentsPerWhitboard": 500.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 88,
+    "numSchoolsFiber": 62,
+    "numSchoolsBroadband": 26,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 70.5
   },
   "5334036": {
     "name": "Würselen",
@@ -5514,7 +8265,14 @@ export default {
     "studentsPerDesktop": 22.7,
     "studentsPerLaptop": 3.8,
     "studentsPerWhitboard": 76.9,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 7,
+    "numSchoolsFiber": 2,
+    "numSchoolsBroadband": 5,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 28.6
   },
   "5170052": {
     "name": "Xanten",
@@ -5528,7 +8286,14 @@ export default {
     "studentsPerDesktop": 12.3,
     "studentsPerLaptop": 41.7,
     "studentsPerWhitboard": 1000.0,
-    "notice": ""
+    "notice": "",
+    "answeredFiber": true,
+    "couldEvaluateFiber": true,
+    "numSchoolsTotal": 3,
+    "numSchoolsFiber": 3,
+    "numSchoolsBroadband": 0,
+    "numSchoolsOther": 0,
+    "numSchoolsFiberPercent": 100.0
   },
   "5366044": {
     "name": "Zülpich",
@@ -5542,7 +8307,14 @@ export default {
     "studentsPerDesktop": null,
     "studentsPerLaptop": null,
     "studentsPerWhitboard": null,
-    "notice": "keine Teilnahme an der Abfrage"
+    "notice": "keine Teilnahme an der Abfrage",
+    "answeredFiber": false,
+    "couldEvaluateFiber": false,
+    "numSchoolsTotal": null,
+    "numSchoolsFiber": null,
+    "numSchoolsBroadband": null,
+    "numSchoolsOther": null,
+    "numSchoolsFiberPercent": null
   },
   "NRW": {
     "name": "NRW",
