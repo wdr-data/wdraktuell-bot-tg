@@ -17,9 +17,7 @@ export const handleAGS = async (ctx, ags) => {
     let intro = `${
         schoolData.name
     } hat als eine von 87 Kommunen nicht auf unsere IFG-Anfrage geantwortet.`;
-    let device = `Leider hat ${
-        schoolData.name
-    } keine Angaben zu digitalen Geräten an den Schulen gemacht.`;
+    let allDevice = ``;
     let fiber = '';
 
     if (schoolData.responded) {
@@ -33,39 +31,32 @@ export const handleAGS = async (ctx, ags) => {
         }.`;
 
         const noDevice = [];
+        const device = [];
         if (schoolData.answeredDevices) {
-            device = `An den Schulen teilen sich im Schnitt\n${
-                schoolData.studentsPerLaptop ? `${
-                    schoolData.studentsPerLaptop
-                } Schüler*innen einen Laptop,\n` : ''
-            }${
-                schoolData.studentsPerTablet? `${
-                    schoolData.studentsPerTablet
-                } Schüler*innen ein Tablet,\n` : ''
-            }${
-                schoolData.studentsPerDesktop ? `${
-                    schoolData.studentsPerDesktop
-                } Schüler*innen einen Desktoprechner,\n` : ''
-            }${
-                schoolData.studentsPerWhiteboard ? `${
-                    schoolData.studentsPerWhiteboard
-                } Schüler*innen ein Whiteboard.\n` : ''
-            }`;
             for (const [ key, value ] of Object.entries({
-                'studentsPerLaptop': 'Laptops',
-                'studentsPerTablet': 'Tablets',
-                'studentsPerDesktop': 'Desktoprechner',
-                'studentsPerWhiteboard': 'Whiteboards',
+                'studentsPerLaptop': [ 'Laptops', 'Schüler*innen einen Laptop' ],
+                'studentsPerTablet': [ 'Tablets', 'Schüler*innen ein Tablet' ],
+                'studentsPerDesktop': [ 'Desktoprechner', 'Schüler*innen einen Desktoprechner' ],
+                'studentsPerWhiteboard': [ 'Whiteboards', 'Schüler*innen ein Whiteboard' ],
             })) {
                 if (!schoolData[key]) {
-                    noDevice.push(value);
+                    noDevice.push(value[0]);
+                } else {
+                    device.push(`${schoolData[key]} ${value[1]}`);
                 }
             }
-            if (noDevice) {
-                device += '\n' + noDevice.join(', ') + ' sind keine vorhanden.';
+            if (device.length) {
+                allDevice += 'An den Schulen teilen sich im Schnitt\n' + device.join(',\n') + '.';
             }
+            if (noDevice.length) {
+                allDevice += '\n' + noDevice.join(', ') + ' sind keine vorhanden.';
+            }
+        } else {
+            allDevice = `Leider hat ${
+                schoolData.name
+            } keine Angaben zu digitalen Geräten an den Schulen gemacht.`;
         }
-        device += `\n\nIm Vergleich dazu teilen sich in ganz NRW im Schnitt\n${
+        allDevice += `\n\nIm Vergleich dazu teilen sich in ganz NRW\n${
             schoolDataNRW.studentsPerLaptop
         } Schüler*innen einen Laptop,\n${
             schoolDataNRW.studentsPerTablet
@@ -78,15 +69,16 @@ export const handleAGS = async (ctx, ags) => {
         if ( schoolData.couldEvaluateFiber ) {
             fiber = `${
                 schoolData.numSchoolsFiber
-            } / ${
+            } von ${
                 schoolData.numSchoolsTotal
-            } Schulen haben einen Glasfaser Anschluss (> 100 MBit/s).`;
+            } Schulen haben einen Glasfaseranschluss (> 100 MBit/s).`;
         } else if (schoolData.answeredFiber) {
             fiber = `Leider konnte die Antwort von ${schoolData.name} nicht ausgewertet werden.`;
         }
+        fiber += `\nIm Schnitt ist in NRW jede dritte Schule ans Glasfasernetz angeschlossenen.`;
     }
 
-    const outro = `Für die Daten hat das WDR Newsroom-Team ` +
+    const outro = `\nFür die Daten hat das WDR Newsroom-Team ` +
         `alle 396 Kommunen in NRW im Juli 2020 per IFG angefragt.`;
 
     const ddjUrl = trackLink(
@@ -99,7 +91,7 @@ export const handleAGS = async (ctx, ags) => {
         escapeHTML(`Weitere Ergebnisse und interaktive Grafiken`)
     }</a>`;
 
-    const caption = `${intro}\n\n${device}\n${fiber}\n${outro}\n${ddjLink}`;
+    const caption = `${intro}\n\n${allDevice}\n${fiber}\n${outro}\n${ddjLink}`;
 
     /*
     const caption = Object.entries(schoolData).map(
