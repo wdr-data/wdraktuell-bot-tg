@@ -12,7 +12,7 @@ PADDING = 40
 DIMENSIONS = (WIDTH, HEIGHT)
 CONTENT_WIDTH = WIDTH - 2 * PADDING
 
-STAT_OFFSET_Y = 500
+STAT_OFFSET_Y = 470
 
 # Colors
 COLOR_PRIMARY = (255, 255, 255)
@@ -106,7 +106,7 @@ def draw_stat(
         ),
     )
     img.alpha_composite(overlay)
-    offset += icon_height + spacing
+    offset += icon_height + spacing + 30
 
     size_ca = draw.textsize("ca.", font=font_ca)
 
@@ -133,6 +133,7 @@ def draw_stat(
         fill=COLOR_SECONDARY,
         font=font_description,
         align="center",
+        spacing=15,
     )
 
 
@@ -210,10 +211,14 @@ for ags, item in data.items():
         if item["numSchoolsTotal"] > 50:
             fiber_ca = True
             fiber_percentage = f"{format_number(item['numSchoolsFiberPercent'])}%"
-            fiber_percentage_description = "Schulen haben\nGlasfaseranschluss"
+            fiber_percentage_description = (
+                "der Schulen haben\nGlasfaseranschluss/\nüber 100 MBit/s"
+            )
         else:
             fiber_percentage = f"{format_number(item['numSchoolsFiber'])}/{format_number(item['numSchoolsTotal'])}"
-            fiber_percentage_description = "der Schulen haben\nGlasfaseranschluss"
+            fiber_percentage_description = (
+                "Schulen haben\nGlasfaseranschluss/\nüber 100 MBit/s"
+            )
         icon_variant_fiber = "normal"
     elif item["answeredFiber"]:
         fiber_percentage = "k.A.*"
