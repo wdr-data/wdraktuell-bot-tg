@@ -29,6 +29,8 @@ import handleQuizResponse from '../handlers/quizResponse';
 import handlePushOutro from '../handlers/pushOutro';
 import { handleSurvey } from '../handlers/survey';
 import { handleNewsfeedPage } from '../handlers/newsfeed';
+import { handleLocation as handleLocationSchools } from '../handlers/locationSchools';
+import { handleLocation as handleLocationCorona } from '../handlers/locationCorona';
 
 const checkForToken = (event) => decodeURIComponent(
     event.pathParameters.token) === process.env.TG_TOKEN;
@@ -73,6 +75,8 @@ export const update = async (event, context, callback) => {
         bot.action('push_outro', handlePushOutro);
         bot.action('survey', handleSurvey);
         bot.action('newsfeed', handleNewsfeedPage);
+        bot.action('location_school', handleLocationSchools);
+        bot.action('location_corona', handleLocationCorona);
 
         bot.command('einstellungen', handleSubscriptionsCommand);
         bot.command('datenschutz', handleDataPolicy);

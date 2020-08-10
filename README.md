@@ -97,11 +97,12 @@ ServerlessError: AWS provider credentials not found. Learn how to set up AWS pro
 For easy handling of AWS account use `aws-cli`: https://github.com/aws/aws-cli
 
 Then do:
-```aws configure```
+```$ aws configure
 AWS Access Key ID [None]:
 AWS Secret Access Key [None]:
 Default region name [None]:
 Default output format [None]:
+```
 
 `FB_PAGETOKEN`
 - Create a Page in Facebook.
@@ -174,7 +175,7 @@ JavaScript (Source-Code oder aufbereitet) ist bei Beibehaltung des Lizenztextes 
 
 [Lizenztext](LICENSE.md)
 
-Für Grafiken wird kein Nutzungsrecht eingeräumt.
+Für Grafiken, Design und Schriften wird kein Nutzungsrecht eingeräumt.
 
 #### Urheberrecht
 

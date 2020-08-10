@@ -1,173 +1,91 @@
-import { byCities, byStudios, byZipCodes } from '../data/locationMappings';
-import { escapeHTML, trackLink } from '../lib/util';
-import getFaq from '../lib/faq';
+import Markup from 'telegraf/markup';
+import actionData from '../lib/actionData';
+import moment from 'moment';
+import 'moment-timezone';
 
-import request from 'request-promise-native';
-import csvtojson from 'csvtojson';
+import { byCities, byZipCodes } from '../data/locationMappings';
+import { handleCity as handleCityCorona } from './locationCorona';
+import { handleAGS as handleAGSSchools } from './locationSchools';
 
-const uriCityRKI = 'https://coronanrw-prod.s3.eu-central-1.amazonaws.com/rki_ndr_districts_nrw.csv';
-const uriNRWRKI = 'https://coronanrw-prod.s3.eu-central-1.amazonaws.com/rki_ndr_districts_nrw_gesamt.csv';
 
-export const handleLocation = async (ctx) => {
+export const handleDialogflowLocation = async (ctx, options = {}) => {
     if (!ctx.dialogflowParams.location.structValue) {
         return ctx.reply(ctx.dialogflowResponse);
     }
-    const location = ctx.dialogflowParams.location.structValue.fields;
-    console.log(`Detected location: ${location}`);
-    const zipCode = location['zip-code'].stringValue;
-    const subadminArea = location['subadmin-area'].stringValue;
-    let city = location.city.stringValue;
-    if (subadminArea) {
-        city = subadminArea;
-    }
+
+    const locationDialogflow = ctx.dialogflowParams.location.structValue.fields;
+
+    console.log(`Detected location:`, locationDialogflow);
+
+    const zipCode = locationDialogflow['zip-code'].stringValue;
+
+    // locationDialogflow to city name
+    let locationName = locationDialogflow.city.stringValue;
     if (byZipCodes[zipCode]) {
-        city = byZipCodes[zipCode].city;
+        locationName = byZipCodes[zipCode].city;
     }
-    if (city) {
-        ctx.track({
-            category: 'Feature',
-            event: 'Location',
-            label: zipCode ? 'Postleitzahl' : 'Ort',
-            subType: byCities[city] ? city : `${city}-0`,
-        });
-    }
-    if (byCities[city]) {
-        return handleCity(ctx, byCities[city]);
-    }
-    if (city || zipCode) {
+
+    const location = byCities[locationName];
+
+    // If we didn't find the city, inform user about most likely cause if possible
+    if (!location && (locationName || zipCode)) {
         return ctx.reply(`${
-            zipCode ? `Die Postleitzahl ${zipCode}` : city
+            zipCode ? `Die Postleitzahl ${zipCode}` : locationName
         } liegt wohl nicht in NRW. Versuche es mit einer PLZ oder einem Ort aus NRW.`);
+    } else if (!(locationName || zipCode)) {
+        return ctx.reply(ctx.dialogflowResponse);
     }
-    return ctx.reply(ctx.dialogflowResponse);
+
+    // Feature is not Public before
+    if (moment.tz('Europe/Berlin').isBefore(moment.tz('2020-08-11 06:00:00', 'Europe/Berlin'))) {
+        return handleCityCorona(ctx, location);
+    }
+
+    // Trigger specific location feature
+    if (options.type === 'corona') {
+        return handleCityCorona(ctx, location);
+    } else if (options.type === 'schools') {
+        return handleAGSSchools(ctx, location.keyCity);
+    } else {
+        return chooseLocation(ctx, location);
+    }
 };
 
-export const handleCity = async (ctx, cityFull) => {
-    const covidText = await getFaq(`locationcovidnrw`);
+const chooseLocation = async (ctx, location) => {
+    const messageText = 'Was interessiert dich?';
 
-    const covidDataCity = await getCovidCityRKI(cityFull.district);
-    const covidDataNRW = await getCovidNRWRKI();
-
-    const studioUrl = trackLink(byStudios[cityFull.studio].linkCorona, {
-        campaignType: 'unterhaltung',
-        campaignName: `Corona Info Studio ${cityFull.studio}`,
-        campaignId: 'covid',
-    });
-    const studioLink = `\n🔗 <a href="${escapeHTML(studioUrl)}">${
-        escapeHTML(`Coronavirus in NRW - Studio ${cityFull.studio}`)
-    }</a>`;
-
-    const ddjUrl = trackLink(
-        'https://www1.wdr.de/nachrichten/themen/coronavirus/corona-daten-nrw-100.html', {
-            campaignType: 'unterhaltung',
-            campaignName: `Zahlen Corona-Krise NRW`,
-            campaignId: 'covid',
-        });
-    const ddjLink = `\n🔗 <a href="${escapeHTML(ddjUrl)}">${
-        escapeHTML(`Aktuelle Zahlen zur Corona-Krise in NRW`)
-    }</a>`;
-
-    let indicator = '';
-    if (covidDataCity.lastSevenDaysPer100k >= 50) {
-        indicator = '🟥';
-    } else if (covidDataCity.lastSevenDaysPer100k >= 25) {
-        indicator = '🟧';
-    } else if (covidDataCity.lastSevenDaysPer100k > 10) {
-        indicator = '🟨';
-    }
-
-    /* eslint-disable */
-    const messageText = `Hier die aktuellen Corona-Fallzahlen für ${
-        cityFull.keyCity.slice(-3) === '000' ? cityFull.city : 'den Landkreis ' + cityFull.district
-    }:\n\nGemeldete Infektionen in den vergangenen 7 Tagen pro 100.000 Einwohner: ${
-        covidDataCity.lastSevenDaysPer100k
-    } ${
-        indicator
-    }\nGemeldete Infektionen in den vergangenen 7 Tagen: ${
-        covidDataCity.lastSevenDaysNew
-    }\nBestätigte Infektionen seit Beginn: ${
-        covidDataCity.infected
-    }\nGenesene: ${
-        covidDataCity.recovered
-    }\nTodesfälle: ${
-        covidDataCity.dead
-    }\n\nSteigt die Zahl der Neuinfektionen in den vergangenen 7 Tagen pro 100.000 Einwohner über 50, dann muss der Ort Maßnahmen zur Eindämmung ergreifen.\n
-Aktuelle Zahlen für NRW im Überblick:\nGemeldete Infektionen in den vergangenen 7 Tagen pro 100.000 Einwohner: ${
-        covidDataNRW.lastSevenDaysPer100k
-    }\nGemeldete Infektionen in den vergangenen 7 Tagen: ${
-        covidDataNRW.lastSevenDaysNew
-    }\nBestätigte Infektionen: ${
-        covidDataNRW.infected
-    }\nGenesene: ${
-        covidDataNRW.recovered
-    }\nTodesfälle: ${
-        covidDataNRW.dead
-    }\n\n(Quelle: RKI, Stand: ${
-        covidDataCity.publishedDate
-    })\n\n`;
-    /* eslint-enable */
-
-    return ctx.reply(
-        escapeHTML(messageText) + `${escapeHTML(covidText.text)}\n${ddjLink}\n${studioLink}`,
-        {
-            'parse_mode': 'HTML',
-            'disable_web_page_preview': true,
-        }
+    const buttonSchool = Markup.callbackButton(
+        'Schulumfrage',
+        actionData('location_school', {
+            ags: location.keyCity,
+            track: {
+                category: 'Feature',
+                event: 'Location',
+                label: 'Choose',
+                subType: 'Schulumfrage',
+            },
+        }),
     );
-};
 
-export const getCovidCityRKI = async (district) => {
-    const response = await request.get({ uri: uriCityRKI });
-    const covidData = await csvtojson({ flatKeys: true }).fromString(response);
-
-    const sorted = covidData.sort(
-        (a, b) => a['Infizierte'] - b['Infizierte']
+    const buttonCorona= Markup.callbackButton(
+        'Corona-Fallzahlen',
+        actionData('location_corona', {
+            ags: location.keyCity,
+            track: {
+                category: 'Feature',
+                event: 'Location',
+                label: 'Choose',
+                subType: 'Corona-Fallzahlen',
+            },
+        }),
     );
-    const min = sorted[0];
-    const max = sorted[sorted.length - 1];
-    for (const row of covidData) {
-        if (row['Landkreis/ kreisfreie Stadt'] === district) {
-            return {
-                infected: row['Infizierte'],
-                per100k: row['Infizierte pro 100.000'].split('.')[0],
-                dead: row['Todesfälle'] || '0',
-                publishedDate: row['Stand'],
-                recovered: row['Genesene*'],
-                lastSevenDaysNew: row['Neuinfektionen vergangene 7 Tage'],
-                lastSevenDaysPer100k: row['7-Tage-Inzidenz'],
-                max: {
-                    district: max['Landkreis/ kreisfreie Stadt'],
-                    infected: max['Infizierte'],
-                    dead: max['Todesfälle'] || '0',
-                    per100k: max['Infizierte pro 100.000'].split('.')[0],
-                    recovered: max['Genesene*'],
-                },
-                min: {
-                    district: min['Landkreis/ kreisfreie Stadt'],
-                    infected: min['Infizierte'],
-                    dead: min['Todesfälle'] || '0',
-                    per100k: min['Infizierte pro 100.000'].split('.')[0],
-                    recovered: min['Genesene*'],
-                },
-            };
-        }
-    }
-    return;
-};
 
-export const getCovidNRWRKI = async () => {
-    const response = await request.get({ uri: uriNRWRKI });
-    console.log(response);
-    const covidData = await csvtojson({ flatKeys: true }).fromString(response);
-    console.log(covidData);
-    const total = covidData[0];
-    return {
-        infected: total['Infizierte'],
-        per100k: total['Infizierte pro 100.000'].split('.')[0],
-        dead: total['Todesfälle'] || '0',
-        publishedDate: total['Stand'],
-        recovered: total['Genesene*'],
-        lastSevenDaysNew: total['Neuinfektionen vergangene 7 Tage'],
-        lastSevenDaysPer100k: total['7-Tage-Inzidenz'],
-    };
+    const buttons = [
+        buttonSchool,
+        buttonCorona,
+    ];
+    const extra = {};
+    extra['reply_markup'] = Markup.inlineKeyboard(buttons.map((button) => [ button ]));
+
+    await ctx.reply(messageText, extra);
 };

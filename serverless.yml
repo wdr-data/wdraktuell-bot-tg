@@ -43,6 +43,11 @@ functions:
           method: post
           async: true
 
+  # Special events
+  uploadSchoolImages:
+    handler: entrypoint/events.uploadSchoolImages
+    timeout: 900
+
   pushFetch:
     handler: entrypoint/push.fetch
     timeout: 300
