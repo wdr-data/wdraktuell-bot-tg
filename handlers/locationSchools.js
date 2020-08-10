@@ -81,7 +81,9 @@ export const handleAGS = async (ctx, ags) => {
                 schoolData.numSchoolsTotal
             } Schulen haben einen Glasfaseranschluss (> 100 MBit/s).`;
         } else if (schoolData.answeredFiber) {
-            fiber = `Leider konnte die Antwort von ${schoolData.name} nicht ausgewertet werden.`;
+            fiber = `Leider konnte die Antwort von ${
+                schoolData.name
+            } bezüglich des Glasfaseranschluss an Schulen nicht ausgewertet werden.`;
         }
         fiber += `\nIm Schnitt ist in NRW jede dritte Schule ans Glasfasernetz angeschlossenen.`;
     }
