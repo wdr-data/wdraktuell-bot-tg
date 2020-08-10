@@ -11,6 +11,9 @@ export const uploadSchoolImages = RavenLambdaWrapper.handler(Raven, async (event
     const attachments = new DynamoDbCrud(process.env.DYNAMODB_ATTACHMENTS, 'url');
 
     for (const [ ags, item ] of Object.entries(schoolData)) {
+        if (ags === 'nrw') {
+            continue;
+        }
         const url = generateImageUrl(ags);
         console.log(`Resolving ${item['name']} with URL ${url}`);
 
