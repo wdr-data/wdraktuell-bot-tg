@@ -27,7 +27,7 @@ Barntrup,5766012,Westfalen,Lippe,Detmold,3,0,0.0,150,0,150,ja,ja
 Beckum,5570008,Westfalen,Warendorf,Münster,10,0,0.0,1225,0,1225,ja,ja
 Bedburg,5362004,Rheinland,Rhein-Erft-Kreis,Köln,7,0,0.0,7,0,7,ja,ja
 Bedburg-Hau,5154004,Rheinland,Kleve,Düsseldorf,2,0,0.0,2,0,2,ja,ja
-Beelen,5570012,Westfalen,Warendorf,Münster,1,200,100,0,0,200,nein,ja
+Beelen,5570012,Westfalen,Warendorf,Münster,1,1,100.0,0,0,200,ja,ja
 Bergheim,5362008,Rheinland,Rhein-Erft-Kreis,Köln,15,4,26.666666666666668,11,0,15,ja,ja
 Bergisch Gladbach,5378004,Rheinland,Rheinisch-Bergischer Kreis,Köln,32,0,0.0,32,0,32,ja,ja
 Bergneustadt,5374004,Rheinland,Oberbergischer Kreis,Köln,6,0,0.0,6,0,6,ja,ja
@@ -47,7 +47,7 @@ Borken,5554012,Westfalen,Borken,Münster,12,12,100.0,0,0,12,ja,ja
 Bornheim,5382012,Rheinland,Rhein-Sieg-Kreis,Köln,12,0,0.0,12,0,12,ja,ja
 Bottrop,5512000,Ruhrgebiet,Bottrop,Münster,31,1000,nicht auswertbar,1200,0,2200,nein,ja
 Brakel,5762016,Westfalen,Höxter,Detmold,3,2,66.66666666666666,6,0,8,ja,ja
-Breckerfeld,5954004,Ruhrgebiet,Ennepe-Ruhr-Kreis,Arnsberg,1,100,100,0,0,100,nein,ja
+Breckerfeld,5954004,Ruhrgebiet,Ennepe-Ruhr-Kreis,Arnsberg,1,1,100.0,0,0,100,ja,ja
 Brilon,5958012,Westfalen,Hochsauerlandkreis,Arnsberg,5,1200,nicht auswertbar,0,0,1200,nein,ja
 Brühl,5362012,Rheinland,Rhein-Erft-Kreis,Köln,12,5,41.66666666666667,7,0,12,ja,ja
 Bünde,5758004,Westfalen,Herford,Detmold,14,6,42.857142857142854,9,0,15,ja,ja
@@ -149,8 +149,8 @@ Korschenbroich,5162020,Rheinland,Rhein-Kreis Neuss,Düsseldorf,9,9,100.0,0,0,9,j
 Kranenburg,5154040,Rheinland,Kleve,Düsseldorf,2,2,100.0,0,0,2,ja,ja
 Kreuztal,5970024,Westfalen,Siegen-Wittgenstein,Arnsberg,11,0,0.0,11,0,11,ja,ja
 Kürten,5378012,Rheinland,Rheinisch-Bergischer Kreis,Köln,5,2,40.0,3,0,5,ja,ja
-Ladbergen,5566032,Westfalen,Steinfurt,Münster,1,100,100,0,0,100,nein,ja
-Laer,5566036,Westfalen,Steinfurt,Münster,1,200,100,0,0,200,nein,ja
+Ladbergen,5566032,Westfalen,Steinfurt,Münster,1,1,100.0,0,0,100,ja,ja
+Laer,5566036,Westfalen,Steinfurt,Münster,1,1,100.0,0,0,200,ja,ja
 Lage,5766040,Westfalen,Lippe,Detmold,11,0,0.0,10,0,10,ja,ja
 Langenberg,5754024,Westfalen,Gütersloh,Detmold,2,2,100.0,0,0,2,ja,ja
 Langenfeld (Rhld.),5158020,Rheinland,Mettmann,Düsseldorf,13,13,100.0,0,0,13,ja,ja
@@ -395,3 +395,4 @@ Westerkappeln,5566092,Westfalen,Steinfurt,Münster,keine Antwort,keine Antwort,k
 Wetter (Ruhr),5954032,Ruhrgebiet,Ennepe-Ruhr-Kreis,Arnsberg,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
 Wettringen,5566096,Westfalen,Steinfurt,Münster,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
 Zülpich,5366044,Rheinland,Euskirchen,Köln,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
+NRW,DEA,NRW,alle,alle,3696,1231,33.3,keine Angabe,keine Angabe,keine Angabe,keine Angabe,keine Angabe

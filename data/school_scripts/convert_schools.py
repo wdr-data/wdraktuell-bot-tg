@@ -51,7 +51,7 @@ with open(path_device_csv) as file_csv:
             row["Desktoprechner je 100 Schüler"]
         )
         item["studentsPerLaptop"] = students_per_device(row["Laptops je 100 Schüler"])
-        item["studentsPerWhitboard"] = students_per_device(
+        item["studentsPerWhiteboard"] = students_per_device(
             row["Whiteboards je 100 Schüler"]
         )
 
@@ -60,7 +60,7 @@ with open(path_device_csv) as file_csv:
         data[ags] = item
 
     row_nrw = reader_csv[0]
-    data["NRW"] = {
+    data["nrw"] = {
         "name": "NRW",
         "tabletsPer100": to_float(row_nrw["Mittelwert NRW Tablets"]),
         "desktopsPer100": to_float(row_nrw["Mittelwert NRW Desktop"]),
@@ -69,7 +69,7 @@ with open(path_device_csv) as file_csv:
         "studentsPerTablet": students_per_device(row_nrw["Mittelwert NRW Tablets"]),
         "studentsPerDesktop": students_per_device(row_nrw["Mittelwert NRW Desktop"]),
         "studentsPerLaptop": students_per_device(row_nrw["Mittelwert NRW Laptops"]),
-        "studentsPerWhitboard": students_per_device(
+        "studentsPerWhiteboard": students_per_device(
             row_nrw["Mittelwert NRW Whiteboards"]
         ),
     }
@@ -78,15 +78,18 @@ with open(path_device_csv) as file_csv:
 with open(path_fiber_csv) as file_csv:
     reader_csv = list(csv.DictReader(file_csv))
     for row in reader_csv:
-        item = data[row["keyCity"]]
+        ags = row["keyCity"]
 
-        item["answeredFiber"] = row["antwort"] == "ja"
-        item["couldEvaluateFiber"] = row["auswertbar"] == "ja"
+        if ags == "DEA":
+            item = data["nrw"]
+        else:
+            item = data[ags]
+
+            item["answeredFiber"] = row["antwort"] == "ja"
+            item["couldEvaluateFiber"] = row["auswertbar"] == "ja"
 
         item["numSchoolsTotal"] = to_int(row["schulen_anzahl"])
         item["numSchoolsFiber"] = to_int(row["glasfaser"])
-        item["numSchoolsBroadband"] = to_int(row["breitband"])
-        item["numSchoolsOther"] = to_int(row["andere"])
         item["numSchoolsFiberPercent"] = to_float(row["anteil_glasfaser"])
 
 
