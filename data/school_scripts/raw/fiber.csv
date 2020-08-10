@@ -1,398 +1,397 @@
-Ort,keyCity,region,district,a_district,schulen_anzahl,glasfaser,anteil_glasfaser,breitband,andere,netz_alle,auswertbar,antwort
-Aachen,5334002,Rheinland,Städteregion Aachen,Köln,57,18,31.57894736842105,39,0,57,ja,ja
-Ahaus,5554004,Westfalen,Borken,Münster,10,10,100.0,0,0,10,ja,ja
-Ahlen,5570004,Westfalen,Warendorf,Münster,14,0,0.0,14,0,14,ja,ja
-Aldenhoven,5358004,Rheinland,Düren,Köln,2,2,100.0,0,0,2,ja,ja
-Alfter,5382004,Rheinland,Rhein-Sieg-Kreis,Köln,7,0,0.0,3,0,3,ja,ja
-Alsdorf,5334004,Rheinland,Städteregion Aachen,Köln,13,4,30.76923076923077,9,0,13,ja,ja
-Altena,5962004,Westfalen,Märkischer Kreis,Arnsberg,4,0,0.0,0,0,0,ja,ja
-Altenbeken,5774004,Westfalen,Paderborn,Detmold,2,0,0.0,3,0,3,ja,ja
-Altenberge,5566004,Westfalen,Steinfurt,Münster,2,0,0.0,0,2,2,ja,ja
-Anröchte,5974004,Westfalen,Soest,Arnsberg,2,0,0.0,425,0,425,ja,ja
-Arnsberg,5958004,Westfalen,Hochsauerlandkreis,Arnsberg,23,0,0.0,0,0,0,ja,ja
-Ascheberg,5558004,Westfalen,Coesfeld,Münster,3,3,100.0,0,0,3,ja,ja
-Augustdorf,5766004,Westfalen,Lippe,Detmold,3,0,0.0,32,0,32,ja,ja
-Bad Berleburg,5970004,Westfalen,Siegen-Wittgenstein,Arnsberg,8,0,0.0,3,5,8,ja,ja
-Bad Driburg,5762004,Westfalen,Höxter,Detmold,3,3,100.0,0,0,3,ja,ja
-Bad Honnef,5382008,Rheinland,Rhein-Sieg-Kreis,Köln,5,0,0.0,5,0,5,ja,ja
-Bad Laasphe,5970028,Westfalen,Siegen-Wittgenstein,Arnsberg,5,1,20.0,4,1,6,ja,ja
-Bad Lippspringe,5774008,Westfalen,Paderborn,Detmold,3,2,66.66666666666666,1,0,3,ja,ja
-Bad Oeynhausen,5770004,Westfalen,Minden-Lübbecke,Detmold,10,3,30.0,7,0,10,ja,ja
-Bad Salzuflen,5766008,Westfalen,Lippe,Detmold,13,0,0.0,13,0,13,ja,ja
-Bad Sassendorf,5974008,Westfalen,Soest,Arnsberg,2,0,0.0,0,0,0,ja,ja
-Bad Wünnenberg,5774040,Westfalen,Paderborn,Detmold,4,0,0.0,4,0,4,ja,ja
-Baesweiler,5334008,Rheinland,Städteregion Aachen,Köln,8,0,0.0,8,0,8,ja,ja
-Balve,5962008,Westfalen,Märkischer Kreis,Arnsberg,5,0,0.0,5,0,5,ja,ja
-Barntrup,5766012,Westfalen,Lippe,Detmold,3,0,0.0,150,0,150,ja,ja
-Beckum,5570008,Westfalen,Warendorf,Münster,10,0,0.0,1225,0,1225,ja,ja
-Bedburg,5362004,Rheinland,Rhein-Erft-Kreis,Köln,7,0,0.0,7,0,7,ja,ja
-Bedburg-Hau,5154004,Rheinland,Kleve,Düsseldorf,2,0,0.0,2,0,2,ja,ja
-Beelen,5570012,Westfalen,Warendorf,Münster,1,1,100.0,0,0,200,ja,ja
-Bergheim,5362008,Rheinland,Rhein-Erft-Kreis,Köln,15,4,26.666666666666668,11,0,15,ja,ja
-Bergisch Gladbach,5378004,Rheinland,Rheinisch-Bergischer Kreis,Köln,32,0,0.0,32,0,32,ja,ja
-Bergneustadt,5374004,Rheinland,Oberbergischer Kreis,Köln,6,0,0.0,6,0,6,ja,ja
-Bestwig,5958008,Westfalen,Hochsauerlandkreis,Arnsberg,4,0,0.0,0,0,0,ja,ja
-Beverungen,5762008,Westfalen,Höxter,Detmold,3,0,0.0,300,0,300,ja,ja
-Bielefeld,5711000,Westfalen,Bielefeld,Detmold,76,23,30.263157894736842,53,0,76,ja,ja
-Billerbeck,5558008,Westfalen,Coesfeld,Münster,2,4,nicht auswertbar,0,0,4,nein,ja
-Blankenheim,5366008,Rheinland,Euskirchen,Köln,2,1,50.0,1,0,2,ja,ja
-Blomberg,5766016,Westfalen,Lippe,Detmold,6,0,0.0,0,6,6,ja,ja
-Bochum,5911000,Ruhrgebiet,Bochum,Arnsberg,73,5,6.8493150684931505,68,0,73,ja,ja
-Bönen,5978008,Ruhrgebiet,Unna,Arnsberg,5,1,20.0,5,0,6,ja,ja
-Bonn,5314000,Rheinland,Bonn,Köln,83,27,32.53012048192771,56,0,83,ja,ja
-Borchen,5774012,Westfalen,Paderborn,Detmold,4,3,75.0,0,0,3,ja,ja
-Borgentreich,5762012,Westfalen,Höxter,Detmold,1,1,100.0,0,0,1,ja,ja
-Borgholzhausen,5754004,Westfalen,Gütersloh,Detmold,1,0,0.0,1,0,1,ja,ja
-Borken,5554012,Westfalen,Borken,Münster,12,12,100.0,0,0,12,ja,ja
-Bornheim,5382012,Rheinland,Rhein-Sieg-Kreis,Köln,12,0,0.0,12,0,12,ja,ja
-Bottrop,5512000,Ruhrgebiet,Bottrop,Münster,31,1000,nicht auswertbar,1200,0,2200,nein,ja
-Brakel,5762016,Westfalen,Höxter,Detmold,3,2,66.66666666666666,6,0,8,ja,ja
-Breckerfeld,5954004,Ruhrgebiet,Ennepe-Ruhr-Kreis,Arnsberg,1,1,100.0,0,0,100,ja,ja
-Brilon,5958012,Westfalen,Hochsauerlandkreis,Arnsberg,5,1200,nicht auswertbar,0,0,1200,nein,ja
-Brühl,5362012,Rheinland,Rhein-Erft-Kreis,Köln,12,5,41.66666666666667,7,0,12,ja,ja
-Bünde,5758004,Westfalen,Herford,Detmold,14,6,42.857142857142854,9,0,15,ja,ja
-Burbach,5970008,Westfalen,Siegen-Wittgenstein,Arnsberg,3,0,0.0,125,0,125,ja,ja
-Büren,5774016,Westfalen,Paderborn,Detmold,7,5,71.42857142857143,0,0,5,ja,ja
-Burscheid,5378008,Rheinland,Rheinisch-Bergischer Kreis,Köln,3,0,0.0,3,0,3,ja,ja
-Coesfeld,5558012,Westfalen,Coesfeld,Münster,11,6,54.54545454545454,3,3,12,ja,ja
-Dahlem,5366012,Rheinland,Euskirchen,Köln,1,0,0.0,1,0,1,ja,ja
-Delbrück,5774020,Westfalen,Paderborn,Detmold,8,600,nicht auswertbar,0,0,600,nein,ja
-Detmold,5766020,Westfalen,Lippe,Detmold,21,19,90.47619047619048,2,0,21,ja,ja
-Dinslaken,5170008,Rheinland,Wesel,Düsseldorf,16,16,100.0,0,0,16,ja,ja
-Dörentrup,5766024,Westfalen,Lippe,Detmold,1,0,0.0,1,0,1,ja,ja
-Dormagen,5162004,Rheinland,Rhein-Kreis Neuss,Düsseldorf,18,0,0.0,18,0,18,ja,ja
-Dorsten,5562012,Ruhrgebiet,Recklinghausen,Münster,19,0,0.0,0,0,0,ja,ja
-Dortmund,5913000,Ruhrgebiet,Dortmund,Arnsberg,145,51,35.172413793103445,94,0,145,ja,ja
-Drolshagen,5966008,Westfalen,Olpe,Arnsberg,2,4,nicht auswertbar,0,0,4,nein,ja
-Duisburg,5112000,Ruhrgebiet,Duisburg,Düsseldorf,121,1,0.8264462809917356,120,0,121,ja,ja
-Dülmen,5558016,Westfalen,Coesfeld,Münster,11,11,100.0,0,0,11,ja,ja
-Düren,5358008,Rheinland,Düren,Köln,29,2,6.896551724137931,27,0,29,ja,ja
-Düsseldorf,5111000,Rheinland,Düsseldorf,Düsseldorf,141,93,65.95744680851064,48,0,141,ja,ja
-Eitorf,5382016,Rheinland,Rhein-Sieg-Kreis,Köln,4,0,0.0,4,0,4,ja,ja
-Emmerich am Rhein,5154008,Rheinland,Kleve,Düsseldorf,8,3,37.5,5,0,8,ja,ja
-Emsdetten,5566008,Westfalen,Steinfurt,Münster,10,10,100.0,0,0,10,ja,ja
-Engelskirchen,5374008,Rheinland,Oberbergischer Kreis,Köln,6,4,66.66666666666666,2,0,6,ja,ja
-Enger,5758008,Westfalen,Herford,Detmold,6,0,0.0,5,1,6,ja,ja
-Ennepetal,5954008,Ruhrgebiet,Ennepe-Ruhr-Kreis,Arnsberg,9,0,0.0,10,0,10,ja,ja
-Ense,5974012,Westfalen,Soest,Arnsberg,4,4,100.0,0,0,4,ja,ja
-Erftstadt,5362020,Rheinland,Rhein-Erft-Kreis,Köln,12,2,16.666666666666664,10,0,12,ja,ja
-Erkelenz,5370004,Rheinland,Heinsberg,Köln,11,0,0.0,11,0,11,ja,ja
-Erkrath,5158004,Rheinland,Mettmann,Düsseldorf,12,5,41.66666666666667,2,0,7,ja,ja
-Erwitte,5974016,Westfalen,Soest,Arnsberg,6,0,0.0,4,1,5,ja,ja
-Eschweiler,5334012,Rheinland,Städteregion Aachen,Köln,15,3,20.0,0,12,15,ja,ja
-Espelkamp,5770008,Westfalen,Minden-Lübbecke,Detmold,3,0,0.0,3,0,3,ja,ja
-Essen,5113000,Ruhrgebiet,Essen,Düsseldorf,139,128,92.08633093525181,10,0,138,ja,ja
-Euskirchen,5366016,Rheinland,Euskirchen,Köln,14,0,0.0,11,0,11,ja,ja
-Extertal,5766028,Westfalen,Lippe,Detmold,3,1,33.33333333333333,2,0,3,ja,ja
-Frechen,5362024,Rheinland,Rhein-Erft-Kreis,Köln,10,0,0.0,10,0,10,ja,ja
-Freudenberg,5970016,Westfalen,Siegen-Wittgenstein,Arnsberg,6,3,50.0,3,0,6,ja,ja
-Fröndenberg/Ruhr,5978012,Ruhrgebiet,Unna,Arnsberg,4,1000,nicht auswertbar,400,0,1400,nein,ja
-Gangelt,5370008,Rheinland,Heinsberg,Köln,3,3,100.0,0,0,3,ja,ja
-Geilenkirchen,5370012,Rheinland,Heinsberg,Köln,8,7,87.5,1,0,8,ja,ja
-Gelsenkirchen,5513000,Ruhrgebiet,Gelsenkirchen,Münster,69,69,100.0,0,0,69,ja,ja
-Gescher,5554016,Westfalen,Borken,Münster,3,3,100.0,0,0,3,ja,ja
-Geseke,5974020,Westfalen,Soest,Arnsberg,6,2,33.33333333333333,4,0,6,ja,ja
-Gevelsberg,5954012,Ruhrgebiet,Ennepe-Ruhr-Kreis,Arnsberg,13,0,0.0,0,13,13,ja,ja
-Gladbeck,5562014,Ruhrgebiet,Recklinghausen,Münster,17,0,0.0,0,0,0,ja,ja
-Goch,5154016,Rheinland,Kleve,Düsseldorf,8,4,50.0,4,0,8,ja,ja
-Grefrath,5166008,Rheinland,Viersen,Düsseldorf,2,2,100.0,0,0,2,ja,ja
-Greven,5566012,Westfalen,Steinfurt,Münster,8,8,100.0,0,0,8,ja,ja
-Gronau (Westf.),5554020,Westfalen,Borken,Münster,13,13,100.0,0,0,13,ja,ja
-Gummersbach,5374012,Rheinland,Oberbergischer Kreis,Köln,15,1,6.666666666666667,14,0,15,ja,ja
-Haan,5158008,Rheinland,Mettmann,Düsseldorf,9,0,0.0,9,0,9,ja,ja
-Hagen,5914000,Ruhrgebiet,Hagen,Arnsberg,50,0,0.0,50,0,50,ja,ja
-Halle (Westf.),5754012,Westfalen,Gütersloh,Detmold,5,0,0.0,5,0,5,ja,ja
-Hallenberg,5958020,Westfalen,Hochsauerlandkreis,Arnsberg,1,0,0.0,1,0,1,ja,ja
-Haltern am See,5562016,Ruhrgebiet,Recklinghausen,Münster,9,9,100.0,0,0,9,ja,ja
-Hamm,5915000,Ruhrgebiet,Hamm,Arnsberg,49,45,91.83673469387756,4,0,49,ja,ja
-Harsewinkel,5754016,Westfalen,Gütersloh,Detmold,7,4,57.14285714285714,3,0,7,ja,ja
-Hattingen,5954016,Ruhrgebiet,Ennepe-Ruhr-Kreis,Arnsberg,13,7,53.84615384615385,6,0,13,ja,ja
-Heek,5554024,Westfalen,Borken,Münster,3,3,100.0,0,0,3,ja,ja
-Heimbach,5358012,Rheinland,Düren,Köln,1,0,0.0,1,0,1,ja,ja
-Heinsberg,5370016,Rheinland,Heinsberg,Köln,10,9,90.0,1,0,10,ja,ja
-Hellenthal,5366020,Rheinland,Euskirchen,Köln,2,530,nicht auswertbar,0,0,530,nein,ja
-Hennef (Sieg),5382020,Rheinland,Rhein-Sieg-Kreis,Köln,11,6,54.54545454545454,5,0,11,ja,ja
-Herdecke,5954020,Ruhrgebiet,Ennepe-Ruhr-Kreis,Arnsberg,6,0,0.0,6,0,6,ja,ja
-Herford,5758012,Westfalen,Herford,Detmold,18,18,100.0,0,0,18,ja,ja
-Herne,5916000,Ruhrgebiet,Herne,Arnsberg,38,8,21.052631578947366,13,0,21,ja,ja
-Herten,5562020,Ruhrgebiet,Recklinghausen,Münster,13,5,38.46153846153847,5,0,10,ja,ja
-Herzogenrath,5334016,Rheinland,Städteregion Aachen,Köln,13,1,7.6923076923076925,12,0,13,ja,ja
-Hiddenhausen,5758016,Westfalen,Herford,Detmold,4,2,50.0,2,0,4,ja,ja
-Hilchenbach,5970020,Westfalen,Siegen-Wittgenstein,Arnsberg,3,0,0.0,3,0,3,ja,ja
-Hilden,5158016,Rheinland,Mettmann,Düsseldorf,9,4,44.44444444444444,5,0,9,ja,ja
-Hille,5770012,Westfalen,Minden-Lübbecke,Detmold,4,0,0.0,4,0,4,ja,ja
-Hopsten,5566020,Westfalen,Steinfurt,Münster,2,2,100.0,0,0,2,ja,ja
-Hörstel,5566016,Westfalen,Steinfurt,Münster,6,6,100.0,0,0,6,ja,ja
-Hövelhof,5774024,Westfalen,Paderborn,Detmold,5,1,20.0,4,0,5,ja,ja
-Höxter,5762020,Westfalen,Höxter,Detmold,8,0,0.0,8,0,8,ja,ja
-Hückeswagen,5374016,Rheinland,Oberbergischer Kreis,Köln,5,2,40.0,3,0,5,ja,ja
-Hünxe,5170016,Rheinland,Wesel,Düsseldorf,4,2,50.0,2,0,4,ja,ja
-Hürtgenwald,5358016,Rheinland,Düren,Köln,2,0,0.0,2,0,2,ja,ja
-Hürth,5362028,Rheinland,Rhein-Erft-Kreis,Köln,16,1,6.25,15,0,16,ja,ja
-Inden,5358020,Rheinland,Düren,Köln,2,0,0.0,2,0,2,ja,ja
-Iserlohn,5962024,Westfalen,Märkischer Kreis,Arnsberg,22,0,0.0,0,0,0,ja,ja
-Isselburg,5554032,Westfalen,Borken,Münster,3,300,nicht auswertbar,0,0,300,nein,ja
-Issum,5154020,Rheinland,Kleve,Düsseldorf,2,2,100.0,0,0,2,ja,ja
-Jüchen,5162012,Rheinland,Rhein-Kreis Neuss,Düsseldorf,5,3,60.0,5,0,8,ja,ja
-Jülich,5358024,Rheinland,Düren,Köln,6,6,100.0,0,0,6,ja,ja
-Kaarst,5162016,Rheinland,Rhein-Kreis Neuss,Düsseldorf,10,0,0.0,10,0,10,ja,ja
-Kamen,5978020,Ruhrgebiet,Unna,Arnsberg,10,10,100.0,0,0,10,ja,ja
-Kamp-Lintfort,5170020,Rheinland,Wesel,Düsseldorf,7,0,0.0,4,3,7,ja,ja
-Kempen,5166012,Rheinland,Viersen,Düsseldorf,8,0,0.0,8,0,8,ja,ja
-Kerpen,5362032,Rheinland,Rhein-Erft-Kreis,Köln,17,0,0.0,17,0,17,ja,ja
-Kierspe,5962028,Westfalen,Märkischer Kreis,Arnsberg,5,0,0.0,2,3,5,ja,ja
-Kirchhundem,5966016,Westfalen,Olpe,Arnsberg,4,4,100.0,0,0,4,ja,ja
-Kirchlengern,5758020,Westfalen,Herford,Detmold,2,0,0.0,3,0,3,ja,ja
-Kleve,5154036,Rheinland,Kleve,Düsseldorf,12,0,0.0,12,0,12,ja,ja
-Köln,5315000,Rheinland,Köln,Köln,240,6,2.5,232,0,238,ja,ja
-Korschenbroich,5162020,Rheinland,Rhein-Kreis Neuss,Düsseldorf,9,9,100.0,0,0,9,ja,ja
-Kranenburg,5154040,Rheinland,Kleve,Düsseldorf,2,2,100.0,0,0,2,ja,ja
-Kreuztal,5970024,Westfalen,Siegen-Wittgenstein,Arnsberg,11,0,0.0,11,0,11,ja,ja
-Kürten,5378012,Rheinland,Rheinisch-Bergischer Kreis,Köln,5,2,40.0,3,0,5,ja,ja
-Ladbergen,5566032,Westfalen,Steinfurt,Münster,1,1,100.0,0,0,100,ja,ja
-Laer,5566036,Westfalen,Steinfurt,Münster,1,1,100.0,0,0,200,ja,ja
-Lage,5766040,Westfalen,Lippe,Detmold,11,0,0.0,10,0,10,ja,ja
-Langenberg,5754024,Westfalen,Gütersloh,Detmold,2,2,100.0,0,0,2,ja,ja
-Langenfeld (Rhld.),5158020,Rheinland,Mettmann,Düsseldorf,13,13,100.0,0,0,13,ja,ja
-Legden,5554036,Westfalen,Borken,Münster,2,2,100.0,0,0,2,ja,ja
-Lemgo,5766044,Westfalen,Lippe,Detmold,9,0,0.0,3,6,9,ja,ja
-Lengerich,5566040,Westfalen,Steinfurt,Münster,8,2000,nicht auswertbar,0,0,2000,nein,ja
-Lennestadt,5966020,Westfalen,Olpe,Arnsberg,8,2,25.0,6,0,8,ja,ja
-Leopoldshöhe,5766048,Westfalen,Lippe,Detmold,3,0,0.0,3,0,3,ja,ja
-Lichtenau,5774028,Westfalen,Paderborn,Detmold,3,3,100.0,0,0,3,ja,ja
-Lindlar,5374020,Rheinland,Oberbergischer Kreis,Köln,8,0,0.0,8,0,8,ja,ja
-Linnich,5358036,Rheinland,Düren,Köln,1,0,0.0,1,0,1,ja,ja
-Lippstadt,5974028,Westfalen,Soest,Arnsberg,18,10,55.55555555555556,11,0,21,ja,ja
-Lohmar,5382028,Rheinland,Rhein-Sieg-Kreis,Köln,6,0,0.0,6,0,6,ja,ja
-Löhne,5758024,Westfalen,Herford,Detmold,11,7,63.63636363636363,4,0,11,ja,ja
-Lübbecke,5770020,Westfalen,Minden-Lübbecke,Detmold,8,0,0.0,8,0,8,ja,ja
-Lüdenscheid,5962032,Westfalen,Märkischer Kreis,Arnsberg,20,0,0.0,20,0,20,ja,ja
-Lüdinghausen,5558024,Westfalen,Coesfeld,Münster,8,5,62.5,0,0,5,ja,ja
-Lügde,5766052,Westfalen,Lippe,Detmold,3,0,0.0,0,3,3,ja,ja
-Lünen,5978024,Ruhrgebiet,Unna,Arnsberg,21,0,0.0,24,0,24,ja,ja
-Marienheide,5374024,Rheinland,Oberbergischer Kreis,Köln,3,1,33.33333333333333,2,0,3,ja,ja
-Marienmünster,5762024,Westfalen,Höxter,Detmold,1,0,0.0,100,0,100,ja,ja
-Marsberg,5958024,Westfalen,Hochsauerlandkreis,Arnsberg,5,0,0.0,5,0,5,ja,ja
-Mechernich,5366028,Rheinland,Euskirchen,Köln,6,0,0.0,6,0,6,ja,ja
-Medebach,5958028,Westfalen,Hochsauerlandkreis,Arnsberg,2,0,0.0,1,1,2,ja,ja
-Meerbusch,5162022,Rheinland,Rhein-Kreis Neuss,Düsseldorf,12,4,33.33333333333333,8,0,12,ja,ja
-Meinerzhagen,5962036,Westfalen,Märkischer Kreis,Arnsberg,4,0,0.0,4,0,4,ja,ja
-Menden (Sauerland),5962040,Westfalen,Märkischer Kreis,Arnsberg,9,6,66.66666666666666,3,0,9,ja,ja
-Meschede,5958032,Westfalen,Hochsauerlandkreis,Arnsberg,9,0,0.0,0,0,0,ja,ja
-Metelen,5566052,Westfalen,Steinfurt,Münster,1,1,100.0,0,0,1,ja,ja
-Mettingen,5566056,Westfalen,Steinfurt,Münster,3,400,nicht auswertbar,0,0,400,nein,ja
-Mettmann,5158024,Rheinland,Mettmann,Düsseldorf,8,3,37.5,5,0,8,ja,ja
-Moers,5170024,Rheinland,Wesel,Düsseldorf,22,0,0.0,22,0,22,ja,ja
-Möhnesee,5974032,Westfalen,Soest,Arnsberg,2,0,0.0,166000,0,166000,ja,ja
-Mönchengladbach,5116000,Rheinland,Mönchengladbach,Düsseldorf,66,0,0.0,0,0,0,ja,ja
-Monheim am Rhein,5158026,Rheinland,Mettmann,Düsseldorf,10,1200,nicht auswertbar,0,0,1200,nein,ja
-Monschau,5334020,Rheinland,Städteregion Aachen,Köln,3,0,0.0,3,0,3,ja,ja
-Morsbach,5374028,Rheinland,Oberbergischer Kreis,Köln,2,0,0.0,2,0,2,ja,ja
-Much,5382036,Rheinland,Rhein-Sieg-Kreis,Köln,3,1,33.33333333333333,2,0,3,ja,ja
-Mülheim an der Ruhr,5117000,Ruhrgebiet,Mülheim an der Ruhr,Düsseldorf,36,2,5.555555555555555,30,4,36,ja,ja
-Münster,5515000,Westfalen,Münster,Münster,72,38,52.77777777777778,34,0,72,ja,ja
-Nachrodt-Wiblingwerde,5962044,Westfalen,Märkischer Kreis,Arnsberg,2,0,0.0,800,0,800,ja,ja
-Netphen,5970032,Westfalen,Siegen-Wittgenstein,Arnsberg,8,5,62.5,3,0,8,ja,ja
-Nettetal,5166016,Rheinland,Viersen,Düsseldorf,11,0,0.0,5,6,11,ja,ja
-Neuenkirchen,5566060,Westfalen,Steinfurt,Münster,3,3,100.0,0,0,3,ja,ja
-Neunkirchen,5970036,Westfalen,Siegen-Wittgenstein,Arnsberg,6,0,0.0,6,0,6,ja,ja
-Neunkirchen-Seelscheid,5382040,Rheinland,Rhein-Sieg-Kreis,Köln,4,0,0.0,4,0,4,ja,ja
-Neuss,5162024,Rheinland,Rhein-Kreis Neuss,Düsseldorf,37,10,27.027027027027028,27,0,37,ja,ja
-Nideggen,5358044,Rheinland,Düren,Köln,4,0,0.0,4,0,4,ja,ja
-Nieheim,5762028,Westfalen,Höxter,Detmold,2,0,0.0,2,0,2,ja,ja
-Nordkirchen,5558028,Westfalen,Coesfeld,Münster,3,0,0.0,0,0,0,ja,ja
-Nordwalde,5566064,Westfalen,Steinfurt,Münster,3,500,nicht auswertbar,0,0,500,nein,ja
-Nottuln,5558032,Westfalen,Coesfeld,Münster,6,0,0.0,5,0,5,ja,ja
-Nümbrecht,5374032,Rheinland,Oberbergischer Kreis,Köln,6,6,100.0,0,0,6,ja,ja
-Oberhausen,5119000,Ruhrgebiet,Oberhausen,Düsseldorf,44,0,0.0,44,0,44,ja,ja
-Ochtrup,5566068,Westfalen,Steinfurt,Münster,6,6,100.0,0,0,6,ja,ja
-Odenthal,5378020,Rheinland,Rheinisch-Bergischer Kreis,Köln,7,0,0.0,7,0,7,ja,ja
-Oelde,5570028,Westfalen,Warendorf,Münster,7,7,100.0,0,0,7,ja,ja
-Oer-Erkenschwick,5562028,Ruhrgebiet,Recklinghausen,Münster,7,7,100.0,0,0,7,ja,ja
-Oerlinghausen,5766056,Westfalen,Lippe,Detmold,5,1200,nicht auswertbar,100,0,1300,nein,ja
-Olfen,5558036,Westfalen,Coesfeld,Münster,2,80,nicht auswertbar,0,0,80,nein,ja
-Olpe,5966024,Westfalen,Olpe,Arnsberg,6,6,100.0,0,0,6,ja,ja
-Olsberg,5958036,Westfalen,Hochsauerlandkreis,Arnsberg,5,0,0.0,5,0,5,ja,ja
-Overath,5378024,Rheinland,Rheinisch-Bergischer Kreis,Köln,8,0,0.0,8,0,8,ja,ja
-Paderborn,5774032,Westfalen,Paderborn,Detmold,35,6,17.142857142857142,29,0,35,ja,ja
-Porta Westfalica,5770032,Westfalen,Minden-Lübbecke,Detmold,8,3,37.5,5,0,8,ja,ja
-Preußisch Oldendorf,5770036,Westfalen,Minden-Lübbecke,Detmold,3,3,100.0,0,0,3,ja,ja
-Radevormwald,5374036,Rheinland,Oberbergischer Kreis,Köln,8,1,12.5,7,0,8,ja,ja
-Raesfeld,5554040,Westfalen,Borken,Münster,3,400,nicht auswertbar,0,0,400,nein,ja
-Rahden,5770040,Westfalen,Minden-Lübbecke,Detmold,6,2,33.33333333333333,4,0,6,ja,ja
-Ratingen,5158028,Rheinland,Mettmann,Düsseldorf,21,21,100.0,0,0,21,ja,ja
-Recklinghausen,5562032,Ruhrgebiet,Recklinghausen,Münster,29,0,0.0,29,0,29,ja,ja
-Rees,5154044,Rheinland,Kleve,Düsseldorf,7,7,100.0,7,0,14,ja,ja
-Reichshof,5374040,Rheinland,Oberbergischer Kreis,Köln,5,0,0.0,5,0,5,ja,ja
-Remscheid,5120000,Rheinland,Remscheid,Düsseldorf,29,1,3.4482758620689653,28,0,29,ja,ja
-Rhede,5554048,Westfalen,Borken,Münster,4,2,50.0,2,0,4,ja,ja
-Rheinbach,5382048,Rheinland,Rhein-Sieg-Kreis,Köln,7,2,28.57142857142857,5,0,7,ja,ja
-Rheinberg,5170032,Rheinland,Wesel,Düsseldorf,7,0,0.0,7,0,7,ja,ja
-Rheine,5566076,Westfalen,Steinfurt,Münster,22,1,4.545454545454546,22,0,23,ja,ja
-Rheurdt,5154048,Rheinland,Kleve,Düsseldorf,1,1,100.0,0,0,1,ja,ja
-Rödinghausen,5758028,Westfalen,Herford,Detmold,3,3,100.0,0,0,3,ja,ja
-Rommerskirchen,5162028,Rheinland,Rhein-Kreis Neuss,Düsseldorf,3,2,66.66666666666666,0,0,2,ja,ja
-Rosendahl,5558040,Westfalen,Coesfeld,Münster,4,4,100.0,0,0,4,ja,ja
-Ruppichteroth,5382052,Rheinland,Rhein-Sieg-Kreis,Köln,4,0,0.0,4,0,4,ja,ja
-Rüthen,5974036,Westfalen,Soest,Arnsberg,3,0,0.0,600,0,600,ja,ja
-Saerbeck,5566080,Westfalen,Steinfurt,Münster,2,500,nicht auswertbar,32,0,532,nein,ja
-Salzkotten,5774036,Westfalen,Paderborn,Detmold,5,5,100.0,4,0,9,ja,ja
-Sankt Augustin,5382056,Rheinland,Rhein-Sieg-Kreis,Köln,14,0,0.0,0,14,14,ja,ja
-Sassenberg,5570036,Westfalen,Warendorf,Münster,4,0,0.0,4,0,4,ja,ja
-Schermbeck,5170036,Rheinland,Wesel,Düsseldorf,2,3,nicht auswertbar,0,0,3,nein,ja
-Schieder-Schwalenberg,5766060,Westfalen,Lippe,Detmold,2,0,0.0,2,0,2,ja,ja
-Schlangen,5766064,Westfalen,Lippe,Detmold,2,2,100.0,0,0,2,ja,ja
-Schloß Holte-Stukenbrock,5754036,Westfalen,Gütersloh,Detmold,6,0,0.0,6,0,6,ja,ja
-Schmallenberg,5958040,Westfalen,Hochsauerlandkreis,Arnsberg,9,3,33.33333333333333,6,0,9,ja,ja
-Schwalmtal,5166024,Rheinland,Viersen,Düsseldorf,5,5,100.0,0,0,5,ja,ja
-Schwelm,5954024,Ruhrgebiet,Ennepe-Ruhr-Kreis,Arnsberg,6,1,16.666666666666664,5,0,6,ja,ja
-Schwerte,5978028,Ruhrgebiet,Unna,Arnsberg,12,0,0.0,12,0,12,ja,ja
-Selm,5978032,Ruhrgebiet,Unna,Arnsberg,5,2,40.0,3,0,5,ja,ja
-Senden,5558044,Westfalen,Coesfeld,Münster,7,7,100.0,0,0,7,ja,ja
-Sendenhorst,5570040,Westfalen,Warendorf,Münster,3,1,33.33333333333333,2,0,3,ja,ja
-Siegen,5970040,Westfalen,Siegen-Wittgenstein,Arnsberg,30,0,0.0,30,0,30,ja,ja
-Simmerath,5334028,Rheinland,Städteregion Aachen,Köln,5,2,40.0,3,0,5,ja,ja
-Soest,5974040,Westfalen,Soest,Arnsberg,16,0,0.0,14,0,14,ja,ja
-Solingen,5122000,Rheinland,Solingen,Düsseldorf,37,1,2.7027027027027026,36,0,37,ja,ja
-Sonsbeck,5170040,Rheinland,Wesel,Düsseldorf,1,1,100.0,0,0,1,ja,ja
-Stadtlohn,5554056,Westfalen,Borken,Münster,7,3,42.857142857142854,4,0,7,ja,ja
-Steinfurt,5566084,Westfalen,Steinfurt,Münster,11,4000,nicht auswertbar,0,0,4000,nein,ja
-Stemwede,5770044,Westfalen,Minden-Lübbecke,Detmold,4,1,25.0,3,0,4,ja,ja
-Straelen,5154052,Rheinland,Kleve,Düsseldorf,3,2,66.66666666666666,7,0,9,ja,ja
-Südlohn,5554060,Westfalen,Borken,Münster,2,2,100.0,0,0,2,ja,ja
-Sundern (Sauerland),5958044,Westfalen,Hochsauerlandkreis,Arnsberg,8,6,75.0,3,0,9,ja,ja
-Swisttal,5382064,Rheinland,Rhein-Sieg-Kreis,Köln,4,1,25.0,3,0,4,ja,ja
-Tecklenburg,5566088,Westfalen,Steinfurt,Münster,7,0,0.0,7,0,7,ja,ja
-Titz,5358056,Rheinland,Düren,Köln,0,0,nan,0,0,0,ja,ja
-Tönisvorst,5166028,Rheinland,Viersen,Düsseldorf,6,3,50.0,3,0,6,ja,ja
-Troisdorf,5382068,Rheinland,Rhein-Sieg-Kreis,Köln,19,0,0.0,19,0,19,ja,ja
-Uedem,5154056,Rheinland,Kleve,Düsseldorf,1,1,100.0,0,0,1,ja,ja
-Unna,5978036,Ruhrgebiet,Unna,Arnsberg,17,17,100.0,0,0,17,ja,ja
-Velbert,5158032,Rheinland,Mettmann,Düsseldorf,21,17,80.95238095238095,4,0,21,ja,ja
-Velen,5554064,Westfalen,Borken,Münster,3,3,100.0,0,0,3,ja,ja
-Vettweiß,5358060,Rheinland,Düren,Köln,1,1,100.0,0,0,1,ja,ja
-Viersen,5166032,Rheinland,Viersen,Düsseldorf,16,0,0.0,13,3,16,ja,ja
-Vlotho,5758036,Westfalen,Herford,Detmold,5,0,0.0,2,3,5,ja,ja
-Voerde (Niederrhein),5170044,Rheinland,Wesel,Düsseldorf,7,2,28.57142857142857,5,0,7,ja,ja
-Vreden,5554068,Westfalen,Borken,Münster,6,6,100.0,0,0,6,ja,ja
-Wachtberg,5382072,Rheinland,Rhein-Sieg-Kreis,Köln,6,0,0.0,6,0,6,ja,ja
-Wachtendonk,5154060,Rheinland,Kleve,Düsseldorf,2,2,100.0,0,0,2,ja,ja
-Wadersloh,5570048,Westfalen,Warendorf,Münster,2,450,nicht auswertbar,100,0,550,nein,ja
-Waldbröl,5374044,Rheinland,Oberbergischer Kreis,Köln,6,1,16.666666666666664,5,0,6,ja,ja
-Waldfeucht,5370032,Rheinland,Heinsberg,Köln,3,3,100.0,0,0,3,ja,ja
-Waltrop,5562036,Ruhrgebiet,Recklinghausen,Münster,7,400,nicht auswertbar,0,0,400,nein,ja
-Warburg,5762036,Westfalen,Höxter,Detmold,6,1,16.666666666666664,5,0,6,ja,ja
-Warendorf,5570052,Westfalen,Warendorf,Münster,10,4,40.0,6,0,10,ja,ja
-Warstein,5974044,Westfalen,Soest,Arnsberg,7,0,0.0,7,0,7,ja,ja
-Weeze,5154064,Rheinland,Kleve,Düsseldorf,2,0,0.0,2,0,2,ja,ja
-Wegberg,5370040,Rheinland,Heinsberg,Köln,7,3,42.857142857142854,4,0,7,ja,ja
-Weilerswist,5366040,Rheinland,Euskirchen,Köln,4,0,0.0,1,3,4,ja,ja
-Wenden,5966028,Westfalen,Olpe,Arnsberg,4,3,75.0,1,0,4,ja,ja
-Werdohl,5962060,Westfalen,Märkischer Kreis,Arnsberg,5,2,40.0,3,0,5,ja,ja
-Werl,5974052,Westfalen,Soest,Arnsberg,7,2,28.57142857142857,3,0,5,ja,ja
-Wermelskirchen,5378032,Rheinland,Rheinisch-Bergischer Kreis,Köln,9,0,0.0,460,0,460,ja,ja
-Werne,5978040,Ruhrgebiet,Unna,Arnsberg,5,0,0.0,2,0,2,ja,ja
-Werther (Westf.),5754052,Westfalen,Gütersloh,Detmold,2,1,50.0,1,0,2,ja,ja
-Wesel,5170048,Rheinland,Wesel,Düsseldorf,17,16,94.11764705882352,1,0,17,ja,ja
-Wesseling,5362040,Rheinland,Rhein-Erft-Kreis,Köln,9,0,0.0,9,0,9,ja,ja
-Wickede (Ruhr),5974056,Westfalen,Soest,Arnsberg,3,3,100.0,0,0,3,ja,ja
-Wiehl,5374048,Rheinland,Oberbergischer Kreis,Köln,6,0,0.0,6,0,6,ja,ja
-Willebadessen,5762040,Westfalen,Höxter,Detmold,3,200,nicht auswertbar,0,0,200,nein,ja
-Willich,5166036,Rheinland,Viersen,Düsseldorf,12,12,100.0,0,0,12,ja,ja
-Wilnsdorf,5970044,Westfalen,Siegen-Wittgenstein,Arnsberg,10,0,0.0,0,0,0,ja,ja
-Windeck,5382076,Rheinland,Rhein-Sieg-Kreis,Köln,5,5,100.0,5,0,10,ja,ja
-Winterberg,5958048,Westfalen,Hochsauerlandkreis,Arnsberg,5,0,0.0,5,0,5,ja,ja
-Wipperfürth,5374052,Rheinland,Oberbergischer Kreis,Köln,9,6,66.66666666666666,3,0,9,ja,ja
-Witten,5954036,Ruhrgebiet,Ennepe-Ruhr-Kreis,Arnsberg,27,0,0.0,27,0,27,ja,ja
-Wülfrath,5158036,Rheinland,Mettmann,Düsseldorf,5,2,40.0,2,1,5,ja,ja
-Wuppertal,5124000,Rheinland,Wuppertal,Düsseldorf,88,62,70.45454545454545,26,0,88,ja,ja
-Würselen,5334036,Rheinland,Städteregion Aachen,Köln,7,2,28.57142857142857,5,0,7,ja,ja
-Xanten,5170052,Rheinland,Wesel,Düsseldorf,3,3,100.0,0,0,3,ja,ja
-Alpen,5170004,Rheinland,Wesel,Düsseldorf,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Attendorn,5966004,Westfalen,Olpe,Arnsberg,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Bad Münstereifel,5366004,Rheinland,Euskirchen,Köln,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Bergkamen,5978004,Ruhrgebiet,Unna,Arnsberg,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Bocholt,5554008,Westfalen,Borken,Münster,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Brüggen,5166004,Rheinland,Viersen,Düsseldorf,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Castrop-Rauxel,5562004,Ruhrgebiet,Recklinghausen,Münster,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Datteln,5562008,Ruhrgebiet,Recklinghausen,Münster,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Drensteinfurt,5570016,Westfalen,Warendorf,Münster,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Elsdorf,5362016,Rheinland,Rhein-Erft-Kreis,Köln,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Ennigerloh,5570020,Westfalen,Warendorf,Münster,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Erndtebrück,5970012,Westfalen,Siegen-Wittgenstein,Arnsberg,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Eslohe (Sauerland),5958016,Westfalen,Hochsauerlandkreis,Arnsberg,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Everswinkel,5570024,Westfalen,Warendorf,Münster,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Finnentrop,5966012,Westfalen,Olpe,Arnsberg,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Geldern,5154012,Rheinland,Kleve,Düsseldorf,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Grevenbroich,5162008,Rheinland,Rhein-Kreis Neuss,Düsseldorf,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Gütersloh,5754008,Westfalen,Gütersloh,Detmold,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Halver,5962012,Westfalen,Märkischer Kreis,Arnsberg,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Hamminkeln,5170012,Rheinland,Wesel,Düsseldorf,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Havixbeck,5558020,Westfalen,Coesfeld,Münster,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Heiden,5554028,Westfalen,Borken,Münster,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Heiligenhaus,5158012,Rheinland,Mettmann,Düsseldorf,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Hemer,5962016,Westfalen,Märkischer Kreis,Arnsberg,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Herscheid,5962020,Westfalen,Märkischer Kreis,Arnsberg,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Herzebrock-Clarholz,5754020,Westfalen,Gütersloh,Detmold,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Holzwickede,5978016,Ruhrgebiet,Unna,Arnsberg,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Horn-Bad Meinberg,5766032,Westfalen,Lippe,Detmold,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Horstmar,5566024,Westfalen,Steinfurt,Münster,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Hückelhoven,5370020,Rheinland,Heinsberg,Köln,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Hüllhorst,5770016,Westfalen,Minden-Lübbecke,Detmold,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Ibbenbüren,5566028,Ruhrgebiet,Steinfurt,Münster,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Kalkar,5154024,Rheinland,Kleve,Düsseldorf,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Kall,5366024,Rheinland,Euskirchen,Köln,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Kalletal,5766036,Westfalen,Lippe,Detmold,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Kerken,5154028,Rheinland,Kleve,Düsseldorf,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Kevelaer,5154032,Rheinland,Kleve,Düsseldorf,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Königswinter,5382024,Rheinland,Rhein-Sieg-Kreis,Köln,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Krefeld,5114000,Rheinland,Krefeld,Düsseldorf,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Kreuzau,5358028,Rheinland,Düren,Köln,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Langerwehe,5358032,Rheinland,Düren,Köln,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Leichlingen (Rhld.),5378016,Rheinland,Rheinisch-Bergischer Kreis,Köln,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Leverkusen,5316000,Rheinland,Leverkusen,Köln,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Lienen,5566044,Westfalen,Steinfurt,Münster,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Lippetal,5974024,Westfalen,Soest,Arnsberg,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Lotte,5566048,Westfalen,Steinfurt,Münster,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Marl,5562024,Ruhrgebiet,Recklinghausen,Münster,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Meckenheim,5382032,Rheinland,Rhein-Sieg-Kreis,Köln,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Merzenich,5358040,Rheinland,Düren,Köln,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Minden,5770024,Westfalen,Minden-Lübbecke,Detmold,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Nettersheim,5366032,Rheinland,Euskirchen,Köln,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Neuenrade,5962048,Westfalen,Märkischer Kreis,Arnsberg,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Neukirchen-Vluyn,5170028,Rheinland,Wesel,Düsseldorf,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Niederkassel,5382044,Rheinland,Rhein-Sieg-Kreis,Köln,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Niederkrüchten,5166020,Rheinland,Viersen,Düsseldorf,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Niederzier,5358048,Rheinland,Düren,Köln,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Nörvenich,5358052,Rheinland,Düren,Köln,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Ostbevern,5570032,Westfalen,Warendorf,Münster,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Petershagen,5770028,Westfalen,Minden-Lübbecke,Detmold,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Plettenberg,5962052,Westfalen,Märkischer Kreis,Arnsberg,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Pulheim,5362036,Rheinland,Rhein-Erft-Kreis,Köln,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Recke,5566072,Westfalen,Steinfurt,Münster,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Reken,5554044,Westfalen,Borken,Münster,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Rheda-Wiedenbrück,5754028,Westfalen,Gütersloh,Detmold,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Rietberg,5754032,Westfalen,Gütersloh,Detmold,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Roetgen,5334024,Rheinland,Städteregion Aachen,Köln,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Rösrath,5378028,Rheinland,Rheinisch-Bergischer Kreis,Köln,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Schalksmühle,5962056,Westfalen,Märkischer Kreis,Arnsberg,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Schleiden,5366036,Rheinland,Euskirchen,Köln,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Schöppingen,5554052,Westfalen,Borken,Münster,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Selfkant,5370024,Rheinland,Heinsberg,Köln,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Siegburg,5382060,Rheinland,Rhein-Sieg-Kreis,Köln,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Spenge,5758032,Westfalen,Herford,Detmold,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Sprockhövel,5954028,Ruhrgebiet,Ennepe-Ruhr-Kreis,Arnsberg,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Steinhagen,5754040,Westfalen,Gütersloh,Detmold,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Steinheim,5762032,Westfalen,Höxter,Detmold,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Stolberg (Rhld.),5334032,Rheinland,Städteregion Aachen,Köln,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Telgte,5570044,Westfalen,Warendorf,Münster,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Übach-Palenberg,5370028,Rheinland,Heinsberg,Köln,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Verl,5754044,Westfalen,Gütersloh,Detmold,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Versmold,5754048,Westfalen,Gütersloh,Detmold,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Wassenberg,5370036,Rheinland,Heinsberg,Köln,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Welver,5974048,Westfalen,Soest,Arnsberg,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Westerkappeln,5566092,Westfalen,Steinfurt,Münster,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Wetter (Ruhr),5954032,Ruhrgebiet,Ennepe-Ruhr-Kreis,Arnsberg,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Wettringen,5566096,Westfalen,Steinfurt,Münster,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-Zülpich,5366044,Rheinland,Euskirchen,Köln,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,keine Antwort,nein,nein
-NRW,DEA,NRW,alle,alle,3696,1231,33.3,keine Angabe,keine Angabe,keine Angabe,keine Angabe,keine Angabe
+Ort,keyCity,region,district,a_district,schulen_anzahl,glasfaser,anteil_glasfaser,auswertbar,antwort
+Aachen,5334002,Rheinland,Städteregion Aachen,Köln,57,18,31.57894736842105,ja,ja
+Ahaus,5554004,Westfalen,Borken,Münster,10,10,100.0,ja,ja
+Ahlen,5570004,Westfalen,Warendorf,Münster,14,0,0.0,ja,ja
+Aldenhoven,5358004,Rheinland,Düren,Köln,2,2,100.0,ja,ja
+Alfter,5382004,Rheinland,Rhein-Sieg-Kreis,Köln,7,0,0.0,ja,ja
+Alsdorf,5334004,Rheinland,Städteregion Aachen,Köln,13,4,30.76923076923077,ja,ja
+Altena,5962004,Westfalen,Märkischer Kreis,Arnsberg,4,0,0.0,ja,ja
+Altenbeken,5774004,Westfalen,Paderborn,Detmold,2,0,0.0,ja,ja
+Altenberge,5566004,Westfalen,Steinfurt,Münster,2,0,0.0,ja,ja
+Anröchte,5974004,Westfalen,Soest,Arnsberg,2,0,0.0,ja,ja
+Arnsberg,5958004,Westfalen,Hochsauerlandkreis,Arnsberg,23,0,0.0,ja,ja
+Ascheberg,5558004,Westfalen,Coesfeld,Münster,3,3,100.0,ja,ja
+Augustdorf,5766004,Westfalen,Lippe,Detmold,3,0,0.0,ja,ja
+Bad Berleburg,5970004,Westfalen,Siegen-Wittgenstein,Arnsberg,8,0,0.0,ja,ja
+Bad Driburg,5762004,Westfalen,Höxter,Detmold,3,3,100.0,ja,ja
+Bad Honnef,5382008,Rheinland,Rhein-Sieg-Kreis,Köln,5,0,0.0,ja,ja
+Bad Laasphe,5970028,Westfalen,Siegen-Wittgenstein,Arnsberg,5,1,20.0,ja,ja
+Bad Lippspringe,5774008,Westfalen,Paderborn,Detmold,3,2,66.66666666666666,ja,ja
+Bad Oeynhausen,5770004,Westfalen,Minden-Lübbecke,Detmold,10,3,30.0,ja,ja
+Bad Salzuflen,5766008,Westfalen,Lippe,Detmold,13,0,0.0,ja,ja
+Bad Sassendorf,5974008,Westfalen,Soest,Arnsberg,2,0,0.0,ja,ja
+Bad Wünnenberg,5774040,Westfalen,Paderborn,Detmold,4,0,0.0,ja,ja
+Baesweiler,5334008,Rheinland,Städteregion Aachen,Köln,8,0,0.0,ja,ja
+Balve,5962008,Westfalen,Märkischer Kreis,Arnsberg,5,0,0.0,ja,ja
+Barntrup,5766012,Westfalen,Lippe,Detmold,3,0,0.0,ja,ja
+Beckum,5570008,Westfalen,Warendorf,Münster,10,0,0.0,ja,ja
+Bedburg,5362004,Rheinland,Rhein-Erft-Kreis,Köln,7,0,0.0,ja,ja
+Bedburg-Hau,5154004,Rheinland,Kleve,Düsseldorf,2,0,0.0,ja,ja
+Beelen,5570012,Westfalen,Warendorf,Münster,1,1,100.0,ja,ja
+Bergheim,5362008,Rheinland,Rhein-Erft-Kreis,Köln,15,4,26.666666666666668,ja,ja
+Bergisch Gladbach,5378004,Rheinland,Rheinisch-Bergischer Kreis,Köln,32,0,0.0,ja,ja
+Bergneustadt,5374004,Rheinland,Oberbergischer Kreis,Köln,6,0,0.0,ja,ja
+Bestwig,5958008,Westfalen,Hochsauerlandkreis,Arnsberg,4,0,0.0,ja,ja
+Beverungen,5762008,Westfalen,Höxter,Detmold,3,0,0.0,ja,ja
+Bielefeld,5711000,Westfalen,Bielefeld,Detmold,76,23,30.263157894736842,ja,ja
+Billerbeck,5558008,Westfalen,Coesfeld,Münster,2,4,nicht auswertbar,nein,ja
+Blankenheim,5366008,Rheinland,Euskirchen,Köln,2,1,50.0,ja,ja
+Blomberg,5766016,Westfalen,Lippe,Detmold,6,0,0.0,ja,ja
+Bochum,5911000,Ruhrgebiet,Bochum,Arnsberg,73,5,6.8493150684931505,ja,ja
+Bönen,5978008,Ruhrgebiet,Unna,Arnsberg,5,1,20.0,ja,ja
+Bonn,5314000,Rheinland,Bonn,Köln,83,27,32.53012048192771,ja,ja
+Borchen,5774012,Westfalen,Paderborn,Detmold,4,3,75.0,ja,ja
+Borgentreich,5762012,Westfalen,Höxter,Detmold,1,1,100.0,ja,ja
+Borgholzhausen,5754004,Westfalen,Gütersloh,Detmold,1,0,0.0,ja,ja
+Borken,5554012,Westfalen,Borken,Münster,12,12,100.0,ja,ja
+Bornheim,5382012,Rheinland,Rhein-Sieg-Kreis,Köln,12,0,0.0,ja,ja
+Bottrop,5512000,Ruhrgebiet,Bottrop,Münster,31,1000,nicht auswertbar,nein,ja
+Brakel,5762016,Westfalen,Höxter,Detmold,3,2,66.66666666666666,ja,ja
+Breckerfeld,5954004,Ruhrgebiet,Ennepe-Ruhr-Kreis,Arnsberg,1,1,100.0,ja,ja
+Brilon,5958012,Westfalen,Hochsauerlandkreis,Arnsberg,5,1200,nicht auswertbar,nein,ja
+Brühl,5362012,Rheinland,Rhein-Erft-Kreis,Köln,12,5,41.66666666666667,ja,ja
+Bünde,5758004,Westfalen,Herford,Detmold,14,6,42.857142857142854,ja,ja
+Burbach,5970008,Westfalen,Siegen-Wittgenstein,Arnsberg,3,0,0.0,ja,ja
+Büren,5774016,Westfalen,Paderborn,Detmold,7,5,71.42857142857143,ja,ja
+Burscheid,5378008,Rheinland,Rheinisch-Bergischer Kreis,Köln,3,0,0.0,ja,ja
+Coesfeld,5558012,Westfalen,Coesfeld,Münster,11,6,54.54545454545454,ja,ja
+Dahlem,5366012,Rheinland,Euskirchen,Köln,1,0,0.0,ja,ja
+Delbrück,5774020,Westfalen,Paderborn,Detmold,8,600,nicht auswertbar,nein,ja
+Detmold,5766020,Westfalen,Lippe,Detmold,21,19,90.47619047619048,ja,ja
+Dinslaken,5170008,Rheinland,Wesel,Düsseldorf,16,16,100.0,ja,ja
+Dörentrup,5766024,Westfalen,Lippe,Detmold,1,0,0.0,ja,ja
+Dormagen,5162004,Rheinland,Rhein-Kreis Neuss,Düsseldorf,18,0,0.0,ja,ja
+Dorsten,5562012,Ruhrgebiet,Recklinghausen,Münster,19,0,0.0,ja,ja
+Dortmund,5913000,Ruhrgebiet,Dortmund,Arnsberg,145,51,35.172413793103445,ja,ja
+Drolshagen,5966008,Westfalen,Olpe,Arnsberg,2,4,nicht auswertbar,nein,ja
+Duisburg,5112000,Ruhrgebiet,Duisburg,Düsseldorf,121,1,0.8264462809917356,ja,ja
+Dülmen,5558016,Westfalen,Coesfeld,Münster,11,11,100.0,ja,ja
+Düren,5358008,Rheinland,Düren,Köln,29,2,6.896551724137931,ja,ja
+Düsseldorf,5111000,Rheinland,Düsseldorf,Düsseldorf,141,93,65.95744680851064,ja,ja
+Eitorf,5382016,Rheinland,Rhein-Sieg-Kreis,Köln,4,0,0.0,ja,ja
+Emmerich am Rhein,5154008,Rheinland,Kleve,Düsseldorf,8,3,37.5,ja,ja
+Emsdetten,5566008,Westfalen,Steinfurt,Münster,10,10,100.0,ja,ja
+Engelskirchen,5374008,Rheinland,Oberbergischer Kreis,Köln,6,4,66.66666666666666,ja,ja
+Enger,5758008,Westfalen,Herford,Detmold,6,0,0.0,ja,ja
+Ennepetal,5954008,Ruhrgebiet,Ennepe-Ruhr-Kreis,Arnsberg,9,0,0.0,ja,ja
+Ense,5974012,Westfalen,Soest,Arnsberg,4,4,100.0,ja,ja
+Erftstadt,5362020,Rheinland,Rhein-Erft-Kreis,Köln,12,2,16.666666666666664,ja,ja
+Erkelenz,5370004,Rheinland,Heinsberg,Köln,11,0,0.0,ja,ja
+Erkrath,5158004,Rheinland,Mettmann,Düsseldorf,12,5,41.66666666666667,ja,ja
+Erwitte,5974016,Westfalen,Soest,Arnsberg,6,0,0.0,ja,ja
+Eschweiler,5334012,Rheinland,Städteregion Aachen,Köln,15,3,20.0,ja,ja
+Espelkamp,5770008,Westfalen,Minden-Lübbecke,Detmold,3,0,0.0,ja,ja
+Essen,5113000,Ruhrgebiet,Essen,Düsseldorf,139,128,92.08633093525181,ja,ja
+Euskirchen,5366016,Rheinland,Euskirchen,Köln,14,0,0.0,ja,ja
+Extertal,5766028,Westfalen,Lippe,Detmold,3,1,33.33333333333333,ja,ja
+Frechen,5362024,Rheinland,Rhein-Erft-Kreis,Köln,10,0,0.0,ja,ja
+Freudenberg,5970016,Westfalen,Siegen-Wittgenstein,Arnsberg,6,3,50.0,ja,ja
+Fröndenberg/Ruhr,5978012,Ruhrgebiet,Unna,Arnsberg,4,1000,nicht auswertbar,nein,ja
+Gangelt,5370008,Rheinland,Heinsberg,Köln,3,3,100.0,ja,ja
+Geilenkirchen,5370012,Rheinland,Heinsberg,Köln,8,7,87.5,ja,ja
+Gelsenkirchen,5513000,Ruhrgebiet,Gelsenkirchen,Münster,69,69,100.0,ja,ja
+Gescher,5554016,Westfalen,Borken,Münster,3,3,100.0,ja,ja
+Geseke,5974020,Westfalen,Soest,Arnsberg,6,2,33.33333333333333,ja,ja
+Gevelsberg,5954012,Ruhrgebiet,Ennepe-Ruhr-Kreis,Arnsberg,13,0,0.0,ja,ja
+Gladbeck,5562014,Ruhrgebiet,Recklinghausen,Münster,17,0,0.0,ja,ja
+Goch,5154016,Rheinland,Kleve,Düsseldorf,8,4,50.0,ja,ja
+Grefrath,5166008,Rheinland,Viersen,Düsseldorf,2,2,100.0,ja,ja
+Greven,5566012,Westfalen,Steinfurt,Münster,8,8,100.0,ja,ja
+Gronau (Westf.),5554020,Westfalen,Borken,Münster,13,13,100.0,ja,ja
+Gummersbach,5374012,Rheinland,Oberbergischer Kreis,Köln,15,1,6.666666666666667,ja,ja
+Haan,5158008,Rheinland,Mettmann,Düsseldorf,9,0,0.0,ja,ja
+Hagen,5914000,Ruhrgebiet,Hagen,Arnsberg,50,0,0.0,ja,ja
+Halle (Westf.),5754012,Westfalen,Gütersloh,Detmold,5,0,0.0,ja,ja
+Hallenberg,5958020,Westfalen,Hochsauerlandkreis,Arnsberg,1,0,0.0,ja,ja
+Haltern am See,5562016,Ruhrgebiet,Recklinghausen,Münster,9,9,100.0,ja,ja
+Hamm,5915000,Ruhrgebiet,Hamm,Arnsberg,49,45,91.83673469387756,ja,ja
+Harsewinkel,5754016,Westfalen,Gütersloh,Detmold,7,4,57.14285714285714,ja,ja
+Hattingen,5954016,Ruhrgebiet,Ennepe-Ruhr-Kreis,Arnsberg,13,7,53.84615384615385,ja,ja
+Heek,5554024,Westfalen,Borken,Münster,3,3,100.0,ja,ja
+Heimbach,5358012,Rheinland,Düren,Köln,1,0,0.0,ja,ja
+Heinsberg,5370016,Rheinland,Heinsberg,Köln,10,9,90.0,ja,ja
+Hellenthal,5366020,Rheinland,Euskirchen,Köln,2,530,nicht auswertbar,nein,ja
+Hennef (Sieg),5382020,Rheinland,Rhein-Sieg-Kreis,Köln,11,6,54.54545454545454,ja,ja
+Herdecke,5954020,Ruhrgebiet,Ennepe-Ruhr-Kreis,Arnsberg,6,0,0.0,ja,ja
+Herford,5758012,Westfalen,Herford,Detmold,18,18,100.0,ja,ja
+Herne,5916000,Ruhrgebiet,Herne,Arnsberg,38,8,21.052631578947366,ja,ja
+Herten,5562020,Ruhrgebiet,Recklinghausen,Münster,13,5,38.46153846153847,ja,ja
+Herzogenrath,5334016,Rheinland,Städteregion Aachen,Köln,13,1,7.6923076923076925,ja,ja
+Hiddenhausen,5758016,Westfalen,Herford,Detmold,4,2,50.0,ja,ja
+Hilchenbach,5970020,Westfalen,Siegen-Wittgenstein,Arnsberg,3,0,0.0,ja,ja
+Hilden,5158016,Rheinland,Mettmann,Düsseldorf,9,4,44.44444444444444,ja,ja
+Hille,5770012,Westfalen,Minden-Lübbecke,Detmold,4,0,0.0,ja,ja
+Hopsten,5566020,Westfalen,Steinfurt,Münster,2,2,100.0,ja,ja
+Hörstel,5566016,Westfalen,Steinfurt,Münster,6,6,100.0,ja,ja
+Hövelhof,5774024,Westfalen,Paderborn,Detmold,5,1,20.0,ja,ja
+Höxter,5762020,Westfalen,Höxter,Detmold,8,0,0.0,ja,ja
+Hückeswagen,5374016,Rheinland,Oberbergischer Kreis,Köln,5,2,40.0,ja,ja
+Hünxe,5170016,Rheinland,Wesel,Düsseldorf,4,2,50.0,ja,ja
+Hürtgenwald,5358016,Rheinland,Düren,Köln,2,0,0.0,ja,ja
+Hürth,5362028,Rheinland,Rhein-Erft-Kreis,Köln,16,1,6.25,ja,ja
+Inden,5358020,Rheinland,Düren,Köln,2,0,0.0,ja,ja
+Iserlohn,5962024,Westfalen,Märkischer Kreis,Arnsberg,22,0,0.0,ja,ja
+Isselburg,5554032,Westfalen,Borken,Münster,3,300,nicht auswertbar,nein,ja
+Issum,5154020,Rheinland,Kleve,Düsseldorf,2,2,100.0,ja,ja
+Jüchen,5162012,Rheinland,Rhein-Kreis Neuss,Düsseldorf,5,3,60.0,ja,ja
+Jülich,5358024,Rheinland,Düren,Köln,6,6,100.0,ja,ja
+Kaarst,5162016,Rheinland,Rhein-Kreis Neuss,Düsseldorf,10,0,0.0,ja,ja
+Kamen,5978020,Ruhrgebiet,Unna,Arnsberg,10,10,100.0,ja,ja
+Kamp-Lintfort,5170020,Rheinland,Wesel,Düsseldorf,7,0,0.0,ja,ja
+Kempen,5166012,Rheinland,Viersen,Düsseldorf,8,0,0.0,ja,ja
+Kerpen,5362032,Rheinland,Rhein-Erft-Kreis,Köln,17,0,0.0,ja,ja
+Kierspe,5962028,Westfalen,Märkischer Kreis,Arnsberg,5,0,0.0,ja,ja
+Kirchhundem,5966016,Westfalen,Olpe,Arnsberg,4,4,100.0,ja,ja
+Kirchlengern,5758020,Westfalen,Herford,Detmold,2,0,0.0,ja,ja
+Kleve,5154036,Rheinland,Kleve,Düsseldorf,12,0,0.0,ja,ja
+Köln,5315000,Rheinland,Köln,Köln,240,6,2.5,ja,ja
+Korschenbroich,5162020,Rheinland,Rhein-Kreis Neuss,Düsseldorf,9,9,100.0,ja,ja
+Kranenburg,5154040,Rheinland,Kleve,Düsseldorf,2,2,100.0,ja,ja
+Kreuztal,5970024,Westfalen,Siegen-Wittgenstein,Arnsberg,11,0,0.0,ja,ja
+Kürten,5378012,Rheinland,Rheinisch-Bergischer Kreis,Köln,5,2,40.0,ja,ja
+Ladbergen,5566032,Westfalen,Steinfurt,Münster,1,1,100.0,ja,ja
+Laer,5566036,Westfalen,Steinfurt,Münster,1,1,100.0,ja,ja
+Lage,5766040,Westfalen,Lippe,Detmold,11,0,0.0,ja,ja
+Langenberg,5754024,Westfalen,Gütersloh,Detmold,2,2,100.0,ja,ja
+Langenfeld (Rhld.),5158020,Rheinland,Mettmann,Düsseldorf,13,13,100.0,ja,ja
+Legden,5554036,Westfalen,Borken,Münster,2,2,100.0,ja,ja
+Lemgo,5766044,Westfalen,Lippe,Detmold,9,0,0.0,ja,ja
+Lengerich,5566040,Westfalen,Steinfurt,Münster,8,2000,nicht auswertbar,nein,ja
+Lennestadt,5966020,Westfalen,Olpe,Arnsberg,8,2,25.0,ja,ja
+Leopoldshöhe,5766048,Westfalen,Lippe,Detmold,3,0,0.0,ja,ja
+Lichtenau,5774028,Westfalen,Paderborn,Detmold,3,3,100.0,ja,ja
+Lindlar,5374020,Rheinland,Oberbergischer Kreis,Köln,8,0,0.0,ja,ja
+Linnich,5358036,Rheinland,Düren,Köln,1,0,0.0,ja,ja
+Lippstadt,5974028,Westfalen,Soest,Arnsberg,18,10,55.55555555555556,ja,ja
+Lohmar,5382028,Rheinland,Rhein-Sieg-Kreis,Köln,6,0,0.0,ja,ja
+Löhne,5758024,Westfalen,Herford,Detmold,11,7,63.63636363636363,ja,ja
+Lübbecke,5770020,Westfalen,Minden-Lübbecke,Detmold,8,0,0.0,ja,ja
+Lüdenscheid,5962032,Westfalen,Märkischer Kreis,Arnsberg,20,0,0.0,ja,ja
+Lüdinghausen,5558024,Westfalen,Coesfeld,Münster,8,5,62.5,ja,ja
+Lügde,5766052,Westfalen,Lippe,Detmold,3,0,0.0,ja,ja
+Lünen,5978024,Ruhrgebiet,Unna,Arnsberg,21,0,0.0,ja,ja
+Marienheide,5374024,Rheinland,Oberbergischer Kreis,Köln,3,1,33.33333333333333,ja,ja
+Marienmünster,5762024,Westfalen,Höxter,Detmold,1,0,0.0,ja,ja
+Marsberg,5958024,Westfalen,Hochsauerlandkreis,Arnsberg,5,0,0.0,ja,ja
+Mechernich,5366028,Rheinland,Euskirchen,Köln,6,0,0.0,ja,ja
+Medebach,5958028,Westfalen,Hochsauerlandkreis,Arnsberg,2,0,0.0,ja,ja
+Meerbusch,5162022,Rheinland,Rhein-Kreis Neuss,Düsseldorf,12,4,33.33333333333333,ja,ja
+Meinerzhagen,5962036,Westfalen,Märkischer Kreis,Arnsberg,4,0,0.0,ja,ja
+Menden (Sauerland),5962040,Westfalen,Märkischer Kreis,Arnsberg,9,6,66.66666666666666,ja,ja
+Meschede,5958032,Westfalen,Hochsauerlandkreis,Arnsberg,9,0,0.0,ja,ja
+Metelen,5566052,Westfalen,Steinfurt,Münster,1,1,100.0,ja,ja
+Mettingen,5566056,Westfalen,Steinfurt,Münster,3,400,nicht auswertbar,nein,ja
+Mettmann,5158024,Rheinland,Mettmann,Düsseldorf,8,3,37.5,ja,ja
+Moers,5170024,Rheinland,Wesel,Düsseldorf,22,0,0.0,ja,ja
+Möhnesee,5974032,Westfalen,Soest,Arnsberg,2,0,0.0,ja,ja
+Mönchengladbach,5116000,Rheinland,Mönchengladbach,Düsseldorf,66,0,0.0,ja,ja
+Monheim am Rhein,5158026,Rheinland,Mettmann,Düsseldorf,10,1200,nicht auswertbar,nein,ja
+Monschau,5334020,Rheinland,Städteregion Aachen,Köln,3,0,0.0,ja,ja
+Morsbach,5374028,Rheinland,Oberbergischer Kreis,Köln,2,0,0.0,ja,ja
+Much,5382036,Rheinland,Rhein-Sieg-Kreis,Köln,3,1,33.33333333333333,ja,ja
+Mülheim an der Ruhr,5117000,Ruhrgebiet,Mülheim an der Ruhr,Düsseldorf,36,2,5.555555555555555,ja,ja
+Münster,5515000,Westfalen,Münster,Münster,72,38,52.77777777777778,ja,ja
+Nachrodt-Wiblingwerde,5962044,Westfalen,Märkischer Kreis,Arnsberg,2,0,0.0,ja,ja
+Netphen,5970032,Westfalen,Siegen-Wittgenstein,Arnsberg,8,5,62.5,ja,ja
+Nettetal,5166016,Rheinland,Viersen,Düsseldorf,11,0,0.0,ja,ja
+Neuenkirchen,5566060,Westfalen,Steinfurt,Münster,3,3,100.0,ja,ja
+Neunkirchen,5970036,Westfalen,Siegen-Wittgenstein,Arnsberg,6,0,0.0,ja,ja
+Neunkirchen-Seelscheid,5382040,Rheinland,Rhein-Sieg-Kreis,Köln,4,0,0.0,ja,ja
+Neuss,5162024,Rheinland,Rhein-Kreis Neuss,Düsseldorf,37,10,27.027027027027028,ja,ja
+Nideggen,5358044,Rheinland,Düren,Köln,4,0,0.0,ja,ja
+Nieheim,5762028,Westfalen,Höxter,Detmold,2,0,0.0,ja,ja
+Nordkirchen,5558028,Westfalen,Coesfeld,Münster,3,0,0.0,ja,ja
+Nordwalde,5566064,Westfalen,Steinfurt,Münster,3,500,nicht auswertbar,nein,ja
+Nottuln,5558032,Westfalen,Coesfeld,Münster,6,0,0.0,ja,ja
+Nümbrecht,5374032,Rheinland,Oberbergischer Kreis,Köln,6,6,100.0,ja,ja
+Oberhausen,5119000,Ruhrgebiet,Oberhausen,Düsseldorf,44,0,0.0,ja,ja
+Ochtrup,5566068,Westfalen,Steinfurt,Münster,6,6,100.0,ja,ja
+Odenthal,5378020,Rheinland,Rheinisch-Bergischer Kreis,Köln,7,0,0.0,ja,ja
+Oelde,5570028,Westfalen,Warendorf,Münster,7,7,100.0,ja,ja
+Oer-Erkenschwick,5562028,Ruhrgebiet,Recklinghausen,Münster,7,7,100.0,ja,ja
+Oerlinghausen,5766056,Westfalen,Lippe,Detmold,5,1200,nicht auswertbar,nein,ja
+Olfen,5558036,Westfalen,Coesfeld,Münster,2,80,nicht auswertbar,nein,ja
+Olpe,5966024,Westfalen,Olpe,Arnsberg,6,6,100.0,ja,ja
+Olsberg,5958036,Westfalen,Hochsauerlandkreis,Arnsberg,5,0,0.0,ja,ja
+Overath,5378024,Rheinland,Rheinisch-Bergischer Kreis,Köln,8,0,0.0,ja,ja
+Paderborn,5774032,Westfalen,Paderborn,Detmold,35,6,17.142857142857142,ja,ja
+Porta Westfalica,5770032,Westfalen,Minden-Lübbecke,Detmold,8,3,37.5,ja,ja
+Preußisch Oldendorf,5770036,Westfalen,Minden-Lübbecke,Detmold,3,3,100.0,ja,ja
+Radevormwald,5374036,Rheinland,Oberbergischer Kreis,Köln,8,1,12.5,ja,ja
+Raesfeld,5554040,Westfalen,Borken,Münster,3,400,nicht auswertbar,nein,ja
+Rahden,5770040,Westfalen,Minden-Lübbecke,Detmold,6,2,33.33333333333333,ja,ja
+Ratingen,5158028,Rheinland,Mettmann,Düsseldorf,21,21,100.0,ja,ja
+Recklinghausen,5562032,Ruhrgebiet,Recklinghausen,Münster,29,0,0.0,ja,ja
+Rees,5154044,Rheinland,Kleve,Düsseldorf,7,7,100.0,ja,ja
+Reichshof,5374040,Rheinland,Oberbergischer Kreis,Köln,5,0,0.0,ja,ja
+Remscheid,5120000,Rheinland,Remscheid,Düsseldorf,29,1,3.4482758620689653,ja,ja
+Rhede,5554048,Westfalen,Borken,Münster,4,2,50.0,ja,ja
+Rheinbach,5382048,Rheinland,Rhein-Sieg-Kreis,Köln,7,2,28.57142857142857,ja,ja
+Rheinberg,5170032,Rheinland,Wesel,Düsseldorf,7,0,0.0,ja,ja
+Rheine,5566076,Westfalen,Steinfurt,Münster,22,1,4.545454545454546,ja,ja
+Rheurdt,5154048,Rheinland,Kleve,Düsseldorf,1,1,100.0,ja,ja
+Rödinghausen,5758028,Westfalen,Herford,Detmold,3,3,100.0,ja,ja
+Rommerskirchen,5162028,Rheinland,Rhein-Kreis Neuss,Düsseldorf,3,2,66.66666666666666,ja,ja
+Rosendahl,5558040,Westfalen,Coesfeld,Münster,4,4,100.0,ja,ja
+Ruppichteroth,5382052,Rheinland,Rhein-Sieg-Kreis,Köln,4,0,0.0,ja,ja
+Rüthen,5974036,Westfalen,Soest,Arnsberg,3,0,0.0,ja,ja
+Saerbeck,5566080,Westfalen,Steinfurt,Münster,2,500,nicht auswertbar,nein,ja
+Salzkotten,5774036,Westfalen,Paderborn,Detmold,5,5,100.0,ja,ja
+Sankt Augustin,5382056,Rheinland,Rhein-Sieg-Kreis,Köln,14,0,0.0,ja,ja
+Sassenberg,5570036,Westfalen,Warendorf,Münster,4,0,0.0,ja,ja
+Schermbeck,5170036,Rheinland,Wesel,Düsseldorf,2,3,nicht auswertbar,nein,ja
+Schieder-Schwalenberg,5766060,Westfalen,Lippe,Detmold,2,0,0.0,ja,ja
+Schlangen,5766064,Westfalen,Lippe,Detmold,2,2,100.0,ja,ja
+Schloß Holte-Stukenbrock,5754036,Westfalen,Gütersloh,Detmold,6,0,0.0,ja,ja
+Schmallenberg,5958040,Westfalen,Hochsauerlandkreis,Arnsberg,9,3,33.33333333333333,ja,ja
+Schwalmtal,5166024,Rheinland,Viersen,Düsseldorf,5,5,100.0,ja,ja
+Schwelm,5954024,Ruhrgebiet,Ennepe-Ruhr-Kreis,Arnsberg,6,1,16.666666666666664,ja,ja
+Schwerte,5978028,Ruhrgebiet,Unna,Arnsberg,12,0,0.0,ja,ja
+Selm,5978032,Ruhrgebiet,Unna,Arnsberg,5,2,40.0,ja,ja
+Senden,5558044,Westfalen,Coesfeld,Münster,7,7,100.0,ja,ja
+Sendenhorst,5570040,Westfalen,Warendorf,Münster,3,1,33.33333333333333,ja,ja
+Siegen,5970040,Westfalen,Siegen-Wittgenstein,Arnsberg,30,0,0.0,ja,ja
+Simmerath,5334028,Rheinland,Städteregion Aachen,Köln,5,2,40.0,ja,ja
+Soest,5974040,Westfalen,Soest,Arnsberg,16,0,0.0,ja,ja
+Solingen,5122000,Rheinland,Solingen,Düsseldorf,37,1,2.7027027027027026,ja,ja
+Sonsbeck,5170040,Rheinland,Wesel,Düsseldorf,1,1,100.0,ja,ja
+Stadtlohn,5554056,Westfalen,Borken,Münster,7,3,42.857142857142854,ja,ja
+Steinfurt,5566084,Westfalen,Steinfurt,Münster,11,4000,nicht auswertbar,nein,ja
+Stemwede,5770044,Westfalen,Minden-Lübbecke,Detmold,4,1,25.0,ja,ja
+Straelen,5154052,Rheinland,Kleve,Düsseldorf,3,2,66.66666666666666,ja,ja
+Südlohn,5554060,Westfalen,Borken,Münster,2,2,100.0,ja,ja
+Sundern (Sauerland),5958044,Westfalen,Hochsauerlandkreis,Arnsberg,8,6,75.0,ja,ja
+Swisttal,5382064,Rheinland,Rhein-Sieg-Kreis,Köln,4,1,25.0,ja,ja
+Tecklenburg,5566088,Westfalen,Steinfurt,Münster,7,0,0.0,ja,ja
+Titz,5358056,Rheinland,Düren,Köln,0,0,nan,ja,ja
+Tönisvorst,5166028,Rheinland,Viersen,Düsseldorf,6,3,50.0,ja,ja
+Troisdorf,5382068,Rheinland,Rhein-Sieg-Kreis,Köln,19,0,0.0,ja,ja
+Uedem,5154056,Rheinland,Kleve,Düsseldorf,1,1,100.0,ja,ja
+Unna,5978036,Ruhrgebiet,Unna,Arnsberg,17,17,100.0,ja,ja
+Velbert,5158032,Rheinland,Mettmann,Düsseldorf,21,17,80.95238095238095,ja,ja
+Velen,5554064,Westfalen,Borken,Münster,3,3,100.0,ja,ja
+Vettweiß,5358060,Rheinland,Düren,Köln,1,1,100.0,ja,ja
+Viersen,5166032,Rheinland,Viersen,Düsseldorf,16,0,0.0,ja,ja
+Vlotho,5758036,Westfalen,Herford,Detmold,5,0,0.0,ja,ja
+Voerde (Niederrhein),5170044,Rheinland,Wesel,Düsseldorf,7,2,28.57142857142857,ja,ja
+Vreden,5554068,Westfalen,Borken,Münster,6,6,100.0,ja,ja
+Wachtberg,5382072,Rheinland,Rhein-Sieg-Kreis,Köln,6,0,0.0,ja,ja
+Wachtendonk,5154060,Rheinland,Kleve,Düsseldorf,2,2,100.0,ja,ja
+Wadersloh,5570048,Westfalen,Warendorf,Münster,2,450,nicht auswertbar,nein,ja
+Waldbröl,5374044,Rheinland,Oberbergischer Kreis,Köln,6,1,16.666666666666664,ja,ja
+Waldfeucht,5370032,Rheinland,Heinsberg,Köln,3,3,100.0,ja,ja
+Waltrop,5562036,Ruhrgebiet,Recklinghausen,Münster,7,400,nicht auswertbar,nein,ja
+Warburg,5762036,Westfalen,Höxter,Detmold,6,1,16.666666666666664,ja,ja
+Warendorf,5570052,Westfalen,Warendorf,Münster,10,4,40.0,ja,ja
+Warstein,5974044,Westfalen,Soest,Arnsberg,7,0,0.0,ja,ja
+Weeze,5154064,Rheinland,Kleve,Düsseldorf,2,0,0.0,ja,ja
+Wegberg,5370040,Rheinland,Heinsberg,Köln,7,3,42.857142857142854,ja,ja
+Weilerswist,5366040,Rheinland,Euskirchen,Köln,4,0,0.0,ja,ja
+Wenden,5966028,Westfalen,Olpe,Arnsberg,4,3,75.0,ja,ja
+Werdohl,5962060,Westfalen,Märkischer Kreis,Arnsberg,5,2,40.0,ja,ja
+Werl,5974052,Westfalen,Soest,Arnsberg,7,2,28.57142857142857,ja,ja
+Wermelskirchen,5378032,Rheinland,Rheinisch-Bergischer Kreis,Köln,9,0,0.0,ja,ja
+Werne,5978040,Ruhrgebiet,Unna,Arnsberg,5,0,0.0,ja,ja
+Werther (Westf.),5754052,Westfalen,Gütersloh,Detmold,2,1,50.0,ja,ja
+Wesel,5170048,Rheinland,Wesel,Düsseldorf,17,16,94.11764705882352,ja,ja
+Wesseling,5362040,Rheinland,Rhein-Erft-Kreis,Köln,9,0,0.0,ja,ja
+Wickede (Ruhr),5974056,Westfalen,Soest,Arnsberg,3,3,100.0,ja,ja
+Wiehl,5374048,Rheinland,Oberbergischer Kreis,Köln,6,0,0.0,ja,ja
+Willebadessen,5762040,Westfalen,Höxter,Detmold,3,200,nicht auswertbar,nein,ja
+Willich,5166036,Rheinland,Viersen,Düsseldorf,12,12,100.0,ja,ja
+Wilnsdorf,5970044,Westfalen,Siegen-Wittgenstein,Arnsberg,10,0,0.0,ja,ja
+Windeck,5382076,Rheinland,Rhein-Sieg-Kreis,Köln,5,5,100.0,ja,ja
+Winterberg,5958048,Westfalen,Hochsauerlandkreis,Arnsberg,5,0,0.0,ja,ja
+Wipperfürth,5374052,Rheinland,Oberbergischer Kreis,Köln,9,6,66.66666666666666,ja,ja
+Witten,5954036,Ruhrgebiet,Ennepe-Ruhr-Kreis,Arnsberg,27,0,0.0,ja,ja
+Wülfrath,5158036,Rheinland,Mettmann,Düsseldorf,5,2,40.0,ja,ja
+Wuppertal,5124000,Rheinland,Wuppertal,Düsseldorf,88,62,70.45454545454545,ja,ja
+Würselen,5334036,Rheinland,Städteregion Aachen,Köln,7,2,28.57142857142857,ja,ja
+Xanten,5170052,Rheinland,Wesel,Düsseldorf,3,3,100.0,ja,ja
+Alpen,5170004,Rheinland,Wesel,Düsseldorf,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Attendorn,5966004,Westfalen,Olpe,Arnsberg,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Bad Münstereifel,5366004,Rheinland,Euskirchen,Köln,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Bergkamen,5978004,Ruhrgebiet,Unna,Arnsberg,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Bocholt,5554008,Westfalen,Borken,Münster,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Brüggen,5166004,Rheinland,Viersen,Düsseldorf,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Castrop-Rauxel,5562004,Ruhrgebiet,Recklinghausen,Münster,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Datteln,5562008,Ruhrgebiet,Recklinghausen,Münster,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Drensteinfurt,5570016,Westfalen,Warendorf,Münster,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Elsdorf,5362016,Rheinland,Rhein-Erft-Kreis,Köln,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Ennigerloh,5570020,Westfalen,Warendorf,Münster,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Erndtebrück,5970012,Westfalen,Siegen-Wittgenstein,Arnsberg,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Eslohe (Sauerland),5958016,Westfalen,Hochsauerlandkreis,Arnsberg,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Everswinkel,5570024,Westfalen,Warendorf,Münster,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Finnentrop,5966012,Westfalen,Olpe,Arnsberg,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Geldern,5154012,Rheinland,Kleve,Düsseldorf,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Grevenbroich,5162008,Rheinland,Rhein-Kreis Neuss,Düsseldorf,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Gütersloh,5754008,Westfalen,Gütersloh,Detmold,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Halver,5962012,Westfalen,Märkischer Kreis,Arnsberg,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Hamminkeln,5170012,Rheinland,Wesel,Düsseldorf,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Havixbeck,5558020,Westfalen,Coesfeld,Münster,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Heiden,5554028,Westfalen,Borken,Münster,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Heiligenhaus,5158012,Rheinland,Mettmann,Düsseldorf,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Hemer,5962016,Westfalen,Märkischer Kreis,Arnsberg,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Herscheid,5962020,Westfalen,Märkischer Kreis,Arnsberg,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Herzebrock-Clarholz,5754020,Westfalen,Gütersloh,Detmold,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Holzwickede,5978016,Ruhrgebiet,Unna,Arnsberg,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Horn-Bad Meinberg,5766032,Westfalen,Lippe,Detmold,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Horstmar,5566024,Westfalen,Steinfurt,Münster,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Hückelhoven,5370020,Rheinland,Heinsberg,Köln,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Hüllhorst,5770016,Westfalen,Minden-Lübbecke,Detmold,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Ibbenbüren,5566028,Ruhrgebiet,Steinfurt,Münster,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Kalkar,5154024,Rheinland,Kleve,Düsseldorf,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Kall,5366024,Rheinland,Euskirchen,Köln,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Kalletal,5766036,Westfalen,Lippe,Detmold,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Kerken,5154028,Rheinland,Kleve,Düsseldorf,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Kevelaer,5154032,Rheinland,Kleve,Düsseldorf,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Königswinter,5382024,Rheinland,Rhein-Sieg-Kreis,Köln,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Krefeld,5114000,Rheinland,Krefeld,Düsseldorf,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Kreuzau,5358028,Rheinland,Düren,Köln,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Langerwehe,5358032,Rheinland,Düren,Köln,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Leichlingen (Rhld.),5378016,Rheinland,Rheinisch-Bergischer Kreis,Köln,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Leverkusen,5316000,Rheinland,Leverkusen,Köln,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Lienen,5566044,Westfalen,Steinfurt,Münster,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Lippetal,5974024,Westfalen,Soest,Arnsberg,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Lotte,5566048,Westfalen,Steinfurt,Münster,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Marl,5562024,Ruhrgebiet,Recklinghausen,Münster,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Meckenheim,5382032,Rheinland,Rhein-Sieg-Kreis,Köln,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Merzenich,5358040,Rheinland,Düren,Köln,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Minden,5770024,Westfalen,Minden-Lübbecke,Detmold,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Nettersheim,5366032,Rheinland,Euskirchen,Köln,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Neuenrade,5962048,Westfalen,Märkischer Kreis,Arnsberg,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Neukirchen-Vluyn,5170028,Rheinland,Wesel,Düsseldorf,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Niederkassel,5382044,Rheinland,Rhein-Sieg-Kreis,Köln,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Niederkrüchten,5166020,Rheinland,Viersen,Düsseldorf,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Niederzier,5358048,Rheinland,Düren,Köln,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Nörvenich,5358052,Rheinland,Düren,Köln,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Ostbevern,5570032,Westfalen,Warendorf,Münster,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Petershagen,5770028,Westfalen,Minden-Lübbecke,Detmold,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Plettenberg,5962052,Westfalen,Märkischer Kreis,Arnsberg,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Pulheim,5362036,Rheinland,Rhein-Erft-Kreis,Köln,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Recke,5566072,Westfalen,Steinfurt,Münster,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Reken,5554044,Westfalen,Borken,Münster,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Rheda-Wiedenbrück,5754028,Westfalen,Gütersloh,Detmold,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Rietberg,5754032,Westfalen,Gütersloh,Detmold,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Roetgen,5334024,Rheinland,Städteregion Aachen,Köln,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Rösrath,5378028,Rheinland,Rheinisch-Bergischer Kreis,Köln,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Schalksmühle,5962056,Westfalen,Märkischer Kreis,Arnsberg,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Schleiden,5366036,Rheinland,Euskirchen,Köln,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Schöppingen,5554052,Westfalen,Borken,Münster,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Selfkant,5370024,Rheinland,Heinsberg,Köln,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Siegburg,5382060,Rheinland,Rhein-Sieg-Kreis,Köln,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Spenge,5758032,Westfalen,Herford,Detmold,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Sprockhövel,5954028,Ruhrgebiet,Ennepe-Ruhr-Kreis,Arnsberg,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Steinhagen,5754040,Westfalen,Gütersloh,Detmold,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Steinheim,5762032,Westfalen,Höxter,Detmold,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Stolberg (Rhld.),5334032,Rheinland,Städteregion Aachen,Köln,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Telgte,5570044,Westfalen,Warendorf,Münster,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Übach-Palenberg,5370028,Rheinland,Heinsberg,Köln,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Verl,5754044,Westfalen,Gütersloh,Detmold,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Versmold,5754048,Westfalen,Gütersloh,Detmold,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Wassenberg,5370036,Rheinland,Heinsberg,Köln,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Welver,5974048,Westfalen,Soest,Arnsberg,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Westerkappeln,5566092,Westfalen,Steinfurt,Münster,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Wetter (Ruhr),5954032,Ruhrgebiet,Ennepe-Ruhr-Kreis,Arnsberg,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Wettringen,5566096,Westfalen,Steinfurt,Münster,keine Antwort,keine Antwort,keine Antwort,nein,nein
+Zülpich,5366044,Rheinland,Euskirchen,Köln,keine Antwort,keine Antwort,keine Antwort,nein,nein

@@ -7533,9 +7533,6 @@ export default {
     "studentsPerTablet": 12.8,
     "studentsPerDesktop": 9.6,
     "studentsPerLaptop": 30.3,
-    "studentsPerWhiteboard": 83.3,
-    "numSchoolsTotal": 3696,
-    "numSchoolsFiber": 1231,
-    "numSchoolsFiberPercent": 33.3
+    "studentsPerWhiteboard": 83.3
   }
 }
