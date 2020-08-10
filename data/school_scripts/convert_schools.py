@@ -23,7 +23,7 @@ def to_float(number):
 
 
 def to_int(number):
-    if number in ["keine Angabe", "keine Angaben", "keine Antwort"]:
+    if number in ["keine Angabe", "keine Angaben", "keine Antwort", ""]:
         return None
     return int(round(float(number.replace(",", ".")), 0))
 
@@ -56,11 +56,13 @@ with open(path_device_csv) as file_csv:
             row["Whiteboards je 100 Schüler"]
         )
 
+        item["numStudentsTotal"] = to_int(row['Anzahl_Schüler'])
+
         item["notice"] = row["Bemerkungen"]
 
         data[ags] = item
 
-    row_nrw = reader_csv[0]
+    row_nrw = reader_csv[100]
     data["nrw"] = {
         "name": "NRW",
         "tabletsPer100": to_float(row_nrw["Mittelwert NRW Tablets"]),
