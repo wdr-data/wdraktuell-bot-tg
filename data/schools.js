@@ -6513,9 +6513,9 @@ export default {
     "notice": "",
     "answeredFiber": true,
     "couldEvaluateFiber": true,
-    "numSchoolsTotal": 0,
+    "numSchoolsTotal": 1,
     "numSchoolsFiber": 0,
-    "numSchoolsFiberPercent": NaN
+    "numSchoolsFiberPercent": 0.0
   },
   "5166028": {
     "name": "Tönisvorst",
@@ -7533,6 +7533,9 @@ export default {
     "studentsPerTablet": 12.8,
     "studentsPerDesktop": 9.6,
     "studentsPerLaptop": 30.3,
-    "studentsPerWhiteboard": 83.3
+    "studentsPerWhiteboard": 83.3,
+    "numSchoolsTotal": 3700,
+    "numSchoolsFiber": 1235,
+    "numSchoolsFiberPercent": 33.4
   }
 }

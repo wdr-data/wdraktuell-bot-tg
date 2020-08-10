@@ -263,7 +263,7 @@ Südlohn,5554060,Westfalen,Borken,Münster,2,2,100.0,ja,ja
 Sundern (Sauerland),5958044,Westfalen,Hochsauerlandkreis,Arnsberg,8,6,75.0,ja,ja
 Swisttal,5382064,Rheinland,Rhein-Sieg-Kreis,Köln,4,1,25.0,ja,ja
 Tecklenburg,5566088,Westfalen,Steinfurt,Münster,7,0,0.0,ja,ja
-Titz,5358056,Rheinland,Düren,Köln,0,0,nan,ja,ja
+Titz,5358056,Rheinland,Düren,Köln,1,0,0.0,ja,ja
 Tönisvorst,5166028,Rheinland,Viersen,Düsseldorf,6,3,50.0,ja,ja
 Troisdorf,5382068,Rheinland,Rhein-Sieg-Kreis,Köln,19,0,0.0,ja,ja
 Uedem,5154056,Rheinland,Kleve,Düsseldorf,1,1,100.0,ja,ja
@@ -395,3 +395,4 @@ Westerkappeln,5566092,Westfalen,Steinfurt,Münster,keine Antwort,keine Antwort,k
 Wetter (Ruhr),5954032,Ruhrgebiet,Ennepe-Ruhr-Kreis,Arnsberg,keine Antwort,keine Antwort,keine Antwort,nein,nein
 Wettringen,5566096,Westfalen,Steinfurt,Münster,keine Antwort,keine Antwort,keine Antwort,nein,nein
 Zülpich,5366044,Rheinland,Euskirchen,Köln,keine Antwort,keine Antwort,keine Antwort,nein,nein
+NRW,DEA,NRW,alle,alle,3700,1235,33.4,keine Angabe,keine Angabe
