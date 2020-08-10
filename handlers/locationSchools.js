@@ -4,8 +4,11 @@ import { escapeHTML, trackLink } from '../lib/util';
 
 export const generateImageUrl = (ags) => `${process.env.MEDIA_BASE_URL}assets/schools/${ags}.png`;
 
-export const handleCity = async (ctx, city) => {
-    const ags = city.keyCity;
+export const handleLocation = async (ctx) => {
+    return handleAGS(ctx, ctx.data.ags);
+};
+
+export const handleAGS = async (ctx, ags) => {
     const schoolData = schoolsByAGS[ags];
     console.log(ags);
     console.log(schoolData);

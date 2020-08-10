@@ -5,7 +5,7 @@ import handleCurrentTime from './currentTime';
 import { handleContact } from './contact';
 import { handleFaq } from './faq';
 import handleDataPolicy from './dataPolicy';
-import { handleLocation } from './location';
+import { handleDialogflowLocation } from './location';
 import { handleNewsfeedStart } from './newsfeed';
 
 export const actions = {
@@ -15,8 +15,8 @@ export const actions = {
     contact: handleContact,
     faq: handleFaq,
     faq_data_protection: handleDataPolicy,
-    location: handleLocation,
-    location_corona: (ctx) => handleLocation(ctx, { type: 'corona' }),
-    location_schools: (ctx) => handleLocation(ctx, { type: 'schools' }),
+    location: handleDialogflowLocation,
+    location_corona: (ctx) => handleDialogflowLocation(ctx, { type: 'corona' }),
+    location_schools: (ctx) => handleDialogflowLocation(ctx, { type: 'schools' }),
     newsfeed_corona: handleNewsfeedStart,
 };

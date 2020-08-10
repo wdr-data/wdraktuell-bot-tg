@@ -1,13 +1,17 @@
-import { byStudios } from '../data/locationMappings';
-import { escapeHTML, trackLink } from '../lib/util';
-import getFaq from '../lib/faq';
-
 import request from 'request-promise-native';
 import csvtojson from 'csvtojson';
+
+import { byStudios, byAGS } from '../data/locationMappings';
+import { escapeHTML, trackLink } from '../lib/util';
+import getFaq from '../lib/faq';
 
 const uriCityRKI = 'https://coronanrw-prod.s3.eu-central-1.amazonaws.com/rki_ndr_districts_nrw.csv';
 const uriNRWRKI = 'https://coronanrw-prod.s3.eu-central-1.amazonaws.com/rki_ndr_districts_nrw_gesamt.csv';
 
+export const handleLocation = async (ctx) => {
+    const location = byAGS[ctx.data.ags];
+    return handleCity(ctx, location);
+};
 
 export const handleCity = async (ctx, location) => {
     const covidText = await getFaq(`locationcovidnrw`);
