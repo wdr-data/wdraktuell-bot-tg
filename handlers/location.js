@@ -27,17 +27,6 @@ export const handleDialogflowLocation = async (ctx, options = {}) => {
 
     const location = byCities[locationName];
 
-    // Track city if found
-    if (location) {
-        // TODO: Track options.type
-        ctx.track({
-            category: 'Feature',
-            event: 'Location',
-            label: zipCode ? 'Postleitzahl' : 'Ort',
-            subType: location,
-        });
-    }
-
     // If we didn't find the city, inform user about most likely cause if possible
     if (!location && (locationName || zipCode)) {
         return ctx.reply(`${

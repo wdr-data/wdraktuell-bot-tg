@@ -14,6 +14,14 @@ export const handleAGS = async (ctx, ags) => {
     console.log(ags);
     console.log(schoolData);
 
+    // Track featured called with city
+    ctx.track({
+        category: 'Feature',
+        event: 'Location',
+        label: 'IFG Schule',
+        subType: schoolData.name,
+    });
+
     let intro = `${
         schoolData.name
     } hat als eine von 87 Kommunen nicht auf unsere IFG-Anfrage geantwortet.`;

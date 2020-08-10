@@ -14,6 +14,13 @@ export const handleLocation = async (ctx) => {
 };
 
 export const handleCity = async (ctx, location) => {
+    ctx.track({
+        category: 'Feature',
+        event: 'Location',
+        label: 'Corona-Fallzahlen',
+        subType: location.city,
+    });
+
     const covidText = await getFaq(`locationcovidnrw`);
 
     const covidDataCity = await getCovidCityRKI(location.district);
