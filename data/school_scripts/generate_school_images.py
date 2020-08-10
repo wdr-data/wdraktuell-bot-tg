@@ -194,11 +194,11 @@ for ags, item in data.items():
         icon_variant_laptop = "missing"
         icon_variant_fiber = "missing"
 
-        if item["answeredDevices"] and item["studentsPerLaptop"] is not None:
+        if item["studentsPerLaptop"] is not None:
             students_per_laptop = format_number(item["studentsPerLaptop"])
             students_per_laptop_description = "Schüler teilen\nsich ein Laptop"
             icon_variant_laptop = "normal"
-        elif item["answeredDevices"]:
+        elif item["laptopsPer100"] is not None:
             students_per_laptop = "-"
             students_per_laptop_description = "Keine Laptops\nvorhanden"
         else:
@@ -206,11 +206,11 @@ for ags, item in data.items():
             students_per_laptop_description = "Schüler teilen\nsich ein Laptop"
             notice = f"* Hierzu wurden keine Angaben gemacht"
 
-        if item["answeredDevices"] and item["studentsPerTablet"] is not None:
+        if item["studentsPerTablet"] is not None:
             students_per_tablet = format_number(item["studentsPerTablet"])
             students_per_tablet_description = "Schüler teilen\nsich ein Tablet"
             icon_variant_tablet = "normal"
-        elif item["answeredDevices"]:
+        elif item["tabletsPer100"] is not None:
             students_per_tablet = "-"
             students_per_tablet_description = "Keine Tablets\nvorhanden"
         else:

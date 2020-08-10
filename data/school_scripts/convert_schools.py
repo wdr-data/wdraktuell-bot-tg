@@ -37,10 +37,15 @@ with open(path_device_csv) as file_csv:
         item["name"] = row["Ort"]
 
         item["responded"] = row["Bemerkungen"] != "keine Teilnahme an der Abfrage"
-        item["answeredDevices"] = row["Tablets je 100 Schüler"] not in [
-            "keine Angaben",
-            "keine Angabe",
-        ]
+        item["answeredDevices"] = any(
+            value not in ["keine Angaben", "keine Angabe",]
+            for value in (
+                row["Tablets je 100 Schüler"],
+                row["Laptops je 100 Schüler"],
+                row["Desktoprechner je 100 Schüler"],
+                row["Whiteboards je 100 Schüler"],
+            )
+        )
 
         item["tabletsPer100"] = to_float(row["Tablets je 100 Schüler"])
         item["desktopsPer100"] = to_float(row["Desktoprechner je 100 Schüler"])
@@ -56,7 +61,7 @@ with open(path_device_csv) as file_csv:
             row["Whiteboards je 100 Schüler"]
         )
 
-        item["numStudentsTotal"] = to_int(row['Anzahl_Schüler'])
+        item["numStudentsTotal"] = to_int(row["Anzahl_Schüler"])
 
         item["notice"] = row["Bemerkungen"]
 
