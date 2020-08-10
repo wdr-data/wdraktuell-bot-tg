@@ -2395,10 +2395,10 @@ export default {
     "numStudentsTotal": 646,
     "notice": "",
     "answeredFiber": true,
-    "couldEvaluateFiber": true,
+    "couldEvaluateFiber": false,
     "numSchoolsTotal": 4,
-    "numSchoolsFiber": 0,
-    "numSchoolsFiberPercent": 0.0
+    "numSchoolsFiber": 1000,
+    "numSchoolsFiberPercent": null
   },
   "5762008": {
     "name": "Beverungen",
@@ -2495,10 +2495,10 @@ export default {
     "numStudentsTotal": 2087,
     "notice": "",
     "answeredFiber": true,
-    "couldEvaluateFiber": true,
+    "couldEvaluateFiber": false,
     "numSchoolsTotal": 6,
-    "numSchoolsFiber": 0,
-    "numSchoolsFiberPercent": 0.0
+    "numSchoolsFiber": 1000,
+    "numSchoolsFiberPercent": null
   },
   "5911000": {
     "name": "Bochum",
@@ -2937,8 +2937,8 @@ export default {
     "answeredFiber": true,
     "couldEvaluateFiber": true,
     "numSchoolsTotal": 16,
-    "numSchoolsFiber": 16,
-    "numSchoolsFiberPercent": 100.0
+    "numSchoolsFiber": 6,
+    "numSchoolsFiberPercent": 37.5
   },
   "5766024": {
     "name": "Dörentrup",
@@ -3597,8 +3597,8 @@ export default {
     "answeredFiber": true,
     "couldEvaluateFiber": true,
     "numSchoolsTotal": 6,
-    "numSchoolsFiber": 2,
-    "numSchoolsFiberPercent": 33.3
+    "numSchoolsFiber": 0,
+    "numSchoolsFiberPercent": 0.0
   },
   "5954012": {
     "name": "Gevelsberg",
@@ -5457,8 +5457,8 @@ export default {
     "answeredFiber": true,
     "couldEvaluateFiber": true,
     "numSchoolsTotal": 66,
-    "numSchoolsFiber": 0,
-    "numSchoolsFiberPercent": 0.0
+    "numSchoolsFiber": 27,
+    "numSchoolsFiberPercent": 40.9
   },
   "5158026": {
     "name": "Monheim am Rhein",
@@ -7037,8 +7037,8 @@ export default {
     "answeredFiber": true,
     "couldEvaluateFiber": true,
     "numSchoolsTotal": 1,
-    "numSchoolsFiber": 0,
-    "numSchoolsFiberPercent": 0.0
+    "numSchoolsFiber": 1,
+    "numSchoolsFiberPercent": 100.0
   },
   "5166028": {
     "name": "Tönisvorst",
@@ -7737,8 +7737,8 @@ export default {
     "answeredFiber": true,
     "couldEvaluateFiber": true,
     "numSchoolsTotal": 12,
-    "numSchoolsFiber": 12,
-    "numSchoolsFiberPercent": 100.0
+    "numSchoolsFiber": 9,
+    "numSchoolsFiberPercent": 75.0
   },
   "5970044": {
     "name": "Wilnsdorf",
@@ -7930,8 +7930,8 @@ export default {
     "studentsPerDesktop": 9.6,
     "studentsPerLaptop": 30.3,
     "studentsPerWhiteboard": 83.3,
-    "numSchoolsTotal": 3700,
-    "numSchoolsFiber": 1235,
-    "numSchoolsFiberPercent": 33.4
+    "numSchoolsTotal": 3691,
+    "numSchoolsFiber": 1248,
+    "numSchoolsFiberPercent": 33.8
   }
 }
