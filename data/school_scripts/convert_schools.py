@@ -3,7 +3,8 @@ import json
 
 path_device_csv = "raw/schools.csv"
 path_fiber_csv = "raw/fiber.csv"
-path_json = "../schools.js"
+path_json = "raw/schools.json"
+path_js = "../schools.js"
 
 data = {}
 
@@ -93,6 +94,9 @@ with open(path_fiber_csv) as file_csv:
         item["numSchoolsFiberPercent"] = to_float(row["anteil_glasfaser"])
 
 
+with open(path_js, "w", encoding="utf8") as file_js:
+    file_js.write("/* eslint-disable */\nexport default ")
+    json.dump(data, file_js, indent=2, ensure_ascii=False)
+
 with open(path_json, "w", encoding="utf8") as file_json:
-    file_json.write("/* eslint-disable */\nexport default ")
     json.dump(data, file_json, indent=2, ensure_ascii=False)
