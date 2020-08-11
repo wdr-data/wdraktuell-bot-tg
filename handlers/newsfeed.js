@@ -25,21 +25,28 @@ const getNews = async (index, options={ tag: 'Coronavirus' }) => {
         response.data[0].teaser.redaktionellerStand * 1000
     ).tz('Europe/Berlin').format('DD.MM.YY, HH:mm');
 
-    // Find image url
-    const mediaItems = Object.values(
-        response.data[0].teaser.containsMedia
-    ).sort(
+    // Get image url
+    let imageUrl = 'https://www1.wdr.de/nachrichten/wdr-aktuell-app-icon-100~_v-TeaserAufmacher.jpg';
+
+    const mediaItems = Object.values(response.data[0].teaser.containsMedia).sort(
         (a, b) => a.index - b.index
     );
-    const imageUrlTemplate = mediaItems.find(
-        (e) => e.mediaType === 'image'
-    ).url;
-    const imageCandidates = imageVariants.map(
-        (variant) => imageUrlTemplate.replace('%%FORMAT%%', variant)
-    );
+    const firstImageItem = mediaItems.find((e) => e.mediaType === 'image');
 
-    const statuses = await Promise.allSettled(imageCandidates.map((url) => request.head(url)));
-    const imageUrl = imageCandidates.find((candidate, i) => statuses[i].status === 'fulfilled');
+    if (firstImageItem) {
+        const imageUrlTemplate = firstImageItem.url;
+
+        const imageCandidates = imageVariants.map((variant) =>
+            imageUrlTemplate.replace('%%FORMAT%%', variant)
+        );
+
+        const statuses = await Promise.allSettled(
+            imageCandidates.map((url) => request.head(url))
+        );
+        imageUrl = imageCandidates.find(
+            (candidate, i) => statuses[i].status === 'fulfilled'
+        ) || imageUrl;
+    }
 
     const text = `<b>${
         escapeHTML(headline)
