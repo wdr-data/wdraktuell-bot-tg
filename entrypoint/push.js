@@ -15,7 +15,7 @@ import {
     markSent,
 } from '../lib/pushData';
 import ddb from '../lib/dynamodb';
-import { escapeHTML, trackLink, regexSlug } from '../lib/util';
+import { escapeHTML, trackLink, regexSlug, sleep } from '../lib/util';
 import Webtrekk from '../lib/webtrekk';
 import DynamoDbCrud from '../lib/dynamodbCrud';
 import { CustomContext as Context } from '../lib/customContext';
@@ -218,6 +218,8 @@ export const send = RavenLambdaWrapper.handler(Raven, async (event) => {
                 blocked: event.blocked,
             };
         }
+
+        await sleep(1000);
 
         const bot = new Telegram(process.env.TG_TOKEN);
 
