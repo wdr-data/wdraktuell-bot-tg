@@ -225,7 +225,7 @@ export const send = RavenLambdaWrapper.handler(Raven, async (event) => {
 
         if (event.type === 'report') {
             const report = event.data;
-            /*
+
             let headline;
             let unsubscribeNote = '';
             if (report.type === 'breaking') {
@@ -234,9 +234,6 @@ export const send = RavenLambdaWrapper.handler(Raven, async (event) => {
             } else {
                 headline = `<b>${escapeHTML(report.headline)}</b>`;
             }
-            */
-            const headline = `<b>${escapeHTML(report.headline)}</b>`;
-            const unsubscribeNote = '';
 
             const messageText = `${headline}\n\n${report.text}${unsubscribeNote}`;
 
