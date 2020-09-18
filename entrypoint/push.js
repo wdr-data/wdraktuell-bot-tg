@@ -62,7 +62,7 @@ export const fetch = RavenLambdaWrapper.handler(Raven, async (event) => {
             }
             return {
                 state: 'nextChunk',
-                timing: 'breaking',
+                timing: report.type,
                 type: 'report',
                 data: report,
                 preview: event.preview,
