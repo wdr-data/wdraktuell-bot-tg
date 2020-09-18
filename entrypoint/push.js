@@ -180,7 +180,7 @@ const makeFakeContext = (bot, user, event) => {
         },
     };
     if (report.link) {
-        let campaignType = 'breaking_push';
+        let campaignType = report.type === 'breaking' ? 'breaking_push' : 'evening_push';
         ctx.data.link = trackLink(
             report.link, {
                 campaignType,
