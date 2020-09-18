@@ -62,7 +62,7 @@ export const fetch = RavenLambdaWrapper.handler(Raven, async (event) => {
             }
             return {
                 state: 'nextChunk',
-                timing: 'breaking',
+                timing: report.type,
                 type: 'report',
                 data: report,
                 preview: event.preview,
@@ -180,7 +180,7 @@ const makeFakeContext = (bot, user, event) => {
         },
     };
     if (report.link) {
-        let campaignType = 'breaking_push';
+        let campaignType = report.type === 'breaking' ? 'breaking_push' : 'evening_push';
         ctx.data.link = trackLink(
             report.link, {
                 campaignType,
@@ -228,7 +228,6 @@ export const send = RavenLambdaWrapper.handler(Raven, async (event) => {
 
             let headline;
             let unsubscribeNote = '';
-
             if (report.type === 'breaking') {
                 unsubscribeNote = '\n\nUm Eilmeldungen abzubestellen, schreibe "Stop".';
                 headline = `🚨 <b>${escapeHTML(report.headline)}</b>`;
