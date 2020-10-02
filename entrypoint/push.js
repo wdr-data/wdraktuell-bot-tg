@@ -237,6 +237,13 @@ export const send = RavenLambdaWrapper.handler(Raven, async (event) => {
 
             const messageText = `${headline}\n\n${report.text}${unsubscribeNote}`;
 
+            if (!report.attachment && report.type === 'breaking') {
+                report.attachment= {
+                    processed: 'https://images.informant.einslive.de/TG_Eilmeldung_7-2b2154a9-3616-4eff-930d-1f4d789dd072.png',
+                    title: 'Eilmeldung',
+                };
+            }
+
             await Promise.all(users.map(async (user) => {
                 const ctx = makeFakeContext(bot, user, event);
                 try {
