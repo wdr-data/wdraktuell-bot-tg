@@ -13,9 +13,9 @@ const imageVariants = [
     'TeaserAufmacher',
 ];
 
-const getNews = async (index, options={ tag: 'Coronavirus' }) => {
+const getNews = async (index, options = { tag: 'Schlagzeilen' }) => {
     let response;
-    if (options.tag === 'Schlagzeile' ) {
+    if (options.tag === 'Schlagzeilen' ) {
         response = await request({
             uri: urls.curatedNewsFeed(index, 1),
             json: true,
@@ -134,7 +134,7 @@ const createElement = async (response, index, tag) => {
     return { text, imageUrl, extra };
 };
 
-export const handleNewsfeedStart = async (ctx, options={ tag: 'Schlagzeilen' }) => {
+export const handleNewsfeedStart = async (ctx, options = { tag: 'Schlagzeilen' }) => {
     const { imageUrl, extra } = await getNews(1, options);
     return ctx.replyWithPhoto(imageUrl, extra);
 };
