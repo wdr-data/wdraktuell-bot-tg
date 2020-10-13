@@ -14,21 +14,46 @@ const imageVariants = [
 ];
 
 const getNews = async (index, options={ tag: 'Coronavirus' }) => {
-    const { tag } = options;
-    const response = await request({
-        uri: urls.newsfeedByTopicCategories(index, 1, tag),
-        json: true,
-    });
-    const headline = response.data[0].teaser.schlagzeile;
-    const teaserText = response.data[0].teaser.teaserText.map((text) => ` • ${text}`).join('\n');
+    let response;
+    if (options.tag === 'Schlagzeile' ) {
+        response = await request({
+            uri: urls.curatedNewsFeed(index, 1),
+            json: true,
+        });
+    } else {
+        response = await request({
+            uri: urls.newsfeedByTopicCategories(index, 1, options.tag),
+            json: true,
+        });
+    }
+    return createElement(response, index, options.tag);
+};
+
+const createElement = async (response, index, tag) => {
+    let content = response.data[0];
+    if (response.data[0].teaser) {
+        content = response.data[0].teaser;
+    }
+
+    const headline = content.schlagzeile ? content.schlagzeile : content.title;
+    let teaserText = '';
+    if (content.teaserText) {
+        if (content.teaserText.length > 1) {
+            teaserText = content.teaserText
+                .map((text) => ` • ${text}`)
+                .join('\n');
+        } else {
+            teaserText = content.teaserText[0];
+        }
+    }
     const lastUpdate = moment(
-        response.data[0].teaser.redaktionellerStand * 1000
+        content.redaktionellerStand * 1000
     ).tz('Europe/Berlin').format('DD.MM.YY, HH:mm');
 
     // Get image url
-    let imageUrl = 'https://www1.wdr.de/nachrichten/wdr-aktuell-app-icon-100~_v-TeaserAufmacher.jpg';
+    let imageUrl = 'https://www1.wdr.de/nachrichten/wdr-aktuell-telegram-messenger-100~_v-ARDFotogalerie.jpg';
 
-    const mediaItems = Object.values(response.data[0].teaser.containsMedia).sort(
+    const mediaItems = Object.values(content.containsMedia).sort(
         (a, b) => a.index - b.index
     );
     const firstImageItem = mediaItems.find((e) => e.mediaType === 'image');
@@ -58,9 +83,9 @@ const getNews = async (index, options={ tag: 'Coronavirus' }) => {
 
     // tracklink
     const linkButton = Markup.urlButton(`🔗 Lesen`, trackLink(
-        response.data[0].teaser.shareLink, {
-            campaignType: 'newsfeed',
-            campaignName: 'coronavirus',
+        content.shareLink, {
+            campaignType: `${tag}-newsfeed`,
+            campaignName: headline,
             campaignId: 'bot',
         })
     );
@@ -77,7 +102,7 @@ const getNews = async (index, options={ tag: 'Coronavirus' }) => {
                     track: {
                         category: 'Feature',
                         event: `Newsfeed`,
-                        label: 'Zurück',
+                        label: tag,
                         subType: index-1,
                     },
                 })
@@ -95,7 +120,7 @@ const getNews = async (index, options={ tag: 'Coronavirus' }) => {
                     track: {
                         category: 'Feature',
                         event: `Newsfeed`,
-                        label: 'Vor',
+                        label: tag,
                         subType: index+1,
                     },
                 })
@@ -109,13 +134,14 @@ const getNews = async (index, options={ tag: 'Coronavirus' }) => {
     return { text, imageUrl, extra };
 };
 
-export const handleNewsfeedStart = async (ctx) => {
-    const { imageUrl, extra } = await getNews(1);
+export const handleNewsfeedStart = async (ctx, options={ tag: 'Schlagzeilen' }) => {
+    const { imageUrl, extra } = await getNews(1, options);
     return ctx.replyWithPhoto(imageUrl, extra);
 };
 
 export const handleNewsfeedPage = async (ctx) => {
-    const { imageUrl, extra } = await getNews(ctx.data.next);
+    const options = { tag: ctx.data.tag };
+    const { imageUrl, extra } = await getNews(ctx.data.next, options);
     const media ={ type: 'photo', media: imageUrl, caption: extra.caption, 'parse_mode': 'HTML' };
     return ctx.editMessageMedia(media, extra);
 };
