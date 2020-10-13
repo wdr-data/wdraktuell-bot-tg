@@ -20,6 +20,7 @@ import {
     handleOnboardingPushBreaking,
 } from '../handlers/onboarding';
 import { handleSubscriptionsCommand } from '../handlers/subscriptions';
+import { handleShareBotCommand } from '../handlers/share';
 import { actions } from '../handlers';
 import handleDataPolicy from '../handlers/dataPolicy';
 import handleReport from '../handlers/report';
@@ -28,7 +29,7 @@ import handleReportAudio from '../handlers/reportAudio';
 import handleQuizResponse from '../handlers/quizResponse';
 import handlePushOutro from '../handlers/pushOutro';
 import { handleSurvey } from '../handlers/survey';
-import { handleNewsfeedPage } from '../handlers/newsfeed';
+import { handleNewsfeedPage, handleNewsfeedStart } from '../handlers/newsfeed';
 import { handleLocation as handleLocationSchools } from '../handlers/locationSchools';
 import { handleLocation as handleLocationCorona } from '../handlers/locationCorona';
 
@@ -80,6 +81,8 @@ export const update = async (event, context, callback) => {
 
         bot.command('einstellungen', handleSubscriptionsCommand);
         bot.command('datenschutz', handleDataPolicy);
+        bot.command('teilen', handleShareBotCommand);
+        bot.command('schlagzeilen', handleNewsfeedStart);
 
         for (const [ action, handler ] of Object.entries(actions)) {
             bot.action(action, handler);
