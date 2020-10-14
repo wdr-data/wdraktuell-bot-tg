@@ -53,8 +53,11 @@ export const handleCity = async (ctx, location) => {
     let indicator = '';
     if (covidDataCity.lastSevenDaysPer100k >= 50) {
         indicator = '🟥';
+        incidenceText = await getFaq(`incidence50`);
     } else if (covidDataCity.lastSevenDaysPer100k >= 35) {
         indicator = '🟧';
+        incidenceText = await getFaq(`incidence35`);
+
     }
 
     /* eslint-disable */
