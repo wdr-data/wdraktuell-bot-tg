@@ -82,7 +82,7 @@ export const update = async (event, context, callback) => {
         bot.command('einstellungen', handleSubscriptionsCommand);
         bot.command('datenschutz', handleDataPolicy);
         bot.command('teilen', handleShareBotCommand);
-        bot.command('schlagzeilen', handleNewsfeedStart);
+        bot.command('schlagzeilen', async (ctx) => handleNewsfeedStart(ctx));
 
         for (const [ action, handler ] of Object.entries(actions)) {
             bot.action(action, handler);
