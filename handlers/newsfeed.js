@@ -51,7 +51,7 @@ const createElement = async (response, index, tag) => {
     ).tz('Europe/Berlin').format('DD.MM.YY, HH:mm');
 
     // Get image url
-    let imageUrl = 'https://www1.wdr.de/nachrichten/wdr-aktuell-telegram-messenger-100~_v-ARDFotogalerie.jpg';
+    let imageUrl = 'https://images.informant.einslive.de/telegram-placeholder-a963668c-ec7a-4048-9232-dd15905ef26a.jpg';
 
     const mediaItems = Object.values(content.containsMedia).sort(
         (a, b) => a.index - b.index
