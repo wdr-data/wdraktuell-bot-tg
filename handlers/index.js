@@ -7,6 +7,7 @@ import { handleFaq } from './faq';
 import handleDataPolicy from './dataPolicy';
 import { handleDialogflowLocation } from './location';
 import { handleNewsfeedStart } from './newsfeed';
+import { handleShareBotCommand } from './share';
 
 export const actions = {
     subscriptions: handleSubscriptions,
@@ -16,7 +17,9 @@ export const actions = {
     faq: handleFaq,
     faq_data_protection: handleDataPolicy,
     location: handleDialogflowLocation,
+    share: handleShareBotCommand,
     location_corona: (ctx) => handleDialogflowLocation(ctx, { type: 'corona' }),
     location_schools: (ctx) => handleDialogflowLocation(ctx, { type: 'schools' }),
-    newsfeed_corona: handleNewsfeedStart,
+    newsfeed_corona: (ctx) => handleNewsfeedStart(ctx, { tag: 'Coronavirus' }),
+    newsfeed_curated: handleNewsfeedStart,
 };

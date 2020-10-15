@@ -42,16 +42,21 @@ export const handleCity = async (ctx, location) => {
             campaignId: 'covid',
         });
     const ddjLink = `\n🔗 <a href="${escapeHTML(ddjUrl)}">${
-        escapeHTML(`Aktuelle Zahlen zur Corona-Krise in NRW`)
+        escapeHTML(`Aktuelle Zahlen zur Corona-Pandemie in NRW`)
     }</a>`;
+
+    let incidenceText = {
+        text: 'Steigt die Zahl der Neuinfektionen in den vergangenen 7 Tagen ' +
+            'pro 100.000 Einwohner über 35, dann muss der Ort Maßnahmen zur Eindämmung ergreifen.',
+    };
 
     let indicator = '';
     if (covidDataCity.lastSevenDaysPer100k >= 50) {
         indicator = '🟥';
-    } else if (covidDataCity.lastSevenDaysPer100k >= 25) {
+        incidenceText = await getFaq(`incidence50`);
+    } else if (covidDataCity.lastSevenDaysPer100k >= 35) {
         indicator = '🟧';
-    } else if (covidDataCity.lastSevenDaysPer100k > 10) {
-        indicator = '🟨';
+        incidenceText = await getFaq(`incidence35`);
     }
 
     /* eslint-disable */
@@ -69,7 +74,7 @@ export const handleCity = async (ctx, location) => {
         covidDataCity.recovered
     }\nTodesfälle: ${
         covidDataCity.dead
-    }\n\nSteigt die Zahl der Neuinfektionen in den vergangenen 7 Tagen pro 100.000 Einwohner über 50, dann muss der Ort Maßnahmen zur Eindämmung ergreifen.\n
+    }\n\n${incidenceText.text}\n
 Aktuelle Zahlen für NRW im Überblick:\nGemeldete Infektionen in den vergangenen 7 Tagen pro 100.000 Einwohner: ${
         covidDataNRW.lastSevenDaysPer100k
     }\nGemeldete Infektionen in den vergangenen 7 Tagen: ${
