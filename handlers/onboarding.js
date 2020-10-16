@@ -1,4 +1,3 @@
-import Raven from 'raven';
 import Markup from 'telegraf/markup';
 
 import getFaq from '../lib/faq';
