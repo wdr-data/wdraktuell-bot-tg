@@ -32,6 +32,7 @@ import { handleSurvey } from '../handlers/survey';
 import { handleNewsfeedPage, handleNewsfeedStart } from '../handlers/newsfeed';
 import { handleLocation as handleLocationSchools } from '../handlers/locationSchools';
 import { handleLocation as handleLocationCorona } from '../handlers/locationCorona';
+import { handleFaq } from '../handlers/faq';
 
 const checkForToken = (event) => decodeURIComponent(
     event.pathParameters.token) === process.env.TG_TOKEN;
@@ -83,6 +84,10 @@ export const update = async (event, context, callback) => {
         bot.command('datenschutz', handleDataPolicy);
         bot.command('teilen', handleShareBotCommand);
         bot.command('schlagzeilen', async (ctx) => handleNewsfeedStart(ctx));
+        bot.command('features', async (ctx) => {
+            ctx['data'] = { faq: 'list_of_features' };
+            return handleFaq(ctx);
+        });
 
         for (const [ action, handler ] of Object.entries(actions)) {
             bot.action(action, handler);
