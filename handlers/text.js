@@ -2,6 +2,7 @@ import dialogflow from 'dialogflow';
 
 import { actions } from './index.js';
 import { handleContact } from './contact.js';
+import { handleFaq } from './faq.js';
 
 const handleText = async (ctx) => {
     const text = ctx.message.text;
@@ -82,6 +83,17 @@ const handleText = async (ctx) => {
                 subType: result.action,
             });
             return actions[result.action](ctx);
+        }
+
+        if (result.action.startsWith('faq_')) {
+            ctx['data'] = { 'faq': result.action.replace('faq_', '') };
+            ctx.track({
+                category: 'Unterhaltung',
+                event: 'Dialogflow',
+                label: result.intent.displayName,
+                subType: `FAQ - ${ctx.data.faq}`,
+            });
+            return handleFaq(ctx);
         }
 
         ctx.track({
