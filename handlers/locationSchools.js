@@ -114,7 +114,7 @@ export const handleAGS = async (ctx, ags) => {
 
     const ddjUrl = trackLink(
         'https://www1.wdr.de/nachrichten/digitalisierung-schulen-umfrage-kommunen-100.html', {
-            campaignType: 'unterhaltung',
+            campaignType: 'feature',
             campaignName: `Zahlen Digitalisierung Schulen`,
             campaignId: 'feature',
         });
