@@ -27,7 +27,7 @@ export const handleCity = async (ctx, location) => {
     const covidDataNRW = await getCovidNRWRKI();
 
     const studioUrl = trackLink(byStudios[location.studio].linkCorona, {
-        campaignType: 'unterhaltung',
+        campaignType: 'feature',
         campaignName: `Corona Info Studio ${location.studio}`,
         campaignId: 'covid',
     });
@@ -37,7 +37,7 @@ export const handleCity = async (ctx, location) => {
 
     const ddjUrl = trackLink(
         'https://www1.wdr.de/nachrichten/themen/coronavirus/corona-daten-nrw-100.html', {
-            campaignType: 'unterhaltung',
+            campaignType: 'feature',
             campaignName: `Zahlen Corona-Krise NRW`,
             campaignId: 'covid',
         });

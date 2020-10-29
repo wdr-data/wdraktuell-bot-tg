@@ -81,8 +81,8 @@ const chooseLocation = async (ctx, location) => {
     );
 
     const buttons = [
-        buttonSchool,
         buttonCorona,
+        buttonSchool,
     ];
     const extra = {};
     extra['reply_markup'] = Markup.inlineKeyboard(buttons.map((button) => [ button ]));

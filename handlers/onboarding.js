@@ -1,4 +1,3 @@
-import Raven from 'raven';
 import Markup from 'telegraf/markup';
 
 import getFaq from '../lib/faq';
@@ -43,18 +42,19 @@ const analyticsButtons = (variant, referral) => {
 };
 
 export const handleStart = async (ctx) => {
-    const referral = ctx.startPayload || undefined;
+    let referral = ctx.startPayload || undefined;
     let greeting;
     if (referral) {
         try {
             greeting = await getFaq(`greeting_${referral}`);
         } catch (err) {
+            console.log(`FAQ for referral ${referral} not found!`);
             console.log(err);
-            Raven.captureException(err);
+            greeting = await getFaq(`greeting_default`);
         }
-    }
-    if (!greeting) {
+    } else {
         greeting = await getFaq(`greeting_default`);
+        referral = 'default';
     }
 
     await ctx.replyFullNewsBase(greeting);
