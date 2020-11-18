@@ -29,7 +29,11 @@ import handleReportAudio from '../handlers/reportAudio';
 import handleQuizResponse from '../handlers/quizResponse';
 import handlePushOutro from '../handlers/pushOutro';
 import { handleSurvey } from '../handlers/survey';
-import { handleNewsfeedPage, handleNewsfeedStart } from '../handlers/newsfeed';
+import {
+    handleNewsfeedPage,
+    handleNewsfeedStart,
+    handleLocationRegions,
+} from '../handlers/newsfeed';
 import { handleLocation as handleLocationSchools } from '../handlers/locationSchools';
 import { handleLocation as handleLocationCorona } from '../handlers/locationCorona';
 import { handleFaq } from '../handlers/faq';
@@ -79,6 +83,7 @@ export const update = async (event, context, callback) => {
         bot.action('newsfeed', handleNewsfeedPage);
         bot.action('location_school', handleLocationSchools);
         bot.action('location_corona', handleLocationCorona);
+        bot.action('location_region', handleLocationRegions);
 
         bot.command('einstellungen', handleSubscriptionsCommand);
         bot.command('datenschutz', handleDataPolicy);

@@ -6,12 +6,18 @@ import 'moment-timezone';
 import urls from '../lib/urls';
 import actionData from '../lib/actionData';
 import { escapeHTML, trackLink } from '../lib/util';
+import { byAGS } from '../data/locationMappings';
 
 const imageVariants = [
     'ARDFotogalerie',
     'gseapremiumxl',
     'TeaserAufmacher',
 ];
+
+export const handleLocationRegions = async (ctx) => {
+    const location = byAGS[ctx.data.ags];
+    return handleNewsfeedStart(ctx, { tag: location.district });
+};
 
 const getNews = async (index, options = { tag: 'Schlagzeilen' }) => {
     let response;
