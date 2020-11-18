@@ -134,11 +134,16 @@ const handlePushFailed = async (error, tgid) => {
     Raven.captureException(error);
     console.error(error);
 
+    const blockedErrors = [
+        'Forbidden: bot was blocked by the user',
+        'Forbidden: user is deactivated',
+    ];
+
     if (error.code === 'ETIMEDOUT') {
         console.error('Request timed out!');
         return reasons.TIMED_OUT;
     } else if (
-        error.code === 403 && error.description === 'Forbidden: bot was blocked by the user'
+        error.code === 403 && blockedErrors.includes(error.description)
     ) {
         const subscriptions = new DynamoDbCrud(process.env.DYNAMODB_SUBSCRIPTIONS, 'tgid');
         await subscriptions.remove(tgid);
