@@ -23,6 +23,16 @@ import { CustomContext as Context } from '../lib/customContext';
 import fragmentSender from '../lib/fragmentSender';
 
 
+const fromPrevious = (event, change) => ({
+    timing: event.timing,
+    type: event.type,
+    data: event.data,
+    options: event.options,
+    stats: event.stats,
+    ...change,
+});
+
+
 export const proxy = RavenLambdaWrapper.handler(Raven, async (event) => {
     const params = {
         stateMachineArn: process.env.statemachine_arn,
@@ -60,12 +70,12 @@ const fetchReport = async (event) => {
             json: true,
         };
         // Authorize so we can access unpublished items
-        if (event.preview) {
+        if (event.options.preview) {
             params.headers = { Authorization: 'Token ' + process.env.CMS_API_TOKEN };
         }
         const report = await request(params);
         console.log('Starting to send report with id:', report.id);
-        if (!event.preview) {
+        if (!event.options.preview) {
             await markSending(report.id, 'report');
         }
         return {
@@ -73,9 +83,11 @@ const fetchReport = async (event) => {
             timing: report.type,
             type: 'report',
             data: report,
-            preview: event.preview,
-            recipients: 0,
-            blocked: 0,
+            options: event.options,
+            stats: {
+                recipients: 0,
+                blocked: 0,
+            },
         };
     } catch (error) {
         console.log('Sending report failed: ', JSON.stringify(error, null, 2));
@@ -86,7 +98,7 @@ const fetchReport = async (event) => {
 const fetchPush = async (event) => {
     try {
         let push, timing;
-        if (event.preview) {
+        if (event.options.preview) {
             const params = {
                 uri: urls.push(event.push),
                 json: true,
@@ -94,7 +106,7 @@ const fetchPush = async (event) => {
             // Authorize so we can access unpublished items
             params.headers = { Authorization: 'Token ' + process.env.CMS_API_TOKEN };
             push = await request(params);
-        } else if (event.manual) {
+        } else if (event.options.manual) {
             const params = {
                 uri: urls.push(event.push),
                 json: true,
@@ -115,7 +127,7 @@ const fetchPush = async (event) => {
             });
         }
         console.log('Starting to send push with id:', push.id);
-        if (!event.preview) {
+        if (!event.options.preview) {
             await markSending(push.id, 'push');
         }
         return {
@@ -123,9 +135,11 @@ const fetchPush = async (event) => {
             timing,
             type: 'push',
             data: push,
-            preview: event.preview,
-            recipients: 0,
-            blocked: 0,
+            options: event.options,
+            stats: {
+                recipients: 0,
+                blocked: 0,
+            },
         };
     } catch (error) {
         console.log('Sending push failed: ', JSON.stringify(error, null, 2));
@@ -182,7 +196,7 @@ const makeFakeContext = (bot, user, event) => {
         type: 'report',
         quiz: report.is_quiz,
         audio: report.audio,
-        preview: event.preview,
+        preview: event.options.preview,
         track: {
             category: `Breaking-Push-${report.id}`,
             event: `Breaking Meldung`,
@@ -212,8 +226,8 @@ export const send = RavenLambdaWrapper.handler(Raven, async (event) => {
     try {
         let users, last;
 
-        if (event.preview) {
-            users = [ { tgid: event.preview } ];
+        if (event.options.preview) {
+            users = [ { tgid: event.options.preview } ];
         } else {
             const result = await getUsers(event.timing, event.start);
             users = result.users;
@@ -221,16 +235,10 @@ export const send = RavenLambdaWrapper.handler(Raven, async (event) => {
         }
 
         if (users.length === 0) {
-            return {
+            return fromPrevious(event, {
                 state: 'finished',
                 id: event.data.id,
-                type: event.type,
-                preview: event.preview,
-                timing: event.timing,
-                data: event.data,
-                recipients: event.recipients,
-                blocked: event.blocked,
-            };
+            });
         }
 
         await sleep(1000);
@@ -246,28 +254,16 @@ export const send = RavenLambdaWrapper.handler(Raven, async (event) => {
 
         // LastEvaluatedKey is empty, scan is finished
         if (!last) {
-            return {
+            return fromPrevious(event, {
                 state: 'finished',
                 id: event.data.id,
-                type: event.type,
-                preview: event.preview,
-                timing: event.timing,
-                data: event.data,
-                recipients: event.recipients,
-                blocked: event.blocked,
-            };
+            });
         }
 
-        return {
+        return fromPrevious(event, {
             state: 'nextChunk',
-            timing: event.timing,
-            type: event.type,
-            data: event.data,
             start: last,
-            preview: event.preview,
-            recipients: event.recipients,
-            blocked: event.blocked,
-        };
+        });
     } catch (err) {
         console.error('Sending failed:', err);
         throw err;
@@ -294,11 +290,11 @@ const sendReport = async (event, bot, users) => {
                     },
                 }
             );
-            event.recipients++;
+            event.stats.recipients++;
         } catch (err) {
             const reason = await handlePushFailed(err, user.tgid);
             if (reason === reasons.BLOCKED) {
-                event.blocked++;
+                event.stats.blocked++;
             }
         }
     }));
@@ -306,33 +302,39 @@ const sendReport = async (event, bot, users) => {
 
 const sendPush = async (event, bot, users) => {
     const push = event.data;
-    const { messageText, extra } = assemblePush(push, event.preview);
+    const { messageText, extra } = assemblePush(push, event.options.preview);
 
     await Promise.all(users.map(async (user) => {
         try {
             await bot.sendMessage(user.tgid, messageText, extra);
-            event.recipients++;
+            event.stats.recipients++;
         } catch (err) {
             const reason = await handlePushFailed(err, user.tgid);
             if (reason === reasons.BLOCKED) {
-                event.blocked++;
+                event.stats.blocked++;
             }
         }
     }));
 };
 
-export function getUsers(timing, start = null, limit = 24) {
+export function getUsers(event, limit = 24) {
+    let FilterExpression = `${event.timing} = :p`;
+
+    if (event.options.timings) {
+        FilterExpression = event.options.timings.map((timing) => `${timing} = :p`).join(' or ');
+    }
+
     const params = {
         Limit: limit,
         TableName: process.env.DYNAMODB_SUBSCRIPTIONS,
-        FilterExpression: `${timing} = :p`,
+        FilterExpression,
         ExpressionAttributeValues: {
             ':p': true,
         },
     };
 
-    if (start) {
-        params.ExclusiveStartKey = start;
+    if (event.start) {
+        params.ExclusiveStartKey = event.start;
     }
     return new Promise((resolve, reject) => {
         ddb.scan(params, (err, data) => {
@@ -350,7 +352,7 @@ export function getUsers(timing, start = null, limit = 24) {
 export const finish = RavenLambdaWrapper.handler(Raven, function(event, context, callback) {
     console.log(`Sending of ${event.type} finished:`, event);
 
-    if (event.preview) {
+    if (event.options.preview) {
         console.log(`Only a preview, not marking as sent.`);
         return callback(null, {});
     }
@@ -376,8 +378,8 @@ export const finish = RavenLambdaWrapper.handler(Raven, function(event, context,
         event: 'Zugestellt',
         label: event.data.headline,
         publicationDate: event.data.pub_date || event.data.published_date,
-        recipients: event.recipients,
-        blocked: event.blocked,
+        recipients: event.stats.recipients,
+        blocked: event.stats.blocked,
     });
 
     markSent(event.id, event.type)
