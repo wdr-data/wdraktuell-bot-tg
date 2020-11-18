@@ -13,9 +13,10 @@ import {
     assemblePush,
     markSending,
     markSent,
+    assembleReport,
 } from '../lib/pushData';
 import ddb from '../lib/dynamodb';
-import { escapeHTML, trackLink, regexSlug, sleep } from '../lib/util';
+import { trackLink, regexSlug, sleep } from '../lib/util';
 import Webtrekk from '../lib/webtrekk';
 import DynamoDbCrud from '../lib/dynamodbCrud';
 import { CustomContext as Context } from '../lib/customContext';
@@ -46,35 +47,43 @@ export const fetch = RavenLambdaWrapper.handler(Raven, async (event) => {
     }
 
     if (event.report) {
-        try {
-            const params = {
-                uri: `${urls.report(event.report)}?withFragments=1`,
-                json: true,
-            };
-            // Authorize so we can access unpublished items
-            if (event.preview) {
-                params.headers = { Authorization: 'Token ' + process.env.CMS_API_TOKEN };
-            }
-            const report = await request(params);
-            console.log('Starting to send report with id:', report.id);
-            if (!event.preview) {
-                await markSending(report.id, 'report');
-            }
-            return {
-                state: 'nextChunk',
-                timing: report.type,
-                type: 'report',
-                data: report,
-                preview: event.preview,
-                recipients: 0,
-                blocked: 0,
-            };
-        } catch (error) {
-            console.log('Sending report failed: ', JSON.stringify(error, null, 2));
-            throw error;
-        }
+        return fetchReport(event);
+    } else if (event.push) {
+        return fetchPush(event);
     }
+});
 
+const fetchReport = async (event) => {
+    try {
+        const params = {
+            uri: `${urls.report(event.report)}?withFragments=1`,
+            json: true,
+        };
+        // Authorize so we can access unpublished items
+        if (event.preview) {
+            params.headers = { Authorization: 'Token ' + process.env.CMS_API_TOKEN };
+        }
+        const report = await request(params);
+        console.log('Starting to send report with id:', report.id);
+        if (!event.preview) {
+            await markSending(report.id, 'report');
+        }
+        return {
+            state: 'nextChunk',
+            timing: report.type,
+            type: 'report',
+            data: report,
+            preview: event.preview,
+            recipients: 0,
+            blocked: 0,
+        };
+    } catch (error) {
+        console.log('Sending report failed: ', JSON.stringify(error, null, 2));
+        throw error;
+    }
+};
+
+const fetchPush = async (event) => {
     try {
         let push, timing;
         if (event.preview) {
@@ -122,7 +131,7 @@ export const fetch = RavenLambdaWrapper.handler(Raven, async (event) => {
         console.log('Sending push failed: ', JSON.stringify(error, null, 2));
         throw error;
     }
-});
+};
 
 const reasons = {
     UNKNOWN: 'unknown',
@@ -229,65 +238,9 @@ export const send = RavenLambdaWrapper.handler(Raven, async (event) => {
         const bot = new Telegram(process.env.TG_TOKEN);
 
         if (event.type === 'report') {
-            const report = event.data;
-
-            let headline;
-            let unsubscribeNote = '';
-            if (report.type === 'breaking') {
-                unsubscribeNote = '\n\nUm Eilmeldungen abzubestellen, schreibe "Stop".';
-                headline = `🚨 <b>${escapeHTML(report.headline)}</b>`;
-            } else {
-                headline = `<b>${escapeHTML(report.headline)}</b>`;
-            }
-
-            const messageText = `${headline}\n\n${report.text}${unsubscribeNote}`;
-
-            if (!report.attachment && report.type === 'breaking') {
-                report.attachment= {
-                    processed: 'https://images.informant.einslive.de/TG_Eilmeldung_7-2b2154a9-3616-4eff-930d-1f4d789dd072.png',
-                    title: 'Eilmeldung',
-                };
-            }
-
-            await Promise.all(users.map(async (user) => {
-                const ctx = makeFakeContext(bot, user, event);
-                try {
-                    await fragmentSender(
-                        ctx,
-                        report.next_fragments,
-                        {
-                            ...report,
-                            text: messageText,
-                            extra: {
-                                'parse_mode': 'HTML',
-                                'disable_web_page_preview': true,
-                            },
-                        }
-                    );
-                    event.recipients++;
-                } catch (err) {
-                    const reason = await handlePushFailed(err, user.tgid);
-                    if (reason === reasons.BLOCKED) {
-                        event.blocked++;
-                    }
-                }
-            }));
+            await sendReport(event, bot, users);
         } else if (event.type === 'push') {
-            const push = event.data;
-            const bot = new Telegram(process.env.TG_TOKEN);
-            const { messageText, extra } = assemblePush(push, event.preview);
-
-            await Promise.all(users.map(async (user) => {
-                try {
-                    await bot.sendMessage(user.tgid, messageText, extra);
-                    event.recipients++;
-                } catch (err) {
-                    const reason = await handlePushFailed(err, user.tgid);
-                    if (reason === reasons.BLOCKED) {
-                        event.blocked++;
-                    }
-                }
-            }));
+            await sendPush(event, bot, users);
         }
         console.log(`${event.type} sent to ${users.length} users`);
 
@@ -320,6 +273,53 @@ export const send = RavenLambdaWrapper.handler(Raven, async (event) => {
         throw err;
     }
 });
+
+const sendReport = async (event, bot, users) => {
+    const report = event.data;
+
+    const { messageText } = assembleReport(report);
+
+    await Promise.all(users.map(async (user) => {
+        const ctx = makeFakeContext(bot, user, event);
+        try {
+            await fragmentSender(
+                ctx,
+                report.next_fragments,
+                {
+                    ...report,
+                    text: messageText,
+                    extra: {
+                        'parse_mode': 'HTML',
+                        'disable_web_page_preview': true,
+                    },
+                }
+            );
+            event.recipients++;
+        } catch (err) {
+            const reason = await handlePushFailed(err, user.tgid);
+            if (reason === reasons.BLOCKED) {
+                event.blocked++;
+            }
+        }
+    }));
+};
+
+const sendPush = async (event, bot, users) => {
+    const push = event.data;
+    const { messageText, extra } = assemblePush(push, event.preview);
+
+    await Promise.all(users.map(async (user) => {
+        try {
+            await bot.sendMessage(user.tgid, messageText, extra);
+            event.recipients++;
+        } catch (err) {
+            const reason = await handlePushFailed(err, user.tgid);
+            if (reason === reasons.BLOCKED) {
+                event.blocked++;
+            }
+        }
+    }));
+};
 
 export function getUsers(timing, start = null, limit = 24) {
     const params = {
