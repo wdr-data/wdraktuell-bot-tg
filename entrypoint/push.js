@@ -239,7 +239,7 @@ export const send = RavenLambdaWrapper.handler(Raven, async (event) => {
         if (event.options.preview) {
             users = [ { tgid: event.options.preview } ];
         } else {
-            const result = await getUsers(event.timing, event.start);
+            const result = await getUsers(event);
             users = result.users;
             last = result.last;
         }
