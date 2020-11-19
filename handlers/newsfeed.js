@@ -6,12 +6,20 @@ import 'moment-timezone';
 import urls from '../lib/urls';
 import actionData from '../lib/actionData';
 import { escapeHTML, trackLink } from '../lib/util';
+import { byAGS } from '../data/locationMappings';
 
 const imageVariants = [
     'ARDFotogalerie',
     'gseapremiumxl',
     'TeaserAufmacher',
 ];
+
+export const handleLocationRegions = async (ctx) => {
+    const location = byAGS[ctx.data.ags];
+    return handleNewsfeedStart(ctx, {
+        tag: location.sophoraDistrictTag,
+        location: location });
+};
 
 const getNews = async (index, options = { tag: 'Schlagzeilen' }) => {
     let response;
@@ -136,6 +144,15 @@ const createElement = async (response, index, tag) => {
 
 export const handleNewsfeedStart = async (ctx, options = { tag: 'Schlagzeilen' }) => {
     const { imageUrl, extra } = await getNews(1, options);
+
+    let introText = `Hier unser aktuellen Nachrichten zum Thema "${options.tag}":`;
+    if ('location' in options) {
+        introText = `Das ist gerade in der Region ${options.location.district} wichtig:`;
+    } else if (options.tag === 'Schlagzeilen') {
+        introText = 'Hier die neuesten Meldungen von WDR aktuell:';
+    }
+
+    await ctx.reply(introText);
     return ctx.replyWithPhoto(imageUrl, extra);
 };
 

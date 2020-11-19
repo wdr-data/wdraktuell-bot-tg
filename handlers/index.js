@@ -21,5 +21,6 @@ export const actions = {
     location_corona: (ctx) => handleDialogflowLocation(ctx, { type: 'corona' }),
     location_schools: (ctx) => handleDialogflowLocation(ctx, { type: 'schools' }),
     newsfeed_corona: (ctx) => handleNewsfeedStart(ctx, { tag: 'Coronavirus' }),
+    location_region: (ctx) => handleDialogflowLocation(ctx, { type: 'regions' }),
     newsfeed_curated: handleNewsfeedStart,
 };
