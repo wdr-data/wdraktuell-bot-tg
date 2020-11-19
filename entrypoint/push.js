@@ -83,7 +83,7 @@ const fetchReport = async (event) => {
             timing: report.type,
             type: 'report',
             data: report,
-            options: event.options,
+            options: event.options || {},
             stats: {
                 recipients: 0,
                 blocked: 0,
@@ -120,6 +120,8 @@ const fetchPush = async (event) => {
                 console.log(e);
                 return {
                     state: 'finished',
+                    error: true,
+                    options: event.options || {},
                 };
             }
             push = await getLatestPush(timing, {
@@ -135,7 +137,7 @@ const fetchPush = async (event) => {
             timing,
             type: 'push',
             data: push,
-            options: event.options,
+            options: event.options || {},
             stats: {
                 recipients: 0,
                 blocked: 0,
@@ -359,6 +361,11 @@ export function getUsers(event, limit = 24) {
 
 export const finish = RavenLambdaWrapper.handler(Raven, function(event, context, callback) {
     console.log(`Sending of ${event.type} finished:`, event);
+
+    if (event.error) {
+        console.log('Error state, exiting early');
+        return;
+    }
 
     if (event.options.preview) {
         console.log(`Only a preview, not marking as sent.`);
