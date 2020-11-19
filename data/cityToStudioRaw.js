@@ -10,7 +10,7 @@ export default [
 ,
 {"city":"Alfter","type":"Gemeinde","keyCity":"5382004","state":"Nordrhein-Westfalen","studioRadio":"Köln","studio":"Bonn","region":"Rheinland","district":"Rhein-Sieg-Kreis"}
 ,
-{"city":"Alpen","type":"Gemeinde","keyCity":"5170004","state":"Nordrhein-Westfalen","studioRadio":"Duisburg","studio":"Duisburg","region":"Rheinland","district":"Wesel"},
+{"city":"Alpen","type":"Gemeinde","keyCity":"5170004","state":"Nordrhein-Westfalen","studioRadio":"Duisburg","studio":"Duisburg","region":"Rheinland","district":"Kreis Wesel"},
 {"city":"Alsdorf","type":"Stadt","keyCity":"5334004","state":"Nordrhein-Westfalen","studioRadio":"Aachen","studio":"Aachen","region":"Rheinland","district":"Städteregion Aachen"}
 ,
 {"city":"Altena","type":"Stadt","keyCity":"5962004","state":"Nordrhein-Westfalen","studioRadio":"Siegen","studio":"Siegen","region":"Westfalen","district":"Märkischer Kreis"}
@@ -106,7 +106,7 @@ export default [
 {"city":"Delbrück","type":"Stadt","keyCity":"5774020","state":"Nordrhein-Westfalen","studioRadio":"Bielefeld","studio":"Bielefeld","region":"Westfalen","district":"Kreis Paderborn"}
 ,
 {"city":"Detmold","type":"Stadt","keyCity":"5766020","state":"Nordrhein-Westfalen","studioRadio":"Bielefeld","studio":"Bielefeld","region":"Westfalen","district":"Lippe"},
-{"city":"Dinslaken","type":"Stadt","keyCity":"5170008","state":"Nordrhein-Westfalen","studioRadio":"Duisburg","studio":"Duisburg","region":"Rheinland","district":"Wesel"},
+{"city":"Dinslaken","type":"Stadt","keyCity":"5170008","state":"Nordrhein-Westfalen","studioRadio":"Duisburg","studio":"Duisburg","region":"Rheinland","district":"Kreis Wesel"},
 {"city":"Dörentrup","type":"Gemeinde","keyCity":"5766024","state":"Nordrhein-Westfalen","studioRadio":"Bielefeld","studio":"Bielefeld","region":"Westfalen","district":"Lippe"}
 ,
 {"city":"Dormagen","type":"Stadt","keyCity":"5162004","state":"Nordrhein-Westfalen","studioRadio":"Düsseldorf","studio":"Düsseldorf","region":"Rheinland","district":"Rhein-Kreis Neuss"}
@@ -196,7 +196,7 @@ export default [
 {"city":"Halver","type":"Stadt","keyCity":"5962012","state":"Nordrhein-Westfalen","studioRadio":"Siegen","studio":"Siegen","region":"Westfalen","district":"Märkischer Kreis"}
 ,
 {"city":"Hamm","type":"Stadt","keyCity":"5915000","state":"Nordrhein-Westfalen","studioRadio":"Dortmund","studio":"Dortmund","region":"Ruhrgebiet","district":"Hamm"},
-{"city":"Hamminkeln","type":"Stadt","keyCity":"5170012","state":"Nordrhein-Westfalen","studioRadio":"Duisburg","studio":"Duisburg","region":"Rheinland","district":"Wesel"},
+{"city":"Hamminkeln","type":"Stadt","keyCity":"5170012","state":"Nordrhein-Westfalen","studioRadio":"Duisburg","studio":"Duisburg","region":"Rheinland","district":"Kreis Wesel"},
 {"city":"Harsewinkel","type":"Stadt","keyCity":"5754016","state":"Nordrhein-Westfalen","studioRadio":"Bielefeld","studio":"Bielefeld","region":"Westfalen","district":"Kreis Gütersloh"}
 ,
 {"city":"Hattingen","type":"Stadt","keyCity":"5954016","state":"Nordrhein-Westfalen","studioRadio":"Essen","studio":"Dortmund","region":"Ruhrgebiet","district":"Ennepe-Ruhr-Kreis"},
@@ -249,7 +249,7 @@ export default [
 ,
 {"city":"Hüllhorst","type":"Gemeinde","keyCity":"5770016","state":"Nordrhein-Westfalen","studioRadio":"Bielefeld","studio":"Bielefeld","region":"Westfalen","district":"Kreis Minden-Lübbecke"}
 ,
-{"city":"Hünxe","type":"Gemeinde","keyCity":"5170016","state":"Nordrhein-Westfalen","studioRadio":"Duisburg","studio":"Duisburg","region":"Rheinland","district":"Wesel"}
+{"city":"Hünxe","type":"Gemeinde","keyCity":"5170016","state":"Nordrhein-Westfalen","studioRadio":"Duisburg","studio":"Duisburg","region":"Rheinland","district":"Kreis Wesel"}
 ,
 {"city":"Hürtgenwald","type":"Gemeinde","keyCity":"5358016","state":"Nordrhein-Westfalen","studioRadio":"Aachen","studio":"Aachen","region":"Rheinland","district":"Kreis Düren"}
 ,
@@ -274,7 +274,7 @@ export default [
 {"city":"Kall","type":"Gemeinde","keyCity":"5366024","state":"Nordrhein-Westfalen","studioRadio":"Aachen","studio":"Aachen","region":"Rheinland","district":"Kreis Euskirchen"},
 {"city":"Kalletal","type":"Gemeinde","keyCity":"5766036","state":"Nordrhein-Westfalen","studioRadio":"Bielefeld","studio":"Bielefeld","region":"Westfalen","district":"Lippe"},
 {"city":"Kamen","type":"Stadt","keyCity":"5978020","state":"Nordrhein-Westfalen","studioRadio":"Dortmund","studio":"Dortmund","region":"Ruhrgebiet","district":"Kreis Unna"},
-{"city":"Kamp-Lintfort","type":"Stadt","keyCity":"5170020","state":"Nordrhein-Westfalen","studioRadio":"Duisburg","studio":"Duisburg","region":"Rheinland","district":"Wesel"},
+{"city":"Kamp-Lintfort","type":"Stadt","keyCity":"5170020","state":"Nordrhein-Westfalen","studioRadio":"Duisburg","studio":"Duisburg","region":"Rheinland","district":"Kreis Wesel"},
 {"city":"Kempen","type":"Stadt","keyCity":"5166012","state":"Nordrhein-Westfalen","studioRadio":"Düsseldorf","studio":"Düsseldorf","region":"Rheinland","district":"Kreis Viersen"}
 ,
 {"city":"Kerken","type":"Gemeinde","keyCity":"5154028","state":"Nordrhein-Westfalen","studioRadio":"Duisburg","studio":"Duisburg","region":"Rheinland","district":"Kleve"},
@@ -373,7 +373,7 @@ export default [
 ,
 {"city":"Minden","type":"Stadt","keyCity":"5770024","state":"Nordrhein-Westfalen","studioRadio":"Bielefeld","studio":"Bielefeld","region":"Westfalen","district":"Kreis Minden-Lübbecke"}
 ,
-{"city":"Moers","type":"Stadt","keyCity":"5170024","state":"Nordrhein-Westfalen","studioRadio":"Duisburg","studio":"Duisburg","region":"Rheinland","district":"Wesel"},
+{"city":"Moers","type":"Stadt","keyCity":"5170024","state":"Nordrhein-Westfalen","studioRadio":"Duisburg","studio":"Duisburg","region":"Rheinland","district":"Kreis Wesel"},
 {"city":"Möhnesee","type":"Gemeinde","keyCity":"5974032","state":"Nordrhein-Westfalen","studioRadio":"Siegen","studio":"Siegen","region":"Westfalen","district":"Kreis Soest"}
 ,
 {"city":"Mönchengladbach","type":"Stadt","keyCity":"5116000","state":"Nordrhein-Westfalen","studioRadio":"Düsseldorf","studio":"Düsseldorf","region":"Rheinland","district":"Mönchengladbach"}
@@ -400,7 +400,7 @@ export default [
 ,
 {"city":"Neuenrade","type":"Stadt","keyCity":"5962048","state":"Nordrhein-Westfalen","studioRadio":"Siegen","studio":"Siegen","region":"Westfalen","district":"Märkischer Kreis"}
 ,
-{"city":"Neukirchen-Vluyn","type":"Stadt","keyCity":"5170028","state":"Nordrhein-Westfalen","studioRadio":"Duisburg","studio":"Duisburg","region":"Rheinland","district":"Wesel"},
+{"city":"Neukirchen-Vluyn","type":"Stadt","keyCity":"5170028","state":"Nordrhein-Westfalen","studioRadio":"Duisburg","studio":"Duisburg","region":"Rheinland","district":"Kreis Wesel"},
 {"city":"Neunkirchen","type":"Gemeinde","keyCity":"5970036","state":"Nordrhein-Westfalen","studioRadio":"Siegen","studio":"Siegen","region":"Westfalen","district":"Kreis Siegen-Wittgenstein"},
 {"city":"Neunkirchen-Seelscheid","type":"Gemeinde","keyCity":"5382040","state":"Nordrhein-Westfalen","studioRadio":"Köln","studio":"Bonn","region":"Rheinland","district":"Rhein-Sieg-Kreis"}
 ,
@@ -476,7 +476,7 @@ export default [
 ,
 {"city":"Rheinbach","type":"Stadt","keyCity":"5382048","state":"Nordrhein-Westfalen","studioRadio":"Köln","studio":"Bonn","region":"Rheinland","district":"Rhein-Sieg-Kreis"}
 ,
-{"city":"Rheinberg","type":"Stadt","keyCity":"5170032","state":"Nordrhein-Westfalen","studioRadio":"Duisburg","studio":"Duisburg","region":"Rheinland","district":"Wesel"},
+{"city":"Rheinberg","type":"Stadt","keyCity":"5170032","state":"Nordrhein-Westfalen","studioRadio":"Duisburg","studio":"Duisburg","region":"Rheinland","district":"Kreis Wesel"},
 {"city":"Rheine","type":"Stadt","keyCity":"5566076","state":"Nordrhein-Westfalen","studioRadio":"Münster","studio":"Münster","region":"Westfalen","district":"Kreis Steinfurt"}
 ,
 {"city":"Rheurdt","type":"Gemeinde","keyCity":"5154048","state":"Nordrhein-Westfalen","studioRadio":"Duisburg","studio":"Duisburg","region":"Rheinland","district":"Kleve"},
@@ -505,7 +505,7 @@ export default [
 ,
 {"city":"Schalksmühle","type":"Gemeinde","keyCity":"5962056","state":"Nordrhein-Westfalen","studioRadio":"Siegen","studio":"Siegen","region":"Westfalen","district":"Märkischer Kreis"}
 ,
-{"city":"Schermbeck","type":"Gemeinde","keyCity":"5170036","state":"Nordrhein-Westfalen","studioRadio":"Duisburg","studio":"Duisburg","region":"Rheinland","district":"Wesel"},
+{"city":"Schermbeck","type":"Gemeinde","keyCity":"5170036","state":"Nordrhein-Westfalen","studioRadio":"Duisburg","studio":"Duisburg","region":"Rheinland","district":"Kreis Wesel"},
 {"city":"Schieder-Schwalenberg","type":"Stadt","keyCity":"5766060","state":"Nordrhein-Westfalen","studioRadio":"Bielefeld","studio":"Bielefeld","region":"Westfalen","district":"Lippe"},
 {"city":"Schlangen","type":"Gemeinde","keyCity":"5766064","state":"Nordrhein-Westfalen","studioRadio":"Bielefeld","studio":"Bielefeld","region":"Westfalen","district":"Lippe"},
 {"city":"Schleiden","type":"Stadt","keyCity":"5366036","state":"Nordrhein-Westfalen","studioRadio":"Aachen","studio":"Aachen","region":"Rheinland","district":"Kreis Euskirchen"},
@@ -531,7 +531,7 @@ export default [
 ,
 {"city":"Soest","type":"Stadt","keyCity":"5974040","state":"Nordrhein-Westfalen","studioRadio":"Siegen","studio":"Siegen","region":"Westfalen","district":"Kreis Soest"},
 {"city":"Solingen","type":"Stadt","keyCity":"5122000","state":"Nordrhein-Westfalen","studioRadio":"Wuppertal","studio":"Wuppertal","region":"Rheinland","district":"Solingen"},
-{"city":"Sonsbeck","type":"Gemeinde","keyCity":"5170040","state":"Nordrhein-Westfalen","studioRadio":"Duisburg","studio":"Duisburg","region":"Rheinland","district":"Wesel"},
+{"city":"Sonsbeck","type":"Gemeinde","keyCity":"5170040","state":"Nordrhein-Westfalen","studioRadio":"Duisburg","studio":"Duisburg","region":"Rheinland","district":"Kreis Wesel"},
 {"city":"Spenge","type":"Stadt","keyCity":"5758032","state":"Nordrhein-Westfalen","studioRadio":"Bielefeld","studio":"Bielefeld","region":"Westfalen","district":"Kreis Herford"},
 {"city":"Sprockhövel","type":"Stadt","keyCity":"5954028","state":"Nordrhein-Westfalen","studioRadio":"Wuppertal","studio":"Dortmund","region":"Ruhrgebiet","district":"Ennepe-Ruhr-Kreis"}
 ,
@@ -579,7 +579,7 @@ export default [
 {"city":"Viersen","type":"Stadt","keyCity":"5166032","state":"Nordrhein-Westfalen","studioRadio":"Düsseldorf","studio":"Düsseldorf","region":"Rheinland","district":"Kreis Viersen"}
 ,
 {"city":"Vlotho","type":"Stadt","keyCity":"5758036","state":"Nordrhein-Westfalen","studioRadio":"Bielefeld","studio":"Bielefeld","region":"Westfalen","district":"Kreis Herford"},
-{"city":"Voerde (Niederrhein)","type":"Stadt","keyCity":"5170044","state":"Nordrhein-Westfalen","studioRadio":"Duisburg","studio":"Duisburg","region":"Rheinland","district":"Wesel"},
+{"city":"Voerde (Niederrhein)","type":"Stadt","keyCity":"5170044","state":"Nordrhein-Westfalen","studioRadio":"Duisburg","studio":"Duisburg","region":"Rheinland","district":"Kreis Wesel"},
 {"city":"Vreden","type":"Stadt","keyCity":"5554068","state":"Nordrhein-Westfalen","studioRadio":"Münster","studio":"Münster","region":"Westfalen","district":"Kreis Borken"}
 ,
 {"city":"Wachtberg","type":"Gemeinde","keyCity":"5382072","state":"Nordrhein-Westfalen","studioRadio":"Köln","studio":"Bonn","region":"Rheinland","district":"Rhein-Sieg-Kreis"}
@@ -610,7 +610,7 @@ export default [
 {"city":"Werne","type":"Stadt","keyCity":"5978040","state":"Nordrhein-Westfalen","studioRadio":"Dortmund","studio":"Dortmund","region":"Ruhrgebiet","district":"Kreis Unna"},
 {"city":"Werther (Westfalen)","type":"Stadt","keyCity":"5754052","state":"Nordrhein-Westfalen","studioRadio":"Bielefeld","studio":"Bielefeld","region":"Westfalen","district":"Kreis Gütersloh"}
 ,
-{"city":"Wesel","type":"Stadt","keyCity":"5170048","state":"Nordrhein-Westfalen","studioRadio":"Duisburg","studio":"Duisburg","region":"Rheinland","district":"Wesel"},
+{"city":"Wesel","type":"Stadt","keyCity":"5170048","state":"Nordrhein-Westfalen","studioRadio":"Duisburg","studio":"Duisburg","region":"Rheinland","district":"Kreis Wesel"},
 {"city":"Wesseling","type":"Stadt","keyCity":"5362040","state":"Nordrhein-Westfalen","studioRadio":"Köln","studio":"Köln","region":"Rheinland","district":"Rhein-Erft-Kreis"}
 ,
 {"city":"Westerkappeln","type":"Gemeinde","keyCity":"5566092","state":"Nordrhein-Westfalen","studioRadio":"münster","studio":"Münster","region":"Westfalen","district":"Kreis Steinfurt"}
@@ -637,7 +637,7 @@ export default [
 {"city":"Wuppertal","type":"Stadt","keyCity":"5124000","state":"Nordrhein-Westfalen","studioRadio":"Wuppertal","studio":"Wuppertal","region":"Rheinland","district":"Wuppertal"},
 {"city":"Würselen","type":"Stadt","keyCity":"5334036","state":"Nordrhein-Westfalen","studioRadio":"Aachen","studio":"Aachen","region":"Rheinland","district":"Städteregion Aachen"}
 ,
-{"city":"Xanten","type":"Stadt","keyCity":"5170052","state":"Nordrhein-Westfalen","studioRadio":"Duisburg","studio":"Duisburg","region":"Rheinland","district":"Wesel"},
+{"city":"Xanten","type":"Stadt","keyCity":"5170052","state":"Nordrhein-Westfalen","studioRadio":"Duisburg","studio":"Duisburg","region":"Rheinland","district":"Kreis Wesel"},
 {"city":"Zülpich","type":"Stadt","keyCity":"5366044","state":"Nordrhein-Westfalen","studioRadio":"Köln","studio":"Bonn","region":"Rheinland","district":"Kreis Euskirchen"}
 
 ]
