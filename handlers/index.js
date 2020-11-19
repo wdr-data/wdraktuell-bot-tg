@@ -23,4 +23,8 @@ export const actions = {
     newsfeed_corona: (ctx) => handleNewsfeedStart(ctx, { tag: 'Coronavirus' }),
     location_region: (ctx) => handleDialogflowLocation(ctx, { type: 'regions' }),
     newsfeed_curated: handleNewsfeedStart,
+    newsfeed_sophora_tag: (ctx) => handleNewsfeedStart(
+        ctx,
+        { tag: ctx.dialogflowParams.sophoraTag.stringValue }
+    ),
 };
