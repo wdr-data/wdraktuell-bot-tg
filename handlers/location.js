@@ -41,7 +41,7 @@ export const handleDialogflowLocation = async (ctx, options = {}) => {
     } else if (options.type === 'schools') {
         return handleAGSSchools(ctx, location.keyCity);
     } else if (options.type === 'regions' ) {
-        return handleNewsfeedStart(ctx, { tag: location.district });
+        return handleNewsfeedStart(ctx, { tag: location.sophoraDistrictTag, location: location });
     } else {
         return chooseLocation(ctx, location);
     }

@@ -16,7 +16,9 @@ const imageVariants = [
 
 export const handleLocationRegions = async (ctx) => {
     const location = byAGS[ctx.data.ags];
-    return handleNewsfeedStart(ctx, { tag: location.district });
+    return handleNewsfeedStart(ctx, {
+        tag: location.sophoraDistrictTag,
+        location: location });
 };
 
 const getNews = async (index, options = { tag: 'Schlagzeilen' }) => {
@@ -142,11 +144,15 @@ const createElement = async (response, index, tag) => {
 
 export const handleNewsfeedStart = async (ctx, options = { tag: 'Schlagzeilen' }) => {
     const { imageUrl, extra } = await getNews(1, options);
-    if (options.tag === 'Schlagzeilen') {
-        await ctx.reply('Hier die aktuellen News von WDR aktuell:');
-    } else {
-        await ctx.reply(`Hier unsere aktuellen Nachrichten in der Kategorie "${options.tag}":`);
+
+    let introText = `Hier unser aktuellen Nachrichten zum Thema "${options.tag}":`;
+    if ('location' in options) {
+        introText = `Das ist gerade in der Region ${options.location.district} wichtig:`;
+    } else if (options.tag === 'Schlagzeilen') {
+        introText = 'Hier die neuesten Meldungen von WDR aktuell:';
     }
+
+    await ctx.reply(introText);
     return ctx.replyWithPhoto(imageUrl, extra);
 };
 
