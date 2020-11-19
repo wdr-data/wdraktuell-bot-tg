@@ -189,6 +189,14 @@ const makeFakeContext = (bot, user, event) => {
             },
         },
     };
+
+    const typeMapping = {
+        morning: 'Morgen',
+        evening: 'Abend',
+        breaking: 'Breaking',
+        notification: 'Benachrichtigungs',
+    };
+
     const ctx = new Context(update, bot, {});
     ctx.data = {
         timing: report.type,
@@ -198,8 +206,8 @@ const makeFakeContext = (bot, user, event) => {
         audio: report.audio,
         preview: event.options.preview,
         track: {
-            category: `Breaking-Push-${report.id}`,
-            event: `Breaking Meldung`,
+            category: `Report-Push-${report.id}`,
+            event: `${typeMapping[report.type]} Meldung`,
             label: report.subtype ?
                 `${report.subtype.title}: ${report.headline}` :
                 report.headline,
@@ -208,7 +216,7 @@ const makeFakeContext = (bot, user, event) => {
         },
     };
     if (report.link) {
-        let campaignType = report.type === 'breaking' ? 'breaking_push' : 'abend_push';
+        let campaignType = `${typeMapping[report.type].toLowerCase()}_push`;
         ctx.data.link = trackLink(
             report.link, {
                 campaignType,
@@ -372,6 +380,9 @@ export const finish = RavenLambdaWrapper.handler(Raven, function(event, context,
         break;
     case 'breaking':
         trackCategory = `Breaking-Push-${event.data.id}`;
+        break;
+    case 'notification':
+        trackCategory = `Benachrichtigungs-Push-${event.data.id}`;
     }
     webtrekk.track({
         category: trackCategory,
