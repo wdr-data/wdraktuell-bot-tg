@@ -142,6 +142,11 @@ const createElement = async (response, index, tag) => {
 
 export const handleNewsfeedStart = async (ctx, options = { tag: 'Schlagzeilen' }) => {
     const { imageUrl, extra } = await getNews(1, options);
+    if (options.tag === 'Schlagzeilen') {
+        await ctx.reply('Hier die aktuellen News von WDR aktuell:');
+    } else {
+        await ctx.reply(`Hier unsere aktuellen Nachrichten in der Kategorie "${options.tag}":`);
+    }
     return ctx.replyWithPhoto(imageUrl, extra);
 };
 
