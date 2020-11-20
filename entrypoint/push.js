@@ -56,6 +56,9 @@ export const fetch = RavenLambdaWrapper.handler(Raven, async (event) => {
         event = JSON.parse(event.body);
     }
 
+    // Ensure options are always set
+    event.options = event.options || {};
+
     if (event.report) {
         return fetchReport(event);
     } else if (event.push) {
@@ -83,7 +86,7 @@ const fetchReport = async (event) => {
             timing: report.type,
             type: 'report',
             data: report,
-            options: event.options || {},
+            options: event.options,
             stats: {
                 recipients: 0,
                 blocked: 0,
@@ -121,7 +124,7 @@ const fetchPush = async (event) => {
                 return {
                     state: 'finished',
                     error: true,
-                    options: event.options || {},
+                    options: event.options,
                 };
             }
             push = await getLatestPush(timing, {
@@ -137,7 +140,7 @@ const fetchPush = async (event) => {
             timing,
             type: 'push',
             data: push,
-            options: event.options || {},
+            options: event.options,
             stats: {
                 recipients: 0,
                 blocked: 0,
