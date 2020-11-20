@@ -8,6 +8,7 @@ import handleDataPolicy from './dataPolicy';
 import { handleDialogflowLocation } from './location';
 import { handleNewsfeedStart } from './newsfeed';
 import { handleShareBotCommand } from './share';
+import { handlePodcast } from './podcast';
 
 export const actions = {
     subscriptions: handleSubscriptions,
@@ -27,4 +28,5 @@ export const actions = {
         ctx,
         { tag: ctx.dialogflowParams.sophoraTag.stringValue }
     ),
+    podcast_0630: handlePodcast,
 };

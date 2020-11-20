@@ -312,7 +312,7 @@ const sendReport = async (event, bot, users) => {
 
 const sendPush = async (event, bot, users) => {
     const push = event.data;
-    const { messageText, extra } = assemblePush(push, event.options.preview);
+    const { messageText, extra } = await assemblePush(push, event.options.preview);
 
     await Promise.all(users.map(async (user) => {
         try {

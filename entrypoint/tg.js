@@ -37,6 +37,7 @@ import {
 import { handleLocation as handleLocationSchools } from '../handlers/locationSchools';
 import { handleLocation as handleLocationCorona } from '../handlers/locationCorona';
 import { handleFaq } from '../handlers/faq';
+import { handlePodcast } from '../handlers/podcast';
 
 const checkForToken = (event) => decodeURIComponent(
     event.pathParameters.token) === process.env.TG_TOKEN;
@@ -84,6 +85,7 @@ export const update = async (event, context, callback) => {
         bot.action('location_school', handleLocationSchools);
         bot.action('location_corona', handleLocationCorona);
         bot.action('location_region', handleLocationRegions);
+        bot.action('podcast_0630', async (ctx) => handlePodcast(ctx));
 
         bot.command('einstellungen', handleSubscriptionsCommand);
         bot.command('datenschutz', handleDataPolicy);
