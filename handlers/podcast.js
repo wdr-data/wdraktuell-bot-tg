@@ -6,16 +6,7 @@ import 'moment-timezone';
 import urls from '../lib/urls';
 import { trackLink } from '../lib/util';
 
-/*
-import actionData from '../lib/actionData';
-import { escapeHTML, trackLink } from '../lib/util';
 
-const imageVariants = [
-    'ARDFotogalerie',
-    'gseapremiumxl',
-    'TeaserAufmacher',
-];
-*/
 export const handlePodcast = async (
     ctx,
     options = { show: '0630_by_WDR_aktuell_WDR_Online' }
@@ -25,7 +16,6 @@ export const handlePodcast = async (
         json: true,
     });
     const episode = response.data[0];
-    console.log(episode);
 
     const title = episode.programme.title;
     const teasterText = episode.teaserText;
