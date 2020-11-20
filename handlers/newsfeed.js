@@ -21,6 +21,14 @@ export const handleLocationRegions = async (ctx) => {
         location: location });
 };
 
+export const handleSophoraTag = async (ctx) => {
+    if (ctx.dialogflowParams.sophoraTag.stringValue) {
+        const tag = ctx.dialogflowParams.sophoraTag.stringValue;
+        return handleNewsfeedStart(ctx, { tag } );
+    }
+    return handleNewsfeedStart(ctx, { tag: 'Schlagzeilen' });
+};
+
 const getNews = async (index, options = { tag: 'Schlagzeilen' }) => {
     let response;
     if (options.tag === 'Schlagzeilen' ) {
