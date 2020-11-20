@@ -6,12 +6,28 @@ import 'moment-timezone';
 import urls from '../lib/urls';
 import actionData from '../lib/actionData';
 import { escapeHTML, trackLink } from '../lib/util';
+import { byAGS } from '../data/locationMappings';
 
 const imageVariants = [
     'ARDFotogalerie',
     'gseapremiumxl',
     'TeaserAufmacher',
 ];
+
+export const handleLocationRegions = async (ctx) => {
+    const location = byAGS[ctx.data.ags];
+    return handleNewsfeedStart(ctx, {
+        tag: location.sophoraDistrictTag,
+        location: location });
+};
+
+export const handleSophoraTag = async (ctx) => {
+    if (ctx.dialogflowParams.sophoraTag.stringValue) {
+        const tag = ctx.dialogflowParams.sophoraTag.stringValue;
+        return handleNewsfeedStart(ctx, { tag } );
+    }
+    return handleNewsfeedStart(ctx, { tag: 'Schlagzeilen' });
+};
 
 const getNews = async (index, options = { tag: 'Schlagzeilen' }) => {
     let response;
@@ -51,7 +67,7 @@ const createElement = async (response, index, tag) => {
     ).tz('Europe/Berlin').format('DD.MM.YY, HH:mm');
 
     // Get image url
-    let imageUrl = 'https://images.informant.einslive.de/telegram-placeholder-a963668c-ec7a-4048-9232-dd15905ef26a.jpg';
+    let imageUrl = 'https://images.informant.einslive.de/75788e87-9bae-44d5-998b-fb41ff3570d3.png';
 
     const mediaItems = Object.values(content.containsMedia).sort(
         (a, b) => a.index - b.index
@@ -136,6 +152,15 @@ const createElement = async (response, index, tag) => {
 
 export const handleNewsfeedStart = async (ctx, options = { tag: 'Schlagzeilen' }) => {
     const { imageUrl, extra } = await getNews(1, options);
+
+    let introText = `Hier unser aktuellen Nachrichten zum Thema "${options.tag}":`;
+    if ('location' in options) {
+        introText = `Das ist gerade in der Region ${options.location.district} wichtig:`;
+    } else if (options.tag === 'Schlagzeilen') {
+        introText = 'Hier die neuesten Meldungen von WDR aktuell:';
+    }
+
+    await ctx.reply(introText);
     return ctx.replyWithPhoto(imageUrl, extra);
 };
 

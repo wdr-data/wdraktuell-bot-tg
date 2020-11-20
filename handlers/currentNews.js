@@ -15,6 +15,6 @@ export default async (ctx) => {
 
     const push = data.results[0];
 
-    const { messageText, extra } = assemblePush(push);
+    const { messageText, extra } = await assemblePush(push);
     await ctx.reply(messageText, extra);
 };

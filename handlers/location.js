@@ -1,11 +1,11 @@
+import moment from 'moment-timezone';
 import Markup from 'telegraf/markup';
 import actionData from '../lib/actionData';
-import moment from 'moment';
-import 'moment-timezone';
 
 import { byCities, byZipCodes } from '../data/locationMappings';
 import { handleCity as handleCityCorona } from './locationCorona';
 import { handleAGS as handleAGSSchools } from './locationSchools';
+import { handleNewsfeedStart } from './newsfeed';
 
 
 export const handleDialogflowLocation = async (ctx, options = {}) => {
@@ -36,16 +36,13 @@ export const handleDialogflowLocation = async (ctx, options = {}) => {
         return ctx.reply(ctx.dialogflowResponse);
     }
 
-    // Feature is not Public before
-    if (moment.tz('Europe/Berlin').isBefore(moment.tz('2020-08-11 06:00:00', 'Europe/Berlin'))) {
-        return handleCityCorona(ctx, location);
-    }
-
     // Trigger specific location feature
     if (options.type === 'corona') {
         return handleCityCorona(ctx, location);
     } else if (options.type === 'schools') {
         return handleAGSSchools(ctx, location.keyCity);
+    } else if (options.type === 'regions' ) {
+        return handleNewsfeedStart(ctx, { tag: location.sophoraDistrictTag, location: location });
     } else {
         return chooseLocation(ctx, location);
     }
@@ -80,8 +77,26 @@ const chooseLocation = async (ctx, location) => {
         }),
     );
 
+    let buttonText = 'Regionale News';
+    if (moment.now() - moment('2020-11-21')< 7*24*60*60*1000) {
+        buttonText = '✨Neu✨ ' + buttonText;
+    }
+    const buttonRegion= Markup.callbackButton(
+        buttonText,
+        actionData('location_region', {
+            ags: location.keyCity,
+            track: {
+                category: 'Feature',
+                event: 'Location',
+                label: 'Choose',
+                subType: 'Regionale News',
+            },
+        }),
+    );
+
     const buttons = [
         buttonCorona,
+        buttonRegion,
         buttonSchool,
     ];
     const extra = {};
