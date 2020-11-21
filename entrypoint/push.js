@@ -198,6 +198,7 @@ const makeFakeContext = (bot, user, event) => {
     const typeMapping = {
         morning: 'Morgen',
         evening: 'Abend',
+        last: 'Letzte',
         breaking: 'Breaking',
         notification: 'Benachrichtigungs',
     };
