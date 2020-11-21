@@ -41,5 +41,5 @@ export const handlePodcast = async (
         title: `${title} vom ${date}`,
     });
 
-    return ctx.replyWithAttachment(podcastUrl, extra)
+    return ctx.replyWithAttachment(podcastUrl, extra);
 };
