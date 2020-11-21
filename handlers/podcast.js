@@ -18,7 +18,7 @@ export const handlePodcast = async (
     const episode = response.data[0];
 
     const title = episode.programme.title;
-    const teasterText = episode.teaserText;
+    const teasterText = episode.teaserText.slice(0, 1024);
     const podcastUrl = episode.podcastUrl;
     const date = moment(
         episode.broadcastTime
@@ -41,5 +41,5 @@ export const handlePodcast = async (
         title: `${title} vom ${date}`,
     });
 
-    return ctx.replyWithAudio(podcastUrl, extra);
+    return ctx.replyWithAttachment(podcastUrl, extra);
 };
