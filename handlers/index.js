@@ -8,7 +8,7 @@ import handleDataPolicy from './dataPolicy';
 import { handleDialogflowLocation } from './location';
 import { handleNewsfeedStart, handleSophoraTag } from './newsfeed';
 import { handleShareBotCommand } from './share';
-// import { handlePodcast } from './podcast';
+import { handlePodcast } from './podcast';
 
 export const actions = {
     subscriptions: handleSubscriptions,
@@ -25,5 +25,5 @@ export const actions = {
     location_region: (ctx) => handleDialogflowLocation(ctx, { type: 'regions' }),
     newsfeed_curated: handleNewsfeedStart,
     newsfeed_sophora_tag: handleSophoraTag,
-    // podcast_0630: handlePodcast,
+    podcast_0630: handlePodcast,
 };
