@@ -4,7 +4,7 @@ import moment from 'moment';
 import 'moment-timezone';
 
 import urls from '../lib/urls';
-import { trackLink } from '../lib/util';
+import { trackLink, escapeHTML } from '../lib/util';
 
 
 export const handlePodcast = async (
@@ -37,8 +37,9 @@ export const handlePodcast = async (
     }
 
     const extra = Markup.inlineKeyboard( buttonPicker ).extra({
-        caption: `${teasterText}`,
+        caption: `<b>${escapeHTML(episode.title)}</b>\n\n${escapeHTML(teaserText)}`,
         title: `${title} vom ${date}`,
+        'parse_mode': 'HTML',
     });
 
     return ctx.replyWithAttachment(podcastUrl, extra);
