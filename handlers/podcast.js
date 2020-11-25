@@ -26,7 +26,7 @@ export const handlePodcast = async (
 
     // Temp fix: Check if file is bigger than upload limit
     const headers = await request.head(podcastUrl);
-    const largeFile = headers['content-length'] > 20000000;
+    const largeFile = headers['content-length'] > 10000000;
 
     const buttonPicker = [];
     if (options.show === '0630_by_WDR_aktuell_WDR_Online') {
