@@ -326,10 +326,10 @@ const sendPush = async (event, bot, users) => {
         fileId = await getAttachmentId(push.attachment.processed);
         const type = guessAttachmentType(push.attachment.processed);
         const sendMapping = {
-            image: bot.sendPhoto,
-            document: bot.sendDocument,
-            audio: bot.sendAudio,
-            video: bot.sendVideo,
+            image: bot.sendPhoto.bind(bot),
+            document: bot.sendDocument.bind(bot),
+            audio: bot.sendAudio.bind(bot),
+            video: bot.sendVideo.bind(bot),
         };
         attachmentSendFunction = sendMapping[type];
     }
