@@ -27,7 +27,6 @@ import handleReport from '../handlers/report';
 import handleFragment from '../handlers/fragment';
 import handleReportAudio from '../handlers/reportAudio';
 import handleQuizResponse from '../handlers/quizResponse';
-import handlePushOutro from '../handlers/pushOutro';
 import { handleSurvey } from '../handlers/survey';
 import {
     handleNewsfeedPage,
@@ -79,7 +78,6 @@ export const update = async (event, context, callback) => {
         bot.action('fragment', handleFragment);
         bot.action('report_audio', handleReportAudio);
         bot.action('quiz_response', handleQuizResponse);
-        bot.action('push_outro', handlePushOutro);
         bot.action('survey', handleSurvey);
         bot.action('newsfeed', handleNewsfeedPage);
         bot.action('location_school', handleLocationSchools);
