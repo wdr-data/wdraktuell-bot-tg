@@ -20,11 +20,11 @@ export const handlePromo = async (ctx) => {
         return ctx.reply('Dieser Content ist nicht mehr verfügbar.');
     }
 
-    const { attachment, text, link, link_text: linkText } = promo;
+    const { attachment, text, link, link_name: linkName } = promo;
     const extra = {};
 
     if (link) {
-        const linkButtonText = `🔗 ${linkText || 'Mehr'}`;
+        const linkButtonText = `🔗 ${linkName || 'Mehr'}`;
         const linkButton = Markup.urlButton(
             linkButtonText,
             link,
