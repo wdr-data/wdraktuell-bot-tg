@@ -48,6 +48,15 @@ functions:
     handler: entrypoint/events.uploadSchoolImages
     timeout: 900
 
+  podcasts:
+    handler: entrypoint/audio.podcasts
+    timeout: 120
+    events:
+      - schedule:
+          name: ${self:service}-${self:provider.stage}-podcasts
+          rate: rate(10 minutes)
+          enabled: true
+
   pushFetch:
     handler: entrypoint/push.fetch
     timeout: 300

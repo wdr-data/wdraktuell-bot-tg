@@ -2,8 +2,9 @@ import Raven from 'raven';
 import RavenLambdaWrapper from 'serverless-sentry-lib';
 import request from 'request-promise-native';
 import { load } from 'cheerio';
-import { getAttachmentId } from '../lib/facebookAttachments';
+import { getAttachmentId } from '../lib/attachments';
 import dynamoDb from '../lib/dynamodb';
+import urls from '../lib/urls';
 const tableName = process.env.DYNAMODB_AUDIOS;
 
 export const scrape = RavenLambdaWrapper.handler(Raven, async (event, context, callback) => {
@@ -82,5 +83,30 @@ export const scrape = RavenLambdaWrapper.handler(Raven, async (event, context, c
             body: e.message,
         });
         throw e;
+    }
+});
+
+
+export const podcasts = RavenLambdaWrapper.handler(Raven, async (event, context, callback) => {
+    const podcastNames = [ '0630_by_WDR_aktuell_WDR_Online' ];
+
+    for (const podcastName of podcastNames) {
+        const response = await request({
+            uri: urls.documentsByShow(1, 1, podcastName),
+            json: true,
+        });
+        const episode = response.data[0];
+        const podcastUrl = episode.podcastUrl;
+
+        const headers = await request.head(podcastUrl);
+        const largeFile = Number.parseInt(headers['content-length']) > 20000000;
+
+        if (!largeFile) {
+            try {
+                await getAttachmentId(podcastUrl);
+            } catch (e) {
+                console.log(JSON.stringify(e, null, 2));
+            }
+        }
     }
 });
