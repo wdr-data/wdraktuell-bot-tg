@@ -9,6 +9,7 @@ import { handleDialogflowLocation } from './location';
 import { handleNewsfeedStart, handleSophoraTag } from './newsfeed';
 import { handleShareBotCommand } from './share';
 import { handlePodcast } from './podcast';
+import { handlePromo } from './promo';
 
 export const actions = {
     subscriptions: handleSubscriptions,
@@ -26,4 +27,5 @@ export const actions = {
     newsfeed_curated: handleNewsfeedStart,
     newsfeed_sophora_tag: handleSophoraTag,
     podcast_0630: handlePodcast,
+    promo: handlePromo,
 };

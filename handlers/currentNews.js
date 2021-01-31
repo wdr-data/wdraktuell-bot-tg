@@ -16,5 +16,16 @@ export default async (ctx) => {
     const push = data.results[0];
 
     const { messageText, extra } = await assemblePush(push);
-    await ctx.reply(messageText, extra);
+
+    if (push.attachment) {
+        if (messageText.length > 1000) {
+            await ctx.replyWithAttachment(push.attachment.processed);
+            return ctx.reply(messageText, extra);
+        } else {
+            extra.caption = messageText;
+            return ctx.replyWithAttachment(push.attachment.processed, extra);
+        }
+    } else {
+        return ctx.reply(messageText, extra);
+    }
 };

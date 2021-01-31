@@ -21,6 +21,7 @@ import Webtrekk from '../lib/webtrekk';
 import DynamoDbCrud from '../lib/dynamodbCrud';
 import { CustomContext as Context } from '../lib/customContext';
 import fragmentSender from '../lib/fragmentSender';
+import { guessAttachmentType, getAttachmentId } from '../lib/attachments';
 
 
 const fromPrevious = (event, change) => ({
@@ -319,9 +320,33 @@ const sendPush = async (event, bot, users) => {
     const push = event.data;
     const { messageText, extra } = await assemblePush(push, event.options.preview);
 
+    // Manual implementation of ctx.replyWithAttachment
+    let fileId, attachmentSendFunction;
+    if (push.attachment) {
+        fileId = await getAttachmentId(push.attachment.processed);
+        const type = guessAttachmentType(push.attachment.processed);
+        const sendMapping = {
+            image: bot.sendPhoto.bind(bot),
+            document: bot.sendDocument.bind(bot),
+            audio: bot.sendAudio.bind(bot),
+            video: bot.sendVideo.bind(bot),
+        };
+        attachmentSendFunction = sendMapping[type];
+    }
+
     await Promise.all(users.map(async (user) => {
         try {
-            await bot.sendMessage(user.tgid, messageText, extra);
+            if (push.attachment) {
+                if (messageText.length > 1000) {
+                    await attachmentSendFunction(user.tgid, fileId);
+                    await bot.sendMessage(user.tgid, messageText, extra);
+                } else {
+                    extra.caption = messageText;
+                    await attachmentSendFunction(user.tgid, fileId, extra);
+                }
+            } else {
+                await bot.sendMessage(user.tgid, messageText, extra);
+            }
             event.stats.recipients++;
         } catch (err) {
             const reason = await handlePushFailed(err, user.tgid);
