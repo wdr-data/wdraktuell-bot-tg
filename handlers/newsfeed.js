@@ -85,7 +85,8 @@ const createElement = async (response, index, tag) => {
             imageCandidates.map((url) => request.head(url))
         );
         imageUrl = imageCandidates.find(
-            (candidate, i) => statuses[i].value['content-type'].startsWith('image')
+            (candidate, i) => statuses[i].status === 'fulfilled' &&
+            statuses[i].value['content-type'].startsWith('image')
         ) || imageUrl;
     }
     const text = `<b>${
