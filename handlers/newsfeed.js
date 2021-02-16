@@ -10,8 +10,8 @@ import { byAGS } from '../data/locationMappings';
 
 const imageVariants = [
     'ARDFotogalerie',
-    'gseapremiumxl',
     'TeaserAufmacher',
+    'original',
 ];
 
 export const handleLocationRegions = async (ctx) => {
@@ -85,10 +85,10 @@ const createElement = async (response, index, tag) => {
             imageCandidates.map((url) => request.head(url))
         );
         imageUrl = imageCandidates.find(
-            (candidate, i) => statuses[i].status === 'fulfilled'
+            (candidate, i) => statuses[i].status === 'fulfilled' &&
+            statuses[i].value['content-type'].startsWith('image')
         ) || imageUrl;
     }
-
     const text = `<b>${
         escapeHTML(headline)
     }</b>\n\n${
