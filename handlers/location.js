@@ -51,19 +51,6 @@ export const handleDialogflowLocation = async (ctx, options = {}) => {
 const chooseLocation = async (ctx, location) => {
     const messageText = 'Was interessiert dich?';
 
-    const buttonSchool = Markup.callbackButton(
-        'Schulumfrage',
-        actionData('location_school', {
-            ags: location.keyCity,
-            track: {
-                category: 'Feature',
-                event: 'Location',
-                label: 'Choose',
-                subType: 'Schulumfrage',
-            },
-        }),
-    );
-
     const buttonCorona= Markup.callbackButton(
         'Corona-Fallzahlen',
         actionData('location_corona', {
@@ -97,7 +84,6 @@ const chooseLocation = async (ctx, location) => {
     const buttons = [
         buttonCorona,
         buttonRegion,
-        buttonSchool,
     ];
     const extra = {};
     extra['reply_markup'] = Markup.inlineKeyboard(buttons.map((button) => [ button ]));
