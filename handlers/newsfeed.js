@@ -158,6 +158,8 @@ export const handleNewsfeedStart = async (ctx, options = { tag: 'Schlagzeilen' }
         introText = `Das ist gerade in der Region ${options.location.district} wichtig:`;
     } else if (options.tag === 'Schlagzeilen') {
         introText = 'Hier die neuesten Meldungen von WDR aktuell:';
+    } else if (options.tag === 'Tagesschau') {
+        introText = 'Hier die neuesten Meldungen der Tagesschau:';
     }
 
     await ctx.reply(introText);
