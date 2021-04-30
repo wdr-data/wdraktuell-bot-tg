@@ -1,5 +1,6 @@
 import request from 'request-promise-native';
 import csvtojson from 'csvtojson';
+import moment from 'moment-timezone';
 
 import { byStudios, byAGS } from '../data/locationMappings';
 import { escapeHTML, trackLink } from '../lib/util';
@@ -7,6 +8,7 @@ import getFaq from '../lib/faq';
 
 const uriCityRKI = 'https://coronanrw-prod.s3.eu-central-1.amazonaws.com/rki_ndr_districts_nrw.csv';
 const uriNRWRKI = 'https://coronanrw-prod.s3.eu-central-1.amazonaws.com/rki_ndr_districts_nrw_gesamt.csv';
+const uriDIVI = 'http://coronanrw-prod.s3.eu-central-1.amazonaws.com/intensivregister_karte_nrw.csv';
 
 export const handleLocation = async (ctx) => {
     const location = byAGS[ctx.data.ags];
@@ -25,6 +27,7 @@ export const handleCity = async (ctx, location) => {
 
     const covidDataCity = await getCovidCityRKI(location.district);
     const covidDataNRW = await getCovidNRWRKI();
+    const diviData = await getDIVI(location);
 
     const studioUrl = trackLink(byStudios[location.studio].linkCorona, {
         campaignType: 'feature',
@@ -68,14 +71,16 @@ export const handleCity = async (ctx, location) => {
         indicator
     }\nGemeldete Infektionen in den vergangenen 7 Tagen: ${
         covidDataCity.lastSevenDaysNew
-    }\n\n${incidenceText.text}\n
+    }\n\nDerzeit gibt es ${diviData.bedsFree} COVID-19 Fälle auf den Intensivstationen ${
+        location.keyCity.slice(-3) === '000' ? `in ${location.city}` : 'im Landkreis ' + location.district
+    }.\n\n${incidenceText.text}\n
 Aktuelle Zahlen für NRW:\nGemeldete Infektionen in den vergangenen 7 Tagen pro 100.000 Einwohner: ${
         covidDataNRW.lastSevenDaysPer100k
     }\nGemeldete Infektionen in den vergangenen 7 Tagen: ${
         covidDataNRW.lastSevenDaysNew
-    }\n\n(Quelle: RKI, Stand: ${
+    }\n\nQuelle:\nInfektionen: RKI, Stand: ${
         covidDataCity.publishedDate
-    })\n\n`;
+    }\nIntensivbetten: Divi, Stand: ${diviData.publishedDate}\n\n`;
     /* eslint-enable */
 
     return ctx.reply(
@@ -141,4 +146,27 @@ export const getCovidNRWRKI = async () => {
         lastSevenDaysNew: total['Neuinfektionen vergangene 7 Tage'],
         lastSevenDaysPer100k: total['7-Tage-Inzidenz'],
     };
+};
+
+export const getDIVI = async (location) => {
+    const response = await request.get({ uri: uriDIVI });
+    const diviData = await csvtojson({ flatKeys: true }).fromString(response);
+
+    for (const row of diviData) {
+        if (row['gemeindeschluessel'] === location.keyCity.substring(0, 4)) {
+            return {
+                casesNow: row['faelle_covid_aktuell'],
+                casesNowVentilated: row['aelle_covid_aktuell_invasiv_beatmet'],
+                countPlaces: row['anzahl_standorte'],
+                bedsFree: row['betten_frei'],
+                bedsOccupied: row['betten_belegt vergangene 7 Tage'],
+                bedsTotal: row['betten_gesamt'],
+                bedsPercentage: row['betten_auslastung'],
+                publishedDate: moment(
+                    row['daten_stand']
+                ).format('DD.MM.YY HH:mm [Uhr]'),
+            };
+        }
+    }
+    return;
 };
