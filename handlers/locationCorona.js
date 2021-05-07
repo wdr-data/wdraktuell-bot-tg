@@ -77,7 +77,11 @@ export const handleCity = async (ctx, location) => {
         indicator
     }\nGemeldete Infektionen in den vergangenen 7 Tagen: ${
         covidDataCity.lastSevenDaysNew
-    }\n\nDerzeit gibt es ${diviData.bedsFree} COVID-19 Fälle auf den Intensivstationen ${
+    }\n\nDerzeit gibt es ${
+        diviData.casesNow
+    } COVID-19 Fälle und ${
+        diviData.bedsFree
+    } freie Betten auf den Intensivstationen ${
         location.keyCity.slice(-3) === '000' ? `in ${location.city}` : 'im Landkreis ' + location.district
     }.\n\n${incidenceText.text}\n
 Aktuelle Zahlen für NRW:\nGemeldete Infektionen in den vergangenen 7 Tagen pro 100.000 Einwohner: ${
