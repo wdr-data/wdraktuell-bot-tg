@@ -166,7 +166,7 @@ export const getDIVI = async (location) => {
         if (row['gemeindeschluessel'] === location.keyCity.substring(0, 4)) {
             return {
                 casesNow: row['faelle_covid_aktuell'],
-                casesNowVentilated: row['aelle_covid_aktuell_invasiv_beatmet'],
+                casesNowVentilated: row['faelle_covid_aktuell_invasiv_beatmet'],
                 countPlaces: row['anzahl_standorte'],
                 bedsFree: row['betten_frei'],
                 bedsOccupied: row['betten_belegt vergangene 7 Tage'],
