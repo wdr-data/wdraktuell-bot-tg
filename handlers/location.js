@@ -37,7 +37,7 @@ Den Service bieten wir außerdem nur für Orte in NRW.
 
 Die Kolleg:innen vom NDR bieten auch einen Bot mit PLZ-Abfrage für ` +
 `Niedersachsen, Schleswig-Holstein, Mecklenburg-Vorpommern und Hamburg an:
-https://m.me/ndrinfo`);
+https://t.me/NDR_Info_bot`);
     } else if (!(locationName || zipCode)) {
         return ctx.reply(ctx.dialogflowResponse);
     }
