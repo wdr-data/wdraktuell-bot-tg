@@ -35,8 +35,8 @@ export const handleDialogflowLocation = async (ctx, options = {}) => {
 Versuche es mal mit dem Namen deines Ortes oder mit einer anderen PLZ.
 Den Service bieten wir außerdem nur für Orte in NRW.
 
-<b>Die Kolleg:innen von der Tagesschau bieten einen Bot mit bundesweiter PLZ-Abfrage an:</b>
-https://t.me/ARD_tagesschau_Bot`, { 'parse_mode': 'HTML' });
+Die Kolleg:innen von der Tagesschau bieten einen Bot mit bundesweiter PLZ-Abfrage an:
+https://t.me/ARD_tagesschau_Bot`);
     } else if (!(locationName || zipCode)) {
         return ctx.reply(ctx.dialogflowResponse);
     }
