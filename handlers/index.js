@@ -22,6 +22,7 @@ export const actions = {
     share: handleShareBotCommand,
     location_corona: (ctx) => handleDialogflowLocation(ctx, { type: 'corona' }),
     location_schools: (ctx) => handleDialogflowLocation(ctx, { type: 'schools' }),
+    location_weather: (ctx) => handleDialogflowLocation(ctx, { type: 'weather' }),
     newsfeed_corona: (ctx) => handleNewsfeedStart(ctx, { tag: 'Coronavirus' }),
     location_region: (ctx) => handleDialogflowLocation(ctx, { type: 'regions' }),
     newsfeed_curated: handleNewsfeedStart,

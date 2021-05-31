@@ -35,6 +35,7 @@ import {
 } from '../handlers/newsfeed';
 import { handleLocation as handleLocationSchools } from '../handlers/locationSchools';
 import { handleLocation as handleLocationCorona } from '../handlers/locationCorona';
+import { handleLocation as handleLocationWeather } from '../handlers/locationWeather';
 import { handleFaq } from '../handlers/faq';
 import { handlePodcast } from '../handlers/podcast';
 
@@ -83,6 +84,7 @@ export const update = async (event, context, callback) => {
         bot.action('location_school', handleLocationSchools);
         bot.action('location_corona', handleLocationCorona);
         bot.action('location_region', handleLocationRegions);
+        bot.action('location_weather', handleLocationWeather);
         bot.action('podcast_0630', async (ctx) => handlePodcast(ctx));
 
         bot.command('einstellungen', handleSubscriptionsCommand);
