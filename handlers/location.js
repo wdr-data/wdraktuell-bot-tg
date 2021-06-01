@@ -4,6 +4,7 @@ import actionData from '../lib/actionData';
 
 import { byCities, byZipCodes } from '../data/locationMappings';
 import { handleCity as handleCityCorona } from './locationCorona';
+import { handleCity as handleCityWeather } from './locationWeather';
 import { handleAGS as handleAGSSchools } from './locationSchools';
 import { handleNewsfeedStart } from './newsfeed';
 
@@ -44,6 +45,8 @@ https://t.me/ARD_tagesschau_Bot`);
     // Trigger specific location feature
     if (options.type === 'corona') {
         return handleCityCorona(ctx, location);
+    } else if (options.type === 'weather') {
+        return handleCityWeather(ctx, location);
     } else if (options.type === 'schools') {
         return handleAGSSchools(ctx, location.keyCity);
     } else if (options.type === 'regions' ) {
@@ -56,6 +59,7 @@ https://t.me/ARD_tagesschau_Bot`);
 const chooseLocation = async (ctx, location) => {
     const messageText = 'Was interessiert dich?';
 
+    // Corona
     const buttonCorona= Markup.callbackButton(
         'Corona-Fallzahlen',
         actionData('location_corona', {
@@ -69,6 +73,7 @@ const chooseLocation = async (ctx, location) => {
         }),
     );
 
+    // Regional news
     let buttonText = 'Regionale News';
     if (moment.now() - moment('2020-11-21')< 7*24*60*60*1000) {
         buttonText = '✨Neu✨ ' + buttonText;
@@ -86,9 +91,24 @@ const chooseLocation = async (ctx, location) => {
         }),
     );
 
+    // Weather
+    const buttonWeather = Markup.callbackButton(
+        'Wetter',
+        actionData('location_weather', {
+            ags: location.keyCity,
+            track: {
+                category: 'Feature',
+                event: 'Location',
+                label: 'Choose',
+                subType: 'Wetter',
+            },
+        }),
+    );
+
     const buttons = [
         buttonCorona,
         buttonRegion,
+        buttonWeather,
     ];
     const extra = {};
     extra['reply_markup'] = Markup.inlineKeyboard(buttons.map((button) => [ button ]));
