@@ -29,34 +29,34 @@ export const handleCity = async (ctx, location) => {
         getWeather(location, 'forecast'),
     ]);
 
-    const { place, data: currentData } = weatherCurrent;
-    const { data: forecastData } = weatherForecast;
-    const todayData = forecastData.forecasts[0];
-    const tomorrowData = forecastData.forecasts[1];
+    const { place, data: dataCurrent } = weatherCurrent;
+    const { data: dataForecast } = weatherForecast;
+    const dataToday = dataForecast.forecasts[0];
+    const dataTomorrow = dataForecast.forecasts[1];
 
     const textCurrent = `So sieht das Wetter gerade in ${place.name} aus:\n${
-        currentData.temperature} Grad, ${currentData.status.description}`;
+        dataCurrent.temperature} Grad, ${dataCurrent.status.description}`;
 
     const textTemperaturesDay = `Die Tagestemperaturen liegen zwischen ${
-        todayData.minimumTemperature} und ${todayData.maximumTemperature} Grad.`;
+        dataToday.minimumTemperature} und ${dataToday.maximumTemperature} Grad.`;
 
     const textStatus =
-`Morgens: ${capitalizeWord(todayData.statusMorning.description)}
-Nachmittags: ${capitalizeWord(todayData.statusAfternoon.description)}
-Abends: ${capitalizeWord(todayData.statusEvening.description)}`;
+`Morgens: ${capitalizeWord(dataToday.statusMorning.description)}
+Nachmittags: ${capitalizeWord(dataToday.statusAfternoon.description)}
+Abends: ${capitalizeWord(dataToday.statusEvening.description)}`;
 
-    const textNight = `In der Nacht ${todayData.statusNight.description} und Tiefstwert ${
-        todayData.minimumTemperatureNight} Grad.`;
+    const textNight = `In der Nacht ${dataToday.statusNight.description} und Tiefstwert ${
+        dataToday.minimumTemperatureNight} Grad.`;
 
     const dateTomorrow = moment(
-        tomorrowData.date,
+        dataTomorrow.date,
     ).tz('Europe/Berlin').format('DD.MM.YY');
     const textTomorrow = `Die Wettervorhersage für morgen, den ${dateTomorrow}:\n${
-        tomorrowData.minimumTemperature} - ${tomorrowData.maximumTemperature} Grad, ${
-        tomorrowData.statusDay.description}`;
+        dataTomorrow.minimumTemperature} - ${dataTomorrow.maximumTemperature} Grad, ${
+        dataTomorrow.statusDay.description}`;
 
     const dateLastUpdate = moment(
-        currentData.importedAt,
+        dataCurrent.importedAt,
     ).tz('Europe/Berlin').format('DD.MM.YY, HH:mm');
     const textLastUpdate = `Zuletzt aktualisiert: ${dateLastUpdate}`;
 
