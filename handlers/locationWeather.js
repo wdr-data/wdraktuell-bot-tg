@@ -32,6 +32,7 @@ export const handleCity = async (ctx, location) => {
     const { place, data: currentData } = weatherCurrent;
     const { data: forecastData } = weatherForecast;
     const todayData = forecastData.forecasts[0];
+    const tomorrowData = forecastData.forecasts[1];
 
     const textCurrent = `So sieht das Wetter gerade in ${place.name} aus:\n${
         currentData.temperature} Grad, ${currentData.status.description}`;
@@ -47,13 +48,20 @@ Abends: ${capitalizeWord(todayData.statusEvening.description)}`;
     const textNight = `In der Nacht ${todayData.statusNight.description} und Tiefstwert ${
         todayData.minimumTemperatureNight} Grad.`;
 
-    const lastUpdate = moment(
+    const dateTomorrow = moment(
+        tomorrowData.date,
+    ).tz('Europe/Berlin').format('DD.MM.YY');
+    const textTomorrow = `Die Wettervorhersage für morgen, den ${dateTomorrow}:\n${
+        tomorrowData.minimumTemperature} - ${tomorrowData.maximumTemperature} Grad, ${
+        tomorrowData.statusDay.description}`;
+
+    const dateLastUpdate = moment(
         currentData.importedAt,
     ).tz('Europe/Berlin').format('DD.MM.YY, HH:mm');
-    const textLastUpdate = `Zuletzt aktualisiert: ${lastUpdate}`;
+    const textLastUpdate = `Zuletzt aktualisiert: ${dateLastUpdate}`;
 
     const messageText = `${textCurrent}\n\n${textTemperaturesDay}\n\n${textStatus}\n\n${
-        textNight}\n\n${textLastUpdate}`;
+        textNight}\n\n${textTomorrow}\n\n${textLastUpdate}`;
 
     return ctx.reply(messageText);
 };
