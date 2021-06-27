@@ -38,7 +38,7 @@ const getNews = async (index, options = { tag: 'Schlagzeilen' }) => {
         });
     } else {
         response = await request({
-            uri: urls.newsfeedByTopicCategories(index, 1, options.tag),
+            uri: urls.newsfeedByTopicCategories(index, 2, options.tag),
             json: true,
         });
     }
