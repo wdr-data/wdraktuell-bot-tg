@@ -38,7 +38,7 @@ const getNews = async (index, options = { tag: 'Schlagzeilen' }) => {
         });
     } else {
         response = await request({
-            uri: urls.newsfeedByTopicCategories(index, 1, options.tag),
+            uri: urls.newsfeedByTopicCategories(index, 2, options.tag),
             json: true,
         });
     }
@@ -46,6 +46,7 @@ const getNews = async (index, options = { tag: 'Schlagzeilen' }) => {
 };
 
 const createElement = async (response, index, tag) => {
+    console.log(response);
     let content = response.data[0];
     if (response.data[0].teaser) {
         content = response.data[0].teaser;
