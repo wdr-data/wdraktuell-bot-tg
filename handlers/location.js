@@ -26,7 +26,10 @@ export const handleDialogflowLocation = async (ctx, options = {}) => {
         locationName = byZipCodes[zipCode].city;
     }
 
-    const location = { ...byCities[locationName], zipCode: zipCode || undefined };
+    const location = byCities[locationName] && {
+        ...byCities[locationName],
+        zipCode: zipCode || undefined,
+    };
 
     // If we didn't find the city, inform user about most likely cause if possible
     if (!location && (locationName || zipCode)) {
