@@ -26,7 +26,7 @@ export const handleDialogflowLocation = async (ctx, options = {}) => {
         locationName = byZipCodes[zipCode].city;
     }
 
-    const location = byCities[locationName];
+    const location = { ...byCities[locationName], zipCode: zipCode || undefined };
 
     // If we didn't find the city, inform user about most likely cause if possible
     if (!location && (locationName || zipCode)) {
@@ -51,6 +51,8 @@ https://t.me/ARD_tagesschau_Bot`);
         return handleAGSSchools(ctx, location.keyCity);
     } else if (options.type === 'regions' ) {
         return handleNewsfeedStart(ctx, { tag: location.sophoraDistrictTag, location: location });
+    } else if (options.type === 'candidates') {
+        return handleLocationCandidates(ctx, location);
     } else {
         return chooseLocation(ctx, location);
     }
@@ -74,12 +76,8 @@ const chooseLocation = async (ctx, location) => {
     );
 
     // Regional news
-    let buttonText = 'Regionale News';
-    if (moment.now() - moment('2020-11-21')< 7*24*60*60*1000) {
-        buttonText = '✨Neu✨ ' + buttonText;
-    }
     const buttonRegion= Markup.callbackButton(
-        buttonText,
+        'Regionale News',
         actionData('location_region', {
             ags: location.keyCity,
             track: {

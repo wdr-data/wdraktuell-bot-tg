@@ -85,6 +85,7 @@ export const update = async (event, context, callback) => {
         bot.action('location_corona', handleLocationCorona);
         bot.action('location_region', handleLocationRegions);
         bot.action('location_weather', handleLocationWeather);
+        bot.action('location_candidates', handleLocationCandidates);
         bot.action('podcast_0630', async (ctx) => handlePodcast(ctx));
 
         bot.command('einstellungen', handleSubscriptionsCommand);
