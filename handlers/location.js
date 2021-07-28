@@ -1,4 +1,3 @@
-import moment from 'moment-timezone';
 import Markup from 'telegraf/markup';
 import actionData from '../lib/actionData';
 
@@ -7,6 +6,7 @@ import { handleCity as handleCityCorona } from './locationCorona';
 import { handleCity as handleCityWeather } from './locationWeather';
 import { handleAGS as handleAGSSchools } from './locationSchools';
 import { handleNewsfeedStart } from './newsfeed';
+import { handleLocationCandidates } from './locationCandidates';
 
 
 export const handleDialogflowLocation = async (ctx, options = {}) => {

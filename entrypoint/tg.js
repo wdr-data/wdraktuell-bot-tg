@@ -38,6 +38,7 @@ import { handleLocation as handleLocationCorona } from '../handlers/locationCoro
 import { handleLocation as handleLocationWeather } from '../handlers/locationWeather';
 import { handleFaq } from '../handlers/faq';
 import { handlePodcast } from '../handlers/podcast';
+import { handleLocationCandidates } from '../handlers/locationCandidates';
 
 const checkForToken = (event) => decodeURIComponent(
     event.pathParameters.token) === process.env.TG_TOKEN;
