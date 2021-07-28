@@ -5,8 +5,8 @@ import { byCities, byZipCodes } from '../data/locationMappings';
 import { handleCity as handleCityCorona } from './locationCorona';
 import { handleCity as handleCityWeather } from './locationWeather';
 import { handleAGS as handleAGSSchools } from './locationSchools';
+import { handleCity as handleCityCandidates } from './locationCandidates';
 import { handleNewsfeedStart } from './newsfeed';
-import { handleLocationCandidates } from './locationCandidates';
 
 
 export const handleDialogflowLocation = async (ctx, options = {}) => {
@@ -52,7 +52,7 @@ https://t.me/ARD_tagesschau_Bot`);
     } else if (options.type === 'regions' ) {
         return handleNewsfeedStart(ctx, { tag: location.sophoraDistrictTag, location: location });
     } else if (options.type === 'candidates') {
-        return handleLocationCandidates(ctx, location);
+        return handleCityCandidates(ctx, location);
     } else {
         return chooseLocation(ctx, location);
     }
@@ -60,6 +60,20 @@ https://t.me/ARD_tagesschau_Bot`);
 
 const chooseLocation = async (ctx, location) => {
     const messageText = 'Was interessiert dich?';
+
+    // Kandidatencheck
+    const buttonCandidates= Markup.callbackButton(
+        'Kandidatencheck',
+        actionData('location_candidates', {
+            ags: location.keyCity,
+            track: {
+                category: 'Feature',
+                event: 'Location',
+                label: 'Choose',
+                subType: 'Kandidatencheck',
+            },
+        }),
+    );
 
     // Corona
     const buttonCorona= Markup.callbackButton(
@@ -104,6 +118,7 @@ const chooseLocation = async (ctx, location) => {
     );
 
     const buttons = [
+        buttonCandidates,
         buttonCorona,
         buttonRegion,
         buttonWeather,
