@@ -67,20 +67,23 @@ const handleWahlkreis_ = async (ctx, wahlkreisId) => {
     });
 
     const candidates = response.data.map((c) => {
-        return `${c.kandidatVorname} ${c.kandidatName}, ${c.kandidatPartei}`;
+        return `  • ${c.kandidatVorname} ${c.kandidatName}, ${c.kandidatPartei}`;
     });
 
-    const moreUrl = `https://www1.wdr.de//kandidatencheck/2021/wdr-bundestagswahl/app/kandidatencheck144.html?wahlkreisid=${wahlkreis.id}`;
+    const moreUrl = `https://www1.wdr.de/kandidatencheck/2021/wdr-bundestagswahl/app/kandidatencheck144.html?wahlkreisid=${wahlkreis.id}`;
 
     const text = `In deinem Wahlkreis „${
         wahlkreis.wahlkreisName
     }“ stellen sich diese Direkt-Kandidat:innen zur Wahl:\n\n${
         candidates.join('\n')
-    }\n\nHier beantworten Kandidat:innen in Drei-Minuten-Videos Fragen zu Wahlkampf-Themen: ${
+    }\n\nHier beantworten Kandidat:innen in Drei-Minuten-Videos Fragen zu Wahlkampf-Themen:\n${
         moreUrl
     }`;
 
-    return ctx.reply(text, {
+    const imageUrl = 'https://images.informant.einslive.de/MicrosoftTeams-image%20(2)-a12a661d-cf92-40f3-8496-69635a97f90f.png';
+
+    return ctx.replyWithPhoto(imageUrl, {
+        'caption': text,
         'disable_web_page_preview': true,
     });
 };
