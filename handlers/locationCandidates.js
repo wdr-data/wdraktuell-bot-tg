@@ -70,7 +70,7 @@ const handleWahlkreis_ = async (ctx, wahlkreisId) => {
         return `  • ${c.kandidatVorname} ${c.kandidatName}, ${c.kandidatPartei}`;
     });
 
-    const moreUrl = `https://www1.wdr.de/kandidatencheck/2021/wdr-bundestagswahl/app/kandidatencheck144.html?wahlkreisid=${wahlkreis.id}`;
+    const moreUrl = `https://www1.wdr.de/kandidatencheck/2021/wdr-bundestagswahl/app/kandidatencheck144.html?wahlkreisid=${wahlkreis.id}&wt_mc=tg`;
 
     const text = `In deinem Wahlkreis „${
         wahlkreis.wahlkreisName
@@ -80,7 +80,7 @@ const handleWahlkreis_ = async (ctx, wahlkreisId) => {
         moreUrl
     }`;
 
-    const imageUrl = 'https://images.informant.einslive.de/MicrosoftTeams-image%20(2)-a12a661d-cf92-40f3-8496-69635a97f90f.png';
+    const imageUrl = 'https://images.informant.einslive.de/MicrosoftTeams-image-0fd5c975-6c55-4f78-a49d-4cdd6bc4109b.png';
 
     return ctx.replyWithPhoto(imageUrl, {
         'caption': text,
