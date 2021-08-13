@@ -1,4 +1,3 @@
-import moment from 'moment-timezone';
 import Markup from 'telegraf/markup';
 import actionData from '../lib/actionData';
 
@@ -6,6 +5,7 @@ import { byCities, byZipCodes } from '../data/locationMappings';
 import { handleCity as handleCityCorona } from './locationCorona';
 import { handleCity as handleCityWeather } from './locationWeather';
 import { handleAGS as handleAGSSchools } from './locationSchools';
+import { handleCity as handleCityCandidates } from './locationCandidates';
 import { handleNewsfeedStart } from './newsfeed';
 
 
@@ -26,7 +26,10 @@ export const handleDialogflowLocation = async (ctx, options = {}) => {
         locationName = byZipCodes[zipCode].city;
     }
 
-    const location = byCities[locationName];
+    const location = byCities[locationName] && {
+        ...byCities[locationName],
+        zipCode: zipCode || undefined,
+    };
 
     // If we didn't find the city, inform user about most likely cause if possible
     if (!location && (locationName || zipCode)) {
@@ -51,6 +54,8 @@ https://t.me/ARD_tagesschau_Bot`);
         return handleAGSSchools(ctx, location.keyCity);
     } else if (options.type === 'regions' ) {
         return handleNewsfeedStart(ctx, { tag: location.sophoraDistrictTag, location: location });
+    } else if (options.type === 'candidates') {
+        return handleCityCandidates(ctx, location);
     } else {
         return chooseLocation(ctx, location);
     }
@@ -58,6 +63,20 @@ https://t.me/ARD_tagesschau_Bot`);
 
 const chooseLocation = async (ctx, location) => {
     const messageText = 'Was interessiert dich?';
+
+    // Kandidatencheck
+    const buttonCandidates= Markup.callbackButton(
+        'Kandidatencheck',
+        actionData('location_candidates', {
+            ags: location.keyCity,
+            track: {
+                category: 'Feature',
+                event: 'Location',
+                label: 'Choose',
+                subType: 'Kandidatencheck',
+            },
+        }),
+    );
 
     // Corona
     const buttonCorona= Markup.callbackButton(
@@ -74,12 +93,8 @@ const chooseLocation = async (ctx, location) => {
     );
 
     // Regional news
-    let buttonText = 'Regionale News';
-    if (moment.now() - moment('2020-11-21')< 7*24*60*60*1000) {
-        buttonText = '✨Neu✨ ' + buttonText;
-    }
     const buttonRegion= Markup.callbackButton(
-        buttonText,
+        'Regionale News',
         actionData('location_region', {
             ags: location.keyCity,
             track: {
@@ -106,6 +121,7 @@ const chooseLocation = async (ctx, location) => {
     );
 
     const buttons = [
+        buttonCandidates,
         buttonCorona,
         buttonRegion,
         buttonWeather,
