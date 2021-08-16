@@ -8,6 +8,8 @@ import wahlkreiseByZip from '../data/wahlkreiseByZip';
 
 export const handleLocation = async (ctx) => {
     const location = byAGS[ctx.data.ags];
+    location.zipCode = ctx.data.zip;
+
     return handleCity(ctx, location);
 };
 
