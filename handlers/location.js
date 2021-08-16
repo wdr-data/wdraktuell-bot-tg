@@ -69,6 +69,7 @@ const chooseLocation = async (ctx, location) => {
         'Kandidatencheck',
         actionData('location_candidates', {
             ags: location.keyCity,
+            zip: location.zipCode,
             track: {
                 category: 'Feature',
                 event: 'Location',
