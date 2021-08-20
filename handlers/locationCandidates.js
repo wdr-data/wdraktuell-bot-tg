@@ -61,6 +61,13 @@ export const handleWahlkreis = async (ctx) => {
 const handleWahlkreis_ = async (ctx, wahlkreisId) => {
     const wahlkreis = wahlkreisById[wahlkreisId];
 
+    ctx.track({
+        category: 'Feature',
+        event: 'Location',
+        label: 'Kandidatencheck',
+        subType: wahlkreis.wahlkreisName,
+    });
+
     const candidates = wahlkreis.kandidaten.map((c) => {
         return `  • ${c.vorname} ${c.nachname}, ${c.partei}`;
     });
