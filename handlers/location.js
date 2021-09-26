@@ -1,5 +1,6 @@
 import Markup from 'telegraf/markup';
 import actionData from '../lib/actionData';
+import moment from 'moment-timezone';
 
 import { byCities, byZipCodes } from '../data/locationMappings';
 import { handleCity as handleCityCorona } from './locationCorona';
@@ -65,8 +66,13 @@ const chooseLocation = async (ctx, location) => {
     const messageText = 'Was interessiert dich?';
 
     // Kandidatencheck
+    let buttonCandidatesText = 'Kandidatencheck';
+    if (moment() - moment('2021-09-26T18:00:00+02:00') > 0 ) {
+        buttonCandidatesText = 'Bundestagswahl';
+    }
+
     const buttonCandidates= Markup.callbackButton(
-        'Kandidatencheck',
+        buttonCandidatesText,
         actionData('location_candidates', {
             ags: location.keyCity,
             zip: location.zipCode,
@@ -74,7 +80,7 @@ const chooseLocation = async (ctx, location) => {
                 category: 'Feature',
                 event: 'Location',
                 label: 'Choose',
-                subType: 'Kandidatencheck',
+                subType: buttonCandidatesText,
             },
         }),
     );

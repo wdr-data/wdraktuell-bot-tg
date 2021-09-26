@@ -1,6 +1,8 @@
 import Markup from 'telegraf/markup';
 import actionData from '../lib/actionData';
+import moment from 'moment-timezone';
 
+import { handleFaq } from './faq';
 import { byAGS } from '../data/locationMappings';
 import wahlkreisById from '../data/wahlkreisById';
 import wahlkreiseByCity from '../data/wahlkreiseByCity';
@@ -14,6 +16,11 @@ export const handleLocation = async (ctx) => {
 };
 
 export const handleCity = async (ctx, location) => {
+    if (moment() - moment('2021-09-26T18:00:00+02:00') > 0 ) {
+        ctx['data'] = { faq: 'election' };
+        return handleFaq(ctx);
+    }
+
     let wahlkreisIds;
 
     if (location.zipCode) {
